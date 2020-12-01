@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Things you should know before starting a scan - Smart Vulnerability Scanner</title>
+    <meta name="description" content="There are two types of implications you should be aware of before performing a security scanning on any target.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Things you should know before starting a scan">
+    <meta property="og:url" content="/docs/things-you-should-know-before-starting-a-security-scan">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:description" content="There are two types of implications you should be aware of before performing a security scanning on any target." />
+    <link rel="canonical" href="/docs/things-you-should-know-before-starting-a-security-scan" />
+    <meta name="robots" content="index, follow">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ');
+</script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="sans-serif lh-easy flex flex-column h-100">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/support">Support</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    
+
+
+
+
+
+<main class="w-100 mw7 center ph3 pv4 flex-grow">
+  <article>
+    <div>
+      <span class="f6 gray i"><a href="/docs/" class="link gray hover-dark-green">Documents</a><span class="mh2">/</span><a href="/docs/#Getting Started" class="link gray hover-dark-green">Getting Started</a><span class="mh2">/</span></span>
+      <h1 class="mt0">Things you should know before starting a scan</h1>
+    </div>
+    <p>There are two types of implications you should be aware of before performing a security scanning on any target.</p>
+
+<h2 id="1--automation-issues">1- Automation issues</h2>
+<p>Automated security testing tools (including SmartScanner) try to send different data to the server. They submit forms with arbitrary data; they send different values for each parameter, cookie, and header. This can lead to the below side effects:</p>
+<ul>
+  <li>Denial of Service (DoS) of the testing target</li>
+  <li>Spamming the target’s database with bogus data</li>
+  <li>Causing malfunction or instability of the target</li>
+  <li>Triggering alarms in security systems like <abbr title="Web Application Firewall">WAF</abbr></li>
+</ul>
+
+<p>To avoid the above problems or any other issues, you should use SmartScanner and other automated testing tools in testing or pre-production environments where data or system stability is not a concern.</p>
+
+<h2 id="2--legal-issues">2- Legal issues</h2>
+<p>In many countries, unauthorized security scanning can get you in trouble. You might get sued by the owner of the scanned system if you don’t have the required permission.
+Make sure you have a written agreement with the owner of scanning target before starting a scan.</p>
+
+<p><strong>Note:</strong> Before using the SmartScanner, you need to read and agree with our <a href="/terms">Terms</a> and <a href="/privacy">Privacy Policy</a>.</p>
+
+
+    <div class="flex justify-between gray">
+      <span>Still need help? <a class="link gray hover-dark-green" href="/contact">contact us</a></span>
+      <span>Last updated on December 01, 2020</span>
+    </div>
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/docs/installing-smartscanner">← Installation</a>
+      
+      
+      <a class="link dark-green dim fr" href="/docs/scanning-a-target">Scanning a target →</a>
+      
+    </div>
+  </article>
+</main>
+  
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Need more information? Please ask your questions.</h2>
+    <a href="/contact" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Ask a question</a>
+  </div>
+</section>      
+
+    <footer class="w-100 f6 pv3 pv4-ns flex bg-dark-gray flex-wrap justify-around moon-gray flex-shrink-none">
+      <div class="pv2">
+        <span>© TheSmartScanner.com</span>
+      </div>
+      <div class="pv2 tc">
+        <a href="/support" class="link dim dib mh2 moon-gray link-reset">Support</a>
+        <a href="/contact" class="link dim dib mh2 moon-gray link-reset">Contact</a>
+        <a href="/blog/" class="link dim dib mh2 moon-gray link-reset">Blog</a>
+        <a href="/vulnerability-list/" class="link dim dib mh2 moon-gray link-reset">Vulnerability List</a>
+      </div>
+      <div class="pv2">
+        <a href="/privacy" class="link dim dib moon-gray mh2 link-reset">Privacy</a>
+        <a href="/terms" class="link dim dib moon-gray mh2 link-reset">Terms</a>
+      </div>
+    </footer>
+
+  <script type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2020-12-01T16:12:58+03:30</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">The very first version of SmartScanner is released 🎉</title><link href="https://www.thesmartscanner.com/blog/very-first-version-of-smartscanner-released" rel="alternate" type="text/html" title="The very first version of SmartScanner is released 🎉" /><published>2020-12-01T00:00:00+03:30</published><updated>2020-12-01T00:00:00+03:30</updated><id>https://www.thesmartscanner.com/blog/very-first-version-of-smartscanner-released</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/very-first-version-of-smartscanner-released">&lt;p&gt;We’re so proud to announce the version 1.0.0 of the SmartScanner was just released. Download it now!&lt;/p&gt;
+
+&lt;p&gt;You can download the Windows version on the &lt;a href=&quot;/download&quot;&gt;download page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;yet-another-vulnerability-scanner&quot;&gt;Yet another vulnerability scanner&lt;/h2&gt;
+&lt;p&gt;SmartScanner is an automated web vulnerability scanner you can use to test the security of websites and web applications.
+Unlike most security scanners, SmartScanner is taking advantage of Artificial Intelligence (AI) and machine learning methods to reach and find vulnerabilities where other scanners cannot detect most of the time. This means that SmartScanner has a minimum number of &lt;a href=&quot;https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_positive_error&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;false positives&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;false negatives&lt;/a&gt; for security issues it can test and it gets better over each upgrade!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-smart-is-it&quot;&gt;How &lt;em&gt;Smart&lt;/em&gt; is it?&lt;/h2&gt;
+&lt;p&gt;Certainly not as much as it could replace an experienced penetration tester but it is always learning and can be a perfect assist. Many security issues are as easy as detecting a static simple pattern. For example detection of a missing &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_cookie#Http-only_cookie&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Http-only cookie&lt;/a&gt; attribute, is easy but detection of a session relevant cookie might not be that easy for an automated tool. Business logics are another example that is hard for automated tools to understand. SmartScanner’s goal is to detect such issues and put context around them to make it easy for you to mitigate security risks.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-features&quot;&gt;Key features&lt;/h2&gt;
+&lt;p&gt;Smartness, Automation, and ease of use are fundamental elements of SmartScanner. We continue to improve SmartScanner to make it the best automated web security scanner.
+Below list is the key features of SmartScanner&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;Dynamic JavaScript evaluation&lt;/li&gt;
+  &lt;li&gt;HTML5 support&lt;/li&gt;
+  &lt;li&gt;Intuitive user interface&lt;/li&gt;
+  &lt;li&gt;Fully automated&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/&quot;&gt;Lots of security tests&lt;/a&gt; including &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;XSS&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQLI&lt;/a&gt;, and more&lt;/li&gt;
+  &lt;li&gt;Authentication support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SmartScanner comes in two versions. A &lt;a href=&quot;/download&quot;&gt;Free version&lt;/a&gt; for testing SSL/TLS, HTTP Headers security, passive tests, and more and a &lt;a href=&quot;/pricing&quot;&gt;Professional version&lt;/a&gt; to test everything.&lt;/p&gt;
+
+&lt;p&gt;We love to hear from you, give it a try, and &lt;a href=&quot;/contact&quot;&gt;send us your feedback&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="release" /><summary type="html">We’re so proud to announce the version 1.0.0 of the SmartScanner was just released. Download it now!</summary></entry></feed>
