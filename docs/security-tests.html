@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Security Tests - SmartScanner</title>
+    <meta name="description" content="Before starting a scan, you can specify security issues you want to test.On the main page, click on the change scan config to go to scan configurat...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Security Tests">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/docs/security-tests">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:description" content="Before starting a scan, you can specify security issues you want to test.On the main page, click on the change scan config to go to scan configurations. In the Tests tab, you can select security tests." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/docs/security-tests" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Security Tests">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/docs/security-tests" />
+    <meta name="twitter:description" content="Before starting a scan, you can specify security issues you want to test.On the main page, click on the change scan config to go to scan configurations. In the Tests tab, you can select security tests.">
+    
+    <meta name="robots" content="index, follow">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ');
+</script>
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="sans-serif lh-easy flex flex-column h-100">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/support">Support</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    
+
+
+
+
+
+<main class="w-100 mw7 center ph3 pv4 flex-grow">
+  <article>
+    <div>
+      <span class="f6 gray i"><a href="/docs/" class="link gray hover-dark-green">Documents</a><span class="mh2">/</span><a href="/docs/#Configurations" class="link gray hover-dark-green">Configurations</a><span class="mh2">/</span></span>
+      <h1 class="mt0">Security Tests</h1>
+    </div>
+    <p>Before starting a scan, you can specify <a href="/vulnerability-list">security issues</a> you want to test.
+On the main page, click on the <code class="language-plaintext highlighter-rouge">change scan config</code> to go to scan configurations. In the <code class="language-plaintext highlighter-rouge">Tests</code> tab, you can select security tests.</p>
+
+<p>You can also select predefined tests using the <code class="language-plaintext highlighter-rouge">Test Profile</code>. Below predefined tests are available.</p>
+
+<ul>
+  <li>Default</li>
+  <li>No Test</li>
+  <li>OWASP Top 10</li>
+  <li>Passive</li>
+  <li>High Impact</li>
+  <li>Custom</li>
+</ul>
+
+<h2 id="test-for-all-security-issues">Test for all security issues</h2>
+<p>The <code class="language-plaintext highlighter-rouge">Default</code> test profile in the scan configs includes tests for all security issues.</p>
+
+<h2 id="test-for-owasp-top-ten-web-application-security-risks">Test for OWASP top ten web application security risks</h2>
+<p>The OWASP Top 10 is a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.
+Select <code class="language-plaintext highlighter-rouge">OWASP Top 10</code> in the test profile of scan config to check all vulnerabilities in OWASP Top 10.
+The OWASP Top 10 2017 and 2013 are included in this profile.</p>
+
+<h2 id="scan-websites-passively">Scan websites passively</h2>
+<p>A passive scan detects security issues that can be identified using normal browsing of the website. 
+In this type of scan, no malformed request is sent to the server.
+The risk of DOS or causing any damage to the backend is minimum in this type of scan.
+Passive scans also reduce the chance of getting blocked by WAF.</p>
+
+<p><em>Also read <a href="/blog/why-you-should-use-passive-vulnerability-scan-on-your-website">Why you should use passive vulnerability scan on your website</a>.</em></p>
+
+<p>Select <code class="language-plaintext highlighter-rouge">Passive</code> in the test profile to perform a passive scan.</p>
+
+<h2 id="finding-all-critical-vulnerabilities">Finding all critical vulnerabilities</h2>
+<p>If you want to test for severe security issues, you can select the <code class="language-plaintext highlighter-rouge">High Impact</code> test profile.</p>
+
+    <div class="flex justify-between gray">
+      <span>Still need help? <a class="link gray hover-dark-green" href="/contact">contact us</a></span>
+      <span>Last updated on January 01, 2021</span>
+    </div>
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/docs/scan-dashboard">← Scan Dashboard</a>
+      
+      
+      <a class="link dark-green dim fr" href="/docs/changelog">Change Log →</a>
+      
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Docs",
+    "item": "https://www.thesmartscanner.com/docs/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Security Tests"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "TechArticle",
+
+ "headline": "Security Tests"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Need more information? Please ask your questions.</h2>
+    <a href="/contact" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Ask a question</a>
+  </div>
+</section>      
+
+    <footer class="w-100 f6 pv3 pv4-ns flex bg-dark-gray flex-wrap justify-around moon-gray flex-shrink-none">
+      <div class="pv2">
+        <span>© TheSmartScanner.com</span>
+      </div>
+      <div class="pv2 tc">
+        <a href="/support" class="link dim dib mh2 moon-gray link-reset">Support</a>
+        <a href="/contact" class="link dim dib mh2 moon-gray link-reset">Contact</a>
+        <a href="/blog/" class="link dim dib mh2 moon-gray link-reset">Blog</a>
+        <a href="/vulnerability-list/" class="link dim dib mh2 moon-gray link-reset">Vulnerability List</a>
+      </div>
+      <div class="pv2">
+        <a href="/privacy" class="link dim dib moon-gray mh2 link-reset">Privacy</a>
+        <a href="/terms" class="link dim dib moon-gray mh2 link-reset">Terms</a>
+      </div>
+    </footer>
+
+  <script type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
