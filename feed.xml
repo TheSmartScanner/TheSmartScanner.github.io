@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-03T13:58:56+00:00</updated><id>http://localhost:4000/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4</title><link href="http://localhost:4000/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4" rel="alternate" type="text/html" title="Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4" /><published>2021-04-04T00:00:00+00:00</published><updated>2021-04-04T00:00:00+00:00</updated><id>http://localhost:4000/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4</id><content type="html" xml:base="http://localhost:4000/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4">&lt;p&gt;As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;WordPress security test was already covered in the previous versions of SmartScanner and now you can test the security of your website if you’re using Drupal or Joomla!&lt;/p&gt;
+
+&lt;h2 id=&quot;automatic-security-scan-for-wordpress-drupal-and-joomla&quot;&gt;Automatic Security Scan for WordPress, Drupal and, Joomla!&lt;/h2&gt;
+&lt;p&gt;SmartScanner automatically detects the CMS your website is using and then it will test for known vulnerabilities for that CMS. as of now (version 1.4.0) three CMSs (WordPress, Drupal and, Joomla!) are supported by SmartScanner. Not all known vulnerabilities for these CMSs are covered yet but with each release, new tests will be rolled out.&lt;/p&gt;
+
+&lt;p&gt;To get started download SmartScanner and test the security of your website for free.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog#version-140--april-4-2021&quot;&gt;change log&lt;/a&gt; for more details on new things in version 1.4.0.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="release" /><summary type="html">As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/smartscanner-v1-4.png" /><media:content medium="image" url="http://localhost:4000/assets/img/smartscanner-v1-4.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why you should use passive vulnerability scan on your website</title><link href="http://localhost:4000/blog/why-you-should-use-passive-vulnerability-scan-on-your-website" rel="alternate" type="text/html" title="Why you should use passive vulnerability scan on your website" /><published>2021-01-25T00:00:00+00:00</published><updated>2021-01-25T00:00:00+00:00</updated><id>http://localhost:4000/blog/why-you-should-use-passive-vulnerability-scan-on-your-website</id><content type="html" xml:base="http://localhost:4000/blog/why-you-should-use-passive-vulnerability-scan-on-your-website">&lt;p&gt;A passive vulnerability scan is a type of security scan in which the scanner sends no unusual request to the server. It is like a visitor browsing the site.&lt;/p&gt;
+
+&lt;p&gt;Let’s review the benefits of a passive vulnerability scan.&lt;/p&gt;
+
+&lt;h2 id=&quot;pick-low-hanging-fruits&quot;&gt;Pick Low Hanging Fruits&lt;/h2&gt;
+&lt;p&gt;Browsing the website is the first thing hackers and security experts do when evaluating a website’s security. It is called a passive scan.
+Many problems can be identified just by looking into the source code of web pages. Issues like &lt;a href=&quot;/vulnerability-list/vulnerable-wordpress-version&quot;&gt;Vulnerable WordPress Version&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/application-error&quot;&gt;Application Errors&lt;/a&gt; and, &lt;a href=&quot;/vulnerability-list/password-sent-over-http&quot;&gt;Password Over Unencrypted Channel&lt;/a&gt; are some of such problems.
+Intercepting requests and responses between the browser and the server can also reveal many weaknesses. For example, you can detect cookie vulnerabilities just by looking into the web server’s response headers.&lt;/p&gt;
+
+&lt;h2 id=&quot;less-impact&quot;&gt;Less Impact&lt;/h2&gt;
+&lt;p&gt;Passive scan comparing to active scan is less risky for the availability of the web application.
+Since no unexpected request is sent to the web server, the server should be able to handle the scan like any other visitor.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⛔ In passive scans, all URLs are visited so, if there are links that perform actions like deleting accounts or files, passive scans can still be dangerous.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;bypass-web-application-firewalls&quot;&gt;Bypass Web Application Firewalls&lt;/h2&gt;
+&lt;p&gt;Websites usually use WAFs to stop attacks in the production environment. Passive scans don’t trigger any alarm on WAFs most of the time. So, the scan can proceed without getting blocked by the firewall.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-schedule-required&quot;&gt;No Schedule Required&lt;/h2&gt;
+&lt;p&gt;Active vulnerability scans usually put a lot of pressure on the web application. That’s why they should be performed at a scheduled time to reduce the risk.
+But passive tests can be conducted at any time, just like website visitors that can browse the site anytime.&lt;/p&gt;
+
+&lt;h2 id=&quot;fast-security-scan&quot;&gt;Fast Security Scan&lt;/h2&gt;
+&lt;p&gt;Browsing a website is fast, so does a passive scan. Passive scans are speedy because they send fewer requests to the webserver. Also, there is less chance of getting caught by WAF that might slow down the scan.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-perform-a-passive-scan&quot;&gt;How To Perform A Passive Scan?&lt;/h2&gt;
+&lt;p&gt;You can use SmartScanner— the smart vulnerability scanner, to perform a passive scan. &lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt; and install it.
+Open SmartScanner and enter your website address then, click on “change scan config”; On the config page, select the “Passive” test profile. Now go back to the start page and click on “scan”; Wait for the scan to finish and check the issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;is-passive-scan-enough&quot;&gt;Is Passive Scan Enough?&lt;/h2&gt;
+&lt;p&gt;Definitely no! You should perform full comprehensive scans to have a thorough security test.
+Passive scans are excellent for a quick evaluation of the website’s security, especially when a full scan is not an option.&lt;/p&gt;</content><author><name></name></author><category term="article" /><category term="scan" /><category term="passive" /><summary type="html">A passive vulnerability scan is a type of security scan in which the scanner sends no unusual request to the server. It is like a visitor browsing the site.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/passive-scan.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/passive-scan.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Version 1.1 with new tests is out now</title><link href="http://localhost:4000/blog/version-1-1-with-new-tests-is-out-now" rel="alternate" type="text/html" title="Version 1.1 with new tests is out now" /><published>2021-01-06T00:00:00+00:00</published><updated>2021-01-06T00:00:00+00:00</updated><id>http://localhost:4000/blog/version-1-1-with-new-tests-is-out-now</id><content type="html" xml:base="http://localhost:4000/blog/version-1-1-with-new-tests-is-out-now">&lt;p&gt;A few hours ago we released version 1.1.0 of SmartScanner.
+You can download the Windows version on the &lt;a href=&quot;/download&quot;&gt;download page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are major changes in this version.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-tests&quot;&gt;New Tests&lt;/h2&gt;
+&lt;h3 id=&quot;expression-language-injection&quot;&gt;Expression Language Injection&lt;/h3&gt;
+&lt;p&gt;When it is possible to change the expressions in the applications, there’s an &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Expression Language Injection vulnerability&lt;/a&gt;.
+Expressions are programming statements that evaluate to a value or perform an action. They are usually used in templates of a web application for creating different pages. That’s why another common name for this vulnerability is &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Template Injection&lt;/a&gt;.
+If an attacker could change expressions in the application, he can extract sensitive information or run commands on the application server so this is a serious issue.
+This test has been added to SmartScanner and you can select it in the Tests section of scan configs. (it’s selected by default)&lt;/p&gt;
+
+&lt;h3 id=&quot;wordpress-user-enumeration&quot;&gt;WordPress User Enumeration&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/vulnerability-list/wordpress-user-enumeration&quot;&gt;User enumeration&lt;/a&gt; vulnerabilities reveal users of the application. This is a great start for hackers to prepare a list of users and passwords for performing a brute force attack.
+The default installation of WordPress allows the extraction of users. Now SmartScanner can test for this issue if you select WordPress tests in scan configs.&lt;/p&gt;
+
+&lt;h2 id=&quot;sitemap-support&quot;&gt;Sitemap Support&lt;/h2&gt;
+&lt;p&gt;Sitemaps are an easy way for webmasters to inform search engines about pages on their sites that are available for crawling. SmartScanner now crawls sitemaps and referenced URLs in them.&lt;/p&gt;
+
+&lt;h2 id=&quot;test-profiles&quot;&gt;Test Profiles&lt;/h2&gt;
+&lt;p&gt;By using test profiles you can easily select a set of tests together instead of selecting one by one.
+Check out the &lt;a href=&quot;/docs/security-tests&quot;&gt;guide here&lt;/a&gt; for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/vulnerability-list/weak-password&quot;&gt;Weak Password&lt;/a&gt; checks got a whole lot better and now it supports WordPress login as well.
+False-positives got fixed in &lt;a href=&quot;/vulnerability-list/source-code-disclosure&quot;&gt;Source Code Disclosure&lt;/a&gt; test. A crash got fixed and dozens of tests enhanced.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog&quot;&gt;change log&lt;/a&gt; for more.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="release" /><summary type="html">Better vulnerability scanning with new tests like EL Injection and WordPress user enumeration.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/smarscanner-v1-1.png" /><media:content medium="image" url="http://localhost:4000/assets/img/smarscanner-v1-1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">14 Software Security Terms You Should Know</title><link href="http://localhost:4000/blog/14-software-security-terms-you-should-know" rel="alternate" type="text/html" title="14 Software Security Terms You Should Know" /><published>2020-12-25T00:00:00+00:00</published><updated>2020-12-25T00:00:00+00:00</updated><id>http://localhost:4000/blog/14-software-security-terms-you-should-know</id><content type="html" xml:base="http://localhost:4000/blog/14-software-security-terms-you-should-know">&lt;p&gt;Everybody in the IT industry should be aware of software security basics. 
+It doesn’t matter if you’re a developer, system engineer, or product manager; security is everyone’s responsibility.
+Here’s a guide to essential software security terms.&lt;/p&gt;
+
+&lt;h2 id=&quot;1--vulnerability&quot;&gt;1- Vulnerability&lt;/h2&gt;
+&lt;p&gt;In computer security, a security issue or vulnerability is a weakness or flaw which allows malicious users to perform unauthorized actions.
+For example, &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt; is a vulnerability that can be used to run SQL commands on the database. Take a look at the list of &lt;a href=&quot;/vulnerability-list/&quot;&gt;web application vulnerabilities&lt;/a&gt; for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;2--exploit&quot;&gt;2- Exploit&lt;/h2&gt;
+&lt;p&gt;An exploit is a piece of code or commands. Exploits can compromise the systems or data of an organization. Exploits are how malicious users take profit from vulnerabilities.&lt;/p&gt;
+
+&lt;h2 id=&quot;3--security-incident&quot;&gt;3- Security Incident&lt;/h2&gt;
+&lt;p&gt;An event of unauthorized action like a breach in the system is a Security Incident. It is often the result of the successful exploitation of a vulnerability.&lt;/p&gt;
+
+&lt;h2 id=&quot;4--zero-day-attack&quot;&gt;4- Zero-day Attack&lt;/h2&gt;
+&lt;p&gt;A zero-day attack is exploiting a zero-day vulnerability. A zero-day vulnerability is an unknown weakness. It’s unexplained to the vendor of the target application or others who are interested in fixing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/zero-day.jpg&quot; width=&quot;800&quot; height=&quot;419&quot; alt=&quot;Zero-day attack&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5--cia-triad&quot;&gt;5- CIA Triad&lt;/h2&gt;
+&lt;p&gt;Confidentiality, Integrity, and Availability of data is the CIA triad. Balanced protection of the CIA is the main focus of information security.&lt;/p&gt;
+
+&lt;h2 id=&quot;6--security-risk&quot;&gt;6- Security Risk&lt;/h2&gt;
+&lt;p&gt;In simple terms, the security risk is the probability and impact of a security incident.
+In software security, the impact is determined by the effect of the security incident on the CIA triad.&lt;/p&gt;
+
+&lt;h2 id=&quot;7--vulnerability-management&quot;&gt;7- Vulnerability Management&lt;/h2&gt;
+&lt;p&gt;Vulnerability management is an always ongoing cycle of identifying, prioritizing, remediating software vulnerabilities.
+Vulnerability management is a must-have process for any organization as part of its information security program.&lt;/p&gt;
+
+&lt;h2 id=&quot;8--vulnerability-assessment&quot;&gt;8- Vulnerability Assessment&lt;/h2&gt;
+&lt;p&gt;Vulnerability assessment is the process of identifying and prioritizing the vulnerabilities in software systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;9--vulnerability-scanning&quot;&gt;9- Vulnerability Scanning&lt;/h2&gt;
+&lt;p&gt;Vulnerability scanning refers to identifying vulnerabilities in computer systems.
+It can be done manually or using automated tools called vulnerability scanners.
+&lt;a href=&quot;/&quot;&gt;SmartScanner&lt;/a&gt; is an automated web vulnerability scanner you can use to find vulnerabilities in your website.&lt;/p&gt;
+
+&lt;h2 id=&quot;10--penetration-test&quot;&gt;10- Penetration Test&lt;/h2&gt;
+&lt;p&gt;a Penetration test or pen test is a test for evaluating the security of the system. 
+A pen test or ethical hacking is an authorized attack.
+Unlike vulnerability assessment, a penetration test tries to exploit vulnerabilities for better estimation of the risk. A penetration tester also finds the strength of the system.
+The results of a penetration test can be used to complete a full risk assessment.&lt;/p&gt;
+
+&lt;h2 id=&quot;11--owasp&quot;&gt;11- OWASP&lt;/h2&gt;
+&lt;p&gt;The Open Web Application Security Project (OWASP) is an online community that produces freely-available articles, methodologies, documentation, tools, and technologies in the field of web application security.
+The most famous project of the OWASP is the OWASP Top 10. It’s a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;12--isms&quot;&gt;12- ISMS&lt;/h2&gt;
+&lt;p&gt;Information Security Management System (ISMS) is how an organization is managing the security of its data.
+It consists of processes, policies, and controls to protect overall information security. The ISO/IEC 27001 is widely known for providing requirements for ISMS.&lt;/p&gt;
+
+&lt;h2 id=&quot;13--threat-actor&quot;&gt;13- Threat Actor&lt;/h2&gt;
+&lt;p&gt;A threat actor or malicious user is the one responsible for a security incident.&lt;/p&gt;
+
+&lt;h2 id=&quot;14--attack-surface&quot;&gt;14- Attack Surface&lt;/h2&gt;
+&lt;p&gt;Attack surface or attack vector is where an attack can be started. For example, an online email subscription form on a website is an attack surface. Other examples are zero-day vulnerabilities, lack of encryption, or misconfigurations.&lt;/p&gt;</content><author><name></name></author><category term="vulnerability" /><category term="owasp" /><category term="exploit" /><category term="zero-day" /><category term="risk" /><category term="isms" /><summary type="html">Everybody in the IT industry should be aware of software security basics. Here's a guide to essential software security terms.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/security-terms.png" /><media:content medium="image" url="http://localhost:4000/assets/img/security-terms.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The very first version of SmartScanner is released 🎉</title><link href="http://localhost:4000/blog/very-first-version-of-smartscanner-released" rel="alternate" type="text/html" title="The very first version of SmartScanner is released 🎉" /><published>2020-12-01T00:00:00+00:00</published><updated>2020-12-01T00:00:00+00:00</updated><id>http://localhost:4000/blog/very-first-version-of-smartscanner-released</id><content type="html" xml:base="http://localhost:4000/blog/very-first-version-of-smartscanner-released">&lt;p&gt;We’re so proud to announce the version 1.0.0 of the SmartScanner was just released. Download it now!&lt;/p&gt;
+
+&lt;p&gt;You can download the Windows version on the &lt;a href=&quot;/download&quot;&gt;download page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;yet-another-vulnerability-scanner&quot;&gt;Yet another vulnerability scanner&lt;/h2&gt;
+&lt;p&gt;SmartScanner is an automated web vulnerability scanner you can use to test the security of websites and web applications.
+Unlike most security scanners, SmartScanner is taking advantage of Artificial Intelligence (AI) and machine learning methods to reach and find vulnerabilities where other scanners cannot detect most of the time. This means that SmartScanner has a minimum number of &lt;a href=&quot;https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_positive_error&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;false positives&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/False_positives_and_false_negatives#False_negative_error&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;false negatives&lt;/a&gt; for security issues it can test and it gets better over each upgrade!&lt;/p&gt;
+
+&lt;h2 id=&quot;how-smart-is-it&quot;&gt;How &lt;em&gt;Smart&lt;/em&gt; is it?&lt;/h2&gt;
+&lt;p&gt;Certainly not as much as it could replace an experienced penetration tester but it is always learning and can be a perfect assist. Many security issues are as easy as detecting a static simple pattern. For example detection of a missing &lt;a href=&quot;https://en.wikipedia.org/wiki/HTTP_cookie#Http-only_cookie&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;Http-only cookie&lt;/a&gt; attribute, is easy but detection of a session relevant cookie might not be that easy for an automated tool. Business logics are another example that is hard for automated tools to understand. SmartScanner’s goal is to detect such issues and put context around them to make it easy for you to mitigate security risks.&lt;/p&gt;
+
+&lt;h2 id=&quot;key-features&quot;&gt;Key features&lt;/h2&gt;
+&lt;p&gt;Smartness, Automation, and ease of use are fundamental elements of SmartScanner. We continue to improve SmartScanner to make it the best automated web security scanner.
+Below list is the key features of SmartScanner&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Artificial Intelligence&lt;/li&gt;
+  &lt;li&gt;Dynamic JavaScript evaluation&lt;/li&gt;
+  &lt;li&gt;HTML5 support&lt;/li&gt;
+  &lt;li&gt;Intuitive user interface&lt;/li&gt;
+  &lt;li&gt;Fully automated&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/&quot;&gt;Lots of security tests&lt;/a&gt; including &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;XSS&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQLI&lt;/a&gt;, and more&lt;/li&gt;
+  &lt;li&gt;Authentication support&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;SmartScanner comes in two versions. A &lt;a href=&quot;/download&quot;&gt;Free version&lt;/a&gt; for testing SSL/TLS, HTTP Headers security, passive tests, and more and a &lt;a href=&quot;/pricing&quot;&gt;Professional version&lt;/a&gt; to test everything.&lt;/p&gt;
+
+&lt;p&gt;We love to hear from you, give it a try, and &lt;a href=&quot;/contact&quot;&gt;send us your feedback&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="release" /><summary type="html">We’re so proud to announce the version 1.0.0 of the SmartScanner was just released. Download it now!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/smartscanner-start.png" /><media:content medium="image" url="http://localhost:4000/assets/img/smartscanner-start.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
