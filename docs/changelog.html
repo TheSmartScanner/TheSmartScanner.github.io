@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Change Log - SmartScanner</title>
+    <meta name="description" content="  New:          Test for the ShellShock Bug      Enhanced application error detection. Detailed Application Error and Detailed Application and Data...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Change Log">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/docs/changelog">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:description" content="  New:          Test for the ShellShock Bug      Enhanced application error detection. Detailed Application Error and Detailed Application and Database Error      Fuzzing parameter names like URL query, Cookie or HTTP form Post parameter names      Automatic detection of ineffective parameters like those used in the query to bypass browser cache. This will prevent unnecessary tests on such parameters and increase scan speed.        Improvements:          Add support for .NET error detection in Application Error      " />
+    <link rel="canonical" href="https://www.thesmartscanner.com/docs/changelog" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Change Log">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/docs/changelog" />
+    <meta name="twitter:description" content="  New:          Test for the ShellShock Bug      Enhanced application error detection. Detailed Application Error and Detailed Application and Database Error      Fuzzing parameter names like URL query, Cookie or HTTP form Post parameter names      Automatic detection of ineffective parameters like those used in the query to bypass browser cache. This will prevent unnecessary tests on such parameters and increase scan speed.        Improvements:          Add support for .NET error detection in Application Error      ">
+    
+    <meta name="robots" content="index, follow">
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ');
+</script>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/support">Support</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    
+
+
+
+
+
+<main class="w-100 mw7 center ph3 pv4 flex-grow">
+  <article>
+    <div>
+      <div class="flex justify-between f6 gray i">
+        <span><a href="/docs/" class="link gray hover-dark-green">Documents</a><span class="mh2">/</span><a href="/docs/#Features" class="link gray hover-dark-green">Features</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/docs/changelog" || document.URL
+  let title = "Change Log" || document.title
+  let text = `  New:          Test for the ShellShock Bug      Enhanced application error detection. Detailed Application Error and Detailed Application and Database Error      Fuzzing parameter names like URL query, Cookie or HTTP form Post parameter names      Automatic detection of ineffective parameters like those used in the query to bypass browser cache. This will prevent unnecessary tests on such parameters and increase scan speed.        Improvements:          Add support for .NET error detection in Application Error      `
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+      </div>
+      <h1 class="mt0">Change Log</h1>
+    </div>
+    <h2 id="version-160--june-8-2021">Version 1.6.0 – <small><em>June 8, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li>Test for <a href="/vulnerability-list/the-shellshock-bug">the ShellShock Bug</a></li>
+      <li>Enhanced application error detection. <a href="/vulnerability-list/detailed-application-error">Detailed Application Error</a> and <a href="/vulnerability-list/detailed-application-and-database-error">Detailed Application and Database Error</a></li>
+      <li>Fuzzing parameter names like URL query, Cookie or HTTP form Post parameter names</li>
+      <li>Automatic detection of ineffective parameters like those used in the query to bypass browser cache. This will prevent unnecessary tests on such parameters and increase scan speed.</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Add support for .NET error detection in <a href="/vulnerability-list/application-error">Application Error</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-150--may-6-2021">Version 1.5.0 – <small><em>May 6, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li>New fuzzer script</li>
+      <li><a href="/vulnerability-list/buffer-overflow">Buffer Overflow</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Enhanced <a href="/vulnerability-list/application-error">Application Error</a> and <a href="/vulnerability-list/database-error">Database Error</a></li>
+      <li>Enhanced custom 404 page detector</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-140--april-4-2021">Version 1.4.0 – <small><em>April 4, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li>Automatic Drupal and Joomla! detection</li>
+      <li><a href="/vulnerability-list/joomla-j2store-3-3-7-sql-injection">Joomla! ‘J2Store &lt; 3.3.7’ SQL Injection</a></li>
+      <li><a href="/vulnerability-list/drupal-drupalgeddon2-remote-code-execution">Drupal ‘Drupalgeddon2’ Remote Code Execution</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2021-23840, CVE-2021-23841, CVE-2021-3449 and, CVE-2021-3450 OpenSSL advisories</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-130--march-9-2021">Version 1.3.0 – <small><em>March 9, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/track-method-allowed">TRACK Method Allowed</a> and <a href="/vulnerability-list/trace-method-allowed">TRACE Method Allowed</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2021-23841, CVE-2021-23840 and CVE-2021-23839 OpenSSL advisories</li>
+      <li>Improved Crawler Performance: Faster processing of pages</li>
+      <li>BugFix: False-negative Unreferenced resource detection</li>
+      <li>BugFix: Broken PDF report layout</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-120--february-1-2021">Version 1.2.0 – <small><em>February 1, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/unreferenced-repository-found">Unreferenced Repository Found</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Improved Crawler Performance: Automatic detection &amp; limitation of content pages like ecomerce product pages.</li>
+      <li>New “Requested URL” attribute for unreferenced/old file issue reports</li>
+      <li>Minor improvements on Form Brute Force and unreferenced login page tests</li>
+      <li>BugFix: False-negative &amp; False-positive Unreferenced resource detection</li>
+      <li>BugFix: Broken link issue for sitemap</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-110--january-6-2021">Version 1.1.0 – <small><em>January 6, 2021</em></small></h2>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/expression-language-injection">Expression Language Injection test</a></li>
+      <li><a href="/vulnerability-list/wordpress-user-enumeration">WordPress User Enumeration test</a></li>
+      <li>Sitemap test</li>
+      <li><a href="/docs/security-tests">Test profiles</a> in scan configs with predefined and custom profiles</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Support for WordPress in Form Brute Force test</li>
+      <li>Support for PHP 8.0 in phpinfo() test</li>
+      <li>CVE-2020-1971 added to “Vulnerable OpenSSL Version” test</li>
+      <li>Better detection of session cookies</li>
+      <li>Minor enhancements in “Breach Attack”, “X-Frame-Options Header is Missing”, “Referrer-Policy Header is Missing”, “Basic Authentication Over HTTP”, “Robots.txt” tests</li>
+      <li>Support for MariaDB in “Database Error” and SQLi tests</li>
+      <li>BugFix: False-positive Source Code disclosure detection</li>
+      <li>BugFix: Wrong results in Form Brute Force test</li>
+      <li>BugFix: Wrong URL detection in crawler</li>
+      <li>BugFix: Random crash</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="version-100--december-1-2020">Version 1.0.0 – <small><em>December 1, 2020</em></small></h2>
+<ul>
+  <li>Initial version</li>
+</ul>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/comprehensive-security-tests">Comprehensive Security Tests</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/artificial-intelligence">Artificial Intelligence</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/fully-automated-security-testing">Fully Automated Security Testing</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/dynamic-javaScript-evaluation-and-html5-support">Dynamic JavaScript Evaluation and HTML5 Support</a></h3>
+  
+
+</div>
+
+    <div class="flex justify-between gray">
+      <span>Still need help? <a class="link gray hover-dark-green" href="/contact">contact us</a></span>
+      <span>Last updated on June 08, 2021</span>
+    </div>
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/docs/priority-support">← Priority Support</a>
+      
+      
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Docs",
+    "item": "https://www.thesmartscanner.com/docs/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Change Log"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "TechArticle",
+
+ "headline": "Change Log"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Need more information? Please ask your questions.</h2>
+    <a href="/contact" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Ask a question</a>
+  </div>
+</section>      
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/top-information-gathering-methods-explained" class="link dim dib moon-gray link-reset pb1">Top Information Gathering Methods Explained</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/find-the-shellshock-bug-and-application-errors-faster" class="link dim dib moon-gray link-reset pb1">Find the ShellShock Bug and Application Errors Faster</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/how-do-hackers-hack" class="link dim dib moon-gray link-reset pb1">How do hackers hack websites?</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/docs/#Features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pb1">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence" class="link dim dib moon-gray link-reset lh-copy pb1">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/fully-automated-security-testing" class="link dim dib moon-gray link-reset lh-copy pb1">Fully Automated</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/dynamic-javaScript-evaluation-and-html5-support" class="link dim dib moon-gray link-reset lh-copy pb1">JavaScript and HTML5 Support</a></h4>
+          <a href="/docs/#Features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pb1">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pb1">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pb1">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pb1">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <span class="light-gray b lh-copy pb2">Support</span>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pb1">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pb1">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pb1">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pb1" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pb2">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pb1">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pb1">Terms</a></h4>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pb1">EULA</a>
+        </div>
+      </div>
+      <div class="pv2 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  <script type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
