@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2021-09-05T04:48:54+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">These 7 PHP mistakes leave your website open to the hackers</title><link href="https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers" rel="alternate" type="text/html" title="These 7 PHP mistakes leave your website open to the hackers" /><published>2021-08-15T00:00:00+00:00</published><updated>2021-08-15T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers">&lt;p&gt;Make these mistakes and hackers will attack your web application using Cross Site Scripting, SQL Injection, Path Traversal, and other attacks to take over your website.&lt;/p&gt;
+
+&lt;p&gt;Let’s review common mistakes and their prevention methods.&lt;/p&gt;
+
+&lt;h2 id=&quot;1--echo-user-input&quot;&gt;1- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Echo&lt;/code&gt; user input&lt;/h2&gt;
+&lt;p&gt;Below code is enough to create a &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;XSS&lt;/a&gt; vulnerability in your website.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;p&amp;gt;'&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;/p&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable to XSS&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Never directly use user input for generating response contents. You have to use proper encoding on user input to escape any dangerous code. PHP has the build-in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;htmlentities()&lt;/code&gt; function to encode html special characters which you can use.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;p&amp;gt;'&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;htmlentities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;/p&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// safe code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Sometimes user input is used indirectly for generating a page. For example, user input might be saved in a database before being used in the response.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;2--using-user-input-in-file-paths&quot;&gt;2- Using user input in file paths&lt;/h2&gt;
+&lt;p&gt;Generating and using file paths that contain user inputs is one of the most dangerous mistakes that can cause critical vulnerabilities like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;Local File Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-file-inclusion&quot;&gt;Remote File Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-file-disclosure&quot;&gt;Remote File Disclosure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-url-inclusion&quot;&gt;Remote URL Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Path Traversal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below code is an example of a file inclusion vulnerability.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable to remote/local file inclusion&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To prevent file inclusion vulnerabilities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Resolve all relative paths containing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;../&lt;/code&gt; to absolute paths and make sure the final file is in the directory where it should be.&lt;/li&gt;
+  &lt;li&gt;Try to accept only whitelisted inputs whenever possible&lt;/li&gt;
+  &lt;li&gt;Check for invalid characters in the filename like null byte, questions mark, semicolon, etc.&lt;/li&gt;
+  &lt;li&gt;Do not include URLs starting with a scheme (http://, ftp://, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3--concatenating-sql-queries-with-user-input&quot;&gt;3- Concatenating SQL queries with user input&lt;/h2&gt;
+&lt;p&gt;Creating SQL queries using user input allows users to manipulate the original SQL command and inject their arbitrary command. This is called &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt;. Hackers can exploit SQL Injection vulnerability to execute commands like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drop&lt;/code&gt; on the database or execute system commands.&lt;/p&gt;
+
+&lt;p&gt;Example code:&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SQLite3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'products.db'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// below line is vulnerable to SQLI&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;querySingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SELECT name from products where productId=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// below line is not vulnerable&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;querySingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SELECT name from products where productId='&quot;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;SQLite3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;escapeString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It’s always a good practice to use prepared statements for creating SQL queries to prevent SQL Injection. Another method to avoid SQLI is to escape special characters in the user input (like the above example).&lt;/p&gt;
+
+&lt;h2 id=&quot;4--executing-user-input&quot;&gt;4- Executing user input&lt;/h2&gt;
+&lt;p&gt;Below commands in PHP allow execution of either PHP code or OS commands.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;preg_replace()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exec()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;passthru()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell_exec()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Passing user input as arguments to the above functions can cause &lt;a href=&quot;/vulnerability-list/os-command-execution&quot;&gt;command execution&lt;/a&gt; vulnerabilities where hackers can execute arbitrary commands on the server. Consider below code as an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ip'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ping &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The above code is a ping service where users can ping any IP. If a user enters &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 &amp;amp; echo 123&lt;/code&gt; as an IP address then the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo&lt;/code&gt; gets executed on the server.&lt;/p&gt;
+
+&lt;p&gt;How to prevent command execution vulnerabilities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Avoid using functions like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system()&lt;/code&gt;, …&lt;/li&gt;
+  &lt;li&gt;Accept whitelisted inputs&lt;/li&gt;
+  &lt;li&gt;Check inputs for special characters like &amp;amp;, semicolon,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;popen()&lt;/code&gt; function can also be used for command execution indirectly. So be careful when using it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;5--redirecting-to-user-input&quot;&gt;5- Redirecting to user input&lt;/h2&gt;
+&lt;p&gt;Redirecting a user in PHP is common and easy. It can be done using below code.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Location: '&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'url'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;But this is vulnerable! It can be exploited to redirect the user to any other website.
+To prevent &lt;a href=&quot;/vulnerability-list/unvalidated-redirection&quot;&gt;open redirections&lt;/a&gt;, make sure the URL is not an off-site link before redirecting the user.&lt;/p&gt;
+
+&lt;h2 id=&quot;6--turning-on-error-reporting&quot;&gt;6- Turning on error reporting&lt;/h2&gt;
+&lt;p&gt;PHP errors disclose information like path/files, database errors, OS type, and some other information. Displaying any kind of PHP errors on production helps hackers to break into your website easier.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;error_reporting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;E_ALL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bad code for production&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;error_reporting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// safe for production usage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;7--phpinfo&quot;&gt;7- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;/vulnerability-list/phpinfo-found&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt;&lt;/a&gt; function displays a huge amount of information. PHP version number, active extensions, configurations, and system paths are a few examples of such information. This information can be used by hackers to learn about the server and craft their attacks to be more successful.
+To avoid any information disclosure it’s better to never use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt; function on production servers.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Dealing with user inputs in PHP applications can be tricky and prone to different vulnerabilities. XSS, SQL Injection, and local file inclusion are a few of explained vulnerabilities related to user inputs. Make sure you have strict checking for user inputs and avoid using risky functions like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt; to have a more secure code.&lt;/p&gt;</content><author><name></name></author><category term="PHP" /><category term="Programming" /><category term="Vulnerability" /><category term="XSS" /><category term="File Inclusion" /><category term="Path Traversal" /><category term="URL Redirection" /><category term="Information Disclosure" /><category term="SQLI" /><category term="RCE" /><category term="Injection" /><summary type="html">Make these mistakes and hackers will attack your web application using Cross Site Scripting, SQL Injection, Path Traversal, and other attacks to take over your website.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/common-php-mistakes.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/common-php-mistakes.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">44 New SQL Injection Tests for WordPress in SmartScanner 1.8</title><link href="https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8" rel="alternate" type="text/html" title="44 New SQL Injection Tests for WordPress in SmartScanner 1.8" /><published>2021-08-07T00:00:00+00:00</published><updated>2021-08-07T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8">&lt;p&gt;SmartScanner version 1.8 was released with new SQL Injection tests for WordPress and improved weak password testing.&lt;/p&gt;
+
+&lt;p&gt;Further than new WordPress tests, &lt;a href=&quot;/vulnerability-list/passive-mixed-content&quot;&gt;Passive Mixed Content&lt;/a&gt; was added and, few bugs got fixed.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing-weak-password-for-wordpress-sites&quot;&gt;Testing Weak Password For WordPress sites&lt;/h2&gt;
+&lt;p&gt;SmartScanner can automatically test for weak passwords on any login form. A bug was fixed and, now SmartScanner tests weak passwords for any WordPress site.
+Besides new method for enumerating WordPress users has been added which, will be used in weak password tests.&lt;/p&gt;
+
+&lt;h2 id=&quot;passive-mixed-content&quot;&gt;Passive Mixed Content&lt;/h2&gt;
+&lt;p&gt;All resources in an HTTPS URL should load using the same HTTP&lt;strong&gt;S&lt;/strong&gt; protocol to avoid man-in-the-middle attacks which can lead to sensitive data disclosure or phishing. SmartScanner now tests for passive mixed contents as well as other SSL/TLS issues.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Wordpress" /><category term="SQLI" /><summary type="html">SmartScanner version 1.8 was released with new SQL Injection tests for WordPress and improved weak password testing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-8.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-8.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Better Passive Vulnerability Testing with SmartScanner version 1.7</title><link href="https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7" rel="alternate" type="text/html" title="Better Passive Vulnerability Testing with SmartScanner version 1.7" /><published>2021-07-07T00:00:00+00:00</published><updated>2021-07-07T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7">&lt;p&gt;Windows HTTP Stack vulnerability test and more passive tests in the new version of SmartScanner.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new&quot;&gt;What’s new?&lt;/h2&gt;
+&lt;h3 id=&quot;test-for-http-protocol-stack-remote-code-execution-vulnerability&quot;&gt;Test for &lt;a href=&quot;/vulnerability-list/http-protocol-stack-remote-code-execution-vulnerability-dos&quot;&gt;HTTP Protocol Stack Remote Code Execution Vulnerability&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A critical vulnerability in The Microsoft Windows HTTP Protocol Stack (HTTP.sys) allows remote code execution on Windows machines. This vulnerability has been registered as &lt;a href=&quot;https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31166&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CVE-2021-31166&lt;/a&gt; and Microsoft has released security updates to rectify it.
+We added test for this vulnerability in SmartScanner version 1.7 based on this &lt;a href=&quot;https://github.com/0vercl0k/CVE-2021-31166&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;POC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 For testing Windows HTTP protocol stack vulnerability, choose “Denial of Service Attacks” in test configs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;🛑 This test will cause a &lt;em&gt;blue screen of death&lt;/em&gt; on vulnerable targets; that’s why it’s not selected by default.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-new-passive-tests&quot;&gt;3 new passive tests&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/redirection-with-body&quot;&gt;Redirection with Body&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/viewstate-is-not-encrypted&quot;&gt;ViewState is not Encrypted&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/file-upload-functionality&quot;&gt;File Upload Functionality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For testing above tests, choose &lt;a href=&quot;/docs/security-tests&quot;&gt;“Passive tests” in scan configs&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;enhancements&quot;&gt;Enhancements&lt;/h2&gt;
+&lt;p&gt;A false positive XSS bug fixed. And, SQL Injection accuracy increased for MySQL and PostgreSQL databases.
+Also, tests for vulnerable applications such as PHP, Apache, Nginx, and WordPress got updated.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;More details on &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="CVE-2021-31166" /><category term="ASP.NET" /><category term="URL Redirection" /><category term="Risk" /><summary type="html">Windows HTTP Stack vulnerability test and more passive tests in the new version of SmartScanner.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-7.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-7.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Top Information Gathering Methods Explained</title><link href="https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained" rel="alternate" type="text/html" title="Top Information Gathering Methods Explained" /><published>2021-06-29T00:00:00+00:00</published><updated>2021-06-29T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained">&lt;p&gt;Information gathering also known as &lt;em&gt;footprinting&lt;/em&gt; or &lt;em&gt;reconnaissance&lt;/em&gt; is the first step of security testing of any target which is used by both hackers and security professionals.&lt;/p&gt;
+
+&lt;p&gt;Sometimes information gathering is enough for a hacker to break into a system.&lt;/p&gt;
+
+&lt;h2 id=&quot;difference-between-passive-and-active-information-gathering&quot;&gt;Difference Between Passive and Active Information Gathering&lt;/h2&gt;
+&lt;p&gt;Footprinting can be passive or active. Passive involves collecting information without the owner knowing it. While active is a type of footprinting that leaves tracks and alerts the sensors on the target.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-type-of-information-to-collect&quot;&gt;What type of information to collect&lt;/h2&gt;
+&lt;p&gt;Generally, there are 3 types of information that can be identified by information gathering.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Network Information&lt;/strong&gt;: such as domain name, IP addresses, websites, protocols used, VPNs, authentication mechanisms, and list of network systems.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;System Information&lt;/strong&gt;: such as users, system banners, SNMP information, system architecture, operating systems, username, and passwords.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organizations’ Information&lt;/strong&gt;: such as employee details, organization’s website, local details, address and phone numbers, security policies implemented, social media posts, news articles, and press releases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;information-gathering-sources&quot;&gt;Information gathering sources&lt;/h2&gt;
+&lt;p&gt;The goal of information gathering is to collect as much information as possible about the target. So any source that can give us information about the target is valuable.&lt;/p&gt;
+
+&lt;p&gt;Some common sources for the information gathering are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DNS&lt;/li&gt;
+  &lt;li&gt;Whois&lt;/li&gt;
+  &lt;li&gt;IP and Ports&lt;/li&gt;
+  &lt;li&gt;Social media&lt;/li&gt;
+  &lt;li&gt;Address books and offline sources&lt;/li&gt;
+  &lt;li&gt;Website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s see what kind of information we can get from each source.&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-interrogation&quot;&gt;DNS interrogation&lt;/h3&gt;
+&lt;p&gt;Security testing starts with one or more targets. By targets, we mean domain names or IP addresses. The place to find out more about domains and IPs are Domain Name Servers (DNS).
+We can find IP addresses corresponding to a domain name and vise versa using DNS footprinting (aka &lt;em&gt;DNS interrogation&lt;/em&gt;).
+Another best place to find out subdomains of a domain is Google search.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools for DNS interrogation&lt;/strong&gt;: NSlookup, Dns enumerator, Sam Spade&lt;/p&gt;
+
+&lt;h3 id=&quot;whois&quot;&gt;Whois&lt;/h3&gt;
+&lt;p&gt;Who is the owner of a domain or IP address? &lt;em&gt;WHOIS&lt;/em&gt; is a query and response protocol to answer this question.
+You can search any domain or IP in public databases to get information like the expiration date, current registrar, registrant information, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Google for “Whois”&lt;/p&gt;
+
+&lt;h3 id=&quot;ip-and-ports&quot;&gt;IP and Ports&lt;/h3&gt;
+&lt;p&gt;After collecting IP addresses we should look for open ports and running services. Using tools like Ping, Telnet, Nmap, and other tools you can determine live IPs and running services.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;⛔ WARNING&lt;/strong&gt;: IP and Port scanning is an active footprinting technique and performing it unauthorized, is illegal in some countries.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once you’ve found an open port you can do &lt;em&gt;Banner grabbing&lt;/em&gt; to learn more about the running service behind the port. Many services send information like the service version and OS name in their responses. This information is known as banner and fetching this info is called Banner Grabbing.&lt;/p&gt;
+
+&lt;p&gt;For example, in the below example, you can see that an HTTP request has been sent to target and the server response contains the webserver name and underlying operating system.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nc target 80
+HEAD / HTTP/1.1
+
+HTTP/1.1 400 Bad Request
+Date: Sun, 27 Jun 2021 07:54:12 GMT
+Server: &lt;span class=&quot;bg-yellow&quot;&gt;&lt;b&gt;Apache/2.2.22 (Debian)&lt;/b&gt;&lt;/span&gt;
+Vary: Accept-Encoding
+Content-Length: 306
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools for IP and port scanning:&lt;/strong&gt; Ping, Telnet, NetCat, Nmap, SuperScan&lt;/p&gt;
+
+&lt;h3 id=&quot;social-media&quot;&gt;Social Media&lt;/h3&gt;
+&lt;p&gt;Social media sites are growing more than ever and now it’s part of our day-to-day life. People sometimes share detailed information on public pages without knowing that this information can be abused by malicious users.
+Places like Facebook, Instagram, LinkedIn, and other social media sites are good places where valuable information is shared by users.&lt;/p&gt;
+
+&lt;h3 id=&quot;address-books-and-offline-sources&quot;&gt;Address Books and Offline Sources&lt;/h3&gt;
+&lt;p&gt;Looking into address books and trash bins or asking from people are a few of the oldest information gathering methods.&lt;/p&gt;
+
+&lt;p&gt;In the IT world &lt;em&gt;dumpster diving&lt;/em&gt; refers to retrieving information from disposed items that could be used to carry out an attack or gain access to a computer network.&lt;/p&gt;
+
+&lt;h3 id=&quot;website-information-gathering&quot;&gt;Website Information Gathering&lt;/h3&gt;
+&lt;p&gt;Websites can reveal important information like server technologies, CMS, backend database, email addresses, and much more.&lt;/p&gt;
+
+&lt;p&gt;You can read our previous post to learn more about &lt;a href=&quot;/blog/why-you-should-use-passive-vulnerability-scan-on-your-website&quot;&gt;passive information gathering methods on websites&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Generally speaking, active scanning methods which can be used for information gathering are &lt;strong&gt;Fuzzing&lt;/strong&gt;, &lt;strong&gt;testing for misconfigurations&lt;/strong&gt;, and &lt;strong&gt;testing for known vulnerabilities&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fuzzing&lt;/strong&gt; refers to manipulating and sending crafted requests to the webserver to trick it into yielding information. Sometimes trying different inputs which are not expected by the web application can make the web application throw a detailed error message. Such error messages can reveal OS, server-side technologies, databases, or many other things. Also, the behavior of the webserver (the way it responds to the request) can reveal information like the webserver type.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Testing for misconfigurations&lt;/strong&gt;: Using default or insecure configurations are common mistakes that leave valuable information unprotected. For example, a bad configured &lt;em&gt;Apache&lt;/em&gt; webserver can show a huge amount of information on &lt;a href=&quot;/vulnerability-list/apache-server-info-enabled&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server-info&lt;/code&gt;&lt;/a&gt; URL.
+Misconfigurations can be found anywhere. Another example is having a public community string for an SNMP service which can disclose a tremendous amount of information regarding the service.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Testing for know vulnerabilities&lt;/strong&gt;: You may have heard of the &lt;a href=&quot;/vulnerability-list/the-heartbleed-bug&quot;&gt;Heartbleed bug&lt;/a&gt; which allows anyone on the Internet to read the memory of the systems protected by the vulnerable versions of the OpenSSL software. Using similar bugs and vulnerabilities is another method for collecting target information.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-to-do-with-collected-information&quot;&gt;What to do with Collected Information&lt;/h2&gt;
+&lt;p&gt;The next steps after information gathering are scanning and gaining access to the target. Sometimes (if you’re lucky) you can find information like passwords that allow direct access to the systems but most of the time you can only find the type of OS, web server, or database.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-protect-against-information-gathering&quot;&gt;How to Protect Against Information Gathering&lt;/h2&gt;
+&lt;p&gt;You should try to eliminate the disclosure of sensitive information. Below are some best practices you can use to achieve it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Classify the type of information which can be kept public.&lt;/li&gt;
+  &lt;li&gt;Don’t publish unnecessary information in any profile, social networking account, or website.&lt;/li&gt;
+  &lt;li&gt;Keep internal DNS and external DNS separate.&lt;/li&gt;
+  &lt;li&gt;Restrict and disable DNS zone transfer to authorized servers.&lt;/li&gt;
+  &lt;li&gt;Establish a disposal policy where all papers are shredded before being recycled&lt;/li&gt;
+  &lt;li&gt;Educate your employees to prevent unwanted information disclosure&lt;/li&gt;
+  &lt;li&gt;Audit and scan your website and network for any information leakage&lt;/li&gt;
+  &lt;li&gt;Keep your systems updated&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Information Disclosure" /><category term="DNS" /><category term="Passive" /><category term="Fuzzing" /><category term="Misconfiguration" /><category term="Apache" /><category term="SSL/TLS" /><summary type="html">Sometimes information gathering is enough for a hacker to break into a system. Information gathering also known as *footprinting* or *reconnaissance* is the first step of security testing of any target which is used by both hackers and security professionals.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/information-gathering-explained.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/information-gathering-explained.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Find the ShellShock Bug and Application Errors Faster</title><link href="https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster" rel="alternate" type="text/html" title="Find the ShellShock Bug and Application Errors Faster" /><published>2021-06-08T00:00:00+00:00</published><updated>2021-06-08T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster">&lt;p&gt;SmartScanner version 1.6.0 is now smarter with new features! Some new features are testing the ShellShock bug, fuzzing parameter names, finding application errors, and more.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-shellshock-attack&quot;&gt;The ShellShock Attack&lt;/h2&gt;
+&lt;p&gt;You can test any website for the ShellShock bug (CVE-2014-6271, CVE-2014-7169, CVE-2014-6277, and CVE-2014-6278) using SmartScanner version 1.6.0.
+Shellshock, also known as Bashdoor is a bug in Unix Bash shell that allows an attacker to execute arbitrary commands and gain unauthorized access using Bash.&lt;/p&gt;
+
+&lt;h2 id=&quot;enhanced-application-error-detection&quot;&gt;Enhanced Application Error Detection&lt;/h2&gt;
+&lt;p&gt;SmartScanner now identifies and differentiates generic application errors and specific technology errors like PHP or .NET errors. All technology errors are now reported as &lt;a href=&quot;/vulnerability-list/detailed-application-error&quot;&gt;Detailed Application Error&lt;/a&gt; and &lt;a href=&quot;/vulnerability-list/detailed-application-and-database-error&quot;&gt;Detailed Application and Database Error&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Enhanced fuzzing which is explained in the following also helps to find application errors better.&lt;/p&gt;
+
+&lt;h2 id=&quot;fuzzing-parameter-names&quot;&gt;Fuzzing Parameter Names&lt;/h2&gt;
+&lt;p&gt;In the previous version, Fuzzer was added to the SmartScanner to identify errors like &lt;a href=&quot;/vulnerability-list/buffer-overflow&quot;&gt;Buffer Overflow&lt;/a&gt;. Now the Fuzzer can manipulate parameter names to identify more application errors. Fuzzer can change query parameter names, Cookie names, and HTTP POST parameter names to check for exceptions in the web applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;smart-ineffective-parameter-detection&quot;&gt;Smart Ineffective Parameter Detection&lt;/h2&gt;
+&lt;p&gt;Some parameters in the HTTP request are neither used on the server-side, nor the client-side. We call such parameters ineffective. For example, it is common to add version numbers as a query string to resource URLs to bypass browser cache.
+Testing these parameters is useless. So, we’ve implemented a new AI model to identify such parameters and prevent SmartScanner from testing them. This will increase the speed and efficiency of the vulnerability scan.&lt;/p&gt;
+
+&lt;p&gt;To get started &lt;a href=&quot;/download&quot;&gt;download SmartScanner&lt;/a&gt; and test the security of your website for free.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog#version-160--june-8-2021&quot;&gt;change log&lt;/a&gt; for more details on new things in version 1.4.0.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="Release" /><summary type="html">SmartScanner version 1.6.0 is now smarter with new features! Some new features are testing the ShellShock bug, fuzzing parameter names, finding application errors, and more.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/shellshock-fuzzing-app-errors.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/shellshock-fuzzing-app-errors.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How do hackers hack websites?</title><link href="https://www.thesmartscanner.com/blog/how-do-hackers-hack" rel="alternate" type="text/html" title="How do hackers hack websites?" /><published>2021-05-02T00:00:00+00:00</published><updated>2021-05-02T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-do-hackers-hack</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-do-hackers-hack">&lt;p&gt;In the movies, hacking is like fast keyboard typing and hitting the Enter but in the real world, hackers find and exploit vulnerabilities to hack websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-web-vulnerability&quot;&gt;What is a web vulnerability?&lt;/h2&gt;
+&lt;p&gt;There are different definitions for vulnerability. According to &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO/IEC_27005&quot; target=&quot;_blank&quot;&gt;ISO 27005&lt;/a&gt; a vulnerability is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“A weakness of an asset or group of assets that can be exploited by one or more threats, where an asset is anything that has value to the organization, its business operations, and their continuity, including information resources that support the organization’s mission”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That means vulnerabilities can let the malicious user do actions they’re not supposed to do.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-vulnerabilities-hackers-use-for-hacking-websites&quot;&gt;Common vulnerabilities hackers use for hacking websites&lt;/h2&gt;
+&lt;p&gt;Here is the list of common web vulnerabilities.&lt;/p&gt;
+
+&lt;h3 id=&quot;passwords&quot;&gt;Passwords&lt;/h3&gt;
+&lt;p&gt;You log in to your website using a password, so do hackers! Choose an easy password to make it easy for hackers to break into your website.
+Hackers use methods like password guessing, brute force, and phishing to find passwords and break into any website.&lt;/p&gt;
+
+&lt;p&gt;Protect your secrets carefully to stop hackers.&lt;/p&gt;
+
+&lt;h3 id=&quot;known-vulnerabilities&quot;&gt;Known Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Using an outdated WordPress plugin can let a hacker get into your website. 
+Every day many vulnerabilities in popular web softwares are found and reported by security researchers. Once a vulnerability is reported hackers start finding vulnerable targets to exploit and hack for their purpose.&lt;/p&gt;
+
+&lt;p&gt;It’s crucial to use the latest version of any software and install security updates as soon as possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;cross-site-scripting-xss&quot;&gt;Cross-Site Scripting (XSS)&lt;/h3&gt;
+&lt;p&gt;XSS doesn’t allow hackers to access your website directly but hackers can manipulate what is presented on your website using this vulnerability.&lt;/p&gt;
+
+&lt;p&gt;Cross Site Scripting is a dangerous vulnerability because hackers can control the browser of your website visitors and eventually gain access to your website by stealing your browser Cookie containing the access token to the website.&lt;/p&gt;
+
+&lt;h3 id=&quot;broken-access-control&quot;&gt;Broken Access Control&lt;/h3&gt;
+&lt;p&gt;What would happen if you have no authentication for the administration panel of your website? Your website will get hacked. This is one example of broken access control over the administration panel.&lt;/p&gt;
+
+&lt;p&gt;The access control can be broken in any sensitive functionalities like sending posts, uploading files, updating profile, etc. Broken access control is like an open door to your website for hackers.&lt;/p&gt;
+
+&lt;h3 id=&quot;injection-vulnerabilities&quot;&gt;Injection Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Web applications rely on executing commands for performing different actions like displaying your website items, searching, login, and other tasks. If these commands are build using user-supplied input, the web application might be vulnerable to injection attacks.&lt;/p&gt;
+
+&lt;p&gt;There many different types of injection vulnerabilities. Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection.
+Hacker uses these vulnerabilities to inject their commands to your website and hack it.&lt;/p&gt;
+
+&lt;h3 id=&quot;path-traversals&quot;&gt;Path Traversals&lt;/h3&gt;
+&lt;p&gt;Hackers try to access files and directories outside of your website root folder. They try to inject dot-dot-slash (../)” sequences and their variations or absolute file paths wherever possible to access sensitive files like application source code and OS files to take over your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-issues&quot;&gt;Other Issues&lt;/h3&gt;
+&lt;p&gt;There are many other ways to hack a website. For example, hacking the FTP server might end up hacking your whole website. Or, Hacking one website on a shared host can give access to other websites on that host. Also, the combination of two or more vulnerabilities can create a back door to your website.&lt;/p&gt;
+
+&lt;p&gt;Some other vulnerabilities for hacking websites are Cross Site Request Forgery (CSRF), having debug/sample codes on your website, leaving backup files under the web root, displaying detailed error messages, etc.&lt;/p&gt;
+
+&lt;p&gt;To keep your website secure, you should test your website for possible vulnerabilities and fix any issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-protect-your-website-against-hackers&quot;&gt;How to protect your website against hackers&lt;/h2&gt;
+&lt;p&gt;Here are a few best practices to prevent hackers from hacking your website:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Change default credentials&lt;/li&gt;
+  &lt;li&gt;Use strong passwords&lt;/li&gt;
+  &lt;li&gt;Use 2-factor authentication&lt;/li&gt;
+  &lt;li&gt;Always type your website login URL in the browser manually (or use a bookmark)&lt;/li&gt;
+  &lt;li&gt;Never provide your personal information in response to an unsolicited request either over the phone or Internet.&lt;/li&gt;
+  &lt;li&gt;Make sure you’re using an updated version of the software you’re using (turn on auto-update if available).&lt;/li&gt;
+  &lt;li&gt;Remove old, test, and debug files from your website&lt;/li&gt;
+  &lt;li&gt;Setup your website using recommended configurations for the production&lt;/li&gt;
+  &lt;li&gt;Use a &lt;a href=&quot;/&quot;&gt;web vulnerability scanner&lt;/a&gt; to regularly scan your website for finding and fixing weaknesses.&lt;/li&gt;
+  &lt;li&gt;Use a Web Application Firewall (WAF)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="article" /><category term="Exploit" /><category term="Vulnerability" /><category term="Password" /><category term="CVE" /><category term="Injection" /><category term="XSS" /><category term="Authentication" /><category term="Path Traversal" /><summary type="html">In the movies, hacking is like fast keyboard typing and hitting the Enter but in the real world, hackers find and exploit vulnerabilities to hack websites.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/how-hackers-hack.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/how-hackers-hack.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4</title><link href="https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4" rel="alternate" type="text/html" title="Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4" /><published>2021-04-04T00:00:00+00:00</published><updated>2021-04-04T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4">&lt;p&gt;As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;WordPress security test was already covered in the previous versions of SmartScanner and now you can test the security of your website if you’re using Drupal or Joomla!&lt;/p&gt;
+
+&lt;h2 id=&quot;automatic-security-scan-for-wordpress-drupal-and-joomla&quot;&gt;Automatic Security Scan for WordPress, Drupal and, Joomla!&lt;/h2&gt;
+&lt;p&gt;SmartScanner automatically detects the CMS your website is using and then it will test for known vulnerabilities for that CMS. as of now (version 1.4.0) three CMSs (WordPress, Drupal and, Joomla!) are supported by SmartScanner. Not all known vulnerabilities for these CMSs are covered yet but with each release, new tests will be rolled out.&lt;/p&gt;
+
+&lt;p&gt;To get started &lt;a href=&quot;/download&quot;&gt;download SmartScanner&lt;/a&gt; and test the security of your website for free.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog#version-140--april-4-2021&quot;&gt;change log&lt;/a&gt; for more details on new things in version 1.4.0.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="Release" /><summary type="html">As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-4.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-4.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Why you should use passive vulnerability scan on your website</title><link href="https://www.thesmartscanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website" rel="alternate" type="text/html" title="Why you should use passive vulnerability scan on your website" /><published>2021-01-25T00:00:00+00:00</published><updated>2021-01-25T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website">&lt;p&gt;A passive vulnerability scan is a type of security scan in which the scanner sends no unusual request to the server. It is like a visitor browsing the site.&lt;/p&gt;
+
+&lt;p&gt;Let’s review the benefits of a passive vulnerability scan.&lt;/p&gt;
+
+&lt;h2 id=&quot;pick-low-hanging-fruits&quot;&gt;Pick Low Hanging Fruits&lt;/h2&gt;
+&lt;p&gt;Browsing the website is the first thing hackers and security experts do when evaluating a website’s security. It is called a passive scan.
+Many problems can be identified just by looking into the source code of web pages. Issues like &lt;a href=&quot;/vulnerability-list/vulnerable-wordpress-version&quot;&gt;Vulnerable WordPress Version&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/application-error&quot;&gt;Application Errors&lt;/a&gt; and, &lt;a href=&quot;/vulnerability-list/password-sent-over-http&quot;&gt;Password Over Unencrypted Channel&lt;/a&gt; are some of such problems.
+Intercepting requests and responses between the browser and the server can also reveal many weaknesses. For example, you can detect cookie vulnerabilities just by looking into the web server’s response headers.&lt;/p&gt;
+
+&lt;h2 id=&quot;less-impact&quot;&gt;Less Impact&lt;/h2&gt;
+&lt;p&gt;Passive scan comparing to active scan is less risky for the availability of the web application.
+Since no unexpected request is sent to the web server, the server should be able to handle the scan like any other visitor.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⛔ In passive scans, all URLs are visited so, if there are links that perform actions like deleting accounts or files, passive scans can still be dangerous.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;bypass-web-application-firewalls&quot;&gt;Bypass Web Application Firewalls&lt;/h2&gt;
+&lt;p&gt;Websites usually use WAFs to stop attacks in the production environment. Passive scans don’t trigger any alarm on WAFs most of the time. So, the scan can proceed without getting blocked by the firewall.&lt;/p&gt;
+
+&lt;h2 id=&quot;no-schedule-required&quot;&gt;No Schedule Required&lt;/h2&gt;
+&lt;p&gt;Active vulnerability scans usually put a lot of pressure on the web application. That’s why they should be performed at a scheduled time to reduce the risk.
+But passive tests can be conducted at any time, just like website visitors that can browse the site anytime.&lt;/p&gt;
+
+&lt;h2 id=&quot;fast-security-scan&quot;&gt;Fast Security Scan&lt;/h2&gt;
+&lt;p&gt;Browsing a website is fast, so does a passive scan. Passive scans are speedy because they send fewer requests to the webserver. Also, there is less chance of getting caught by WAF that might slow down the scan.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-perform-a-passive-scan&quot;&gt;How To Perform A Passive Scan?&lt;/h2&gt;
+&lt;p&gt;You can use SmartScanner— the smart vulnerability scanner, to perform a passive scan. &lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt; and install it.
+Open SmartScanner and enter your website address then, click on “change scan config”; On the config page, select the “Passive” test profile. Now go back to the start page and click on “scan”; Wait for the scan to finish and check the issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;is-passive-scan-enough&quot;&gt;Is Passive Scan Enough?&lt;/h2&gt;
+&lt;p&gt;Definitely no! You should perform full comprehensive scans to have a thorough security test.
+Passive scans are excellent for a quick evaluation of the website’s security, especially when a full scan is not an option.&lt;/p&gt;</content><author><name></name></author><category term="article" /><category term="Information Disclosure" /><category term="Passive" /><category term="WAF" /><summary type="html">A passive vulnerability scan is a type of security scan in which the scanner sends no unusual request to the server. It is like a visitor browsing the site.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/passive-scan.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/passive-scan.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Version 1.1 with new tests is out now</title><link href="https://www.thesmartscanner.com/blog/version-1-1-with-new-tests-is-out-now" rel="alternate" type="text/html" title="Version 1.1 with new tests is out now" /><published>2021-01-06T00:00:00+00:00</published><updated>2021-01-06T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/version-1-1-with-new-tests-is-out-now</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/version-1-1-with-new-tests-is-out-now">&lt;p&gt;A few hours ago we released version 1.1.0 of SmartScanner.
+You can download the Windows version on the &lt;a href=&quot;/download&quot;&gt;download page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are major changes in this version.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-tests&quot;&gt;New Tests&lt;/h2&gt;
+&lt;h3 id=&quot;expression-language-injection&quot;&gt;Expression Language Injection&lt;/h3&gt;
+&lt;p&gt;When it is possible to change the expressions in the applications, there’s an &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Expression Language Injection vulnerability&lt;/a&gt;.
+Expressions are programming statements that evaluate to a value or perform an action. They are usually used in templates of a web application for creating different pages. That’s why another common name for this vulnerability is &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Template Injection&lt;/a&gt;.
+If an attacker could change expressions in the application, he can extract sensitive information or run commands on the application server so this is a serious issue.
+This test has been added to SmartScanner and you can select it in the Tests section of scan configs. (it’s selected by default)&lt;/p&gt;
+
+&lt;h3 id=&quot;wordpress-user-enumeration&quot;&gt;WordPress User Enumeration&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;/vulnerability-list/wordpress-user-enumeration&quot;&gt;User enumeration&lt;/a&gt; vulnerabilities reveal users of the application. This is a great start for hackers to prepare a list of users and passwords for performing a brute force attack.
+The default installation of WordPress allows the extraction of users. Now SmartScanner can test for this issue if you select WordPress tests in scan configs.&lt;/p&gt;
+
+&lt;h2 id=&quot;sitemap-support&quot;&gt;Sitemap Support&lt;/h2&gt;
+&lt;p&gt;Sitemaps are an easy way for webmasters to inform search engines about pages on their sites that are available for crawling. SmartScanner now crawls sitemaps and referenced URLs in them.&lt;/p&gt;
+
+&lt;h2 id=&quot;test-profiles&quot;&gt;Test Profiles&lt;/h2&gt;
+&lt;p&gt;By using test profiles you can easily select a set of tests together instead of selecting one by one.
+Check out the &lt;a href=&quot;/docs/security-tests&quot;&gt;guide here&lt;/a&gt; for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;improvements&quot;&gt;Improvements&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;/vulnerability-list/weak-password&quot;&gt;Weak Password&lt;/a&gt; checks got a whole lot better and now it supports WordPress login as well.
+False-positives got fixed in &lt;a href=&quot;/vulnerability-list/source-code-disclosure&quot;&gt;Source Code Disclosure&lt;/a&gt; test. A crash got fixed and dozens of tests enhanced.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog&quot;&gt;change log&lt;/a&gt; for more.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="Release" /><summary type="html">Better vulnerability scanning with new tests like EL Injection and WordPress user enumeration.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-1.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">14 Software Security Terms You Should Know</title><link href="https://www.thesmartscanner.com/blog/14-software-security-terms-you-should-know" rel="alternate" type="text/html" title="14 Software Security Terms You Should Know" /><published>2020-12-25T00:00:00+00:00</published><updated>2020-12-25T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/14-software-security-terms-you-should-know</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/14-software-security-terms-you-should-know">&lt;p&gt;Everybody in the IT industry should be aware of software security basics. 
+It doesn’t matter if you’re a developer, system engineer, or product manager; security is everyone’s responsibility.
+Here’s a guide to essential software security terms.&lt;/p&gt;
+
+&lt;h2 id=&quot;1--vulnerability&quot;&gt;1- Vulnerability&lt;/h2&gt;
+&lt;p&gt;In computer security, a security issue or vulnerability is a weakness or flaw which allows malicious users to perform unauthorized actions.
+For example, &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt; is a vulnerability that can be used to run SQL commands on the database. Take a look at the list of &lt;a href=&quot;/vulnerability-list/&quot;&gt;web application vulnerabilities&lt;/a&gt; for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;2--exploit&quot;&gt;2- Exploit&lt;/h2&gt;
+&lt;p&gt;An exploit is a piece of code or commands. Exploits can compromise the systems or data of an organization. Exploits are how malicious users take profit from vulnerabilities.&lt;/p&gt;
+
+&lt;h2 id=&quot;3--security-incident&quot;&gt;3- Security Incident&lt;/h2&gt;
+&lt;p&gt;An event of unauthorized action like a breach in the system is a Security Incident. It is often the result of the successful exploitation of a vulnerability.&lt;/p&gt;
+
+&lt;h2 id=&quot;4--zero-day-attack&quot;&gt;4- Zero-day Attack&lt;/h2&gt;
+&lt;p&gt;A zero-day attack is exploiting a zero-day vulnerability. A zero-day vulnerability is an unknown weakness. It’s unexplained to the vendor of the target application or others who are interested in fixing it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/zero-day.jpg&quot; width=&quot;800&quot; height=&quot;419&quot; alt=&quot;Zero-day attack&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5--cia-triad&quot;&gt;5- CIA Triad&lt;/h2&gt;
+&lt;p&gt;Confidentiality, Integrity, and Availability of data is the CIA triad. Balanced protection of the CIA is the main focus of information security.&lt;/p&gt;
+
+&lt;h2 id=&quot;6--security-risk&quot;&gt;6- Security Risk&lt;/h2&gt;
+&lt;p&gt;In simple terms, the security risk is the probability and impact of a security incident.
+In software security, the impact is determined by the effect of the security incident on the CIA triad.&lt;/p&gt;
+
+&lt;h2 id=&quot;7--vulnerability-management&quot;&gt;7- Vulnerability Management&lt;/h2&gt;
+&lt;p&gt;Vulnerability management is an always ongoing cycle of identifying, prioritizing, remediating software vulnerabilities.
+Vulnerability management is a must-have process for any organization as part of its information security program.&lt;/p&gt;
+
+&lt;h2 id=&quot;8--vulnerability-assessment&quot;&gt;8- Vulnerability Assessment&lt;/h2&gt;
+&lt;p&gt;Vulnerability assessment is the process of identifying and prioritizing the vulnerabilities in software systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;9--vulnerability-scanning&quot;&gt;9- Vulnerability Scanning&lt;/h2&gt;
+&lt;p&gt;Vulnerability scanning refers to identifying vulnerabilities in computer systems.
+It can be done manually or using automated tools called vulnerability scanners.
+&lt;a href=&quot;/&quot;&gt;SmartScanner&lt;/a&gt; is an automated web vulnerability scanner you can use to find vulnerabilities in your website.&lt;/p&gt;
+
+&lt;h2 id=&quot;10--penetration-test&quot;&gt;10- Penetration Test&lt;/h2&gt;
+&lt;p&gt;a Penetration test or pen test is a test for evaluating the security of the system. 
+A pen test or ethical hacking is an authorized attack.
+Unlike vulnerability assessment, a penetration test tries to exploit vulnerabilities for better estimation of the risk. A penetration tester also finds the strength of the system.
+The results of a penetration test can be used to complete a full risk assessment.&lt;/p&gt;
+
+&lt;h2 id=&quot;11--owasp&quot;&gt;11- OWASP&lt;/h2&gt;
+&lt;p&gt;The Open Web Application Security Project (OWASP) is an online community that produces freely-available articles, methodologies, documentation, tools, and technologies in the field of web application security.
+The most famous project of the OWASP is the OWASP Top 10. It’s a standard awareness document for developers and web application security. It represents a broad consensus about the most critical security risks to web applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;12--isms&quot;&gt;12- ISMS&lt;/h2&gt;
+&lt;p&gt;Information Security Management System (ISMS) is how an organization is managing the security of its data.
+It consists of processes, policies, and controls to protect overall information security. The ISO/IEC 27001 is widely known for providing requirements for ISMS.&lt;/p&gt;
+
+&lt;h2 id=&quot;13--threat-actor&quot;&gt;13- Threat Actor&lt;/h2&gt;
+&lt;p&gt;A threat actor or malicious user is the one responsible for a security incident.&lt;/p&gt;
+
+&lt;h2 id=&quot;14--attack-surface&quot;&gt;14- Attack Surface&lt;/h2&gt;
+&lt;p&gt;Attack surface or attack vector is where an attack can be started. For example, an online email subscription form on a website is an attack surface. Other examples are zero-day vulnerabilities, lack of encryption, or misconfigurations.&lt;/p&gt;</content><author><name></name></author><category term="article" /><category term="Vulnerability" /><category term="OWASP" /><category term="Exploit" /><category term="Zero-day" /><category term="Risk" /><category term="ISMS" /><summary type="html">Everybody in the IT industry should be aware of software security basics. Here's a guide to essential software security terms.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/security-terms.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/security-terms.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
