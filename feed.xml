@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2021-10-10T12:40:21+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner</title><link href="https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner" rel="alternate" type="text/html" title="Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner" /><published>2021-10-10T00:00:00+00:00</published><updated>2021-10-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner">&lt;p&gt;Today, we’re excited to announce that SmartScanner 1.10 is available for &lt;a href=&quot;/download&quot;&gt;download&lt;/a&gt;. This release brings 15 new CVEs and tests to improve vulnerability assessment quality and new security testing capabilities to our customers. You can find all changes in the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;, but here are top highlights from the release:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All issues mapped to &lt;strong&gt;OWASP Top 10 2021&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/insecure-deserialization&quot;&gt;Insecure Deserialization&lt;/a&gt;&lt;/strong&gt; tests for JSON objects. Other objects like PHP serialized objects will be added in future versions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/apache-2-4-49-path-traversal-and-rce&quot;&gt;Apache 2.4.49 Path Traversal and RCE (CVE-2021-41773, CVE-2021-42013)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/nginx-restriction-bypass-via-space-character-in-uri&quot;&gt;Nginx Restriction Bypass via Space Character in URI (CVE-2013-4547)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/web-server-path-traversal&quot;&gt;Web Server Path Traversal (CVE-2017-14849)&lt;/a&gt;&lt;/strong&gt; for Express and other static file routers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/cookie-accessible-for-subdomains&quot;&gt;Cookie Accessible for Subdomains&lt;/a&gt;&lt;/strong&gt; in passive tests&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vulnerability assessment&lt;/strong&gt; for outdated &lt;a href=&quot;/vulnerability-list/vulnerable-openssl-version&quot;&gt;OpenSSL&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/vulnerable-apache-version&quot;&gt;Apache&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/vulnerable-php-version&quot;&gt;PHP&lt;/a&gt;, and &lt;a href=&quot;/vulnerability-list/vulnerable-wordpress-version&quot;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Apache" /><category term="Express" /><category term="Path Traversal" /><category term="Nginx" /><category term="CVE" /><category term="Release" /><category term="Web Server" /><category term="Deserialization" /><category term="Cookie" /><summary type="html">15 new CVEs for Apache, Nginx, OpenSSL, and Express included in version 1.10 of SmartScanner. Download it now!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-10-path-traversal.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-10-path-traversal.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Complete guide to HTTP Headers for securing websites (Cheat Sheet)</title><link href="https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet" rel="alternate" type="text/html" title="Complete guide to HTTP Headers for securing websites (Cheat Sheet)" /><published>2021-09-23T00:00:00+00:00</published><updated>2021-09-23T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet">&lt;p&gt;HTTP Headers are a great booster for web security with easy implementation. Proper HTTP headers can prevent security vulnerabilities like Cross-Site Scripting, Click-jacking, Packet sniffing and, information disclosure.&lt;/p&gt;
+
+&lt;p&gt;In this article, we’ll take a quick look at all security-related HTTP headers and the recommended configurations. Below are the main sections of this document.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#security-headers&quot;&gt;Security headers list&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adding-http-headers-in-different-technologies&quot;&gt;Implementation of HTTP headers in Nginx, Apache, PHP, etc.&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#testing-proper-implementation-of-security-headers&quot;&gt;Testing of HTTP headers in your website&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#references&quot;&gt;References&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The source for this document is available on &lt;a href=&quot;https://github.com/TheSmartScanner/http-headers-security&quot;&gt;GitHub&lt;/a&gt;. Your contributions are most welcome to complete it and keep it updated 👐&lt;/p&gt;
+
+&lt;h2 id=&quot;security-headers&quot;&gt;Security Headers&lt;/h2&gt;
+
+&lt;h3 id=&quot;x-frame-options&quot;&gt;X-Frame-Options&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Frame-Options&lt;/code&gt; HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;frame&amp;gt;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;iframe&amp;gt;&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;embed&amp;gt;&lt;/code&gt; or &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;object&amp;gt;&lt;/code&gt;. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Do not allow displaying of the page in a frame.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Frame-Options: DENY&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;x-xss-protection&quot;&gt;X-XSS-Protection&lt;/h3&gt;
+&lt;p&gt;The HTTP &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; response header is a feature of Internet Explorer, Chrome, and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-1&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Enable XSS filtering and prevent browsers from rendering pages if an attack is detected.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection: 1; mode=block&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;x-content-type-options&quot;&gt;X-Content-Type-Options&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Content-Type-Options&lt;/code&gt; response HTTP header is used by the server to prevent browsers from guessing the media type ( MIME type).
+This is known as &lt;strong&gt;MIME sniffing&lt;/strong&gt; in which the browser guesses the correct MIME type by looking at the contents of the resource.
+The absence of this header might cause browsers to transform non-executable content into executable content.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-2&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Content-Type-Options: nosniff&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;referrer-policy&quot;&gt;Referrer-Policy&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Referrer-Policy&lt;/code&gt; HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-3&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Send everything to the same site but only the origin for other sites.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Referrer-Policy: strict-origin-when-cross-origin&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;NOTE:&lt;/em&gt; This is the default in modern browsers&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;content-type&quot;&gt;Content-Type&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Type&lt;/code&gt; representation header is used to indicate the original media type of the resource (before any content encoding is applied for sending).&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-4&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Type: text/html; charset=UTF-8&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;NOTE:&lt;/em&gt; the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;charset&lt;/code&gt; attribute is necessary to prevent XSS in &lt;strong&gt;HTML&lt;/strong&gt; pages&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;NOTE&lt;/em&gt;: the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;text/html&lt;/code&gt; can be any of the possible &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types&quot;&gt;MIME types&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;set-cookie&quot;&gt;Set-Cookie&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set-Cookie&lt;/code&gt; HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple Set-Cookie headers should be sent in the same response.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-5&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set-Cookie: name=value; Secure; HttpOnly; SameSite=Strict&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;NOTE:&lt;/em&gt; The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Domain&lt;/code&gt; attribute has been removed intentionally&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;strict-transport-security&quot;&gt;Strict-Transport-Security&lt;/h3&gt;
+&lt;p&gt;The HTTP &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Strict-Transport-Security&lt;/code&gt; response header (often abbreviated as HSTS) lets a website tell browsers that it should only be accessed using HTTPS, instead of using HTTP.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-6&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Enable HTTPS-only access for the site and sub domains.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Strict-Transport-Security: max-age=63072000; includeSubDomains; preload&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;expect-ct&quot;&gt;Expect-CT&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect-CT&lt;/code&gt; header lets sites opt-in to reporting and/or enforcement of Certificate Transparency requirements, to prevent the use of misissued certificates for that site from going unnoticed.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-7&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Enforce Certificate Transparency for 24 hours.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect-CT: max-age=86400&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;content-security-policy&quot;&gt;Content-Security-Policy&lt;/h3&gt;
+&lt;p&gt;Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-8&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Restrict most of the resource types to the same site and subdomains of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yourdoamin.com&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Content-Security-Policy: default-src 'self' *.yourdomain.com; block-all-mixed-content; font-src 'self' https: data:; img-src 'self' data: blob:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;WARNING&lt;/em&gt;: Inline &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;script&lt;/code&gt; elements and inline script event handlers like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;onload&lt;/code&gt; will stop working with the above header. But this is required to neutralize XSS attacks.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;access-control-allow-origin&quot;&gt;Access-Control-Allow-Origin&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access-Control-Allow-Origin&lt;/code&gt; response header indicates whether the response can be shared with requesting code from the given origin.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-9&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;*&lt;/code&gt; or specific domain names.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Access-Control-Allow-Origin: *&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;cross-origin-opener-policy&quot;&gt;Cross-Origin-Opener-Policy&lt;/h3&gt;
+&lt;p&gt;The HTTP &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cross-Origin-Opener-Policy&lt;/code&gt; (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-10&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Isolates the browsing context exclusively to same-origin documents.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;HTTP Cross-Origin-Opener-Policy: same-origin&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;cross-origin-resource-policy&quot;&gt;Cross-Origin-Resource-Policy&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cross-Origin-Resource-Policy&lt;/code&gt; (CORP) header allows you to control the set of origins that are empowered to include a resource. It is a robust defense against attacks like &lt;a href=&quot;https://meltdownattack.com/&quot;&gt;Spectre&lt;/a&gt;, as it allows browsers to block a given response before it enters an attacker’s process.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-11&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Limit current resource loading to the site and sub-domains only.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cross-Origin-Resource-Policy: same-site&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;cross-origin-embedder-policy&quot;&gt;Cross-Origin-Embedder-Policy&lt;/h3&gt;
+&lt;p&gt;The HTTP &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cross-Origin-Embedder-Policy&lt;/code&gt; (COEP) response header prevents a document from loading any cross-origin resources that don’t explicitly grant the document permission (using &lt;a href=&quot;#cross-origin-resource-policy&quot;&gt;CORP&lt;/a&gt; or CORS).&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-12&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Cross-Origin-Embedder-Policy: require-corp&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;NOTE&lt;/em&gt;: you can bypass it by adding the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;crossorigin&lt;/code&gt; attribute like below:&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;img src=&quot;https://thirdparty.com/img.png&quot; crossorigin&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;server&quot;&gt;Server&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server&lt;/code&gt; header describes the software used by the origin server that handled the request — that is, the server that generated the response.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-13&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Remove this header or set non-informative values.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Server: webserver&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;x-powered-by&quot;&gt;X-Powered-By&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Powered-By&lt;/code&gt; header describes the technologies used by the webserver. This information exposes the server to attackers. Using the information in this header, attackers can find vulnerabilities easier.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-14&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Remove all &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Powered-By&lt;/code&gt; headers.&lt;/p&gt;
+
+&lt;h3 id=&quot;x-aspnet-version&quot;&gt;X-AspNet-Version&lt;/h3&gt;
+&lt;p&gt;Provides information about the .NET version.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-15&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Disable sending this header. Review the &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/asp-net-version-disclosure&quot;&gt;ASP.NET Version Disclosure&lt;/a&gt; issue for details.&lt;/p&gt;
+
+&lt;h3 id=&quot;x-aspnetmvc-version&quot;&gt;X-AspNetMvc-Version&lt;/h3&gt;
+&lt;p&gt;Provides information about the .NET version.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-16&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;Disable sending this header. Review the &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/asp-net-version-disclosure&quot;&gt;ASP.NET Version Disclosure&lt;/a&gt; issue for details.&lt;/p&gt;
+
+&lt;h3 id=&quot;x-dns-prefetch-control&quot;&gt;X-DNS-Prefetch-Control&lt;/h3&gt;
+&lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-DNS-Prefetch-Control&lt;/code&gt; HTTP response header controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-17&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;The default behavior of browsers is to perform DNS caching which is good for most websites.
+If you do not control links on your website, you might want to set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;off&lt;/code&gt; as a value to disable DNS prefetch to avoid leaking information to those domains.&lt;/p&gt;
+
+&lt;h3 id=&quot;public-key-pins-&quot;&gt;Public-Key-Pins ❌&lt;/h3&gt;
+&lt;p&gt;The HTTP &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Public-Key-Pins&lt;/code&gt; response header is used to associate a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates.&lt;/p&gt;
+
+&lt;h4 id=&quot;recommendation-18&quot;&gt;Recommendation&lt;/h4&gt;
+&lt;p&gt;This header is deprecated. Use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Expect-CT&lt;/code&gt; instead.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-http-headers-in-different-technologies&quot;&gt;Adding Http Headers in Different Technologies&lt;/h2&gt;
+&lt;h3 id=&quot;php&quot;&gt;PHP&lt;/h3&gt;
+&lt;p&gt;Below sample code sets the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; header in PHP.&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;X-XSS-Protection: 1; mode=block&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;apache&quot;&gt;Apache&lt;/h3&gt;
+&lt;p&gt;Below &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.htaccess&lt;/code&gt; sample configuration sets the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; header in Apache.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;IfModule mod_headers.c&amp;gt;
+Header set X-XSS-Protection &quot;1; mode=block&quot;
+&amp;lt;/IfModule&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;iis&quot;&gt;IIS&lt;/h3&gt;
+&lt;p&gt;Add below configurations to your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Web.config&lt;/code&gt; in ISS to send the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; header&lt;/p&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;system.webServer&amp;gt;&lt;/span&gt;
+...
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;httpProtocol&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;customHeaders&amp;gt;&lt;/span&gt;
+     &lt;span class=&quot;nt&quot;&gt;&amp;lt;add&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;name=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;X-XSS-Protection&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;value=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;1; mode=block&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/customHeaders&amp;gt;&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;&amp;lt;/httpProtocol&amp;gt;&lt;/span&gt;
+...
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/system.webServer&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;haproxy&quot;&gt;HAProxy&lt;/h3&gt;
+&lt;p&gt;Add the below line to your font-end, listen, or backend configurations to send the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; header&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;http-response set-header X-XSS-Protection 1; mode=block
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;nginx&quot;&gt;Nginx&lt;/h3&gt;
+&lt;p&gt;Below sample configuration, sets the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-XSS-Protection&lt;/code&gt; header in Nginx.&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_header &quot;X-XSS-Protection&quot; &quot;1; mode=block&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;express&quot;&gt;Express&lt;/h3&gt;
+&lt;p&gt;You can use &lt;a href=&quot;&quot;&gt;helmet&lt;/a&gt; to setup HTTP headers in Express. Below code is sample for adding the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;X-Frame-Options&lt;/code&gt; header.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;helmet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;helmet&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;express&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// Sets &quot;X-Frame-Options: SAMEORIGIN&quot;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;use&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;helmet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;frameguard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;  &lt;/span&gt; &lt;span class=&quot;na&quot;&gt;action&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;sameorigin&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;testing-proper-implementation-of-security-headers&quot;&gt;Testing Proper Implementation of Security Headers&lt;/h2&gt;
+&lt;h3 id=&quot;mozilla-observatory&quot;&gt;Mozilla Observatory&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://observatory.mozilla.org/&quot;&gt;Mozilla Observatory&lt;/a&gt; is an online tool that you can check your website’s header status.&lt;/p&gt;
+
+&lt;h3 id=&quot;smartscanner&quot;&gt;SmartScanner&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.thesmartscanner.com/&quot;&gt;SmartScanner&lt;/a&gt; has a dedicated &lt;a href=&quot;https://www.thesmartscanner.com/docs/security-tests&quot;&gt;test profile&lt;/a&gt; for testing security of HTTP headers.
+Online tools usually test the homepage of the given address. But SmartScanner scans the whole website. So, you can make sure all of your web pages have the right HTTP Headers in place.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/smartscanner-testing-security-http-headers.gif&quot; width=&quot;768&quot; height=&quot;466&quot; alt=&quot;Testing HTTP Security Headers using SmartScanner&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options&quot;&gt;Mozilla: X-Frame-Options&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection&quot;&gt;Mozilla: X-XSS-Protection&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://hstspreload.org/&quot;&gt;hstspreload.org&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security&quot;&gt;Mozilla: Strict-Transport-Security&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type&quot;&gt;Mozilla: Content-Type&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT&quot;&gt;Mozilla: Expect-CT&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy&quot;&gt;Mozilla: Referrer-Policy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie&quot;&gt;Mozilla: Set-Cookie&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://content-security-policy.com/&quot;&gt;content-security-policy.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin&quot;&gt;Mozilla: Access-Control-Allow-Origin&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy&quot;&gt;Mozilla: Cross-Origin-Opener-Policy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://resourcepolicy.fyi/&quot;&gt;resourcepolicy.fyi&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy&quot;&gt;Mozilla: Cross-Origin-Resource-Policy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy&quot;&gt;Mozilla: Cross-Origin-Embedder-Policy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server&quot;&gt;Mozilla: Server Header&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="HTTP Headers" /><category term="CWE-1021" /><category term="Information Disclosure" /><category term="Misconfiguration" /><category term="CWE-200" /><category term="XSS" /><category term="Click-jacking" /><category term="OWASP 2007-A6" /><category term="OWASP 2017-A6" /><category term="CWE-16" /><category term="PHP" /><category term="ASP.NET" /><category term="Nginx" /><category term="IIS" /><category term="Apache" /><category term="Express" /><category term="Passive" /><category term="Web Server" /><category term="Spectre" /><summary type="html">HTTP Headers are a great booster for web security with easy implementation. Proper HTTP headers can prevent security vulnerabilities like Cross-Site Scripting, Click-jacking, Packet sniffing and, information disclosure.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/http-headers.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/http-headers.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner v1.9 as Joomla! Security Scanner</title><link href="https://www.thesmartscanner.com/blog/smartscanner-v1-9-as-joomla-security-scanner" rel="alternate" type="text/html" title="SmartScanner v1.9 as Joomla! Security Scanner" /><published>2021-09-05T00:00:00+00:00</published><updated>2021-09-05T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-v1-9-as-joomla-security-scanner-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-v1-9-as-joomla-security-scanner">&lt;p&gt;SmartScanner version 1.9 was released with 22 new tests for Joomla!&lt;sup&gt;®&lt;/sup&gt; and test counts are going to go up!&lt;/p&gt;
+
+&lt;p&gt;Tests include &lt;a href=&quot;/vulnerability-list/os-command-execution&quot;&gt;Remote Command Execution&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;Cross-Site Scripting&lt;/a&gt;, and &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt; in Joomla! core and popular components. To test any Joomla! website against these vulnerabilities, you just need to enter the website URL and click the scan button. SmartScanner automatically detects Joomla! and runs related tests automatically.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ℹ️ SmartScanner has tests for known vulnerabilities in different CMSs. Check the &lt;a href=&quot;/docs/wordpress-drupal-joomla-cms-security-scanner&quot;&gt;documentation page&lt;/a&gt; for more.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We will continue to add more tests for known vulnerabilities to the SmartScanner in the next versions. But SmartScanner is a Smart web vulnerability scanner! It already can find up to &lt;a href=&quot;/vulnerability-list/&quot;&gt;178 vulnerabilities&lt;/a&gt; in any web application like Joomla!&lt;/p&gt;
+
+&lt;h2 id=&quot;brute-force-to-find-weak-passwords&quot;&gt;Brute Force to find Weak Passwords&lt;/h2&gt;
+&lt;p&gt;SmartScanner can automatically detect login forms and try out common weak passwords. There were few bugs preventing this test which got fixed in this version.
+Also, a new feature was added to bypass CSRF defending mechanisms in the login forms.&lt;/p&gt;
+
+&lt;p&gt;Now SmartScanner can test for common weak user/pass combinations on any login form.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot; class=&quot;f3 ph3 pv2 ma2 ml0 mb0 dib br1 white&quot;&gt;Download SmartScanner Free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/docs/changelog&quot;&gt;change log&lt;/a&gt; for details on changes in this version.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Joomla" /><summary type="html">SmartScanner version 1.9 was released with 22 new tests for Joomla!® and test counts are going to go up!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-9.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-9.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">These 7 PHP mistakes leave your website open to the hackers</title><link href="https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers" rel="alternate" type="text/html" title="These 7 PHP mistakes leave your website open to the hackers" /><published>2021-08-15T00:00:00+00:00</published><updated>2021-08-15T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers">&lt;p&gt;Make these mistakes and hackers will attack your web application using Cross Site Scripting, SQL Injection, Path Traversal, and other attacks to take over your website.&lt;/p&gt;
+
+&lt;p&gt;Let’s review common mistakes and their prevention methods.&lt;/p&gt;
+
+&lt;h2 id=&quot;1--echo-user-input&quot;&gt;1- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Echo&lt;/code&gt; user input&lt;/h2&gt;
+&lt;p&gt;Below code is enough to create a &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;XSS&lt;/a&gt; vulnerability in your website.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;p&amp;gt;'&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;/p&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable to XSS&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Never directly use user input for generating response contents. You have to use proper encoding on user input to escape any dangerous code. PHP has the build-in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;htmlentities()&lt;/code&gt; function to encode html special characters which you can use.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;p&amp;gt;'&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;htmlentities&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;/p&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// safe code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Sometimes user input is used indirectly for generating a page. For example, user input might be saved in a database before being used in the response.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;2--using-user-input-in-file-paths&quot;&gt;2- Using user input in file paths&lt;/h2&gt;
+&lt;p&gt;Generating and using file paths that contain user inputs is one of the most dangerous mistakes that can cause critical vulnerabilities like:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;Local File Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-file-inclusion&quot;&gt;Remote File Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-file-disclosure&quot;&gt;Remote File Disclosure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/remote-url-inclusion&quot;&gt;Remote URL Inclusion&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Path Traversal&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Below code is an example of a file inclusion vulnerability.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable to remote/local file inclusion&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;To prevent file inclusion vulnerabilities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Resolve all relative paths containing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;../&lt;/code&gt; to absolute paths and make sure the final file is in the directory where it should be.&lt;/li&gt;
+  &lt;li&gt;Try to accept only whitelisted inputs whenever possible&lt;/li&gt;
+  &lt;li&gt;Check for invalid characters in the filename like null byte, questions mark, semicolon, etc.&lt;/li&gt;
+  &lt;li&gt;Do not include URLs starting with a scheme (http://, ftp://, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;3--concatenating-sql-queries-with-user-input&quot;&gt;3- Concatenating SQL queries with user input&lt;/h2&gt;
+&lt;p&gt;Creating SQL queries using user input allows users to manipulate the original SQL command and inject their arbitrary command. This is called &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt;. Hackers can exploit SQL Injection vulnerability to execute commands like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;drop&lt;/code&gt; on the database or execute system commands.&lt;/p&gt;
+
+&lt;p&gt;Example code:&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;SQLite3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'products.db'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'id'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// below line is vulnerable to SQLI&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;querySingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SELECT name from products where productId=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// below line is not vulnerable&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$db&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;querySingle&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;SELECT name from products where productId='&quot;&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;SQLite3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;escapeString&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;It’s always a good practice to use prepared statements for creating SQL queries to prevent SQL Injection. Another method to avoid SQLI is to escape special characters in the user input (like the above example).&lt;/p&gt;
+
+&lt;h2 id=&quot;4--executing-user-input&quot;&gt;4- Executing user input&lt;/h2&gt;
+&lt;p&gt;Below commands in PHP allow execution of either PHP code or OS commands.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;preg_replace()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exec()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;passthru()&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;shell_exec()&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Passing user input as arguments to the above functions can cause &lt;a href=&quot;/vulnerability-list/os-command-execution&quot;&gt;command execution&lt;/a&gt; vulnerabilities where hackers can execute arbitrary commands on the server. Consider below code as an example:&lt;/p&gt;
+
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ip'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;ping &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$ip&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;The above code is a ping service where users can ping any IP. If a user enters &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 &amp;amp; echo 123&lt;/code&gt; as an IP address then the command &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;echo&lt;/code&gt; gets executed on the server.&lt;/p&gt;
+
+&lt;p&gt;How to prevent command execution vulnerabilities:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Avoid using functions like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;system()&lt;/code&gt;, …&lt;/li&gt;
+  &lt;li&gt;Accept whitelisted inputs&lt;/li&gt;
+  &lt;li&gt;Check inputs for special characters like &amp;amp;, semicolon,&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;popen()&lt;/code&gt; function can also be used for command execution indirectly. So be careful when using it.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;5--redirecting-to-user-input&quot;&gt;5- Redirecting to user input&lt;/h2&gt;
+&lt;p&gt;Redirecting a user in PHP is common and easy. It can be done using below code.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Location: '&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$_GET&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'url'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// vulnerable code&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;But this is vulnerable! It can be exploited to redirect the user to any other website.
+To prevent &lt;a href=&quot;/vulnerability-list/unvalidated-redirection&quot;&gt;open redirections&lt;/a&gt;, make sure the URL is not an off-site link before redirecting the user.&lt;/p&gt;
+
+&lt;h2 id=&quot;6--turning-on-error-reporting&quot;&gt;6- Turning on error reporting&lt;/h2&gt;
+&lt;p&gt;PHP errors disclose information like path/files, database errors, OS type, and some other information. Displaying any kind of PHP errors on production helps hackers to break into your website easier.&lt;/p&gt;
+&lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;error_reporting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;E_ALL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// bad code for production&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;error_reporting&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// safe for production usage&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id=&quot;7--phpinfo&quot;&gt;7- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;/vulnerability-list/phpinfo-found&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt;&lt;/a&gt; function displays a huge amount of information. PHP version number, active extensions, configurations, and system paths are a few examples of such information. This information can be used by hackers to learn about the server and craft their attacks to be more successful.
+To avoid any information disclosure it’s better to never use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt; function on production servers.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Dealing with user inputs in PHP applications can be tricky and prone to different vulnerabilities. XSS, SQL Injection, and local file inclusion are a few of explained vulnerabilities related to user inputs. Make sure you have strict checking for user inputs and avoid using risky functions like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;eval()&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;phpInfo()&lt;/code&gt; to have a more secure code.&lt;/p&gt;</content><author><name></name></author><category term="PHP" /><category term="Programming" /><category term="Vulnerability" /><category term="XSS" /><category term="File Inclusion" /><category term="Path Traversal" /><category term="URL Redirection" /><category term="Information Disclosure" /><category term="SQLI" /><category term="RCE" /><category term="Injection" /><summary type="html">Make these mistakes and hackers will attack your web application using Cross Site Scripting, SQL Injection, Path Traversal, and other attacks to take over your website.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/common-php-mistakes.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/common-php-mistakes.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">44 New SQL Injection Tests for WordPress in SmartScanner 1.8</title><link href="https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8" rel="alternate" type="text/html" title="44 New SQL Injection Tests for WordPress in SmartScanner 1.8" /><published>2021-08-07T00:00:00+00:00</published><updated>2021-08-07T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8">&lt;p&gt;SmartScanner version 1.8 was released with new SQL Injection tests for WordPress and improved weak password testing.&lt;/p&gt;
+
+&lt;p&gt;Further than new WordPress tests, &lt;a href=&quot;/vulnerability-list/passive-mixed-content&quot;&gt;Passive Mixed Content&lt;/a&gt; was added and, few bugs got fixed.&lt;/p&gt;
+
+&lt;h2 id=&quot;testing-weak-password-for-wordpress-sites&quot;&gt;Testing Weak Password For WordPress sites&lt;/h2&gt;
+&lt;p&gt;SmartScanner can automatically test for weak passwords on any login form. A bug was fixed and, now SmartScanner tests weak passwords for any WordPress site.
+Besides new method for enumerating WordPress users has been added which, will be used in weak password tests.&lt;/p&gt;
+
+&lt;h2 id=&quot;passive-mixed-content&quot;&gt;Passive Mixed Content&lt;/h2&gt;
+&lt;p&gt;All resources in an HTTPS URL should load using the same HTTP&lt;strong&gt;S&lt;/strong&gt; protocol to avoid man-in-the-middle attacks which can lead to sensitive data disclosure or phishing. SmartScanner now tests for passive mixed contents as well as other SSL/TLS issues.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Wordpress" /><category term="SQLI" /><summary type="html">SmartScanner version 1.8 was released with new SQL Injection tests for WordPress and improved weak password testing.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-8.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-8.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Better Passive Vulnerability Testing with SmartScanner version 1.7</title><link href="https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7" rel="alternate" type="text/html" title="Better Passive Vulnerability Testing with SmartScanner version 1.7" /><published>2021-07-07T00:00:00+00:00</published><updated>2021-07-07T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7">&lt;p&gt;Windows HTTP Stack vulnerability test and more passive tests in the new version of SmartScanner.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-new&quot;&gt;What’s new?&lt;/h2&gt;
+&lt;h3 id=&quot;test-for-http-protocol-stack-remote-code-execution-vulnerability&quot;&gt;Test for &lt;a href=&quot;/vulnerability-list/http-protocol-stack-remote-code-execution-vulnerability-dos&quot;&gt;HTTP Protocol Stack Remote Code Execution Vulnerability&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;A critical vulnerability in The Microsoft Windows HTTP Protocol Stack (HTTP.sys) allows remote code execution on Windows machines. This vulnerability has been registered as &lt;a href=&quot;https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31166&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;CVE-2021-31166&lt;/a&gt; and Microsoft has released security updates to rectify it.
+We added test for this vulnerability in SmartScanner version 1.7 based on this &lt;a href=&quot;https://github.com/0vercl0k/CVE-2021-31166&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;POC&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 For testing Windows HTTP protocol stack vulnerability, choose “Denial of Service Attacks” in test configs.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;🛑 This test will cause a &lt;em&gt;blue screen of death&lt;/em&gt; on vulnerable targets; that’s why it’s not selected by default.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-new-passive-tests&quot;&gt;3 new passive tests&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/redirection-with-body&quot;&gt;Redirection with Body&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/viewstate-is-not-encrypted&quot;&gt;ViewState is not Encrypted&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Test for &lt;a href=&quot;/vulnerability-list/file-upload-functionality&quot;&gt;File Upload Functionality&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;For testing above tests, choose &lt;a href=&quot;/docs/security-tests&quot;&gt;“Passive tests” in scan configs&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;enhancements&quot;&gt;Enhancements&lt;/h2&gt;
+&lt;p&gt;A false positive XSS bug fixed. And, SQL Injection accuracy increased for MySQL and PostgreSQL databases.
+Also, tests for vulnerable applications such as PHP, Apache, Nginx, and WordPress got updated.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;More details on &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="CVE-2021-31166" /><category term="ASP.NET" /><category term="URL Redirection" /><category term="Risk" /><summary type="html">Windows HTTP Stack vulnerability test and more passive tests in the new version of SmartScanner.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-7.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-7.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Top Information Gathering Methods Explained</title><link href="https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained" rel="alternate" type="text/html" title="Top Information Gathering Methods Explained" /><published>2021-06-29T00:00:00+00:00</published><updated>2021-06-29T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/top-information-gathering-methods-explained">&lt;p&gt;Information gathering also known as &lt;em&gt;footprinting&lt;/em&gt; or &lt;em&gt;reconnaissance&lt;/em&gt; is the first step of security testing of any target which is used by both hackers and security professionals.&lt;/p&gt;
+
+&lt;p&gt;Sometimes information gathering is enough for a hacker to break into a system.&lt;/p&gt;
+
+&lt;h2 id=&quot;difference-between-passive-and-active-information-gathering&quot;&gt;Difference Between Passive and Active Information Gathering&lt;/h2&gt;
+&lt;p&gt;Footprinting can be passive or active. Passive involves collecting information without the owner knowing it. While active is a type of footprinting that leaves tracks and alerts the sensors on the target.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-type-of-information-to-collect&quot;&gt;What type of information to collect&lt;/h2&gt;
+&lt;p&gt;Generally, there are 3 types of information that can be identified by information gathering.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Network Information&lt;/strong&gt;: such as domain name, IP addresses, websites, protocols used, VPNs, authentication mechanisms, and list of network systems.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;System Information&lt;/strong&gt;: such as users, system banners, SNMP information, system architecture, operating systems, username, and passwords.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Organizations’ Information&lt;/strong&gt;: such as employee details, organization’s website, local details, address and phone numbers, security policies implemented, social media posts, news articles, and press releases.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;information-gathering-sources&quot;&gt;Information gathering sources&lt;/h2&gt;
+&lt;p&gt;The goal of information gathering is to collect as much information as possible about the target. So any source that can give us information about the target is valuable.&lt;/p&gt;
+
+&lt;p&gt;Some common sources for the information gathering are as follows:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;DNS&lt;/li&gt;
+  &lt;li&gt;Whois&lt;/li&gt;
+  &lt;li&gt;IP and Ports&lt;/li&gt;
+  &lt;li&gt;Social media&lt;/li&gt;
+  &lt;li&gt;Address books and offline sources&lt;/li&gt;
+  &lt;li&gt;Website&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let’s see what kind of information we can get from each source.&lt;/p&gt;
+
+&lt;h3 id=&quot;dns-interrogation&quot;&gt;DNS interrogation&lt;/h3&gt;
+&lt;p&gt;Security testing starts with one or more targets. By targets, we mean domain names or IP addresses. The place to find out more about domains and IPs are Domain Name Servers (DNS).
+We can find IP addresses corresponding to a domain name and vise versa using DNS footprinting (aka &lt;em&gt;DNS interrogation&lt;/em&gt;).
+Another best place to find out subdomains of a domain is Google search.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools for DNS interrogation&lt;/strong&gt;: NSlookup, Dns enumerator, Sam Spade&lt;/p&gt;
+
+&lt;h3 id=&quot;whois&quot;&gt;Whois&lt;/h3&gt;
+&lt;p&gt;Who is the owner of a domain or IP address? &lt;em&gt;WHOIS&lt;/em&gt; is a query and response protocol to answer this question.
+You can search any domain or IP in public databases to get information like the expiration date, current registrar, registrant information, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools&lt;/strong&gt;: Google for “Whois”&lt;/p&gt;
+
+&lt;h3 id=&quot;ip-and-ports&quot;&gt;IP and Ports&lt;/h3&gt;
+&lt;p&gt;After collecting IP addresses we should look for open ports and running services. Using tools like Ping, Telnet, Nmap, and other tools you can determine live IPs and running services.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;⛔ WARNING&lt;/strong&gt;: IP and Port scanning is an active footprinting technique and performing it unauthorized, is illegal in some countries.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Once you’ve found an open port you can do &lt;em&gt;Banner grabbing&lt;/em&gt; to learn more about the running service behind the port. Many services send information like the service version and OS name in their responses. This information is known as banner and fetching this info is called Banner Grabbing.&lt;/p&gt;
+
+&lt;p&gt;For example, in the below example, you can see that an HTTP request has been sent to target and the server response contains the webserver name and underlying operating system.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ nc target 80
+HEAD / HTTP/1.1
+
+HTTP/1.1 400 Bad Request
+Date: Sun, 27 Jun 2021 07:54:12 GMT
+Server: &lt;span class=&quot;bg-yellow&quot;&gt;&lt;b&gt;Apache/2.2.22 (Debian)&lt;/b&gt;&lt;/span&gt;
+Vary: Accept-Encoding
+Content-Length: 306
+Connection: close
+Content-Type: text/html; charset=iso-8859-1
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Tools for IP and port scanning:&lt;/strong&gt; Ping, Telnet, NetCat, Nmap, SuperScan&lt;/p&gt;
+
+&lt;h3 id=&quot;social-media&quot;&gt;Social Media&lt;/h3&gt;
+&lt;p&gt;Social media sites are growing more than ever and now it’s part of our day-to-day life. People sometimes share detailed information on public pages without knowing that this information can be abused by malicious users.
+Places like Facebook, Instagram, LinkedIn, and other social media sites are good places where valuable information is shared by users.&lt;/p&gt;
+
+&lt;h3 id=&quot;address-books-and-offline-sources&quot;&gt;Address Books and Offline Sources&lt;/h3&gt;
+&lt;p&gt;Looking into address books and trash bins or asking from people are a few of the oldest information gathering methods.&lt;/p&gt;
+
+&lt;p&gt;In the IT world &lt;em&gt;dumpster diving&lt;/em&gt; refers to retrieving information from disposed items that could be used to carry out an attack or gain access to a computer network.&lt;/p&gt;
+
+&lt;h3 id=&quot;website-information-gathering&quot;&gt;Website Information Gathering&lt;/h3&gt;
+&lt;p&gt;Websites can reveal important information like server technologies, CMS, backend database, email addresses, and much more.&lt;/p&gt;
+
+&lt;p&gt;You can read our previous post to learn more about &lt;a href=&quot;/blog/why-you-should-use-passive-vulnerability-scan-on-your-website&quot;&gt;passive information gathering methods on websites&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Generally speaking, active scanning methods which can be used for information gathering are &lt;strong&gt;Fuzzing&lt;/strong&gt;, &lt;strong&gt;testing for misconfigurations&lt;/strong&gt;, and &lt;strong&gt;testing for known vulnerabilities&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Fuzzing&lt;/strong&gt; refers to manipulating and sending crafted requests to the webserver to trick it into yielding information. Sometimes trying different inputs which are not expected by the web application can make the web application throw a detailed error message. Such error messages can reveal OS, server-side technologies, databases, or many other things. Also, the behavior of the webserver (the way it responds to the request) can reveal information like the webserver type.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Testing for misconfigurations&lt;/strong&gt;: Using default or insecure configurations are common mistakes that leave valuable information unprotected. For example, a bad configured &lt;em&gt;Apache&lt;/em&gt; webserver can show a huge amount of information on &lt;a href=&quot;/vulnerability-list/apache-server-info-enabled&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/server-info&lt;/code&gt;&lt;/a&gt; URL.
+Misconfigurations can be found anywhere. Another example is having a public community string for an SNMP service which can disclose a tremendous amount of information regarding the service.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Testing for know vulnerabilities&lt;/strong&gt;: You may have heard of the &lt;a href=&quot;/vulnerability-list/the-heartbleed-bug&quot;&gt;Heartbleed bug&lt;/a&gt; which allows anyone on the Internet to read the memory of the systems protected by the vulnerable versions of the OpenSSL software. Using similar bugs and vulnerabilities is another method for collecting target information.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-to-do-with-collected-information&quot;&gt;What to do with Collected Information&lt;/h2&gt;
+&lt;p&gt;The next steps after information gathering are scanning and gaining access to the target. Sometimes (if you’re lucky) you can find information like passwords that allow direct access to the systems but most of the time you can only find the type of OS, web server, or database.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-protect-against-information-gathering&quot;&gt;How to Protect Against Information Gathering&lt;/h2&gt;
+&lt;p&gt;You should try to eliminate the disclosure of sensitive information. Below are some best practices you can use to achieve it.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Classify the type of information which can be kept public.&lt;/li&gt;
+  &lt;li&gt;Don’t publish unnecessary information in any profile, social networking account, or website.&lt;/li&gt;
+  &lt;li&gt;Keep internal DNS and external DNS separate.&lt;/li&gt;
+  &lt;li&gt;Restrict and disable DNS zone transfer to authorized servers.&lt;/li&gt;
+  &lt;li&gt;Establish a disposal policy where all papers are shredded before being recycled&lt;/li&gt;
+  &lt;li&gt;Educate your employees to prevent unwanted information disclosure&lt;/li&gt;
+  &lt;li&gt;Audit and scan your website and network for any information leakage&lt;/li&gt;
+  &lt;li&gt;Keep your systems updated&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="Information Disclosure" /><category term="DNS" /><category term="Passive" /><category term="Fuzzing" /><category term="Misconfiguration" /><category term="Apache" /><category term="SSL/TLS" /><summary type="html">Sometimes information gathering is enough for a hacker to break into a system. Information gathering also known as *footprinting* or *reconnaissance* is the first step of security testing of any target which is used by both hackers and security professionals.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/information-gathering-explained.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/information-gathering-explained.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Find the ShellShock Bug and Application Errors Faster</title><link href="https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster" rel="alternate" type="text/html" title="Find the ShellShock Bug and Application Errors Faster" /><published>2021-06-08T00:00:00+00:00</published><updated>2021-06-08T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/find-the-shellshock-bug-and-application-errors-faster">&lt;p&gt;SmartScanner version 1.6.0 is now smarter with new features! Some new features are testing the ShellShock bug, fuzzing parameter names, finding application errors, and more.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-shellshock-attack&quot;&gt;The ShellShock Attack&lt;/h2&gt;
+&lt;p&gt;You can test any website for the ShellShock bug (CVE-2014-6271, CVE-2014-7169, CVE-2014-6277, and CVE-2014-6278) using SmartScanner version 1.6.0.
+Shellshock, also known as Bashdoor is a bug in Unix Bash shell that allows an attacker to execute arbitrary commands and gain unauthorized access using Bash.&lt;/p&gt;
+
+&lt;h2 id=&quot;enhanced-application-error-detection&quot;&gt;Enhanced Application Error Detection&lt;/h2&gt;
+&lt;p&gt;SmartScanner now identifies and differentiates generic application errors and specific technology errors like PHP or .NET errors. All technology errors are now reported as &lt;a href=&quot;/vulnerability-list/detailed-application-error&quot;&gt;Detailed Application Error&lt;/a&gt; and &lt;a href=&quot;/vulnerability-list/detailed-application-and-database-error&quot;&gt;Detailed Application and Database Error&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Enhanced fuzzing which is explained in the following also helps to find application errors better.&lt;/p&gt;
+
+&lt;h2 id=&quot;fuzzing-parameter-names&quot;&gt;Fuzzing Parameter Names&lt;/h2&gt;
+&lt;p&gt;In the previous version, Fuzzer was added to the SmartScanner to identify errors like &lt;a href=&quot;/vulnerability-list/buffer-overflow&quot;&gt;Buffer Overflow&lt;/a&gt;. Now the Fuzzer can manipulate parameter names to identify more application errors. Fuzzer can change query parameter names, Cookie names, and HTTP POST parameter names to check for exceptions in the web applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;smart-ineffective-parameter-detection&quot;&gt;Smart Ineffective Parameter Detection&lt;/h2&gt;
+&lt;p&gt;Some parameters in the HTTP request are neither used on the server-side, nor the client-side. We call such parameters ineffective. For example, it is common to add version numbers as a query string to resource URLs to bypass browser cache.
+Testing these parameters is useless. So, we’ve implemented a new AI model to identify such parameters and prevent SmartScanner from testing them. This will increase the speed and efficiency of the vulnerability scan.&lt;/p&gt;
+
+&lt;p&gt;To get started &lt;a href=&quot;/download&quot;&gt;download SmartScanner&lt;/a&gt; and test the security of your website for free.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog#version-160--june-8-2021&quot;&gt;change log&lt;/a&gt; for more details on new things in version 1.4.0.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="Release" /><summary type="html">SmartScanner version 1.6.0 is now smarter with new features! Some new features are testing the ShellShock bug, fuzzing parameter names, finding application errors, and more.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/shellshock-fuzzing-app-errors.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/shellshock-fuzzing-app-errors.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How do hackers hack websites?</title><link href="https://www.thesmartscanner.com/blog/how-do-hackers-hack" rel="alternate" type="text/html" title="How do hackers hack websites?" /><published>2021-05-02T00:00:00+00:00</published><updated>2021-05-02T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-do-hackers-hack</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-do-hackers-hack">&lt;p&gt;In the movies, hacking is like fast keyboard typing and hitting the Enter but in the real world, hackers find and exploit vulnerabilities to hack websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-web-vulnerability&quot;&gt;What is a web vulnerability?&lt;/h2&gt;
+&lt;p&gt;There are different definitions for vulnerability. According to &lt;a href=&quot;https://en.wikipedia.org/wiki/ISO/IEC_27005&quot; target=&quot;_blank&quot;&gt;ISO 27005&lt;/a&gt; a vulnerability is:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“A weakness of an asset or group of assets that can be exploited by one or more threats, where an asset is anything that has value to the organization, its business operations, and their continuity, including information resources that support the organization’s mission”&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;That means vulnerabilities can let the malicious user do actions they’re not supposed to do.&lt;/p&gt;
+
+&lt;h2 id=&quot;common-vulnerabilities-hackers-use-for-hacking-websites&quot;&gt;Common vulnerabilities hackers use for hacking websites&lt;/h2&gt;
+&lt;p&gt;Here is the list of common web vulnerabilities.&lt;/p&gt;
+
+&lt;h3 id=&quot;passwords&quot;&gt;Passwords&lt;/h3&gt;
+&lt;p&gt;You log in to your website using a password, so do hackers! Choose an easy password to make it easy for hackers to break into your website.
+Hackers use methods like password guessing, brute force, and phishing to find passwords and break into any website.&lt;/p&gt;
+
+&lt;p&gt;Protect your secrets carefully to stop hackers.&lt;/p&gt;
+
+&lt;h3 id=&quot;known-vulnerabilities&quot;&gt;Known Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Using an outdated WordPress plugin can let a hacker get into your website. 
+Every day many vulnerabilities in popular web softwares are found and reported by security researchers. Once a vulnerability is reported hackers start finding vulnerable targets to exploit and hack for their purpose.&lt;/p&gt;
+
+&lt;p&gt;It’s crucial to use the latest version of any software and install security updates as soon as possible.&lt;/p&gt;
+
+&lt;h3 id=&quot;cross-site-scripting-xss&quot;&gt;Cross-Site Scripting (XSS)&lt;/h3&gt;
+&lt;p&gt;XSS doesn’t allow hackers to access your website directly but hackers can manipulate what is presented on your website using this vulnerability.&lt;/p&gt;
+
+&lt;p&gt;Cross Site Scripting is a dangerous vulnerability because hackers can control the browser of your website visitors and eventually gain access to your website by stealing your browser Cookie containing the access token to the website.&lt;/p&gt;
+
+&lt;h3 id=&quot;broken-access-control&quot;&gt;Broken Access Control&lt;/h3&gt;
+&lt;p&gt;What would happen if you have no authentication for the administration panel of your website? Your website will get hacked. This is one example of broken access control over the administration panel.&lt;/p&gt;
+
+&lt;p&gt;The access control can be broken in any sensitive functionalities like sending posts, uploading files, updating profile, etc. Broken access control is like an open door to your website for hackers.&lt;/p&gt;
+
+&lt;h3 id=&quot;injection-vulnerabilities&quot;&gt;Injection Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Web applications rely on executing commands for performing different actions like displaying your website items, searching, login, and other tasks. If these commands are build using user-supplied input, the web application might be vulnerable to injection attacks.&lt;/p&gt;
+
+&lt;p&gt;There many different types of injection vulnerabilities. Some of the more common injections are SQL, NoSQL, OS command, Object Relational Mapping (ORM), LDAP, and Expression Language (EL) or Object Graph Navigation Library (OGNL) injection.
+Hacker uses these vulnerabilities to inject their commands to your website and hack it.&lt;/p&gt;
+
+&lt;h3 id=&quot;path-traversals&quot;&gt;Path Traversals&lt;/h3&gt;
+&lt;p&gt;Hackers try to access files and directories outside of your website root folder. They try to inject dot-dot-slash (../)” sequences and their variations or absolute file paths wherever possible to access sensitive files like application source code and OS files to take over your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-issues&quot;&gt;Other Issues&lt;/h3&gt;
+&lt;p&gt;There are many other ways to hack a website. For example, hacking the FTP server might end up hacking your whole website. Or, Hacking one website on a shared host can give access to other websites on that host. Also, the combination of two or more vulnerabilities can create a back door to your website.&lt;/p&gt;
+
+&lt;p&gt;Some other vulnerabilities for hacking websites are Cross Site Request Forgery (CSRF), having debug/sample codes on your website, leaving backup files under the web root, displaying detailed error messages, etc.&lt;/p&gt;
+
+&lt;p&gt;To keep your website secure, you should test your website for possible vulnerabilities and fix any issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-protect-your-website-against-hackers&quot;&gt;How to protect your website against hackers&lt;/h2&gt;
+&lt;p&gt;Here are a few best practices to prevent hackers from hacking your website:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Change default credentials&lt;/li&gt;
+  &lt;li&gt;Use strong passwords&lt;/li&gt;
+  &lt;li&gt;Use 2-factor authentication&lt;/li&gt;
+  &lt;li&gt;Always type your website login URL in the browser manually (or use a bookmark)&lt;/li&gt;
+  &lt;li&gt;Never provide your personal information in response to an unsolicited request either over the phone or Internet.&lt;/li&gt;
+  &lt;li&gt;Make sure you’re using an updated version of the software you’re using (turn on auto-update if available).&lt;/li&gt;
+  &lt;li&gt;Remove old, test, and debug files from your website&lt;/li&gt;
+  &lt;li&gt;Setup your website using recommended configurations for the production&lt;/li&gt;
+  &lt;li&gt;Use a &lt;a href=&quot;/&quot;&gt;web vulnerability scanner&lt;/a&gt; to regularly scan your website for finding and fixing weaknesses.&lt;/li&gt;
+  &lt;li&gt;Use a Web Application Firewall (WAF)&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="article" /><category term="Exploit" /><category term="Vulnerability" /><category term="Password" /><category term="CVE" /><category term="Injection" /><category term="XSS" /><category term="Authentication" /><category term="Path Traversal" /><summary type="html">In the movies, hacking is like fast keyboard typing and hitting the Enter but in the real world, hackers find and exploit vulnerabilities to hack websites.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/how-hackers-hack.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/how-hackers-hack.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4</title><link href="https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4" rel="alternate" type="text/html" title="Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4" /><published>2021-04-04T00:00:00+00:00</published><updated>2021-04-04T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4">&lt;p&gt;As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;WordPress security test was already covered in the previous versions of SmartScanner and now you can test the security of your website if you’re using Drupal or Joomla!&lt;/p&gt;
+
+&lt;h2 id=&quot;automatic-security-scan-for-wordpress-drupal-and-joomla&quot;&gt;Automatic Security Scan for WordPress, Drupal and, Joomla!&lt;/h2&gt;
+&lt;p&gt;SmartScanner automatically detects the CMS your website is using and then it will test for known vulnerabilities for that CMS. as of now (version 1.4.0) three CMSs (WordPress, Drupal and, Joomla!) are supported by SmartScanner. Not all known vulnerabilities for these CMSs are covered yet but with each release, new tests will be rolled out.&lt;/p&gt;
+
+&lt;p&gt;To get started &lt;a href=&quot;/download&quot;&gt;download SmartScanner&lt;/a&gt; and test the security of your website for free.&lt;/p&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;/docs/changelog#version-140--april-4-2021&quot;&gt;change log&lt;/a&gt; for more details on new things in version 1.4.0.&lt;/p&gt;</content><author><name></name></author><category term="news" /><category term="Release" /><summary type="html">As of SmartScanner version 1.4 you can test your Joomla! or Drupal website for known security vulnerabilities.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-4.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-4.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
