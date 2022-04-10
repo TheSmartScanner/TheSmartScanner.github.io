@@ -1,0 +1,442 @@
+/**
+ * Convert a template string into HTML DOM nodes
+ * @param  {String} str The template string
+ * @return {Node}       The template HTML
+ */
+var stringToHTML = function (str) {
+	var parser = new DOMParser();
+	var doc = parser.parseFromString(str, 'text/html');
+	return doc.body;
+};
+
+/**
+ * Get the type for a node
+ * @param  {Node}   node The node
+ * @return {String}      The type
+ */
+var getNodeType = function (node) {
+	if (node.nodeType === 3) return 'text';
+	if (node.nodeType === 8) return 'comment';
+	return node.tagName.toLowerCase();
+};
+
+/**
+ * Get the content from a node
+ * @param  {Node}   node The node
+ * @return {String}      The type
+ */
+var getNodeContent = function (node) {
+	if (node.childNodes && node.childNodes.length > 0) return null;
+	return node.textContent;
+};
+
+var areNodesSame = function(nodeA, nodeB) {
+  return getNodeType(nodeA) === getNodeType(nodeB)
+}
+
+const on = (event, func, key, templateNode) => {
+  // add to the node, in case it's not in the dom
+  if (!templateNode.hasAttribute(`vo${event}:${key}`) ) {
+    templateNode.addEventListener(event, func)
+    templateNode.setAttribute(`vo${event}:${key}`, "")
+  }
+}
+
+
+const setDirectives = (node, instance, applyToChildren = false, templateNode) => {
+  if (node.nodeType !== 1) return true // continue with rendering text/comment elements
+  const attrs = node.attributes
+  let templateAttrs = templateNode ? Array.from(templateNode.attributes).map(attr => attr.nodeName) : []
+  //let attrss= Array.from(attrs).map(attr => attr.nodeName).concat(templateAttrs)
+  //let att = new Set(attrss);
+  for(var i = attrs.length - 1; i >= 0; i--) {
+  
+    let attrName = attrs[i].name
+    let attrValue = attrs[i].value
+
+  //for (const attrName of att){
+    //let attrName = att[i]
+    //let attr = attrs[i] || templateNode.attributes[i]
+    //let attrName = attr.name
+    //let attr = attrs[attrName] || templateNode.attributes[attrName]
+    //let attrValue = attr.nodeValue
+
+    const index = templateAttrs.indexOf(attrName);
+    if (index > -1) {
+      // both template node and current node have this attribute, check if values are same
+      templateAttrs.splice(index, 1);
+    }
+    if (!attrName.startsWith('v-')) {
+      if (!templateNode) continue;
+      
+      //const index = templateAttrs.indexOf(attrName);
+      if (index > -1) {
+        // both template node and current node have this attribute, check if values are same
+        //templateAttrs.splice(index, 1);
+        refAttrValue = templateNode.getAttribute(attrName)
+        if (attrValue !== refAttrValue) {
+          node[attrName] = attrValue
+          node.setAttribute(attrName, attrValue)
+        }        
+      } else {
+        // the template node does not have this attribute, remove it from current node
+        node.removeAttribute(attrName)
+      }
+    }
+    
+    if (attrName == 'v-if') {
+      //let res = typeof instance.data[attrValue] === 'function' ? instance.data[attrValue]() : instance.data[attrValue]
+      let res = (attrValue === 'true')
+      if (!res) {
+        // if it's a child item, remove it
+        if (node.parentNode) node.parentNode.removeChild(node)
+        return false // do not render the node (if it's a root element)
+      }
+    }
+    
+    if (attrName.startsWith('v-on:')) {
+      // add event listener
+      let event = attrName.substr(5)
+      on(event, instance.data[attrValue].bind(instance.data), attrValue, node)
+    }
+    
+
+    if (attrName.startsWith('v-bind:')) {
+      let attr = attrName.substr(7)
+      let val = typeof instance.data[attrValue] === 'function' ? instance.data[attrValue]() : instance.data[attrValue]
+      if (val === undefined) {
+        delete node[attr]
+        node.removeAttribute(attr)
+      } else {
+       node[attr] = val
+       node.setAttribute(attr, val)
+      }
+    }
+
+    if (attrName == 'v-model') {
+      let func = e => instance.data[attrValue] = e.target.value
+      on('input', func, attrValue, node)
+      node.value = instance.data[attrValue]
+    }
+  }
+  
+  for (const extraAttributes of templateAttrs) {
+    // add attributes that current is missing compared to template node
+    let attrValue = templateNode.getAttribute(extraAttributes)
+    node[extraAttributes] = attrValue
+    node.setAttribute(extraAttributes, attrValue)
+  }
+
+  if (!applyToChildren) return true
+  var children = Array.prototype.slice.call(node.childNodes);
+  children.forEach(elm => setDirectives(elm, instance, true))
+}
+
+/**
+ * Compare the template to the UI and make updates
+ * @param  {Node} template The template HTML
+ * @param  {Node} elem     The UI HTML
+ */
+var diff = function (template, elem, instance) {
+
+	// Get arrays of child nodes
+	var domNodes = Array.prototype.slice.call(elem.childNodes);
+	var templateNodes = Array.prototype.slice.call(template.childNodes);
+
+	// If extra elements in DOM, remove them
+	var count = domNodes.length - templateNodes.length;
+	if (count > 0) {
+		for (; count > 0; count--) {
+			domNodes[domNodes.length - count].parentNode.removeChild(domNodes[domNodes.length - count]);
+		}
+	}
+
+	// Diff each item in the templateNodes
+	templateNodes.forEach(function (node, index) {
+
+    let shallRender = setDirectives(node, instance, true)
+    if (shallRender === false) {
+      if (domNodes[index] && getNodeType(node) === getNodeType(domNodes[index])) {
+        // remove it, if added before
+        domNodes[index].parentNode.removeChild(domNodes[index]);
+      }
+      return;
+    }
+    
+		// If element doesn't exist, create it
+		if (!domNodes[index]) {
+			elem.appendChild(node);
+			return;
+		}
+    
+
+		// If element is not the same type, replace it with new element
+		if (getNodeType(node) !== getNodeType(domNodes[index])) {
+			domNodes[index].parentNode.replaceChild(node, domNodes[index]);
+			return;
+		}
+
+    // update attributes and directives like v-on, v-bind, v-mode which requires a propery name in data
+    setDirectives(domNodes[index], instance, false, node)
+    
+		// If content is different, update it
+		var templateContent = getNodeContent(node);
+		if (templateContent && templateContent !== getNodeContent(domNodes[index])) {
+			domNodes[index].textContent = templateContent;      
+		}
+
+		// If target element should be empty, wipe it
+		if (domNodes[index].childNodes.length > 0 && node.childNodes.length < 1) {
+			domNodes[index].innerHTML = '';
+			return;
+		}
+
+		// If element is empty and shouldn't be, build it up
+		// This uses a document fragment to minimize reflows
+		if (domNodes[index].childNodes.length < 1 && node.childNodes.length > 0) {
+			var fragment = document.createDocumentFragment();
+			diff(node, fragment, instance);
+			domNodes[index].appendChild(fragment);
+			return;
+		}
+    
+		// If there are existing child elements that need to be modified, diff them
+		if (node.childNodes.length > 0) {
+			diff(node, domNodes[index], instance);
+		}
+
+	});
+
+};
+
+
+  
+class Bear {
+  constructor(options) {
+    const self = this
+    const handler = {
+      set(obj, prop, value) {
+        obj[prop] = value
+        self.render()
+      }
+    }
+    
+    this.template = options.template
+    this.methods = options.methods
+    this.data = new Proxy(
+      typeof options.data === 'function' ? options.data() : options.data,
+      handler
+    )
+  }
+  
+  /**
+   * Renders UI from the template
+  */
+  render () {
+	  var templateHTML = stringToHTML(this.template.call(this.data));
+
+	  // Diff the DOM
+    diff(templateHTML, document.getElementById('app'), this);
+  
+  }
+}
+
+
+a = new Bear({
+  data: {
+    name: '',
+    email: '',
+    address: '',
+    period: 12,
+    price: {
+      '1': {price: 19.9, total: 19.9},
+      '2': {price: 39.8, total: 39.0},
+      '3': {price: 59.7, total: 57.0},
+      '4': {price: 79.6, total: 75.0},
+      '5': {price: 99.5, total: 91.0},
+      '6': {price: 119.4, total: 107.0},
+      '7': {price: 139.3, total: 123.0},
+      '8': {price: 159.2, total: 139.0},
+      '9': {price: 179.1, total: 154.0},
+      '10': {price: 199, total: 169.0},
+      '11': {price: 218.9, total: 185.0},
+      '12': {price: 238.8, total: 199.0},
+      '13': {price: 258.7, total: 212.0},
+      '14': {price: 278.6, total: 223.0},
+      '15': {price: 298.5, total: 236.0},
+      '16': {price: 318.4, total: 248.0},
+      '17': {price: 338.3, total: 260.0},
+      '18': {price: 358.2, total: 274.0},
+      '19': {price: 378.1, total: 287.0},
+      '20': {price: 398, total: 300.0},
+      '21': {price: 417.9, total: 313.0},
+      '22': {price: 437.8, total: 326.0},
+      '23': {price: 457.7, total: 339.0},
+      '24': {price: 477.6, total: 334.0}      
+    },
+    status: 'fill',
+    message: undefined,
+    discount() {
+      let off = this.price[this.subscription()].price - this.price[this.subscription()].total
+      let dis = off*100 / this.price[this.subscription()].price
+      let roundedDis = Math.round(dis * 10) / 10
+      let roundedOff = Math.round(off * 10) / 10
+      return {
+        off: roundedOff ? `-$${roundedOff}` : '$0',
+        discount: roundedDis        
+      }
+    },
+    subscription() {
+      return this.period || 12
+    },
+    showDiscount() {
+      return this.subscription() > 1
+    },
+    async submit(e) {
+      this.status = 'submitting'
+      this.message = ''
+      e.preventDefault();
+      console.log('submit', this, this.name, this.email, this.address, this.period)
+      
+      try {
+        let response = await axios({
+          method: 'POST',
+          //url: 'https://form.ferrriii.workers.dev/',
+          url: 'https://production.order.smartscanner.workers.dev/',
+          data: {
+            name: this.name,
+            email: this.email,
+            address: this.address,
+            period: this.subscription()
+          }
+        })
+        this.status = 'success'
+        let orderNo = response.data.code
+        let invoiceUrl = response.data.data.invoiceUrl
+        this.message = `<h2 class="mt0">Your order has been successfully submitted</h2><span>Order number: <b>${orderNo}</b></span><div class="mt4">Redirecting to the payment page ...<a href="${invoiceUrl}" class="green f7 db">(click here if you didn't redirect)</a></div></div>`
+        setTimeout(() =>{document.location = invoiceUrl}, 3000)
+        console.log('success', response.status, response.data)
+      } catch(error) {
+        this.status = 'error'
+        let response = (error.response ? error.response : {})
+        let err = (response.data ? response.data : {})
+        let errCode = err.code || response.status
+        let message = err.message || error.message
+        this.message = `an error occured${errCode ? ` (${errCode})` : ''}: ${message}`
+        console.log('error', err, error)
+      }
+    }
+  },
+  template() {
+    return `
+      <div v-if="${this.message ? true:false}" class="center pa2 br1 w-100 mt4 tc ${this.status === 'error' ? 'bg-washed-red dark-red':'pv5 bg-washed-green dark-green'}">${this.message}</div>
+      <form v-if="${this.status !== 'success'}" v-on:submit="submit" accept-charset="utf-8" class="w-100 w-50-l flex flex-column justify-between pv0 mt4">
+        <fieldset id="sign_up" class="ba b--transparent ph0 mh0">
+          <legend class="ph0 mh0 fw6 clip">Order</legend>
+          <div class="mt$">
+            <label class="db fw4 lh-copy f6" for="name">Name *</label>
+            <input v-model="name" class="pa2 input-reset ba b--black-10 bg-black-025 hover-bg-white w-100 measure br1" enterkeyhint="done" type="text" name="name" id="name" required="">
+          </div>
+          <div class="mt4">
+            <label class="db fw4 lh-copy f6" for="email-address">Email address *</label>
+            <label class="db fw4 lh-copy f7 black-60" for="email-address">This email will be used for issuing license and communicating with you</label>
+            <input v-model="email" class="pa2 input-reset ba b--black-10 bg-black-025 hover-bg-white w-100 measure br1" enterkeyhint="done" type="email" name="email-address" id="email-address" required="">
+          </div>
+          <div class="mt4">
+            <label class="db fw4 lh-copy f6" for="address">Billing Address</label>
+            <input v-model="address" class="pa2 input-reset ba b--black-10 bg-black-025 hover-bg-white w-100 measure br1" enterkeyhint="done" type="text" name="address" id="address">
+          </div>
+          <div class="mt4">
+            <label class="db fw4 lh-copy f6" for="period">Subscription period (months)</label>
+            <label class="db fw4 lh-copy f7 black-60" for="period">Save up to 30% by subscribing to longer periods</label>
+            <input v-model="period" class="pa2 input-reset ba b--black-10 bg-black-025 hover-bg-white w-100 measure br1" enterkeyhint="done" type="number" value="12" min="1" max="24" name="period" id="period">
+          </div>
+          <div class="dn">
+            <label for="email">email</label>
+            <input type="email" name="email-confirm" id="email">
+          </div>
+        </fieldset>
+        <div class="mt4">
+          <div class="f7 black-70 pv1">By clicking "Purchase", I agree that I have read and accepted the <a href="/terms" class="dark-green underline-hover">Terms of Service</a>, <a href="/eula" class="dark-green underline-hover">End User License Agreement</a> and <a href="/privacy" class="dark-green underline-hover">Privacy Policy</a>.</div>
+          <button ${this.status === 'submitting' ? 'disabled' : ''} class="ph3 pv0 bn input-reset pointer f4 br1 white bg-dark-green w4 h3 flex justify-center items-center" enterkeyhint="done" type="submit">
+          <span v-if="${this.status !== 'submitting'}">Purchase</span>
+          <svg v-if="${this.status === 'submitting'}" width="120" height="30" viewBox="0 0 120 30" xmlns="http://www.w3.org/2000/svg" fill="#fff">
+              <circle cx="15" cy="15" r="15">
+                  <animate attributeName="r" from="15" to="15"
+                           begin="0s" dur="0.8s"
+                           values="15;9;15" calcMode="linear"
+                           repeatCount="indefinite" />
+                  <animate attributeName="fill-opacity" from="1" to="1"
+                           begin="0s" dur="0.8s"
+                           values="1;.5;1" calcMode="linear"
+                           repeatCount="indefinite" />
+              </circle>
+              <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+                  <animate attributeName="r" from="9" to="9"
+                           begin="0s" dur="0.8s"
+                           values="9;15;9" calcMode="linear"
+                           repeatCount="indefinite" />
+                  <animate attributeName="fill-opacity" from="0.5" to="0.5"
+                           begin="0s" dur="0.8s"
+                           values=".5;1;.5" calcMode="linear"
+                           repeatCount="indefinite" />
+              </circle>
+              <circle cx="105" cy="15" r="15">
+                  <animate attributeName="r" from="15" to="15"
+                           begin="0s" dur="0.8s"
+                           values="15;9;15" calcMode="linear"
+                           repeatCount="indefinite" />
+                  <animate attributeName="fill-opacity" from="1" to="1"
+                           begin="0s" dur="0.8s"
+                           values="1;.5;1" calcMode="linear"
+                           repeatCount="indefinite" />
+              </circle>
+          </svg>
+          
+          </button>
+        </div>
+      </form>
+      <div v-if="${this.status !== 'success'}" class="bg-black-05 pa4 w-100 w-50-l mn1 mt4">
+        <h2 class="pb3 fw4">Order Summary</h2>
+        <div class="pv3 flex justify-between bb b--black-05">
+          <div>
+            <span>SmartScanner Professional</span>
+            <div class="black-60">${this.subscription()} ${this.subscription() > 1 ? 'months' : 'month'} subscription</div>
+          </div>
+          <div class="tr">$${this.price[this.subscription()].price}</div>
+        </div>
+        
+        <div class="pv3 flex justify-between bb b--black-05">
+          <div>
+            <span class="black-60">Discount</span>
+          </div>
+          <div class="tr">
+            <span>${this.discount().off}</span>
+            <div class="green" v-if="${this.showDiscount()}">${this.discount().discount}% off</div>
+          </div>
+        </div>
+
+        <div class="pv3 flex justify-between bb b--black-05">
+          <div>
+            <span class="black-60">Subtotal</span>
+          </div>
+          <div class="tr">
+            <span>$${this.price[this.subscription()].total}</span>
+          </div>
+        </div>
+
+        <div class="pv3 flex justify-between">
+          <div>
+            <span>Billed now</span>
+          </div>
+          <div class="tr">
+            <span class="f3">$${this.price[this.subscription()].total}</span>
+          </div>
+        </div>
+        
+      </div>
+     `
+  }
+})
+
+a.render()
