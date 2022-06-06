@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>How to Secure your NodeJs Express Javascript Application - part 2  - SmartScanner</title>
+    <meta name="description" content="Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects a...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="How to Secure your NodeJs Express Javascript Application - part 2">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">
+    <meta property="og:image" content="/assets/img/eval.png">
+    <meta property="og:description" content="Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="How to Secure your NodeJs Express Javascript Application - part 2">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" />
+    <meta name="twitter:description" content="Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/eval.png">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+	<link rel="stylesheet" href="/assets/css/prism.css">
+    
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/eval.png); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" || document.URL
+  let title = "How to Secure your NodeJs Express Javascript Application - part 2" || document.title
+  let text = `Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2022-02-21" >21 February 2022</time></span>
+      </div>
+      <h1 class="mt0 ph3">How to Secure your NodeJs Express Javascript Application - part 2</h1>
+    </div>
+    <div class="ph3">
+    <p>Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.</p>
+
+<p>This is the second part of the NodeJs Express Security series. If you haven’t read the previous part you can read it on the below URL.</p>
+
+<blockquote>
+  <p><a href="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1</a></p>
+</blockquote>
+
+<p>Let’s see how we can make our Express software more secure.</p>
+
+<h2 id="limit-input">Limit input</h2>
+<p>Allowing clients to send huge request body can be abused for a denial of service (DoS) attack. To prevent DoS attacks always set a maximum request size for the input. Use the below code to limit input size.</p>
+
+<pre><code class="language-JavaScript">var contentType = require('content-type')
+var express = require('express')
+var getRawBody = require('raw-body')
+
+var app = express()
+
+app.use(function (req, res, next) {
+  getRawBody(req, {
+    length: req.headers['content-length'],
+    limit: '1mb',
+    encoding: contentType.parse(req).parameters.charset
+  }, function (err, string) {
+    if (err) return next(err)
+    req.text = string
+    next()
+  })
+})
+</code></pre>
+
+<p>You can also set request size for different content types:</p>
+
+<pre><code class="language-JavaScript">app.use(express.urlencoded({ extended: true, limit: "1kb" }));
+app.use(express.json({ limit: "1kb" }));
+</code></pre>
+
+<p>Other than input size you should limit the Transaction per Second/Minute (TPS/TPM) rate. If you don’t set a rate limitation for your sensitive APIs like login, you expose yourself to a <a href="/vulnerability-list/brute-force-prevention-bypassed">Brute Force</a> attack. Packages like <a href="https://www.npmjs.com/package/express-brute">express-brute</a>, <a href="https://www.npmjs.com/package/express-bouncer">express-bouncer</a> and <a href="https://www.npmjs.com/package/express-limiter">express-limiter</a> are some sample packages you can use for limiting input rate in Express. Below code is a sample code for protecting against brute force attacks.</p>
+
+<pre><code class="language-JavaScript">const express = require('express')
+const ExpressBrute = require('express-brute');
+const login = require('./routes/login.js')
+
+const app = express()
+ 
+// using memory store, an in-memory db is recommended for production
+let store = new ExpressBrute.MemoryStore();
+let bruteforce = new ExpressBrute(store);
+ 
+app.post('/auth', bruteforce.prevent, login);
+</code></pre>
+
+<p><strong>Note</strong>: If you use an API gateway like Kong you can easily configure input limiting policies for your routes.</p>
+
+<p><strong>Note</strong>: CAPTCHA and account lockout are also other common solutions for mitigating brute-forcing attacks.</p>
+
+<p><strong>Bonus</strong>: You can also benefit from packages like <a href="https://www.npmjs.com/package/toobusy-js">toobusy-js</a> for monitoring the load of your server to detect whether you’re under a DoS attack.</p>
+
+<h2 id="remove-old-forgotten-debug-and-unused-routes">Remove old, forgotten, debug, and unused routes</h2>
+<p>It’s common (but not recommended) to add debug routes during development for testing purposes. These routes usually don’t have authentication and they’re less restricted. The path to these routes is usually easy to guess; something like <code>/test</code>. This allows attackers to find them easily and abuse the functionality.</p>
+
+<p>Review all the routes in your Express project and remove any unnecessary routes and use proper testing and versioning scheme to prevent unwanted routes in production.</p>
+
+<p><strong>Bonus</strong>: Another example of unwanted routes are default routes like those available in <a href="https://sailsjs.com/">Sails</a> and <a href="https://feathersjs.com/">Feathers</a>. Fortunately Express only has a default error and 404 handlers which we will cover in the following section.</p>
+
+<h2 id="catch-404-and-500-errors">Catch 404 and 500 errors</h2>
+<p>You should always expect exceptions to happen, so get prepared. Unhandled exceptions throw a ton of information to users. Default NodeJs exceptions disclose information like Operation System and used libraries.</p>
+
+<p><img src="/assets/img/express-error.png" width="1044" height="298" alt="Express JavaScript Detailed Error" loading="lazy" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<p>Instead of displaying a <a href="/vulnerability-list/detailed-application-error">detailed error message</a>, you can add an error-handling middleware to catch all errors like below.</p>
+
+<pre><code class="language-JavaScript">app.use((err, req, res, next) =&gt; {
+ console.error(err.stack)
+ res.status(500).send('Something broke!')
+})
+</code></pre>
+
+<p><strong>Note</strong>: You should add the above middleware after any other <code>app.use()</code> and routes.
+No need to mention that you can capture any exception in NodeJs by subscribing to <code>uncaughtException</code> event on the <code>process</code> object.</p>
+
+<h2 id="write-clean-code">Write clean code</h2>
+<p>Code quality is directly correlated to software security. Less code hides fewer vulnerabilities, right? So does the clean code. Keeping your Express project as clean as possible helps to increase the security of your JavaScript application.</p>
+
+<p>One example of bad code that is common in JavaScript projects is the <em>Callback Hell</em>. Callback Hell, also known as <em>Pyramid of Doom</em>, is an anti-pattern seen in code of asynchronous programming. It happens when callbacks are nested inside each other. It’s easy to get lost in a callback hell because it’s hard to follow the execution flow of the program. Inside those deep nested callbacks security bugs, unhandled exceptions, and information leakage are waiting for the right moment to strike.</p>
+
+<p><img src="/assets/img/javascript-promise-hell.png" width="896" height="388" alt="JavaScript Promise Hell Refactored" loading="lazy" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<p>It’s important to have a proper Secure SDLC process in place to prevent bad code. Things like enabling security linters, code reviews, and automatic code scan like Github code scan (see this <a href="https://github.com/github/code-scanning-javascript-demo">repo</a>) are good controls for having more secure code.</p>
+
+<h2 id="only-return-what-is-necessary">Only return what is necessary</h2>
+<p>When passing information to the clients always return the minimum possible fields. Consider a use-case where you want to show a list of available users on your website. You can query the database for all users and return a list of users with all their attributes and only display the username on the front end. Properties like username, password, address, social security numbers, and many others are usually associated with users. You might not display all of them on the page but you are exposing them in your API which makes them available for hackers.</p>
+
+<h2 id="do-not-use-eval">Do not use <code>eval</code></h2>
+<p>There are some functions you must avoid calling unless you absolutely have to use them. <code>eval()</code> is one of them. The <code>eval()</code> function evaluates JavaScript code represented as a string. It is far too easy for a bad actor to run arbitrary code when you use <code>eval()</code> with user-supplied input. The NodeJs <code>child_process.exec</code> is similar to <code>eval()</code> and should be avoided.</p>
+
+<p>The <code>fs</code> and <code>vm</code> modules as well as the <code>RegExp</code> class should be used carefully if you want to pass user input to them. Please read the <a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1#validate-input">input validation</a> on part 1 of this series for more.</p>
+
+<h2 id="use-strict-mode">Use <code>strict mode</code></h2>
+<p>JavaScript’s strict mode, introduced in ECMAScript 5, is a way to opt-in to a restricted variant of JavaScript. Strict mode makes several changes to normal JavaScript semantics. It eliminates some JavaScript silent errors by changing them to throw errors. It also helps JavaScript engines perform optimizations and prohibits some syntax likely to be defined in future versions of ECMAScript.
+For all these improvements it’s encouraged to always use strict mode. For activating strict mode add <code>'strict mode';</code> at top of your code.</p>
+
+<h2 id="log-and-monitor-events">Log and monitor events</h2>
+<p>Record any events on your application and review them. Monitoring logs regularly could help identify malicious activities on your system. When something bad happens, logs are your only way to find out what happened and what is the root cause of it.
+In Express you can use <a href="https://www.npmjs.com/package/express-winston">express-winston</a> for logging.</p>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">Is your robots.txt file vulnerable? Here's how to check and secure it</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/5-security-vulnerabilities-you-can-fix-right-now">5 Security Vulnerabilities You Can Fix Right Now</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet">Complete guide to HTTP Headers for securing websites (Cheat Sheet)</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/smartscanner-now-has-a-64-bit-version-for-windows">← SmartScanner now has a 64-bit version for Windows</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">Is your robots.txt file vulnerable? Here's how to check and secure it →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>    
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "How to Secure your NodeJs Express Javascript Application - part 2"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "How to Secure your NodeJs Express Javascript Application - part 2",
+ "image": "/assets/img/eval.png"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14" class="link dim dib moon-gray link-reset pb1">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/is-a-serverless-application-more-secure-no,-it-s-not" class="link dim dib moon-gray link-reset pb1">Is a Serverless application more secure? No, it's not!</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests" class="link dim dib moon-gray link-reset pb1">SmartScanner 1.13 now has logs and more Joomla! tests</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pb1">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pb1">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pb1">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pb1">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pb1">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pb1">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pb1">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pb1">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pb1">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pb1">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pb1">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pb1" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pb2">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pb1">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pb1">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pb1">EULA</a>
+        </div>
+      </div>
+      <div class="pv2 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <script defer type="text/javascript" src="/assets/js/prism.js"></script>
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>

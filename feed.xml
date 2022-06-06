@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2022-06-06T06:30:31+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</title><link href="https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14" rel="alternate" type="text/html" title="Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14" /><published>2022-06-06T00:00:00+00:00</published><updated>2022-06-06T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14">&lt;p&gt;SmartScanner version 1.14 released. It now can scan Apache Tomcat/Struts and Java vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;This version is just a start for adding tests for Apache Tomcat and Apache Struts. We’ll continue adding new tests for Apache projects in future versions.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this release.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Apache Tomcat&lt;/strong&gt; and &lt;strong&gt;Apache Struts&lt;/strong&gt; detection&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Java runtime error detection&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;4 Vulnerabilities for Apache Struts&lt;/li&gt;
+  &lt;li&gt;3 Vulnerabilities for Apache Tomcat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Apache" /><category term="Tomcat" /><summary type="html">SmartScanner version 1.14 released. It now can scan Apache Tomcat/Struts and Java vulnerabilities.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-14.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-14.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is a Serverless application more secure? No, it’s not!</title><link href="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not" rel="alternate" type="text/html" title="Is a Serverless application more secure? No, it’s not!" /><published>2022-05-21T00:00:00+00:00</published><updated>2022-05-21T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not">&lt;p&gt;They’re not as serverless as it sounds and not more secure than other applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-serverless-application&quot;&gt;What is a Serverless Application?&lt;/h2&gt;
+&lt;p&gt;For running a traditional web application, you need to set up an OS, configure a web server, install a CMS and prepare a database. You should take care of infrastructure, capacity, and maintenance of servers as long as your application is running.&lt;/p&gt;
+
+&lt;p&gt;What if you could only focus on developing your application and don’t think about the infrastructure? This is exactly what you can do in a Serverless architecture. You write your code and publish it on cloud servers like AWS Lambda, Cloudflare workers, or Google Cloud Functions. Your code will run on cloud servers, and your cloud provider manages and handles the infrastructure and maintenance.&lt;/p&gt;
+
+&lt;p&gt;Cloud companies that provide Serverless services offer different form of it. Take FaaS as an example. In this development model, cloud providers allow you to write your application in small separate functions. That’s why this service is called Function as a service (FaaS). This approach supports trending architectures like the JAMstack (JavaScript, API &amp;amp; Markup). The JAMStack consists of static pages (the Markup) that integrate with the backend through the use of APIs in Serverless applications.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 PaaS is also another Serverless cloud service where you control the entire application. This is in contrast with FaaS that has an event-driven architecture. In FaaS, your application (function) gets executed in certain events like incoming requests.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;serverless-security&quot;&gt;Serverless Security&lt;/h2&gt;
+&lt;p&gt;The Serverless development model has many benefits like cost efficiency, elasticity, and productivity. But Serverless applications are not more secure compared to traditional applications. Cloud providers like Amazon AWS take care of OS and platform vulnerabilities, but you don’t have access to the servers, and you can’t use classic security solutions like IDS/IPS that require installation on endpoints.&lt;/p&gt;
+
+&lt;p&gt;Further, in a Serverless architecture, the entire application consists of more small components, that means more entry points resulting in an increased attack surface.&lt;/p&gt;
+
+&lt;p&gt;Developing and running a Serverless application depends on the cloud provider’s standards. This means the same code can not be used in another cloud provider without change.&lt;/p&gt;
+
+&lt;p&gt;Privacy is another concern in Serverless applications because of using shared resources and access by external employees in public Serverless cloud infrastructure.&lt;/p&gt;
+
+&lt;h2 id=&quot;vulnerabilities-in-serverless-applications&quot;&gt;Vulnerabilities in Serverless Applications&lt;/h2&gt;
+&lt;p&gt;Security vulnerabilities affect different layers of any application like OS, web server, database, and the application itself. In Serverless architectures, the cloud provider takes care of all infrastructure security. So you won’t worry about security misconfigurations and issues like &lt;a href=&quot;/vulnerability-list/vulnerable-apache-version&quot;&gt;Outdated server vulnerability&lt;/a&gt;. But the application security is still your responsibility in the Serverless development model. And unfortunately, many vulnerabilities relate to the application layer. Vulnerabilities like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;Cross-Site Scripting (XSS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;File Inclusion Vulnerabilities&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cross-site Request Forgery (CSRF)&lt;/li&gt;
+  &lt;li&gt;Using &lt;code&gt;eval&lt;/code&gt; and Command Execution&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/unvalidated-redirection&quot;&gt;Unvalidated Redirects and Forwards&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are generic vulnerabilities that are in OWASP’s Top 10 list. We have covered some of them in articles like &lt;a href=&quot;/blog/how-do-hackers-hack&quot;&gt;common web vulnerabilities&lt;/a&gt; and &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;securing your NodeJs express application&lt;/a&gt;. In the followings, we will review vulnerabilities that are less known but more specific to Serverless applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;missing-function-level-access-control&quot;&gt;Missing Function Level Access Control&lt;/h3&gt;
+&lt;p&gt;Sensitive functionalities should be protected with an authentication mechanism. It doesn’t matter whether these functionalities are served as web pages or an API. If anyone can access such functionalities, this is a broken access control flaw.&lt;/p&gt;
+
+&lt;p&gt;All administration use-cases are prone to this issue. You might have several Serverless APIs for tasks like managing accounts/posts or changing service status. You should make sure that only allowed users can access and use such functionalities.&lt;/p&gt;
+
+&lt;h3 id=&quot;sensitive-data-exposure&quot;&gt;Sensitive Data Exposure&lt;/h3&gt;
+&lt;p&gt;Let’s say you have a Serverless application for a voting system. One function of this platform is to show the vote counts for any candidate. Consider a Serverless function for displaying vote counts which accepts candidate ID and returns a list of every user who has voted for that candidate. So you can easily show the count of users as vote counts for the candidate.
+But something’s fishy here! We need a function to display vote counts, not to return name of voters! You might say that the list of users is not displayed anywhere, and only the count of users is represented. That’s right, but as long as the Serverless function is returning all those information and it’s publicly accessible, an attacker can abuse it.&lt;/p&gt;
+
+&lt;p&gt;Sensitive Data Exposure is a very common flaw. To avoid it you should return the minimum required data in your Serverless functions.&lt;/p&gt;
+
+&lt;h3 id=&quot;insecure-direct-object-reference-idor&quot;&gt;Insecure Direct Object Reference (IDOR)&lt;/h3&gt;
+&lt;p&gt;Imagine an HR application that has a profile API that accepts an employee ID and returns the employee information. Let’s say the employee IDs are an integer number and the Serverless function queries it on the database to find the employee. What could go wrong in this scenario? An attacker can build a collection of employee IDs by starting from 1 and incrementing to any number. Then this collection can be used to query your function to enumerate all employee information. This can happen if the API does not implement the proper access control we discussed earlier.&lt;/p&gt;
+
+&lt;p&gt;Here employee ID passed to the Serverless API is a reference to the employee record in the database. And this reference is directly controlled by the user. If such references are easy to guess, you risk your data being enumerated.&lt;/p&gt;
+
+&lt;p&gt;Avoid using guessable patterns for IDs (using hash can help). Make sure your functions have access control to mitigate IDOR flaws.&lt;/p&gt;
+
+&lt;h3 id=&quot;template-language-injection&quot;&gt;Template Language Injection&lt;/h3&gt;
+&lt;p&gt;A common way of rendering HTML pages using a template is to evaluate an expression like &lt;code&gt;2+2&lt;/code&gt; and display the results (&lt;code&gt;4&lt;/code&gt;) in output. &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Template language injection&lt;/a&gt; or Expression language injection occurs when a user can change the expression used in the template.&lt;/p&gt;
+
+&lt;h3 id=&quot;components-with-known-vulnerabilities&quot;&gt;Components with Known Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Serverless applications are usually in JavaScript (or TypeScript) or Python languages. Developers in Python or JavaScript usually use numerous third-party packages for completing different tasks. These packages might have vulnerabilities, and using them can make your Serverless application vulnerable.&lt;/p&gt;
+
+&lt;p&gt;To mitigate component vulnerabilities, make sure you’re using the updated version of any library and run security tests to find vulnerable packages.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 In NodeJs, you can use &lt;code&gt;npm audit&lt;/code&gt; to find vulnerabilities in npm packages. Read &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;Securing Your NodeJs JavaScript Project&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Serverless applications have many benefits and use cases like file transformation, providing dynamic contents, logging, and others. There’s a misunderstanding that Serverless applications are more secure. This is true to some extent when it comes to OS vulnerabilities, but you need to take application layer security in your hand.&lt;/p&gt;
+
+&lt;p&gt;We reviewed some of the common vulnerabilities in Serverless applications, but you should know that these vulnerabilities are not complete and these are not even limited to Serverless applications. So security testing of your web applications is a crucial job for securing them.
+Security of Serverless applications needs a DevSecOps solution where developers, operation team, and Security guys collaborate closely.&lt;/p&gt;</content><author><name></name></author><category term="Serverless" /><category term="FaaS" /><category term="PaaS" /><category term="Cloud" /><category term="IDOR" /><category term="EL Injection" /><summary type="html">They’re not as serverless as it sounds and not more secure than other applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/serverless-security.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/serverless-security.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner 1.13 now has logs and more Joomla! tests</title><link href="https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests" rel="alternate" type="text/html" title="SmartScanner 1.13 now has logs and more Joomla! tests" /><published>2022-04-10T00:00:00+00:00</published><updated>2022-04-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests">&lt;p&gt;SmartScanner version 1.13 released. It now can scan more vulnerabilities for Joomla!&lt;/p&gt;
+
+&lt;p&gt;In addition to 24 new Joomla! vulnerability tests, a log section was added. It displays information about events and findings during a scan job.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this release.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Scan logs&lt;/strong&gt; during scan&lt;/li&gt;
+  &lt;li&gt;Support for &lt;strong&gt;sitemaps in robots.txt&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/missing-or-insecure-cache-control-header&quot;&gt;Missing or Insecure Cache-Control Header&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;24 new &lt;strong&gt;&lt;a href=&quot;/vulnerability-list/#tags:joomla&quot;&gt;Joomla! tests&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Some bug fixes for &lt;a href=&quot;/vulnerability-list/subresource-integrity-is-missing&quot;&gt;SRI&lt;/a&gt; and &lt;a href=&quot;/vulnerability-list/content-security-policy-header-is-missing&quot;&gt;CSP&lt;/a&gt; checking and authentication in scan configs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Joomla" /><summary type="html">SmartScanner version 1.13 released. It now can scan more vulnerabilities for Joomla!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-13.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-13.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is your robots.txt file vulnerable? Here’s how to check and secure it</title><link href="https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it" rel="alternate" type="text/html" title="Is your robots.txt file vulnerable? Here’s how to check and secure it" /><published>2022-03-27T00:00:00+00:00</published><updated>2022-03-27T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">&lt;p&gt;A bad configured Robots.txt file is like a welcome sign to your website for hackers.
+Let’s see how to set up an efficient and secure robots.txt.&lt;/p&gt;
+
+&lt;p&gt;Can a Robots.txt file be vulnerable? Yes, Here’s how to create a secure one.
+Is your robots.txt file vulnerable? Here’s how to check and secure it
+Beware of Robots.txt! You should not reveal everything to robots.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-robotstxt&quot;&gt;What is robots.txt&lt;/h2&gt;
+&lt;p&gt;Actually, the robots.txt file is not vulnerable by itself.
+Robots.txt is a file for web robots. Web robots or web spiders and crawlers are programs that search the web for collecting content. Search engine robots like google collect your web page contents for indexing it and spammer robots &lt;a href=&quot;/vulnerability-list/email-address-disclosure&quot;&gt;look for email addresses&lt;/a&gt; and other things on your website.&lt;/p&gt;
+
+&lt;p&gt;Web robots look for the robots.txt file at the main directory (typically your root domain or homepage) of any website.&lt;/p&gt;
+
+&lt;h2 id=&quot;anatomy-of-a-robotstxt&quot;&gt;Anatomy of a robots.txt&lt;/h2&gt;
+&lt;p&gt;In robots.txt, you can put instructions about your website for web robots; these instructions are called &lt;em&gt;The Robots Exclusion Protocol&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Each line of a robots.txt file consists of a field, a colon, and a value. Comments are preceded with &lt;code&gt;#&lt;/code&gt; character and white spaces are optional. So, the general syntax is like below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;field&amp;gt;:&amp;lt;value&amp;gt;&amp;lt;#optional-comment&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Common fields are followings:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;user-agent&lt;/code&gt;: identifies which crawler the rules apply to.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;allow&lt;/code&gt;: a URL path that may be crawled.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;disallow&lt;/code&gt;: a URL path that may not be crawled.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;noindex&lt;/code&gt;: unofficial directive for preventing search engines from indexing a page&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;sitemap&lt;/code&gt;: the complete URL of a sitemap.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By default, robots try to crawl all your website or at least as many pages as they choose. But using the above directives you can guide them about crawling your website.
+The &lt;code&gt;allow&lt;/code&gt; and &lt;code&gt;disallow&lt;/code&gt; are the most used directives for instructing robots about what pages they can crawl and what they shouldn’t.
+Using the &lt;code&gt;user-agent&lt;/code&gt; you can associate rules with specific user agents (robots).&lt;/p&gt;
+
+&lt;p&gt;For example, consider the below sample robots.txt.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user-agent: *
+allow: /*
+
+user-agent: googlebot*
+disallow: /oldui/
+
+sitemap: https://example.com/sitemap.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This robots.txt means that any robot (&lt;code&gt;user-agent: *&lt;/code&gt;) is allowed to crawl any URL (&lt;code&gt;allow: /*&lt;/code&gt;). But the google bot (&lt;code&gt;user-agent: googlebot*&lt;/code&gt;) is not allowed to crawl the &lt;code&gt;/oldui/&lt;/code&gt; URL. This sample also includes a link to the sitemap.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-evils-nest&quot;&gt;The evil’s nest&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;disallow&lt;/code&gt; and &lt;code&gt;noindex&lt;/code&gt; are usually misunderstood. Using these two directives for hiding pages from google and robots seems to be a good idea. But the truth is these directives are not respected by all web robots. You should keep in mind that robots.txt is a public file that can be accessed by both google bot and an attacker.&lt;/p&gt;
+
+&lt;p&gt;So if you put something like &lt;code&gt;disallow: /admin/&lt;/code&gt; in your robots.txt file, you’re actually revealing the URL of your website admin section.&lt;/p&gt;
+
+&lt;p&gt;If you add any web pages of your website in the robots.txt file, that file will be accessed by the whole internet like the home page of your website. So robots.txt is not a locker where you can &lt;a href=&quot;/vulnerability-list/hidden-resource-in-robots-txt&quot;&gt;hide your secrets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have a public web page but you don’t want it to be indexed and shown in search results, you can use the disallow directive.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The robots.txt is a good tool for optimizing the experience of your website’s robot visitors. But it’s not just for robots, and not all robots are friendly. So do not put sensitive information in the robots.txt file.&lt;/p&gt;</content><author><name></name></author><category term="Information Disclosure" /><category term="SEO" /><summary type="html">A bad configured Robots.txt file is like a welcome sign to your website for hackers. Let’s see how to set up an efficient and secure robots.txt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/robots.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/robots.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to Secure your NodeJs Express Javascript Application - part 2</title><link href="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" rel="alternate" type="text/html" title="How to Secure your NodeJs Express Javascript Application - part 2" /><published>2022-02-21T00:00:00+00:00</published><updated>2022-02-21T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application---part-2-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">&lt;p&gt;Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.&lt;/p&gt;
+
+&lt;p&gt;This is the second part of the NodeJs Express Security series. If you haven’t read the previous part you can read it on the below URL.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;How to Secure your NodeJs Express Javascript Application - part 1&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how we can make our Express software more secure.&lt;/p&gt;
+
+&lt;h2 id=&quot;limit-input&quot;&gt;Limit input&lt;/h2&gt;
+&lt;p&gt;Allowing clients to send huge request body can be abused for a denial of service (DoS) attack. To prevent DoS attacks always set a maximum request size for the input. Use the below code to limit input size.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;var contentType = require('content-type')
+var express = require('express')
+var getRawBody = require('raw-body')
+
+var app = express()
+
+app.use(function (req, res, next) {
+  getRawBody(req, {
+    length: req.headers['content-length'],
+    limit: '1mb',
+    encoding: contentType.parse(req).parameters.charset
+  }, function (err, string) {
+    if (err) return next(err)
+    req.text = string
+    next()
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also set request size for different content types:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;app.use(express.urlencoded({ extended: true, limit: &quot;1kb&quot; }));
+app.use(express.json({ limit: &quot;1kb&quot; }));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other than input size you should limit the Transaction per Second/Minute (TPS/TPM) rate. If you don’t set a rate limitation for your sensitive APIs like login, you expose yourself to a &lt;a href=&quot;/vulnerability-list/brute-force-prevention-bypassed&quot;&gt;Brute Force&lt;/a&gt; attack. Packages like &lt;a href=&quot;https://www.npmjs.com/package/express-brute&quot;&gt;express-brute&lt;/a&gt;, &lt;a href=&quot;https://www.npmjs.com/package/express-bouncer&quot;&gt;express-bouncer&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/express-limiter&quot;&gt;express-limiter&lt;/a&gt; are some sample packages you can use for limiting input rate in Express. Below code is a sample code for protecting against brute force attacks.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;const express = require('express')
+const ExpressBrute = require('express-brute');
+const login = require('./routes/login.js')
+
+const app = express()
+ 
+// using memory store, an in-memory db is recommended for production
+let store = new ExpressBrute.MemoryStore();
+let bruteforce = new ExpressBrute(store);
+ 
+app.post('/auth', bruteforce.prevent, login);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you use an API gateway like Kong you can easily configure input limiting policies for your routes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: CAPTCHA and account lockout are also other common solutions for mitigating brute-forcing attacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: You can also benefit from packages like &lt;a href=&quot;https://www.npmjs.com/package/toobusy-js&quot;&gt;toobusy-js&lt;/a&gt; for monitoring the load of your server to detect whether you’re under a DoS attack.&lt;/p&gt;
+
+&lt;h2 id=&quot;remove-old-forgotten-debug-and-unused-routes&quot;&gt;Remove old, forgotten, debug, and unused routes&lt;/h2&gt;
+&lt;p&gt;It’s common (but not recommended) to add debug routes during development for testing purposes. These routes usually don’t have authentication and they’re less restricted. The path to these routes is usually easy to guess; something like &lt;code&gt;/test&lt;/code&gt;. This allows attackers to find them easily and abuse the functionality.&lt;/p&gt;
+
+&lt;p&gt;Review all the routes in your Express project and remove any unnecessary routes and use proper testing and versioning scheme to prevent unwanted routes in production.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: Another example of unwanted routes are default routes like those available in &lt;a href=&quot;https://sailsjs.com/&quot;&gt;Sails&lt;/a&gt; and &lt;a href=&quot;https://feathersjs.com/&quot;&gt;Feathers&lt;/a&gt;. Fortunately Express only has a default error and 404 handlers which we will cover in the following section.&lt;/p&gt;
+
+&lt;h2 id=&quot;catch-404-and-500-errors&quot;&gt;Catch 404 and 500 errors&lt;/h2&gt;
+&lt;p&gt;You should always expect exceptions to happen, so get prepared. Unhandled exceptions throw a ton of information to users. Default NodeJs exceptions disclose information like Operation System and used libraries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/express-error.png&quot; width=&quot;1044&quot; height=&quot;298&quot; alt=&quot;Express JavaScript Detailed Error&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of displaying a &lt;a href=&quot;/vulnerability-list/detailed-application-error&quot;&gt;detailed error message&lt;/a&gt;, you can add an error-handling middleware to catch all errors like below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;app.use((err, req, res, next) =&amp;gt; {
+ console.error(err.stack)
+ res.status(500).send('Something broke!')
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You should add the above middleware after any other &lt;code&gt;app.use()&lt;/code&gt; and routes.
+No need to mention that you can capture any exception in NodeJs by subscribing to &lt;code&gt;uncaughtException&lt;/code&gt; event on the &lt;code&gt;process&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;h2 id=&quot;write-clean-code&quot;&gt;Write clean code&lt;/h2&gt;
+&lt;p&gt;Code quality is directly correlated to software security. Less code hides fewer vulnerabilities, right? So does the clean code. Keeping your Express project as clean as possible helps to increase the security of your JavaScript application.&lt;/p&gt;
+
+&lt;p&gt;One example of bad code that is common in JavaScript projects is the &lt;em&gt;Callback Hell&lt;/em&gt;. Callback Hell, also known as &lt;em&gt;Pyramid of Doom&lt;/em&gt;, is an anti-pattern seen in code of asynchronous programming. It happens when callbacks are nested inside each other. It’s easy to get lost in a callback hell because it’s hard to follow the execution flow of the program. Inside those deep nested callbacks security bugs, unhandled exceptions, and information leakage are waiting for the right moment to strike.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/javascript-promise-hell.png&quot; width=&quot;896&quot; height=&quot;388&quot; alt=&quot;JavaScript Promise Hell Refactored&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s important to have a proper Secure SDLC process in place to prevent bad code. Things like enabling security linters, code reviews, and automatic code scan like Github code scan (see this &lt;a href=&quot;https://github.com/github/code-scanning-javascript-demo&quot;&gt;repo&lt;/a&gt;) are good controls for having more secure code.&lt;/p&gt;
+
+&lt;h2 id=&quot;only-return-what-is-necessary&quot;&gt;Only return what is necessary&lt;/h2&gt;
+&lt;p&gt;When passing information to the clients always return the minimum possible fields. Consider a use-case where you want to show a list of available users on your website. You can query the database for all users and return a list of users with all their attributes and only display the username on the front end. Properties like username, password, address, social security numbers, and many others are usually associated with users. You might not display all of them on the page but you are exposing them in your API which makes them available for hackers.&lt;/p&gt;
+
+&lt;h2 id=&quot;do-not-use-eval&quot;&gt;Do not use &lt;code&gt;eval&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;There are some functions you must avoid calling unless you absolutely have to use them. &lt;code&gt;eval()&lt;/code&gt; is one of them. The &lt;code&gt;eval()&lt;/code&gt; function evaluates JavaScript code represented as a string. It is far too easy for a bad actor to run arbitrary code when you use &lt;code&gt;eval()&lt;/code&gt; with user-supplied input. The NodeJs &lt;code&gt;child_process.exec&lt;/code&gt; is similar to &lt;code&gt;eval()&lt;/code&gt; and should be avoided.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;fs&lt;/code&gt; and &lt;code&gt;vm&lt;/code&gt; modules as well as the &lt;code&gt;RegExp&lt;/code&gt; class should be used carefully if you want to pass user input to them. Please read the &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1#validate-input&quot;&gt;input validation&lt;/a&gt; on part 1 of this series for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-strict-mode&quot;&gt;Use &lt;code&gt;strict mode&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;JavaScript’s strict mode, introduced in ECMAScript 5, is a way to opt-in to a restricted variant of JavaScript. Strict mode makes several changes to normal JavaScript semantics. It eliminates some JavaScript silent errors by changing them to throw errors. It also helps JavaScript engines perform optimizations and prohibits some syntax likely to be defined in future versions of ECMAScript.
+For all these improvements it’s encouraged to always use strict mode. For activating strict mode add &lt;code&gt;'strict mode';&lt;/code&gt; at top of your code.&lt;/p&gt;
+
+&lt;h2 id=&quot;log-and-monitor-events&quot;&gt;Log and monitor events&lt;/h2&gt;
+&lt;p&gt;Record any events on your application and review them. Monitoring logs regularly could help identify malicious activities on your system. When something bad happens, logs are your only way to find out what happened and what is the root cause of it.
+In Express you can use &lt;a href=&quot;https://www.npmjs.com/package/express-winston&quot;&gt;express-winston&lt;/a&gt; for logging.&lt;/p&gt;</content><author><name></name></author><category term="Express" /><category term="NodeJs" /><category term="JavaScript" /><category term="npm" /><category term="Information Disclosure" /><category term="Brute Force" /><summary type="html">Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/eval.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/eval.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner now has a 64-bit version for Windows</title><link href="https://www.thesmartscanner.com/blog/smartscanner-now-has-a-64-bit-version-for-windows" rel="alternate" type="text/html" title="SmartScanner now has a 64-bit version for Windows" /><published>2022-02-08T00:00:00+00:00</published><updated>2022-02-08T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-now-has-a-64-bit-version-for-windows-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-now-has-a-64-bit-version-for-windows">&lt;p&gt;SmartScanner version 1.12 is out with a new 64bit build. Of course, we didn’t forget to include new tests.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this release.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;New &lt;strong&gt;64bit&lt;/strong&gt; build along with the 32bit version&lt;/li&gt;
+  &lt;li&gt;New tests, focusing on &lt;strong&gt;web server vulnerabilities&lt;/strong&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/crlf-injection-in-url&quot;&gt;CRLF Injection in URL&lt;/a&gt;&lt;/strong&gt;, that can occur because of misconfigurations in Nginx or other web servers&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/nginx-code-execution-due-to-misconfiguration&quot;&gt;Nginx Code Execution due to Misconfiguration&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Nginx&lt;/strong&gt; &lt;a href=&quot;/vulnerability-list/nginx-integer-overflow&quot;&gt;CVE-2017-7529&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;Django&lt;/strong&gt; &lt;a href=&quot;/vulnerability-list/open-redirection-in-url&quot;&gt;CVE-2018-14574&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;strong&gt;WordPress&lt;/strong&gt; &lt;a href=&quot;/vulnerability-list/wordpress-4-6-blind-os-command-execution&quot;&gt;CVE-2016-10033&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Now &lt;em&gt;Referer&lt;/em&gt; and &lt;em&gt;User-Agent&lt;/em&gt; headers are tested for XSS and other vulnerabilities by default. (You can disable it in the scan config)&lt;/li&gt;
+  &lt;li&gt;A critical bug causing random crashes fixed.&lt;/li&gt;
+  &lt;li&gt;Some false positives were removed and, many optimizations were done.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><summary type="html">SmartScanner version 1.12 is out with a new 64bit build. Of course, we didn’t forget to include new tests.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-version-1-12.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-version-1-12.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to Secure your NodeJs Express Javascript Application - part 1</title><link href="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1" rel="alternate" type="text/html" title="How to Secure your NodeJs Express Javascript Application - part 1" /><published>2021-12-29T00:00:00+00:00</published><updated>2021-12-29T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application---part-1-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">&lt;p&gt;Express is a fast, unopinionated, and minimalist web framework for Node.js. It has been a de facto choice for creating a web-server application in Node.js. If you want to use Express in your application, you need to read this article.&lt;/p&gt;
+
+&lt;p&gt;Read the second part of this series on the below URL.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2&quot;&gt;How to Secure your NodeJs Express Javascript Application - part 2&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how you can make Express more secure.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-updated-express-version-and-any-other-npm-package&quot;&gt;Use Updated Express Version (and any other npm package)&lt;/h2&gt;
+&lt;p&gt;Old versions of Express have vulnerabilities like &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/web-server-path-traversal&quot;&gt;Path traversal (CVE-2017-14849)&lt;/a&gt;. The best practice is to use the latest stable packages to mitigate such vulnerabilities. You can use the &lt;code&gt;npm audit&lt;/code&gt; command to find out known vulnerabilities in your Nodejs application. Then you can fix them by running the &lt;code&gt;npm audit fix&lt;/code&gt; command. Make sure to get 0 vulnerabilities in the report of the npm audit command.&lt;/p&gt;
+
+&lt;h2 id=&quot;secure-your-http-headers&quot;&gt;Secure your HTTP Headers&lt;/h2&gt;
+&lt;p&gt;Proper HTTP headers can prevent security vulnerabilities like Cross-Site Scripting, Click-jacking, Packet sniffing and, information disclosure. It’s better not to use Express with its default HTTP headers.
+Try the &lt;a href=&quot;https://www.npmjs.com/package/helmet&quot;&gt;Helmet&lt;/a&gt; npm package for hardening the HTTP headers of your Express project. Below is a sample code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const express = require(&quot;express&quot;);
+const helmet = require(&quot;helmet&quot;);
+
+const app = express();
+
+app.use(helmet());
+
+// ...
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Read the &lt;a href=&quot;https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet&quot;&gt;Complete guide to HTTP Headers&lt;/a&gt; for more detailed information about HTTP Headers security.&lt;/p&gt;
+
+&lt;h2 id=&quot;validate-input&quot;&gt;Validate Input&lt;/h2&gt;
+&lt;p&gt;Hackers should find a way into your application and, request parameters are their first choice. All the injection vulnerabilities like &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt;, &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/os-command-execution&quot;&gt;Command Injection&lt;/a&gt;, &lt;a href=&quot;https://www.thesmartscanner.com/vulnerability-list/expression-language-injection&quot;&gt;Expression Language injection&lt;/a&gt;, and many others occur when unvalidated user input is directly used in performing tasks.&lt;/p&gt;
+
+&lt;p&gt;Consider below code which gets your name in the &lt;code&gt;name&lt;/code&gt; query parameter and displays it.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const express = require('express')
+const app = express()
+
+app.get('/', function (request, response) {
+ response.send('Hello ' + request.query.name)
+})
+
+app.listen(3000)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you send a request like &lt;code&gt;http://localhost:3000/?name[foo]=bar&lt;/code&gt; then you will receive an Object instead of a String name. This is an attack known as HTTP Parameter Pollution (HPP). It can be very scary when working with a no-SQL database like MongoDB.&lt;/p&gt;
+
+&lt;p&gt;Before processing any &lt;code&gt;request&lt;/code&gt; parameter, validate the following:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Input type (either String, Number, Boolean, etc.)&lt;/li&gt;
+  &lt;li&gt;Input boundaries: Check range for numbers, length, and acceptable characters for strings&lt;/li&gt;
+  &lt;li&gt;Input format: Check for input patterns like emails, IP addresses, etc.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can use &lt;a href=&quot;https://www.npmjs.com/package/hpp&quot;&gt;hpp&lt;/a&gt; npm package for preventing HPP attacks.&lt;/p&gt;
+
+&lt;p&gt;Input validation is a broad topic. It can be very tricky especially dealing with rich user content. You can read &lt;a href=&quot;https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html&quot;&gt;this article&lt;/a&gt; for an in-depth review.&lt;/p&gt;
+
+&lt;h2 id=&quot;sanitize-output&quot;&gt;Sanitize Output&lt;/h2&gt;
+&lt;p&gt;Below sample code exposes a Cross-Site scripting (XSS) vulnerability.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const express = require('express')
+const app = express()
+
+app.get('/', function (request, response) {
+ response.send('Hello ' + request.query.name)
+})
+
+app.listen(3000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you run the application and open &lt;code&gt;http://localhost:2000/?name=&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&lt;/code&gt; URL, the &lt;code&gt;alert(1)&lt;/code&gt; JavaScript code will be executed. XSS bug allows an attacker to run any client-side code to steal session tokens, passwords or display wrong information.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/xss.png&quot; width=&quot;960&quot; height=&quot;320&quot; alt=&quot;Cross-Side Scripting Vulnerability&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To prevent the XSS you have to use proper encoding before rendering input parameters in the response. You can use &lt;a href=&quot;https://github.com/ESAPI/node-esapi&quot;&gt;node-esapi&lt;/a&gt; or &lt;a href=&quot;https://github.com/component/escape-html&quot;&gt;escape-html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Below code is a fix for the above XSS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const express = require('express')
+var ESAPI = require('node-esapi');
+const app = express()
+
+app.get('/', function (request, response) {
+ encodedName = ESAPI.encoder().encodeForHTML(request.query.name)
+ response.send('Hello ' + encodedName)
+})
+
+app.listen(3000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;use-anti-csrf&quot;&gt;Use Anti CSRF&lt;/h2&gt;
+&lt;p&gt;Processing form data and performing actions only by relying on the form data will cause a Cross-Site Request Forgery (CSRF).
+If the same request data (either form data or URL query) causes the same action on your application then you have a CSRF issue. It gets serious when the action is sensitive like, creating a new user or deleting data.&lt;/p&gt;
+
+&lt;p&gt;Attackers use CSRF to perform actions on behalf of an authorized user while the user is unaware of this action. Below sample code is an example that kills the app by a CSRF.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const express = require('express')
+const app = express()
+
+app.get('/', function (request, response) {
+ response.send('&amp;lt;h1&amp;gt;Admin Panel&amp;lt;/h1&amp;gt;&amp;lt;a href=/kill&amp;gt;kill&amp;lt;/a&amp;gt;')
+})
+
+app.get('/kill', function (request, response) {
+ process.exit()
+})
+
+app.listen(2000)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You might wonder that adding cookie-based session management cannot prevent CSRF because Cookies are automatically sent by browsers. To prevent CSRF you should send random tokens within each request and validate the existence of the CSRF token before processing the request.&lt;/p&gt;
+
+&lt;p&gt;You can use the &lt;a href=&quot;https://www.npmjs.com/package/csurf&quot;&gt;csurf&lt;/a&gt; npm package for integrating CSRF prevention in your Express application.&lt;/p&gt;
+
+&lt;p&gt;In next article we will see how to prevent brute force attacks, command execution and information disclosure vulnerabilities.&lt;/p&gt;</content><author><name></name></author><category term="Express" /><category term="NodeJs" /><category term="JavaScript" /><category term="npm" /><category term="HTTP Headers" /><category term="XSS" /><category term="HPP" /><category term="CSRF" /><summary type="html">Express is a fast, unopinionated, and minimalist web framework for Node.js. It has been a de facto choice for creating a web-server application in Node.js. If you want to use Express in your application, you need to read this article.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/express-security.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/express-security.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Host Header Injection and Python Tests with SmartScanner 1.11</title><link href="https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11" rel="alternate" type="text/html" title="Host Header Injection and Python Tests with SmartScanner 1.11" /><published>2021-12-12T00:00:00+00:00</published><updated>2021-12-12T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11">&lt;p&gt;SmartScanner version 1.11 &lt;a href=&quot;/download&quot;&gt;was released&lt;/a&gt; with new tests like Host Header Injection.&lt;/p&gt;
+
+&lt;p&gt;Below are the change highlights in this version:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/host-header-injection&quot;&gt;Host Header Injection&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/insecure-deserialization&quot;&gt;Insecure Deserialization&lt;/a&gt;&lt;/strong&gt; test for JSON objects, which &lt;a href=&quot;/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner&quot;&gt;was added&lt;/a&gt; in version 1.10 updated with support for Java and PHP objects.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/wordpress-plugin-wpfilemanager-6-8-rce&quot;&gt;WordPress Plugin Wpfilemanager 6.8 RCE&lt;/a&gt;&lt;/strong&gt;, which is listed with CVE-2020-25213 in &lt;a href=&quot;https://www.cisa.gov/known-exploited-vulnerabilities-catalog&quot;&gt;Known Exploited Vulnerabilities Catalog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/drupal7-pre-auth-sqli&quot;&gt;Drupal7 Pre Auth SQLI (CVE-2014-3704)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/apache-mod-proxy-2-4-48-ssrf&quot;&gt;Apache mod_proxy 2.4.48 SSRF (CVE-2021-40438)&lt;/a&gt;&lt;/strong&gt;, listed &lt;a href=&quot;https://www.cisa.gov/known-exploited-vulnerabilities-catalog&quot;&gt;Known Exploited Vulnerabilities Catalog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Support for using &lt;strong&gt;the system’s proxy&lt;/strong&gt; in the scan configurations&lt;/li&gt;
+  &lt;li&gt;Support for detection of &lt;strong&gt;errors in Python&lt;/strong&gt; libraries like Django, Flask, and &lt;a href=&quot;/vulnerability-list/werkzeug-interactive-debugging-is-active&quot;&gt;Werkzeug&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vulnerability assessment&lt;/strong&gt; for outdated &lt;a href=&quot;/vulnerability-list/vulnerable-php-version&quot;&gt;PHP&lt;/a&gt;, and &lt;a href=&quot;/vulnerability-list/vulnerable-wordpress-version&quot;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Check out all changes in the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Release" /><summary type="html">SmartScanner version 1.11 was released with new tests like Host Header Injection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-11.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-11.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5 Security Vulnerabilities You Can Fix Right Now</title><link href="https://www.thesmartscanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now" rel="alternate" type="text/html" title="5 Security Vulnerabilities You Can Fix Right Now" /><published>2021-11-03T00:00:00+00:00</published><updated>2021-11-03T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now">&lt;p&gt;We usually think security and hacking are complicated—at least it’s super geeky in movies—but you will be surprised to see how easy you can fix some security problems even without programming knowledge. Let’s review and fix them right away.&lt;/p&gt;
+
+&lt;h2 id=&quot;weak-password&quot;&gt;Weak Password&lt;/h2&gt;
+&lt;p&gt;Do you use &lt;code&gt;123456&lt;/code&gt; to login into your website? Change it now! Easy passwords can be guessed and cracked in minutes.
+You should use strong and unique passwords for any of your accounts. To have a strong password, always use a long, hard to guess &lt;a href=&quot;https://en.wikipedia.org/wiki/Passphrase&quot;&gt;passphrase&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;outdated-application&quot;&gt;Outdated Application&lt;/h2&gt;
+&lt;p&gt;Outdated applications are like open doors for hackers to break in. Hackers search the whole Internet for outdated applications of any kind (web server, CMS, router, etc.). If you’re using outdated software, you’ve already become a target for hackers.
+Modern applications like WordPress and Joomla! provide one-click auto-update features to make our life much easier. If your site is one of them, login into your administration panel and check for available updates.&lt;/p&gt;
+
+&lt;h2 id=&quot;directory-listing&quot;&gt;Directory listing&lt;/h2&gt;
+&lt;p&gt;Does your website display a list of files and folders when the URL ends with a slash (&lt;code&gt;/&lt;/code&gt;)? If yes, you have a &lt;a href=&quot;/vulnerability-list/directory-listing&quot;&gt;directory listing issue&lt;/a&gt; you need to fix.&lt;/p&gt;
+
+&lt;p&gt;A universal and easy fix for this issue is to login into your website hosting panel and create an empty file named &lt;code&gt;index.html&lt;/code&gt; inside every directory that doesn’t have one. Try not to override files to prevent unwanted damages to your website.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; It’s better to ask your web hosting provider for the specific instructions for your website to have a permanent fix for the directory listing problem.&lt;/p&gt;
+
+&lt;h2 id=&quot;hidden-pages-or-functionalities&quot;&gt;Hidden Pages or Functionalities&lt;/h2&gt;
+&lt;p&gt;Let’s say you have a &lt;em&gt;secret&lt;/em&gt; page on your website that you’re the only one who knows its URL. If you believe no other one can access it because they don’t know the URL, you’re wrong!
+Obscuring a resource does not make it secure. Because hackers can find hidden pages by trying many different URLs. Furthermore, the &lt;em&gt;secret&lt;/em&gt; URL you access will be reported and recorded in many places like web server logs and referrer headers where others can see it.&lt;/p&gt;
+
+&lt;p&gt;Common example of hidden pages are debug pages like &lt;a href=&quot;/vulnerability-list/phpinfo-found&quot;&gt;phpInfo()&lt;/a&gt;, beta versions, hidden administration pages and pre-production features.
+Immediately delete such pages from your website or use password protection for them.&lt;/p&gt;
+
+&lt;h2 id=&quot;backup-files&quot;&gt;Backup files&lt;/h2&gt;
+&lt;p&gt;Taking regular backups is a must. But leaving backup files under the web directory where they are accessible over the Internet, is a bad habit you have to quit.
+Backups contain source code and config files that can reveal secrets like the source codes, password of your database and protected directories.&lt;/p&gt;
+
+&lt;p&gt;Common backup formats are:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Compressed files like &lt;code&gt;.rar&lt;/code&gt;, &lt;code&gt;.zip&lt;/code&gt;, &lt;code&gt;.gz&lt;/code&gt; and &lt;code&gt;.tar&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.bak&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.tmp&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.gho&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.001&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;.bac&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Search for the above file types in your web hosting panel and make sure they are not publicly accessible over the web.
+Also, If you use a compressed file for transferring resources to your web hosting, do not forget to remove the compressed archive after extracting files.&lt;/p&gt;
+
+&lt;h2 id=&quot;bonus-always-use-https&quot;&gt;Bonus: Always use HTTP&lt;strong&gt;S&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Do you still use &lt;code&gt;http://&lt;/code&gt; (without S) for viewing your website in the browser? The HTTP protocol transfers everything in plain text. That means anyone between your system and the target website can see everything, as well as your password!&lt;/p&gt;
+
+&lt;p&gt;Next time you want to access any web page, always use the &lt;code&gt;httpS://&lt;/code&gt; instead of &lt;code&gt;http://&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We didn’t cover many other vulnerabilities that require time and technical skills to fix. To keep your site safe and protected, always use up-to-date applications and regularly &lt;a href=&quot;/&quot;&gt;scan for vulnerabilities&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Do you know any other easy-to-fix issues to add? &lt;a href=&quot;https://twitter.com/intent/tweet?text=%23DIY_Security%20%23SmartScanner&quot;&gt;share it&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Brute Force" /><category term="Information Disclosure" /><category term="Vulnerability" /><category term="Password" /><summary type="html">We usually think security and hacking are complicated—at least it’s super geeky in movies—but you will be surprised to see how easy you can fix some security problems even without programming knowledge. Let’s review and fix them right away.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/diy-security.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/diy-security.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner</title><link href="https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner" rel="alternate" type="text/html" title="Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner" /><published>2021-10-10T00:00:00+00:00</published><updated>2021-10-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner">&lt;p&gt;Today, we’re excited to announce that SmartScanner 1.10 is available for &lt;a href=&quot;/download&quot;&gt;download&lt;/a&gt;. This release brings 15 new CVEs and tests to improve vulnerability assessment quality and new security testing capabilities to our customers. You can find all changes in the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt;, but here are top highlights from the release:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All issues mapped to &lt;strong&gt;OWASP Top 10 2021&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/insecure-deserialization&quot;&gt;Insecure Deserialization&lt;/a&gt;&lt;/strong&gt; tests for JSON objects. Other objects like PHP serialized objects will be added in future versions.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/apache-2-4-49-path-traversal-and-rce&quot;&gt;Apache 2.4.49 Path Traversal and RCE (CVE-2021-41773, CVE-2021-42013)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/nginx-restriction-bypass-via-space-character-in-uri&quot;&gt;Nginx Restriction Bypass via Space Character in URI (CVE-2013-4547)&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/web-server-path-traversal&quot;&gt;Web Server Path Traversal (CVE-2017-14849)&lt;/a&gt;&lt;/strong&gt; for Express and other static file routers&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;/vulnerability-list/cookie-accessible-for-subdomains&quot;&gt;Cookie Accessible for Subdomains&lt;/a&gt;&lt;/strong&gt; in passive tests&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Vulnerability assessment&lt;/strong&gt; for outdated &lt;a href=&quot;/vulnerability-list/vulnerable-openssl-version&quot;&gt;OpenSSL&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/vulnerable-apache-version&quot;&gt;Apache&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/vulnerable-php-version&quot;&gt;PHP&lt;/a&gt;, and &lt;a href=&quot;/vulnerability-list/vulnerable-wordpress-version&quot;&gt;WordPress&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="Apache" /><category term="Express" /><category term="Path Traversal" /><category term="Nginx" /><category term="CVE" /><category term="Release" /><category term="Web Server" /><category term="Deserialization" /><category term="Cookie" /><summary type="html">15 new CVEs for Apache, Nginx, OpenSSL, and Express included in version 1.10 of SmartScanner. Download it now!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-10-path-traversal.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smarscanner-v1-10-path-traversal.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

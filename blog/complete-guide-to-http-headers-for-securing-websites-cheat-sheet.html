@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Complete guide to HTTP Headers for securing websites (Cheat Sheet)  - SmartScanner</title>
+    <meta name="description" content="A complete list of security related HTTP headers and guide for configuration. Headers for preventing and mitigating attacks like XSS, click-jacking...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Complete guide to HTTP Headers for securing websites (Cheat Sheet)">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet">
+    <meta property="og:image" content="/assets/img/http-headers.png">
+    <meta property="og:description" content="A complete list of security related HTTP headers and guide for configuration. Headers for preventing and mitigating attacks like XSS, click-jacking, Spectre" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Complete guide to HTTP Headers for securing websites (Cheat Sheet)">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet" />
+    <meta name="twitter:description" content="A complete list of security related HTTP headers and guide for configuration. Headers for preventing and mitigating attacks like XSS, click-jacking, Spectre">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/http-headers.png">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+	<link rel="stylesheet" href="/assets/css/prism.css">
+    
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/http-headers.webp); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet" || document.URL
+  let title = "Complete guide to HTTP Headers for securing websites (Cheat Sheet)" || document.title
+  let text = `A complete list of security related HTTP headers and guide for configuration. Headers for preventing and mitigating attacks like XSS, click-jacking, Spectre`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2021-09-23" >23 September 2021</time></span>
+      </div>
+      <h1 class="mt0 ph3">Complete guide to HTTP Headers for securing websites (Cheat Sheet)</h1>
+    </div>
+    <div class="ph3">
+    <p>HTTP Headers are a great booster for web security with easy implementation. Proper HTTP headers can prevent security vulnerabilities like Cross-Site Scripting, Click-jacking, Packet sniffing and, information disclosure.</p>
+
+<p>In this article, we’ll take a quick look at all security-related HTTP headers and the recommended configurations. Below are the main sections of this document.</p>
+
+<ul>
+  <li><a href="#security-headers">Security headers list</a></li>
+  <li><a href="#adding-http-headers-in-different-technologies">Implementation of HTTP headers in Nginx, Apache, PHP, etc.</a></li>
+  <li><a href="#testing-proper-implementation-of-security-headers">Testing of HTTP headers in your website</a></li>
+  <li><a href="#references">References</a></li>
+</ul>
+
+<p>The source for this document is available on <a href="https://github.com/TheSmartScanner/http-headers-security">GitHub</a>. Your contributions are most welcome to complete it and keep it updated 👐</p>
+
+<h2 id="security-headers">Security Headers</h2>
+
+<h3 id="x-frame-options">X-Frame-Options</h3>
+<p>The <code>X-Frame-Options</code> HTTP response header can be used to indicate whether or not a browser should be allowed to render a page in a <code>&lt;frame&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code> or <code>&lt;object&gt;</code>. Sites can use this to avoid click-jacking attacks, by ensuring that their content is not embedded into other sites.</p>
+
+<h4 id="recommendation">Recommendation</h4>
+<p>Do not allow displaying of the page in a frame.</p>
+<blockquote>
+  <p><code>X-Frame-Options: DENY</code></p>
+</blockquote>
+
+<h3 id="x-xss-protection">X-XSS-Protection</h3>
+<p>The HTTP <code>X-XSS-Protection</code> response header is a feature of Internet Explorer, Chrome, and Safari that stops pages from loading when they detect reflected cross-site scripting (XSS) attacks.</p>
+
+<h4 id="recommendation-1">Recommendation</h4>
+<p>Do not set this header or explicitly turn it off.</p>
+<blockquote>
+  <p><code>X-XSS-Protection: 0</code></p>
+</blockquote>
+
+<p>Please read <a href="https://github.com/OWASP/CheatSheetSeries/master/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.md#x-xss-protection-header">X-XSS_Protection should be disabled</a> for details.</p>
+
+<h3 id="x-content-type-options">X-Content-Type-Options</h3>
+<p>The <code>X-Content-Type-Options</code> response HTTP header is used by the server to prevent browsers from guessing the media type ( MIME type).
+This is known as <strong>MIME sniffing</strong> in which the browser guesses the correct MIME type by looking at the contents of the resource.
+The absence of this header might cause browsers to transform non-executable content into executable content.</p>
+
+<h4 id="recommendation-2">Recommendation</h4>
+<blockquote>
+  <p><code>X-Content-Type-Options: nosniff</code></p>
+</blockquote>
+
+<h3 id="referrer-policy">Referrer-Policy</h3>
+<p>The <code>Referrer-Policy</code> HTTP header controls how much referrer information (sent via the Referer header) should be included with requests.</p>
+
+<h4 id="recommendation-3">Recommendation</h4>
+<p>Send everything to the same site but only the origin for other sites.</p>
+<blockquote>
+  <p><code>Referrer-Policy: strict-origin-when-cross-origin</code></p>
+</blockquote>
+
+<ul>
+  <li><em>NOTE:</em> This is the default in modern browsers</li>
+</ul>
+
+<h3 id="content-type">Content-Type</h3>
+<p>The <code>Content-Type</code> representation header is used to indicate the original media type of the resource (before any content encoding is applied for sending).</p>
+
+<h4 id="recommendation-4">Recommendation</h4>
+<blockquote>
+  <p><code>Content-Type: text/html; charset=UTF-8</code></p>
+</blockquote>
+
+<ul>
+  <li><em>NOTE:</em> the <code>charset</code> attribute is necessary to prevent XSS in <strong>HTML</strong> pages</li>
+  <li><em>NOTE</em>: the <code>text/html</code> can be any of the possible <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME types</a></li>
+</ul>
+
+<h3 id="set-cookie">Set-Cookie</h3>
+<p>The <code>Set-Cookie</code> HTTP response header is used to send a cookie from the server to the user agent, so the user agent can send it back to the server later. To send multiple cookies, multiple Set-Cookie headers should be sent in the same response.</p>
+
+<h4 id="recommendation-5">Recommendation</h4>
+<blockquote>
+  <p><code>Set-Cookie: name=value; Secure; HttpOnly; SameSite=Strict</code></p>
+</blockquote>
+
+<ul>
+  <li><em>NOTE:</em> The <code>Domain</code> attribute has been removed intentionally</li>
+</ul>
+
+<h3 id="strict-transport-security">Strict-Transport-Security</h3>
+<p>The HTTP <code>Strict-Transport-Security</code> response header (often abbreviated as HSTS) lets a website tell browsers that it should only be accessed using HTTPS, instead of using HTTP.</p>
+
+<h4 id="recommendation-6">Recommendation</h4>
+<p>Enable HTTPS-only access for the site and sub domains.</p>
+<blockquote>
+  <p><code>Strict-Transport-Security: max-age=63072000; includeSubDomains; preload</code></p>
+</blockquote>
+
+<h3 id="expect-ct">Expect-CT</h3>
+<p>The <code>Expect-CT</code> header lets sites opt-in to reporting of Certificate Transparency (CT) requirements. Given that mainstream clients now require CT qualification, the only remaining value is reporting such occurrences to the nominated report-uri value in the header. The header is now less about enforcement and more about detection/reporting.</p>
+
+<h4 id="recommendation-7">Recommendation</h4>
+<p>Set Certificate Transparency so user agents report Expect-CT failures.</p>
+<blockquote>
+  <p><code>Expect-CT: max-age=604800, report-uri="https://foo.example/report"</code></p>
+</blockquote>
+
+<h3 id="content-security-policy">Content-Security-Policy</h3>
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement to distribution of malware.</p>
+
+<h4 id="recommendation-8">Recommendation</h4>
+<p>Restrict most of the resource types to the same site and subdomains of <code>yourdoamin.com</code></p>
+<blockquote>
+  <p><code>Content-Security-Policy: default-src 'self' *.yourdomain.com; block-all-mixed-content; font-src 'self' https: data:; img-src 'self' data: blob:; object-src 'none'; script-src-attr 'none'; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests;</code></p>
+</blockquote>
+
+<ul>
+  <li><em>WARNING</em>: Inline <code>script</code> elements and inline script event handlers like <code>onload</code> will stop working with the above header. But this is required to neutralize XSS attacks.</li>
+</ul>
+
+<h3 id="access-control-allow-origin">Access-Control-Allow-Origin</h3>
+<p>The <code>Access-Control-Allow-Origin</code> response header indicates whether the response can be shared with requesting code from the given origin.</p>
+
+<h4 id="recommendation-9">Recommendation</h4>
+<p>Use <code>*</code> or specific domain names.</p>
+<blockquote>
+  <p><code>Access-Control-Allow-Origin: *</code></p>
+</blockquote>
+
+<h3 id="cross-origin-opener-policy">Cross-Origin-Opener-Policy</h3>
+<p>The HTTP <code>Cross-Origin-Opener-Policy</code> (COOP) response header allows you to ensure a top-level document does not share a browsing context group with cross-origin documents.</p>
+
+<h4 id="recommendation-10">Recommendation</h4>
+<p>Isolates the browsing context exclusively to same-origin documents.</p>
+<blockquote>
+  <p><code>HTTP Cross-Origin-Opener-Policy: same-origin</code></p>
+</blockquote>
+
+<h3 id="cross-origin-resource-policy">Cross-Origin-Resource-Policy</h3>
+<p>The <code>Cross-Origin-Resource-Policy</code> (CORP) header allows you to control the set of origins that are empowered to include a resource. It is a robust defense against attacks like <a href="https://meltdownattack.com/">Spectre</a>, as it allows browsers to block a given response before it enters an attacker’s process.</p>
+
+<h4 id="recommendation-11">Recommendation</h4>
+<p>Limit current resource loading to the site and sub-domains only.</p>
+<blockquote>
+  <p><code>Cross-Origin-Resource-Policy: same-site</code></p>
+</blockquote>
+
+<h3 id="cross-origin-embedder-policy">Cross-Origin-Embedder-Policy</h3>
+<p>The HTTP <code>Cross-Origin-Embedder-Policy</code> (COEP) response header prevents a document from loading any cross-origin resources that don’t explicitly grant the document permission (using <a href="#cross-origin-resource-policy">CORP</a> or CORS).</p>
+
+<h4 id="recommendation-12">Recommendation</h4>
+<p>A document can only load resources from the same origin, or resources explicitly marked as loadable from another origin.</p>
+<blockquote>
+  <p><code>Cross-Origin-Embedder-Policy: require-corp</code></p>
+</blockquote>
+
+<ul>
+  <li><em>NOTE</em>: you can bypass it by adding the <code>crossorigin</code> attribute like below:</li>
+  <li><code>&lt;img src="https://thirdparty.com/img.png" crossorigin&gt;</code></li>
+</ul>
+
+<h3 id="server">Server</h3>
+<p>The <code>Server</code> header describes the software used by the origin server that handled the request — that is, the server that generated the response.</p>
+
+<h4 id="recommendation-13">Recommendation</h4>
+<p>Remove this header or set non-informative values.</p>
+<blockquote>
+  <p><code>Server: webserver</code></p>
+</blockquote>
+
+<h3 id="x-powered-by">X-Powered-By</h3>
+<p>The <code>X-Powered-By</code> header describes the technologies used by the webserver. This information exposes the server to attackers. Using the information in this header, attackers can find vulnerabilities easier.</p>
+
+<h4 id="recommendation-14">Recommendation</h4>
+<p>Remove all <code>X-Powered-By</code> headers.</p>
+
+<h3 id="x-aspnet-version">X-AspNet-Version</h3>
+<p>Provides information about the .NET version.</p>
+
+<h4 id="recommendation-15">Recommendation</h4>
+<p>Disable sending this header. Review the <a href="https://www.thesmartscanner.com/vulnerability-list/asp-net-version-disclosure">ASP.NET Version Disclosure</a> issue for details.</p>
+
+<h3 id="x-aspnetmvc-version">X-AspNetMvc-Version</h3>
+<p>Provides information about the .NET version.</p>
+
+<h4 id="recommendation-16">Recommendation</h4>
+<p>Disable sending this header. Review the <a href="https://www.thesmartscanner.com/vulnerability-list/asp-net-version-disclosure">ASP.NET Version Disclosure</a> issue for details.</p>
+
+<h3 id="x-dns-prefetch-control">X-DNS-Prefetch-Control</h3>
+<p>The <code>X-DNS-Prefetch-Control</code> HTTP response header controls DNS prefetching, a feature by which browsers proactively perform domain name resolution on both links that the user may choose to follow as well as URLs for items referenced by the document, including images, CSS, JavaScript, and so forth.</p>
+
+<h4 id="recommendation-17">Recommendation</h4>
+<p>The default behavior of browsers is to perform DNS caching which is good for most websites.
+If you do not control links on your website, you might want to set <code>off</code> as a value to disable DNS prefetch to avoid leaking information to those domains.</p>
+
+<h3 id="public-key-pins-">Public-Key-Pins ❌</h3>
+<p>The HTTP <code>Public-Key-Pins</code> response header is used to associate a specific cryptographic public key with a certain web server to decrease the risk of MITM attacks with forged certificates.</p>
+
+<h4 id="recommendation-18">Recommendation</h4>
+<p>This header is deprecated. Use <code>Expect-CT</code> instead.</p>
+
+<h2 id="adding-http-headers-in-different-technologies">Adding Http Headers in Different Technologies</h2>
+<h3 id="php">PHP</h3>
+<p>Below sample code sets the <code>X-XSS-Protection</code> header in PHP.</p>
+
+<pre><code class="language-php">header("X-XSS-Protection: 1; mode=block");
+</code></pre>
+
+<h3 id="apache">Apache</h3>
+<p>Below <code>.htaccess</code> sample configuration sets the <code>X-XSS-Protection</code> header in Apache.</p>
+
+<pre><code>&lt;IfModule mod_headers.c&gt;
+Header set X-XSS-Protection "1; mode=block"
+&lt;/IfModule&gt;
+</code></pre>
+
+<h3 id="iis">IIS</h3>
+<p>Add below configurations to your <code>Web.config</code> in ISS to send the <code>X-XSS-Protection</code> header</p>
+
+<pre><code class="language-xml">&lt;system.webServer&gt;
+...
+ &lt;httpProtocol&gt;
+   &lt;customHeaders&gt;
+     &lt;add name="X-XSS-Protection" value="1; mode=block" /&gt;
+   &lt;/customHeaders&gt;
+ &lt;/httpProtocol&gt;
+...
+&lt;/system.webServer&gt;
+</code></pre>
+
+<h3 id="haproxy">HAProxy</h3>
+<p>Add the below line to your font-end, listen, or backend configurations to send the <code>X-XSS-Protection</code> header</p>
+
+<pre><code>http-response set-header X-XSS-Protection 1; mode=block
+</code></pre>
+
+<h3 id="nginx">Nginx</h3>
+<p>Below sample configuration, sets the <code>X-XSS-Protection</code> header in Nginx.</p>
+
+<pre><code>add_header "X-XSS-Protection" "1; mode=block";
+</code></pre>
+
+<h3 id="express">Express</h3>
+<p>You can use <a href="https://www.npmjs.com/package/helmet">helmet</a> to setup HTTP headers in Express. Below code is sample for adding the <code>X-Frame-Options</code> header.</p>
+
+<pre><code class="language-javascript">const helmet = require('helmet');
+const app = express();
+// Sets "X-Frame-Options: SAMEORIGIN"
+app.use(
+ helmet.frameguard({
+   action: "sameorigin",
+ })
+);
+</code></pre>
+
+<h2 id="testing-proper-implementation-of-security-headers">Testing Proper Implementation of Security Headers</h2>
+<h3 id="mozilla-observatory">Mozilla Observatory</h3>
+<p>The <a href="https://observatory.mozilla.org/">Mozilla Observatory</a> is an online tool that you can check your website’s header status.</p>
+
+<h3 id="smartscanner">SmartScanner</h3>
+<p><a href="https://www.thesmartscanner.com/">SmartScanner</a> has a dedicated <a href="/docs/configuring-security-tests">test profile</a> for testing security of HTTP headers.
+Online tools usually test the homepage of the given address. But SmartScanner scans the whole website. So, you can make sure all of your web pages have the right HTTP Headers in place.</p>
+
+<p><img src="/assets/img/smartscanner-testing-security-http-headers.gif" width="768" height="466" alt="Testing HTTP Security Headers using SmartScanner" loading="lazy" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h2 id="references">References</h2>
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">Mozilla: X-Frame-Options</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection">Mozilla: X-XSS-Protection</a></li>
+  <li><a href="https://hstspreload.org/">hstspreload.org</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Mozilla: Strict-Transport-Security</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type">Mozilla: Content-Type</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Mozilla: Expect-CT</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Mozilla: Referrer-Policy</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie">Mozilla: Set-Cookie</a></li>
+  <li><a href="https://content-security-policy.com/">content-security-policy.com</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin">Mozilla: Access-Control-Allow-Origin</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Opener-Policy">Mozilla: Cross-Origin-Opener-Policy</a></li>
+  <li><a href="https://resourcepolicy.fyi/">resourcepolicy.fyi</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy">Mozilla: Cross-Origin-Resource-Policy</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy">Mozilla: Cross-Origin-Embedder-Policy</a></li>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Server">Mozilla: Server Header</a></li>
+</ul>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/php-version-disclosure">PHP Version Disclosure - Vulnerability</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/server-version-disclosure">Server Version Disclosure - Vulnerability</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/asp-net-version-disclosure">ASP.NET Version Disclosure - Vulnerability</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/apache-version-disclosure">Apache Version Disclosure - Vulnerability</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/smartscanner-v1-9-as-joomla-security-scanner">← SmartScanner v1.9 as Joomla! Security Scanner</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner">Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>    
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Complete guide to HTTP Headers for securing websites (Cheat Sheet)"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "Complete guide to HTTP Headers for securing websites (Cheat Sheet)",
+ "image": "/assets/img/http-headers.webp"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14" class="link dim dib moon-gray link-reset pb1">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/is-a-serverless-application-more-secure-no,-it-s-not" class="link dim dib moon-gray link-reset pb1">Is a Serverless application more secure? No, it's not!</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests" class="link dim dib moon-gray link-reset pb1">SmartScanner 1.13 now has logs and more Joomla! tests</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pb1">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pb1">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pb1">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pb1">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pb1">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pb1">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pb1">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pb1">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pb2"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pb1">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pb1">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pb1">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pb1" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pb2">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pb1">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pb1">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pb1">EULA</a>
+        </div>
+      </div>
+      <div class="pv2 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <script defer type="text/javascript" src="/assets/js/prism.js"></script>
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
