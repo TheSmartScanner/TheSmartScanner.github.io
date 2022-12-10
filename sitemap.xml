@@ -1,0 +1,3440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/very-first-version-of-smartscanner-released</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/14-software-security-terms-you-should-know</loc>
+    <lastmod>2020-12-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/version-1-1-with-new-tests-is-out-now</loc>
+    <lastmod>2021-01-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website</loc>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/how-do-hackers-hack</loc>
+    <lastmod>2021-05-02T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/find-the-shellshock-bug-and-application-errors-faster</loc>
+    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/top-information-gathering-methods-explained</loc>
+    <lastmod>2021-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/better-passive-vulnerability-testing-with-smartscanner-version-1-7</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/these-7-php-mistakes-leave-your-website-open-to-the-hackers</loc>
+    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/smartscanner-v1-9-as-joomla-security-scanner</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet</loc>
+    <lastmod>2021-09-23T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now</loc>
+    <lastmod>2021-11-03T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1</loc>
+    <lastmod>2021-12-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/smartscanner-now-has-a-64-bit-version-for-windows</loc>
+    <lastmod>2022-02-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2</loc>
+    <lastmod>2022-02-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it</loc>
+    <lastmod>2022-03-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not</loc>
+    <lastmod>2022-05-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project</loc>
+    <lastmod>2022-06-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/csrf-xxe-and-12-other-security-acronyms-explained</loc>
+    <lastmod>2022-07-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/smartscanner-v1-15-released</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/update-cheat-sheet-for-developers</loc>
+    <lastmod>2022-09-11T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/how-to-secure-your-wordpress-website</loc>
+    <lastmod>2022-10-31T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/what-is-smartscanner</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/how-does-smartscanner-work</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/installing-smartscanner</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/things-you-should-know-before-starting-a-security-scan</loc>
+    <lastmod>2020-12-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/scanning-a-target</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/scan-dashboard</loc>
+    <lastmod>2020-12-22T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/viewing-target-information</loc>
+    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/create-vulnerability-scan-report</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/configuring-security-tests</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/authenticated-vulnerability-scan</loc>
+    <lastmod>2022-03-26T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/scanning-websites-through-a-proxy</loc>
+    <lastmod>2022-04-27T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/artificial-intelligence-security-scanner</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/comprehensive-security-tests</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/fully-automated-security-testing</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/javascript-html5-spa-jamstack-serverless-react-security</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/wordpress-drupal-joomla-cms-security-scanner</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/vulnerability-assessment-of-web-components</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/automated-penetration-testing</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/target-fingerprinting-feature</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/priority-support</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/changelog</loc>
+    <lastmod>2022-12-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n></n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-expect-header-cross-site-scripting</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-server-info-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-server-status-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/arbitrary-source-code-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/auto-complete-enabled-password-input</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/basic-authentication-over-http</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/blind-os-command-execution</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/blind-sql-injection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/breach-attack</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/broken-link</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/brute-force-prevention-bypassed</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/content-character-encoding-is-not-defined</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/content-security-policy-header-is-missing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cookie-without-httponly-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cookie-without-samesite-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cookie-without-secure-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cross-origin-resource-sharing-allowed</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cross-site-scripting</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/directory-listing-of-sensitive-files</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/directory-listing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/email-address-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/expression-language-injection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/hidden-resource-in-robots-txt</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/http-response-splitting</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/nginx-null-byte-code-execution</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/no-https</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/no-redirection-from-http-to-https</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/old-backup-resource-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/os-command-execution</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/password-input-on-http</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/password-sent-in-http-query</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/password-sent-in-query</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/password-sent-over-http</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/path-disclosure-in-robots-txt</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/php-version-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/phpinfo-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/possible-sql-injection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/private-ipv4-address-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/private-ipv6-address-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/profanity</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/public-key-pins-header-is-set</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/referrer-policy-header-is-missing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/robots-txt-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/sensitive-old-backup-resource-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/sensitive-unreferenced-resource-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/session-cookie-without-httponly-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/session-cookie-without-samesite-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/session-cookie-without-secure-flag</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/source-code-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/sql-command-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/sql-injection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/ssl-2-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/ssl-3-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/strict-transport-security-header-is-missing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/the-heartbleed-bug</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/time-based-sql-injection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/tls-1-0-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/tls-1-1-enabled</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unix-path-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unreferenced-login-page-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unreferenced-repository-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unreferenced-resource-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unreferenced-source-code-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/unvalidated-redirection</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/user-enumeration</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-iis-version</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/weak-password</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/windows-path-disclosure</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-login-page-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-theme-akal-xss</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-user-enumeration</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/x-content-type-options-header-is-missing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/x-frame-options-header-is-missing</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/x-powered-by-header-found</loc>
+    <lastmod>2021-02-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/trace-method-allowed</loc>
+    <lastmod>2021-03-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/track-method-allowed</loc>
+    <lastmod>2021-03-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/crime-spdy-attack</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/crime-ssl-tls-attack</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/drupal-drupalgeddon2-remote-code-execution</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-j2store-3-3-7-sql-injection</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/the-poodle-attack</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/buffer-overflow</loc>
+    <lastmod>2021-05-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/the-shellshock-bug</loc>
+    <lastmod>2021-06-08T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/file-upload-functionality</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/http-protocol-stack-remote-code-execution-vulnerability-dos</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/redirection-with-body</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/viewstate-is-not-encrypted</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-nginx-version</loc>
+    <lastmod>2021-07-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/passive-mixed-content</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-adrotate-3-6-5-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-adrotate-3-6-6-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-adrotate-3-9-4-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-all-video-gallery-1-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-bannerize-2-8-6-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-bannerize-2-8-7-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-business-intelligence-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-chained-quiz-1-0-8-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-community-events-1-2-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-cp-multi-view-event-calendar-1-01-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-cp-multi-view-event-calendar-1-1-4-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-cp-multi-view-event-calendar-1-1-7-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-ds-faq-1-3-2-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-easy-contact-form-lite-1-0-7-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-event-registration-5-4-3-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-eventify-simple-events-1-7-f-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-facebook-promotions-1-3-3-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-file-groups-1-1-2-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-firestorm-professional-real-estate-2-06-01-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-forum-server-1-7-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-glossary-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-google-document-embedder-2-5-14-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-google-document-embedder-2-5-16-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-hitasoft-player-ripe-hd-flv-player-1-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-jetpack-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-jtrt-responsive-tables-4-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-knr-author-list-widget-2-0-0-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-leaguemanager-3-8-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-link-library-5-2-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-nex-forms-3-0-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-olimometer-2-56-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-oqey-headers-0-3-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-paid-downloads-2-01-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-post-highlights-2-2-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-scorm-cloud-1-0-6-6-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-sh-slideshow-3-1-4-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-smart-google-code-inserter-3-5-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-tune-library-2-17-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-users-ultra-1-5-50-blind-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-videowhisper-video-presentation-1-1-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-wp-fastest-cache-0-8-4-8-blind-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-wp-statistics-13-0-7-time-based-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-wp-support-plus-responsive-ticket-system-7-1-3-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-yolink-search-1-1-4-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-zotpress-4-4-sqli</loc>
+    <lastmod>2021-08-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/local-file-inclusion</loc>
+    <lastmod>2021-08-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/secure-renegotiation-is-not-supported</loc>
+    <lastmod>2021-09-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/drupal-4-1-4-2-xss</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/drupal-module-cumulus-cross-site-scripting</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-1-5-3-4-5-rce</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-1-7-0-xss</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-3-2-1-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-fields-3-7-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-hdwplayer-4-2-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-newsfeeds-1-0-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-file-download-tracker-3-0-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-form-maker-3-6-12-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jck-editor-6-4-4-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jquickcontact-1-3-2-2-1-sqli</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/subresource-integrity-is-missing</loc>
+    <lastmod>2021-09-05T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/asp-net-version-disclosure</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/internal-server-error</loc>
+    <lastmod>2021-09-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-2-4-49-path-traversal-and-rce</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/cookie-accessible-for-subdomains</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/insecure-deserialization-remote-code-execution</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/insecure-deserialization</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/nginx-restriction-bypass-via-space-character-in-uri</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/remote-file-disclosure</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/remote-file-inclusion</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/remote-url-inclusion</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/serialized-object-found</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/session-cookie-accessible-for-subdomains</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/web-server-path-traversal</loc>
+    <lastmod>2021-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/x-xss-protection-header-is-set</loc>
+    <lastmod>2021-11-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-mod-proxy-2-4-48-ssrf</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/application-and-database-error</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/application-error</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/database-error</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/drupal7-pre-auth-sqli</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/host-header-injection</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/werkzeug-interactive-debugging-is-active</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-plugin-wpfilemanager-6-8-rce</loc>
+    <lastmod>2021-12-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/crlf-injection-in-url</loc>
+    <lastmod>2022-02-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/nginx-code-execution-due-to-misconfiguration</loc>
+    <lastmod>2022-02-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/nginx-integer-overflow</loc>
+    <lastmod>2022-02-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/open-redirection-in-url</loc>
+    <lastmod>2022-02-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/wordpress-4-6-blind-os-command-execution</loc>
+    <lastmod>2022-02-07T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-advertisement-board-3-1-0-catname-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-aist-2-0-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-allvideos-reloaded-1-2-x-divid-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-ccnewsletter-2-x-x-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-cbcontact-contact-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-contenthistory-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-rsgallery2-2-0-catid-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-shop-editid-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-com-shop-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-dt-register-3-2-7-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-fastball-2-5-season-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-google-map-landkarten-4-2-3-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-invitex-3-0-5-invite-type-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jb-bus-2-3-order-number-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jck-editor-6-4-4-parent-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jextn-video-gallery-3-0-5-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jgive-2-0-9-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jobs-factory-2-0-4-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-jomestate-pro-3-7-id-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-music-collection-3-0-3-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-nextgen-editor-2-1-0-plname-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-odudeprofile-2-8-profession-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-reverse-auction-factory-4-3-8-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-component-timetable-responsive-schedule-for-joomla-1-5-alias-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/joomla-pinterest-clone-social-pinboard-2-0-sqli</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/missing-or-insecure-cache-control-header</loc>
+    <lastmod>2022-04-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-mod-jk-access-control-bypass</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-struts-2-forced-double-ognl-evaluation-s2-059</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-struts-2-rce-s2-045</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-struts-2-rest-plugin-xstream-rce-s2-052</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-struts-ognl-expression-rce-s2-057</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-tomcat-jsp-upload-rce</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-tomcat-manager-login-found</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/apache-version-disclosure</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/detailed-application-and-database-error</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/detailed-application-error</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/nginx-version-disclosure</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/tomcat-version-disclosure</loc>
+    <lastmod>2022-06-06T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/server-version-disclosure</loc>
+    <lastmod>2022-06-29T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-apache-version</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-openssl-version</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-tomcat-version</loc>
+    <lastmod>2022-08-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-php-version</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+  
+  
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/vulnerable-wordpress-version</loc>
+    <lastmod>2022-10-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <n>true</n>
+  </url>
+  
+  
+
+
+
+
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/contact</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/docs/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/download</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/eula</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/features</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/order</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/pricing</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/privacy</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+
+
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/support</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/terms</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/vulnerability-list/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/2/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+
+
+  <url>
+    <loc>https://www.TheSmartScanner.com/blog/3/</loc>
+    
+      <lastmod>2022-12-10T13:29:32+00:00</lastmod>
+    
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+ 
+  
+</urlset>

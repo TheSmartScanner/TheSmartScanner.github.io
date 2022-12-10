@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2022-12-10T13:29:32+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for testing  the security of web sites and applications</subtitle><entry><title type="html">How to Secure Your WordPress Website</title><link href="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" rel="alternate" type="text/html" title="How to Secure Your WordPress Website" /><published>2022-10-31T00:00:00+00:00</published><updated>2022-10-31T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website">&lt;p&gt;Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.&lt;/p&gt;
+
+&lt;p&gt;Owning a WordPress website can be very demanding, especially if you manage it yourself. First, you have to think of the needs and preferences of your users. Second, you have to design and maintain your website in a way that encourages users to visit again and again, and helps you get other users to do the same. But equally important is the security of your WordPress website. If your website is insecure, we assure you that you will not be able to stop users from running off to more secure websites that offer the same services that you do.&lt;/p&gt;
+
+&lt;p&gt;So, in this article, we will outline some of the ways you can secure your WordPress website. But before that, here are 5 reasons you should make the security of your WordPress Website a priority.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-you-should-secure-your-wordpress-website&quot;&gt;Why You Should Secure Your WordPress Website&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;WordPress is a fairground for malicious online activity:&lt;/strong&gt; Perhaps the best thing about building your website using WordPress is that it is the most popular content management system. The platform’s plugin integration and theme structures help website managers like you run the show without knowing all there is to know about web development. But the popularity of the platform also means that there are a lot of different individuals and virtual agents that can easily penetrate it. Similarly, because of the relative ease with which you can design websites on WordPress, there are many gaps and cracks in the framework that malware such as the &lt;a href=&quot;https://softwaretested.com/anti-malware/what-is-the-vzwpix-email-virus/&quot;&gt;vzwpix OR vzwpix.com email&lt;/a&gt; virus can slip through. So, securing your WordPress website helps you block these gaps.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Securing your WordPress website prevents hackers from breaking it:&lt;/strong&gt; With the evolution of technology, especially digital tech, hackers are getting smarter. Therefore, if you do not secure your website, these hackers can easily place a ‘bug’ in the backdoor of your WordPress website and do whatever they want with your users. The easiest way for hackers to operate such bugs is via your and your users’ passwords. Maybe you are better at handling passwords, but your users may not. And because some have trouble remembering difficult passwords, they use simple passwords. And hackers can easily break simple passwords. Therefore, it is your responsibility to secure your WordPress website in a way that hackers cannot access user information. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;You don’t want Google to blacklist your website:&lt;/strong&gt; Google as a search engine has become the ultimate gatekeeper for web content management. The majority of web users rely on Google to link them up with information. To a significant extent, therefore, Google decides whether or not users can ‘mistakenly’ bump into your WordPress. And because Google likes and only promotes secure websites to users, you have to tighten the security of your website. Moreover, securing your WordPress website also means that you won’t be subject to Google’s blacklisting. This is a lot like the fictitious Santa’s Naughty and Nice list: stay on Google’s good side by securing your WordPress website or watch how fewer and fewer web users visit your website.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;You can retain and boost reputation and user trust:&lt;/strong&gt; The more secure your WordPress website is, the easier it would be to retain and boost its reputation. Much like Google’s ranking, protecting your website from virtual/cyber breachers like hackers and malware such as the &lt;a href=&quot;https://softwaretested.com/anti-malware/soap2day-virus/&quot;&gt;soap2day.to virus OR soap2day virus&lt;/a&gt; indicates to users that you are worthy of their trust. In return for your protection, the reputation of your website would increase and it would be much easier for you to get new visitors to the site.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Secure WordPress websites reinforce revenue:&lt;/strong&gt; Lastly, if the primary goal of your website is to earn you some money, you are significantly more likely to meet this goal when your website is secure. If your WordPress website is not secure, hackers will steal user data, users will report to Google, Google will blacklist you, fewer users will go near your website, and your goal for making money from the website will be dashed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/wordpress-plugins.jpg&quot; width=&quot;768&quot; height=&quot;512&quot; alt=&quot;WordPress plugins&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-secure-your-wordpress-website&quot;&gt;How to Secure Your WordPress Website&lt;/h2&gt;
+
+&lt;p&gt;Having outlined some of the most important reasons for securing your WordPress website, how should you go about it?&lt;/p&gt;
+
+&lt;h3 id=&quot;use-the-security-measures-available-on-wordpress&quot;&gt;Use the Security Measures Available on WordPress&lt;/h3&gt;
+
+&lt;p&gt;Nobody (and nothing) knows WordPress like WordPress. The platform has many different measures that you can implement against possible breaching. Some of these measures take the form of security plugins which you can easily install on your website and never have to worry about digital cracks that hackers and their malware can slip through. As a bonus, WordPress has a robust collection of these security plugins. Some of the most popular and widely recommended plugins include iThemes Security, Patchstack, Sucuri Security, Wordfence Security, and All In One WP Security &amp;amp; Firewall. Using any one of these WordPress security plugins can help you protect the web users that visit your website from unauthorized hackers and programs.&lt;/p&gt;
+
+&lt;h3 id=&quot;partner-with-trusted-hostingweb-management-companies&quot;&gt;Partner with Trusted Hosting/Web Management Companies&lt;/h3&gt;
+
+&lt;p&gt;Website management is not very easy. Because of this, many website owners and managers delegate the task of managing their WordPress websites to professional agencies. But what if such agencies have malicious intentions or are digitally insecure themselves? This is why it is important to consider only agencies/agents with a trusted history of effectively managing WordPress websites. The same can be said of web hosting companies. Make sure you use only trusted hosting companies that prioritize security and take your website seriously. Usually, you have to pay a bit of money to get committed and serious hosting companies. But it is worth it, so find them online and pay them to look over your website if you cannot do so yourself.&lt;/p&gt;
+
+&lt;h3 id=&quot;only-implement-plugins-from-trusted-developers&quot;&gt;Only Implement Plugins from Trusted Developers&lt;/h3&gt;
+
+&lt;p&gt;In the same spirit of partnering with only trusted web management agencies and hosting companies, you have to pay attention to where the security plugins installed on your WordPress website come from. If you rely on plugins from developers that are cybercriminals in disguise, you would be jeopardizing your website and putting your users at risk. So, only use plugins from trusted and highly-rated developers. Such developers regularly update their plugins to reflect reported vulnerabilities from users and website managers. So, avoid installing plugins from developers and sources that don’t update or respond to reports of cyberattacks.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-ssl-certificates-to-lock-your-website&quot;&gt;Use SSL Certificates to Lock Your Website&lt;/h3&gt;
+
+&lt;p&gt;Simply put, an SSL (Secure Sockets Layer) certificate is a digital encryption key that helps you secure a website. This key typically takes the form of a data file containing the public key of your website and other important information. Once you have it implemented on your website, web users will be able to tell that your website is secure—and it is. A padlock icon is the symbol to indicate to users that a website has SSL and is more secure than websites without the icon.&lt;/p&gt;
+
+&lt;h3 id=&quot;protect-core-wordpress-files-like-the-wp-configphp-file&quot;&gt;Protect Core WordPress Files like the &lt;code&gt;wp-config.php&lt;/code&gt; File&lt;/h3&gt;
+
+&lt;p&gt;We noted earlier that WordPress makes web development easy. As the owner/manager of a WordPress website, you have access to the files that serve as the core of the site. The &lt;code&gt;wp-config.php&lt;/code&gt; file is one such core component of your WordPress website. This file contains important information about your WordPress security keys and database connection details. So, protecting this file is tantamount to protecting the entire website. A simple way to protect this file is to hide it by moving it outside the default WordPress installation folder.&lt;/p&gt;
+
+&lt;h3 id=&quot;regularly-update-your-wordpress-by-turning-on-auto-update&quot;&gt;Regularly Update Your WordPress by Turning on Auto-Update&lt;/h3&gt;
+
+&lt;p&gt;Another very easy way to secure your WordPress website is to regularly update it. Much like the majority of software/web developers, no genuine digital creator wants their creation to be abused. As such, they will always progressively protect their products. This is just as true for WordPress. All you need to do, therefore, is turn on auto-update. Consequently, subsequent updates of WordPress will take care of problems such as data breaches that other web managers or users have reported.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-strong-passwords-and-require-your-users-to-do-the-same&quot;&gt;Use Strong Passwords and Require Your Users to Do the Same&lt;/h3&gt;
+
+&lt;p&gt;There is no way we can overstate the importance of strong passwords for virtual security. Breaking your password is probably the easiest way an unauthorized person can break the security of your WordPress website. So, use strong passwords and encourage your users to do the same. You can check out password best practices such as mixing alphanumeric passwords with symbols. If you easily forget passwords, you can implement the Two-Factor Authentication (2FA) on your website. This way, users may still decide to use simple passwords but would have to verify them in a way only they can. Authenticator apps are especially useful on this front. The Google Authenticator app is one of the most popular of these apps and can help protect the integrity of your WordPress website.&lt;/p&gt;
+
+&lt;h3 id=&quot;implement-website-lockdown-feature&quot;&gt;Implement Website Lockdown Feature&lt;/h3&gt;
+
+&lt;p&gt;A website lockdown feature allows you to have some restrictive control over a web user’s account. The most basic application of this feature is in temporarily deactivating said account until the user can prove that the account belongs to them. So, once you implement this feature on your WordPress website, you will be able to lock down a user’s account whenever they appear to use the wrong password multiple times. You may also use plugins that send notifications to you and to the user’s email account about the repeated attempts to access the account. This will help both you and the user take immediate steps to unauthorized access to the account. Meanwhile, if it is a case of the user forgetting their password, you can implement the aforementioned 2FA solution so users don’t have to adopt and be forced to remember overly difficult passwords.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-wps-hide-login-plugin-to-reduce-the-ease-of-access-to-the-login-page&quot;&gt;Use WPS Hide Login Plugin to Reduce the Ease of Access to the Login Page&lt;/h3&gt;
+
+&lt;p&gt;Your &lt;a href=&quot;/vulnerability-list/wordpress-login-page-found&quot;&gt;WordPress website’s login&lt;/a&gt; page is a door that unauthorized persons can use to break the security of your website. Usually, once such hackers with malicious intentions access your login page, they can also use digital brute force to break in. One such brute force method is the use of software applications that combine millions of possible username and password information and then attempt to access the administrative page. But you can protect your website against such inventions by simply renaming the login URL of your website. You can use the WPS Hide Login plugin for this. As long as you have installed and activated this plugin, hackers will not be able to easily access your login page, meaning that they will not be able to gain unauthorized access to your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;pay-attention-to-user-activity&quot;&gt;Pay Attention to User Activity&lt;/h3&gt;
+
+&lt;p&gt;Outside the active steps you can implement to secure your WordPress website, you may also use passive methods such as regularly keeping track of user activity on your website. The easiest way to do this is to log user activity and then go through the data for possible irregularities. If a user, for example, reports their location as Canada, you should expect that their digital footprints contain that geographical tag, unless they regularly use a VPN. So, when you begin to notice a difference in location, you should pay more attention to the account and notify the user via email to verify that they are still in control. You can use WordPress’ User Activity Log plugin for this monitoring process.&lt;/p&gt;
+
+&lt;h3 id=&quot;backup-wordpress-regularly&quot;&gt;Backup WordPress Regularly&lt;/h3&gt;
+
+&lt;p&gt;Lastly, you should backup your WordPress regularly. This ensures that in case of a very serious breach, you have the option of returning the website to a period when it was secure. So, make sure to install and use backup plugins. You should also store the backup on reliable cloud servers. We recommend using those that require no coding so that you will not have to give your WordPress admin password to someone else to do it for you.&lt;/p&gt;
+
+&lt;p&gt;All in all, making your WordPress website more secure is good. Using the methods outlined in this article will protect you and your users, saving you from the malicious activities of hackers and malware.&lt;/p&gt;</content><author><name>Jessica Bullet</name></author><category term="Wordpress" /><category term="Malware" /><category term="Brute Force" /><summary type="html">Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Update Cheat Sheet for Developers</title><link href="https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers" rel="alternate" type="text/html" title="Update Cheat Sheet for Developers" /><published>2022-09-11T00:00:00+00:00</published><updated>2022-09-11T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers">&lt;p&gt;Using an outdated application is a high-risk vulnerability that has an easy fix. This guide provides easy-to-follow instructions for different applications to fix security vulnerabilities.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ The goal of this guide is to eliminate vulnerabilities by updating applications. Sometimes updates can break things or lead to unexpected behaviors. It is up to you to perform enough checking and testing before using commands in this cheat sheet in the production environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how to update different environments.&lt;/p&gt;
+
+&lt;h2 id=&quot;rhelcentosoracle-linux&quot;&gt;RHEL/CentOS/Oracle Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo yum update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;debianubuntu-linux&quot;&gt;Debian/Ubuntu Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;opensusesuse-linux&quot;&gt;OpenSUSE/SUSE Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo zypper up
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nodejs-npm&quot;&gt;NodeJs (npm)&lt;/h2&gt;
+&lt;p&gt;Run the below command in your NodeJs project directory.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm audit fix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that some vulnerabilities cannot be fixed automatically and will require manual intervention or review.
+Some fixes can be forced using the below command but please make sure it doesn’t break anything in your project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm audit fix --force
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;python-pip&quot;&gt;Python (pip)&lt;/h2&gt;
+&lt;p&gt;You have to update packages one by one. Run the below command to get a list of outdated packages.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip list --outdated
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For each package run the below command to update it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install [package_name] --upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nuget&quot;&gt;NuGet&lt;/h2&gt;
+&lt;p&gt;From the command line, you can update packages in the solution to the latest version available from nuget.org.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nuget update YourSolution.sln
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that this will not run any PowerShell scripts in any NuGet packages.&lt;/p&gt;
+
+&lt;p&gt;From within Visual Studio, you can use the &lt;a href=&quot;http://docs.nuget.org/docs/reference/package-manager-console-powershell-reference&quot;&gt;Package Manager Console&lt;/a&gt; to also update the packages. This has the benefit that any PowerShell scripts will be run as part of the update whereas using NuGet.exe will not run them. The following command will update all packages in every project to the latest version available from nuget.org.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Update-Package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;php-composer&quot;&gt;PHP (Composer)&lt;/h2&gt;
+&lt;p&gt;Navigate to the root of your application, where your &lt;code&gt;composer.json&lt;/code&gt; file is, and run the below command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php composer.phar update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In Windows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;go-golang&quot;&gt;Go (golang)&lt;/h2&gt;
+&lt;p&gt;To update all packages in your &lt;code&gt;GOPATH&lt;/code&gt;, run the below command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go get -u all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;ruby-gem&quot;&gt;Ruby (gem)&lt;/h2&gt;
+&lt;p&gt;To update all gems:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;RubyGems keeps old versions of gems. Run cleanup to remove old gems after an update.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem cleanup
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;maven-mvn&quot;&gt;Maven (mvn)&lt;/h2&gt;
+&lt;p&gt;Run the below command to force an update of dependencies.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mvn clean install -U
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rust-cargo&quot;&gt;Rust (cargo)&lt;/h2&gt;
+&lt;p&gt;For updating all dependencies of your Rust project, you need to install a third-party crate. Install &lt;code&gt;cargo-update&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install cargo-update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then run the below command to check for newer versions and update all installed packages.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install-update -a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;wordpress&quot;&gt;WordPress&lt;/h2&gt;
+&lt;p&gt;WordPress lets you update with the click of a button. You can launch the update by clicking the link in the new version banner (if it’s there) or by going to the Dashboard &amp;gt; Updates screen. Once you are on the &lt;em&gt;“Update WordPress”&lt;/em&gt; page, click the button &lt;em&gt;“Update Now”&lt;/em&gt; to start the process off. You shouldn’t need to do anything else and, once it’s finished, you will be up-to-date.&lt;/p&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+&lt;p&gt;Run the below command on &lt;code&gt;cmd&lt;/code&gt; to open the Windows update screen.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;control update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This document is a &lt;a href=&quot;https://github.com/TheSmartScanner/update-everyhitng&quot;&gt;GitHub project&lt;/a&gt; and contributions are most welcome.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/v8/commands/npm-audit&quot;&gt;npm-audit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/article/updating-wordpress/&quot;&gt;Updating WordPress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/6882750&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/10383783&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/40982333&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="npm" /><category term="NodeJs" /><category term="Unix" /><category term="Python" /><category term="NuGet" /><category term="PHP" /><category term="Go" /><category term="Ruby" /><category term="Gem" /><category term="Maven" /><category term="mvn" /><category term="Rust" /><category term="Composer" /><category term="Wordpress" /><summary type="html">How to keep your project packages and development environment update to date.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/system-update.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/system-update.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner Version 1.15 Released</title><link href="https://www.thesmartscanner.com/blog/smartscanner-v1-15-released" rel="alternate" type="text/html" title="SmartScanner Version 1.15 Released" /><published>2022-08-01T00:00:00+00:00</published><updated>2022-08-01T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-v1-15-released</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-v1-15-released">&lt;p&gt;JSON report and better dynamic javascript evaluations added.&lt;/p&gt;
+
+&lt;p&gt;Modern web applications heavily depend on front-end JavaScript functionalities. JavaScript is used for creating reactive content, validating forms, and performing different actions. 
+SmartScanner has a built-in module to interpret JavaScript on web pages, so it can submit forms and crawl the website. In this version, new changes have been deployed to add support for the Javascript &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;Fetch&lt;/a&gt; API.
+This feature improves SmartScanner’s capability for covering all the contents and resources in websites using AJAX and new frameworks like ReactJS, Vue.js, and Angular.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this version.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved dynamic JavaScript evaluation module for &lt;strong&gt;full capturing of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;Fetch&lt;/a&gt; API&lt;/strong&gt;, supporting all HTTP methods and custom headers.&lt;/li&gt;
+  &lt;li&gt;In addition to PDF reports, now you can export scan results in &lt;strong&gt;JSON format&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Minor improvements and bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="JSON" /><category term="JavaScript" /><category term="React" /><category term="Vue" /><category term="Angular" /><category term="AJAX" /><summary type="html">JSON report and better dynamic javascript evaluations added.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-15.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-15.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">CSRF, XXE, and 12 Other Security Acronyms Explained</title><link href="https://www.thesmartscanner.com/blog/csrf-xxe-and-12-other-security-acronyms-explained" rel="alternate" type="text/html" title="CSRF, XXE, and 12 Other Security Acronyms Explained" /><published>2022-07-11T00:00:00+00:00</published><updated>2022-07-11T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/csrf-xxe-and-12-other-security-acronyms-explained</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/csrf-xxe-and-12-other-security-acronyms-explained">&lt;p&gt;Acronyms are shortcuts, and we love using them, specially the catchy ones! Let’s decipher some commonly used acronyms in the cyber security industry.&lt;/p&gt;
+
+&lt;h2 id=&quot;owasp&quot;&gt;OWASP&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Open Web Application Security Project (OWASP)&lt;/strong&gt; is a nonprofit foundation that works to improve the security of software. The OWASP Top 10 is one their popular projects.&lt;/p&gt;
+
+&lt;h2 id=&quot;xss&quot;&gt;XSS&lt;/h2&gt;
+&lt;p&gt;It stands for &lt;strong&gt;Cross-Site Scripting&lt;/strong&gt;. An X is used instead of the C to prevent confusion with Cascading Style Sheets (CSS).&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;Read more about Cross-Site Scripting vulnerability&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;sqli&quot;&gt;SQLI&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;SQL Injection&lt;/strong&gt;, is an attack where the SQL commands used in an application are manipulated by attacker. SQLI is a dangerous and common vulnerability. &lt;a href=&quot;/&quot;&gt;Find SQL Injection on your website&lt;/a&gt; with SmartScanner now.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;Read more about SQL Injection vulnerability&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;rce&quot;&gt;RCE&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Remote Command Execution&lt;/strong&gt; (RCE) is a high-risk vulnerability. It can occur anywhere from routers to online shops. By exploiting RCE, an attacker can execute commands (usually OS commands) on the target system.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/vulnerability-list/os-command-execution&quot;&gt;Read more about Remote Command Execution vulnerability&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;dos-and-ddos&quot;&gt;DoS and DDos&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Denial of Service&lt;/strong&gt; (DoS) is a famous security acronym. You might have heard it at the news. DoS is a type of attack that makes the target service unavailable. Attackers usually perform DoS attacks by sending enormous traffic to the target.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Distributed Denial of Service&lt;/strong&gt; (DDoS) is a DoS attack from many different sources. This type of DoS typically runs using zombie botnets.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/service-unavailable-due-to-dos-attack.png&quot; width=&quot;648&quot; height=&quot;361&quot; alt=&quot;Results of a DoS attack&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;csrf&quot;&gt;CSRF&lt;/h2&gt;
+&lt;p&gt;CSRF (pronounce Sea Surf) stands for &lt;strong&gt;Cross-Site Request Forgery&lt;/strong&gt;. CSRF (aka XSRF) is an attack where the attacker sends a request on behalf of a victim user without her knowledge. Attackers exploit CSRF to do actions using the victim’s permission. For example, a hacker can create an admin user for himself using a CSRF attack.&lt;/p&gt;
+
+&lt;h2 id=&quot;xxe&quot;&gt;XXE&lt;/h2&gt;
+&lt;p&gt;An &lt;strong&gt;XML External Entity&lt;/strong&gt; attack is a kind of attack against an application that parses XML input. In this attack, the vulnerable application processes a reference to an external entity in the provided XML. The XXE is a dangerous attack that can lead to information disclosure or denial of service attacks.&lt;/p&gt;
+
+&lt;h2 id=&quot;ssrf&quot;&gt;SSRF&lt;/h2&gt;
+&lt;p&gt;In a &lt;strong&gt;Server-Side Request Forgery&lt;/strong&gt; (SSRF) attack, the attacker can abuse functionality on the server to read or update internal resources.&lt;/p&gt;
+
+&lt;h2 id=&quot;ssi&quot;&gt;SSI&lt;/h2&gt;
+&lt;p&gt;A &lt;strong&gt;Server-Side Includes Injection&lt;/strong&gt; is a type of security attack that exploits the Service-side Includes features of a web server. The &lt;em&gt;Server-side includes&lt;/em&gt; are tags in HTML files. The web server executes these tags to add dynamic contents to the page before sending it to the user.&lt;/p&gt;
+
+&lt;h2 id=&quot;rfi&quot;&gt;RFI&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Remote File Inclusion&lt;/strong&gt; (RFI) occurs when the web application downloads and executes a remote file. This remote file is usually controlled by an attacker and is passed as a request parameter.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/vulnerability-list/remote-file-inclusion&quot;&gt;Read more about Remote File Inclusion vulnerability&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;lfi--lfd&quot;&gt;LFI / LFD&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Local File Inclusion&lt;/strong&gt; (LFI) is similar to a remote file inclusion vulnerability, but only local files on the server can be included for execution. It does not mean the LFI is less dangerous than RFI.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/path-traversal-variations.png&quot; width=&quot;640&quot; height=&quot;362&quot; alt=&quot;Path Traversal and File Inclusion Payloads&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When the local file is only opened and sent back to the user (or attacker), it is called &lt;strong&gt;Local File Download&lt;/strong&gt; or &lt;strong&gt;Disclosure&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;Read more about Local File Inclusion&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;idor&quot;&gt;IDOR&lt;/h2&gt;
+&lt;p&gt;IDOR stands for &lt;strong&gt;Insecure Direct Object Reference&lt;/strong&gt;. It is a vulnerability that occurs when a reference to an internal object, such as a file or directory, is retrieved from user-supplied input. If no proper authorization is implemented, an attacker can abuse this reference to access every object.&lt;/p&gt;
+
+&lt;h2 id=&quot;cve&quot;&gt;CVE&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Common Vulnerabilities and Exposures&lt;/strong&gt; (CVE) system provides a mechanism for referencing publicly known security vulnerabilities.&lt;/p&gt;
+
+&lt;h2 id=&quot;cwe&quot;&gt;CWE&lt;/h2&gt;
+&lt;p&gt;The &lt;strong&gt;Common Weakness Enumeration&lt;/strong&gt; (CWE) is a category system for hardware and software weaknesses and vulnerabilities.&lt;/p&gt;</content><author><name></name></author><category term="XSS" /><category term="SQLI" /><category term="RCE" /><category term="DOS" /><category term="CSRF" /><category term="XXE" /><category term="SSRF" /><category term="SSI" /><category term="RFI" /><category term="LFI" /><category term="LFD" /><category term="CVE" /><category term="CWE" /><category term="DDoS" /><category term="Vulnerability" /><category term="Exploit" /><summary type="html">Acronyms are shortcuts, and we love using them, specially the catchy ones! Let’s decipher some commonly used acronyms in the cyber security industry.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/security-acronym-cheat-sheet-small.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/security-acronym-cheat-sheet-small.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">10 Secure Coding Best Practices to Follow in Every Project</title><link href="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project" rel="alternate" type="text/html" title="10 Secure Coding Best Practices to Follow in Every Project" /><published>2022-06-11T00:00:00+00:00</published><updated>2022-06-11T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project">&lt;p&gt;Let’s see how we can make more secure software.&lt;/p&gt;
+
+&lt;h2 id=&quot;update-update-update&quot;&gt;Update, Update, Update!&lt;/h2&gt;
+&lt;p&gt;Using vulnerable and outdated components with known vulnerabilities has always been in the &lt;a href=&quot;https://owasp.org/www-project-top-ten/&quot;&gt;OWASP Top 10 Application Security Risks&lt;/a&gt;. You can take a giant leap in securing your projects only if you use up-to-date tools and libraries.&lt;/p&gt;
+
+&lt;h2 id=&quot;stick-to-standards&quot;&gt;Stick to Standards&lt;/h2&gt;
+&lt;p&gt;If you have the &lt;a href=&quot;https://en.wikipedia.org/wiki/Not_invented_here&quot;&gt;&lt;em&gt;Not invented here (NIH)&lt;/em&gt;&lt;/a&gt; syndrome, you prefer to develop everything from scratch. That’s fine if you have the time and money to do so. But building major things like cryptography and web servers from scratch needs a lot of skills and effort. Such complex components cannot be built by a single person. Even if you have made one, you should not use it in production without in-depth reviews from many other people.&lt;/p&gt;
+
+&lt;p&gt;In design and architecture concepts, you should do the same. You should follow best practices to benefit from the community experience.&lt;/p&gt;
+
+&lt;p&gt;Next time instead of introducing your own hash algorithm, use one of the &lt;a href=&quot;https://en.wikipedia.org/wiki/Cryptographic_hash_function#Cryptographic_hash_algorithms&quot;&gt;well-known hash functions&lt;/a&gt; implemented by an open-source and peer-reviewed library.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-trustworthy-packages&quot;&gt;Use Trustworthy Packages&lt;/h2&gt;
+&lt;p&gt;One significant risk of using third-party modules (like packages in npm, PyPI, NuGet, etc. ) is the &lt;em&gt;Supply Chain Attack&lt;/em&gt;. Consider one of your project’s dependencies goes rogue and doesn’t do what it was supposed to do. It is called a supply chain attack. This has happened for popular npm packages (UA-Parser-JS, COA, and RC), and it can happen for many others.&lt;/p&gt;
+
+&lt;p&gt;We know that using third-party packages is inevitable. So, here are a few tips to consider before choosing a third-party library.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Prefer packages with more contributions (more contributors, commits, pull requests, and stars)&lt;/li&gt;
+  &lt;li&gt;Prefer packages with less open issues&lt;/li&gt;
+  &lt;li&gt;Prefer packages with higher release frequency&lt;/li&gt;
+  &lt;li&gt;Use dependency scanners like &lt;a href=&quot;https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates&quot;&gt;GitHub Dependabot&lt;/a&gt; to find vulnerable packages.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;never-trust-user&quot;&gt;Never Trust User&lt;/h2&gt;
+&lt;p&gt;Always validate data received from user input before processing them. Check the length, type, allowed characters, and data pattern before using it.&lt;/p&gt;
+
+&lt;p&gt;The essential thing in user validation is to do it where the user cannot manipulate the logic. For example, the user has complete control over a webpage, so checking if the user entered a correct email address on the client is not enough, and you should validate it on the back-end again.&lt;/p&gt;
+
+&lt;h2 id=&quot;always-encode-output&quot;&gt;Always Encode Output&lt;/h2&gt;
+&lt;p&gt;Always use proper encoding when displaying data to the user. The encoding depends on the context you display the data within.
+For example, data on a web page should be HTML-Encoded, and data in URL should be URL-Encoded. Other contexts like CSV, XML, JSON files, or email need unique encodings.&lt;/p&gt;
+
+&lt;h2 id=&quot;catch-exceptions&quot;&gt;Catch Exceptions&lt;/h2&gt;
+&lt;p&gt;Exceptions happen! We should be prepared for them. Unhandled errors create security issues like failing insecurely or &lt;a href=&quot;/vulnerability-list/detailed-application-and-database-error&quot;&gt;revealing sensitive information&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Always assume things will break eventually and get prepared for it.&lt;/p&gt;
+
+&lt;h2 id=&quot;do-not-write-secrets-in-comments&quot;&gt;Do not Write Secrets in Comments&lt;/h2&gt;
+&lt;p&gt;When you put comments in the code, it means your code is not clear and expressive enough and needs explanation. So, a better title for this section would be &lt;em&gt;Do not Write Comments&lt;/em&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;em&gt;“Comments are always failures.”&lt;/em&gt;
+— Robert C. Martin @ Clean Code&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are some valid use-cases for comments in the code, but writing operational information and sensitive data like passwords are not one of them.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-linter&quot;&gt;Use Linter&lt;/h2&gt;
+&lt;p&gt;Linters can analyze your code and enforce particular rules. Linters assist you in finding errors, bugs, code smells, and suspicious expressions like using &lt;code&gt;eval&lt;/code&gt; and dangerous regular expressions.&lt;/p&gt;
+
+&lt;h2 id=&quot;possess-an-open-source-spirit&quot;&gt;Possess an Open-Source Spirit&lt;/h2&gt;
+&lt;p&gt;Open source projects are maintained by the community. It means their structure is not specific to a single user’s environment. Open source projects (usually) don’t have any hard-coded passwords or internal IP addresses. These are good practices we can follow in our projects.&lt;/p&gt;
+
+&lt;p&gt;Not every project is supposed to be open-source and publicly available. But we should prepare all projects for open sourcing. Here are a few things to start:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Remove hard-coded passwords, IP addresses, and database connection strings, …&lt;/li&gt;
+  &lt;li&gt;Load all configurations from environment variables&lt;/li&gt;
+  &lt;li&gt;Add a &lt;code&gt;readme.md&lt;/code&gt; file to your project and document build and test instructions.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;write-clean-code&quot;&gt;Write Clean Code&lt;/h2&gt;
+&lt;p&gt;A clean code is inherently more secure. From a security point of view, a clear code has many benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A clear code has fewer opportunities for vulnerabilities to occur because they’re less complex&lt;/li&gt;
+  &lt;li&gt;Reviewing and finding vulnerabilities in a clear code is easier&lt;/li&gt;
+  &lt;li&gt;It takes less time and effort to fix a vulnerability in a clear code&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can read the &lt;a href=&quot;https://www.google.com/books/edition/_/hjEFCAAAQBAJ&quot;&gt;Clean Code&lt;/a&gt; book (if you haven’t read it already) and start refactoring your codes.&lt;/p&gt;</content><author><name></name></author><category term="npm" /><category term="Supply Chain Attack" /><category term="OWASP" /><category term="PyPI" /><category term="Development" /><summary type="html">Let’s see how we can make more secure software.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/secure-coding-best-practice.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/secure-coding-best-practice.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</title><link href="https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14" rel="alternate" type="text/html" title="Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14" /><published>2022-06-06T00:00:00+00:00</published><updated>2022-06-06T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14">&lt;p&gt;SmartScanner version 1.14 released. It now can scan Apache Tomcat/Struts and Java vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;This version is just a start for adding tests for Apache Tomcat and Apache Struts. We’ll continue adding new tests for Apache projects in future versions.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this release.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Apache Tomcat&lt;/strong&gt; and &lt;strong&gt;Apache Struts&lt;/strong&gt; detection&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Java runtime error detection&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;4 Vulnerabilities for Apache Struts&lt;/li&gt;
+  &lt;li&gt;3 Vulnerabilities for Apache Tomcat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Apache" /><category term="Tomcat" /><summary type="html">SmartScanner version 1.14 released. It now can scan Apache Tomcat/Struts and Java vulnerabilities.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-14.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-14.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is a Serverless application more secure? No, it’s not!</title><link href="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not" rel="alternate" type="text/html" title="Is a Serverless application more secure? No, it’s not!" /><published>2022-05-21T00:00:00+00:00</published><updated>2022-05-21T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not">&lt;p&gt;They’re not as serverless as it sounds and not more secure than other applications.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-a-serverless-application&quot;&gt;What is a Serverless Application?&lt;/h2&gt;
+&lt;p&gt;For running a traditional web application, you need to set up an OS, configure a web server, install a CMS and prepare a database. You should take care of infrastructure, capacity, and maintenance of servers as long as your application is running.&lt;/p&gt;
+
+&lt;p&gt;What if you could only focus on developing your application and don’t think about the infrastructure? This is exactly what you can do in a Serverless architecture. You write your code and publish it on cloud servers like AWS Lambda, Cloudflare workers, or Google Cloud Functions. Your code will run on cloud servers, and your cloud provider manages and handles the infrastructure and maintenance.&lt;/p&gt;
+
+&lt;p&gt;Cloud companies that provide Serverless services offer different form of it. Take FaaS as an example. In this development model, cloud providers allow you to write your application in small separate functions. That’s why this service is called Function as a service (FaaS). This approach supports trending architectures like the JAMstack (JavaScript, API &amp;amp; Markup). The JAMStack consists of static pages (the Markup) that integrate with the backend through the use of APIs in Serverless applications.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 PaaS is also another Serverless cloud service where you control the entire application. This is in contrast with FaaS that has an event-driven architecture. In FaaS, your application (function) gets executed in certain events like incoming requests.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;serverless-security&quot;&gt;Serverless Security&lt;/h2&gt;
+&lt;p&gt;The Serverless development model has many benefits like cost efficiency, elasticity, and productivity. But Serverless applications are not more secure compared to traditional applications. Cloud providers like Amazon AWS take care of OS and platform vulnerabilities, but you don’t have access to the servers, and you can’t use classic security solutions like IDS/IPS that require installation on endpoints.&lt;/p&gt;
+
+&lt;p&gt;Further, in a Serverless architecture, the entire application consists of more small components, that means more entry points resulting in an increased attack surface.&lt;/p&gt;
+
+&lt;p&gt;Developing and running a Serverless application depends on the cloud provider’s standards. This means the same code can not be used in another cloud provider without change.&lt;/p&gt;
+
+&lt;p&gt;Privacy is another concern in Serverless applications because of using shared resources and access by external employees in public Serverless cloud infrastructure.&lt;/p&gt;
+
+&lt;h2 id=&quot;vulnerabilities-in-serverless-applications&quot;&gt;Vulnerabilities in Serverless Applications&lt;/h2&gt;
+&lt;p&gt;Security vulnerabilities affect different layers of any application like OS, web server, database, and the application itself. In Serverless architectures, the cloud provider takes care of all infrastructure security. So you won’t worry about security misconfigurations and issues like &lt;a href=&quot;/vulnerability-list/vulnerable-apache-version&quot;&gt;Outdated server vulnerability&lt;/a&gt;. But the application security is still your responsibility in the Serverless development model. And unfortunately, many vulnerabilities relate to the application layer. Vulnerabilities like:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQL Injection&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;Cross-Site Scripting (XSS)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;File Inclusion Vulnerabilities&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Cross-site Request Forgery (CSRF)&lt;/li&gt;
+  &lt;li&gt;Using &lt;code&gt;eval&lt;/code&gt; and Command Execution&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/unvalidated-redirection&quot;&gt;Unvalidated Redirects and Forwards&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are generic vulnerabilities that are in OWASP’s Top 10 list. We have covered some of them in articles like &lt;a href=&quot;/blog/how-do-hackers-hack&quot;&gt;common web vulnerabilities&lt;/a&gt; and &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;securing your NodeJs express application&lt;/a&gt;. In the followings, we will review vulnerabilities that are less known but more specific to Serverless applications.&lt;/p&gt;
+
+&lt;h3 id=&quot;missing-function-level-access-control&quot;&gt;Missing Function Level Access Control&lt;/h3&gt;
+&lt;p&gt;Sensitive functionalities should be protected with an authentication mechanism. It doesn’t matter whether these functionalities are served as web pages or an API. If anyone can access such functionalities, this is a broken access control flaw.&lt;/p&gt;
+
+&lt;p&gt;All administration use-cases are prone to this issue. You might have several Serverless APIs for tasks like managing accounts/posts or changing service status. You should make sure that only allowed users can access and use such functionalities.&lt;/p&gt;
+
+&lt;h3 id=&quot;sensitive-data-exposure&quot;&gt;Sensitive Data Exposure&lt;/h3&gt;
+&lt;p&gt;Let’s say you have a Serverless application for a voting system. One function of this platform is to show the vote counts for any candidate. Consider a Serverless function for displaying vote counts which accepts candidate ID and returns a list of every user who has voted for that candidate. So you can easily show the count of users as vote counts for the candidate.
+But something’s fishy here! We need a function to display vote counts, not to return name of voters! You might say that the list of users is not displayed anywhere, and only the count of users is represented. That’s right, but as long as the Serverless function is returning all those information and it’s publicly accessible, an attacker can abuse it.&lt;/p&gt;
+
+&lt;p&gt;Sensitive Data Exposure is a very common flaw. To avoid it you should return the minimum required data in your Serverless functions.&lt;/p&gt;
+
+&lt;h3 id=&quot;insecure-direct-object-reference-idor&quot;&gt;Insecure Direct Object Reference (IDOR)&lt;/h3&gt;
+&lt;p&gt;Imagine an HR application that has a profile API that accepts an employee ID and returns the employee information. Let’s say the employee IDs are an integer number and the Serverless function queries it on the database to find the employee. What could go wrong in this scenario? An attacker can build a collection of employee IDs by starting from 1 and incrementing to any number. Then this collection can be used to query your function to enumerate all employee information. This can happen if the API does not implement the proper access control we discussed earlier.&lt;/p&gt;
+
+&lt;p&gt;Here employee ID passed to the Serverless API is a reference to the employee record in the database. And this reference is directly controlled by the user. If such references are easy to guess, you risk your data being enumerated.&lt;/p&gt;
+
+&lt;p&gt;Avoid using guessable patterns for IDs (using hash can help). Make sure your functions have access control to mitigate IDOR flaws.&lt;/p&gt;
+
+&lt;h3 id=&quot;template-language-injection&quot;&gt;Template Language Injection&lt;/h3&gt;
+&lt;p&gt;A common way of rendering HTML pages using a template is to evaluate an expression like &lt;code&gt;2+2&lt;/code&gt; and display the results (&lt;code&gt;4&lt;/code&gt;) in output. &lt;a href=&quot;/vulnerability-list/expression-language-injection&quot;&gt;Template language injection&lt;/a&gt; or Expression language injection occurs when a user can change the expression used in the template.&lt;/p&gt;
+
+&lt;h3 id=&quot;components-with-known-vulnerabilities&quot;&gt;Components with Known Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Serverless applications are usually in JavaScript (or TypeScript) or Python languages. Developers in Python or JavaScript usually use numerous third-party packages for completing different tasks. These packages might have vulnerabilities, and using them can make your Serverless application vulnerable.&lt;/p&gt;
+
+&lt;p&gt;To mitigate component vulnerabilities, make sure you’re using the updated version of any library and run security tests to find vulnerable packages.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 In NodeJs, you can use &lt;code&gt;npm audit&lt;/code&gt; to find vulnerabilities in npm packages. Read &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;Securing Your NodeJs JavaScript Project&lt;/a&gt; for details.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Serverless applications have many benefits and use cases like file transformation, providing dynamic contents, logging, and others. There’s a misunderstanding that Serverless applications are more secure. This is true to some extent when it comes to OS vulnerabilities, but you need to take application layer security in your hand.&lt;/p&gt;
+
+&lt;p&gt;We reviewed some of the common vulnerabilities in Serverless applications, but you should know that these vulnerabilities are not complete and these are not even limited to Serverless applications. So security testing of your web applications is a crucial job for securing them.
+Security of Serverless applications needs a DevSecOps solution where developers, operation team, and Security guys collaborate closely.&lt;/p&gt;</content><author><name></name></author><category term="Serverless" /><category term="FaaS" /><category term="PaaS" /><category term="Cloud" /><category term="IDOR" /><category term="EL Injection" /><summary type="html">They’re not as serverless as it sounds and not more secure than other applications.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/serverless-security.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/serverless-security.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner 1.13 now has logs and more Joomla! tests</title><link href="https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests" rel="alternate" type="text/html" title="SmartScanner 1.13 now has logs and more Joomla! tests" /><published>2022-04-10T00:00:00+00:00</published><updated>2022-04-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests">&lt;p&gt;SmartScanner version 1.13 released. It now can scan more vulnerabilities for Joomla!&lt;/p&gt;
+
+&lt;p&gt;In addition to 24 new Joomla! vulnerability tests, a log section was added. It displays information about events and findings during a scan job.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this release.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Scan logs&lt;/strong&gt; during scan&lt;/li&gt;
+  &lt;li&gt;Support for &lt;strong&gt;sitemaps in robots.txt&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;/vulnerability-list/missing-or-insecure-cache-control-header&quot;&gt;Missing or Insecure Cache-Control Header&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;24 new &lt;strong&gt;&lt;a href=&quot;/vulnerability-list/#tags:joomla&quot;&gt;Joomla! tests&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;Some bug fixes for &lt;a href=&quot;/vulnerability-list/subresource-integrity-is-missing&quot;&gt;SRI&lt;/a&gt; and &lt;a href=&quot;/vulnerability-list/content-security-policy-header-is-missing&quot;&gt;CSP&lt;/a&gt; checking and authentication in scan configs&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="Joomla" /><summary type="html">SmartScanner version 1.13 released. It now can scan more vulnerabilities for Joomla!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-13.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-13.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Is your robots.txt file vulnerable? Here’s how to check and secure it</title><link href="https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it" rel="alternate" type="text/html" title="Is your robots.txt file vulnerable? Here’s how to check and secure it" /><published>2022-03-27T00:00:00+00:00</published><updated>2022-03-27T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">&lt;p&gt;A bad configured Robots.txt file is like a welcome sign to your website for hackers.
+Let’s see how to set up an efficient and secure robots.txt.&lt;/p&gt;
+
+&lt;p&gt;Can a Robots.txt file be vulnerable? Yes, Here’s how to create a secure one.
+Is your robots.txt file vulnerable? Here’s how to check and secure it
+Beware of Robots.txt! You should not reveal everything to robots.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-robotstxt&quot;&gt;What is robots.txt&lt;/h2&gt;
+&lt;p&gt;Actually, the robots.txt file is not vulnerable by itself.
+Robots.txt is a file for web robots. Web robots or web spiders and crawlers are programs that search the web for collecting content. Search engine robots like google collect your web page contents for indexing it and spammer robots &lt;a href=&quot;/vulnerability-list/email-address-disclosure&quot;&gt;look for email addresses&lt;/a&gt; and other things on your website.&lt;/p&gt;
+
+&lt;p&gt;Web robots look for the robots.txt file at the main directory (typically your root domain or homepage) of any website.&lt;/p&gt;
+
+&lt;h2 id=&quot;anatomy-of-a-robotstxt&quot;&gt;Anatomy of a robots.txt&lt;/h2&gt;
+&lt;p&gt;In robots.txt, you can put instructions about your website for web robots; these instructions are called &lt;em&gt;The Robots Exclusion Protocol&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Each line of a robots.txt file consists of a field, a colon, and a value. Comments are preceded with &lt;code&gt;#&lt;/code&gt; character and white spaces are optional. So, the general syntax is like below:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;field&amp;gt;:&amp;lt;value&amp;gt;&amp;lt;#optional-comment&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Common fields are followings:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code&gt;user-agent&lt;/code&gt;: identifies which crawler the rules apply to.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;allow&lt;/code&gt;: a URL path that may be crawled.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;disallow&lt;/code&gt;: a URL path that may not be crawled.&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;noindex&lt;/code&gt;: unofficial directive for preventing search engines from indexing a page&lt;/li&gt;
+  &lt;li&gt;&lt;code&gt;sitemap&lt;/code&gt;: the complete URL of a sitemap.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By default, robots try to crawl all your website or at least as many pages as they choose. But using the above directives you can guide them about crawling your website.
+The &lt;code&gt;allow&lt;/code&gt; and &lt;code&gt;disallow&lt;/code&gt; are the most used directives for instructing robots about what pages they can crawl and what they shouldn’t.
+Using the &lt;code&gt;user-agent&lt;/code&gt; you can associate rules with specific user agents (robots).&lt;/p&gt;
+
+&lt;p&gt;For example, consider the below sample robots.txt.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;user-agent: *
+allow: /*
+
+user-agent: googlebot*
+disallow: /oldui/
+
+sitemap: https://example.com/sitemap.xml
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This robots.txt means that any robot (&lt;code&gt;user-agent: *&lt;/code&gt;) is allowed to crawl any URL (&lt;code&gt;allow: /*&lt;/code&gt;). But the google bot (&lt;code&gt;user-agent: googlebot*&lt;/code&gt;) is not allowed to crawl the &lt;code&gt;/oldui/&lt;/code&gt; URL. This sample also includes a link to the sitemap.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-evils-nest&quot;&gt;The evil’s nest&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;disallow&lt;/code&gt; and &lt;code&gt;noindex&lt;/code&gt; are usually misunderstood. Using these two directives for hiding pages from google and robots seems to be a good idea. But the truth is these directives are not respected by all web robots. You should keep in mind that robots.txt is a public file that can be accessed by both google bot and an attacker.&lt;/p&gt;
+
+&lt;p&gt;So if you put something like &lt;code&gt;disallow: /admin/&lt;/code&gt; in your robots.txt file, you’re actually revealing the URL of your website admin section.&lt;/p&gt;
+
+&lt;p&gt;If you add any web pages of your website in the robots.txt file, that file will be accessed by the whole internet like the home page of your website. So robots.txt is not a locker where you can &lt;a href=&quot;/vulnerability-list/hidden-resource-in-robots-txt&quot;&gt;hide your secrets&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;If you have a public web page but you don’t want it to be indexed and shown in search results, you can use the disallow directive.&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The robots.txt is a good tool for optimizing the experience of your website’s robot visitors. But it’s not just for robots, and not all robots are friendly. So do not put sensitive information in the robots.txt file.&lt;/p&gt;</content><author><name></name></author><category term="Information Disclosure" /><category term="SEO" /><summary type="html">A bad configured Robots.txt file is like a welcome sign to your website for hackers. Let’s see how to set up an efficient and secure robots.txt.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/robots.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/robots.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to Secure your NodeJs Express Javascript Application - part 2</title><link href="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" rel="alternate" type="text/html" title="How to Secure your NodeJs Express Javascript Application - part 2" /><published>2022-02-21T00:00:00+00:00</published><updated>2022-02-21T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application---part-2-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">&lt;p&gt;Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.&lt;/p&gt;
+
+&lt;p&gt;This is the second part of the NodeJs Express Security series. If you haven’t read the previous part you can read it on the below URL.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.thesmartscanner.com/blog/how-to-secure-your-nodejs-express-javascript-application-part-1&quot;&gt;How to Secure your NodeJs Express Javascript Application - part 1&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how we can make our Express software more secure.&lt;/p&gt;
+
+&lt;h2 id=&quot;limit-input&quot;&gt;Limit input&lt;/h2&gt;
+&lt;p&gt;Allowing clients to send huge request body can be abused for a denial of service (DoS) attack. To prevent DoS attacks always set a maximum request size for the input. Use the below code to limit input size.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;var contentType = require('content-type')
+var express = require('express')
+var getRawBody = require('raw-body')
+
+var app = express()
+
+app.use(function (req, res, next) {
+  getRawBody(req, {
+    length: req.headers['content-length'],
+    limit: '1mb',
+    encoding: contentType.parse(req).parameters.charset
+  }, function (err, string) {
+    if (err) return next(err)
+    req.text = string
+    next()
+  })
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can also set request size for different content types:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;app.use(express.urlencoded({ extended: true, limit: &quot;1kb&quot; }));
+app.use(express.json({ limit: &quot;1kb&quot; }));
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Other than input size you should limit the Transaction per Second/Minute (TPS/TPM) rate. If you don’t set a rate limitation for your sensitive APIs like login, you expose yourself to a &lt;a href=&quot;/vulnerability-list/brute-force-prevention-bypassed&quot;&gt;Brute Force&lt;/a&gt; attack. Packages like &lt;a href=&quot;https://www.npmjs.com/package/express-brute&quot;&gt;express-brute&lt;/a&gt;, &lt;a href=&quot;https://www.npmjs.com/package/express-bouncer&quot;&gt;express-bouncer&lt;/a&gt; and &lt;a href=&quot;https://www.npmjs.com/package/express-limiter&quot;&gt;express-limiter&lt;/a&gt; are some sample packages you can use for limiting input rate in Express. Below code is a sample code for protecting against brute force attacks.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;const express = require('express')
+const ExpressBrute = require('express-brute');
+const login = require('./routes/login.js')
+
+const app = express()
+ 
+// using memory store, an in-memory db is recommended for production
+let store = new ExpressBrute.MemoryStore();
+let bruteforce = new ExpressBrute(store);
+ 
+app.post('/auth', bruteforce.prevent, login);
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: If you use an API gateway like Kong you can easily configure input limiting policies for your routes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: CAPTCHA and account lockout are also other common solutions for mitigating brute-forcing attacks.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: You can also benefit from packages like &lt;a href=&quot;https://www.npmjs.com/package/toobusy-js&quot;&gt;toobusy-js&lt;/a&gt; for monitoring the load of your server to detect whether you’re under a DoS attack.&lt;/p&gt;
+
+&lt;h2 id=&quot;remove-old-forgotten-debug-and-unused-routes&quot;&gt;Remove old, forgotten, debug, and unused routes&lt;/h2&gt;
+&lt;p&gt;It’s common (but not recommended) to add debug routes during development for testing purposes. These routes usually don’t have authentication and they’re less restricted. The path to these routes is usually easy to guess; something like &lt;code&gt;/test&lt;/code&gt;. This allows attackers to find them easily and abuse the functionality.&lt;/p&gt;
+
+&lt;p&gt;Review all the routes in your Express project and remove any unnecessary routes and use proper testing and versioning scheme to prevent unwanted routes in production.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Bonus&lt;/strong&gt;: Another example of unwanted routes are default routes like those available in &lt;a href=&quot;https://sailsjs.com/&quot;&gt;Sails&lt;/a&gt; and &lt;a href=&quot;https://feathersjs.com/&quot;&gt;Feathers&lt;/a&gt;. Fortunately Express only has a default error and 404 handlers which we will cover in the following section.&lt;/p&gt;
+
+&lt;h2 id=&quot;catch-404-and-500-errors&quot;&gt;Catch 404 and 500 errors&lt;/h2&gt;
+&lt;p&gt;You should always expect exceptions to happen, so get prepared. Unhandled exceptions throw a ton of information to users. Default NodeJs exceptions disclose information like Operation System and used libraries.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/express-error.png&quot; width=&quot;1044&quot; height=&quot;298&quot; alt=&quot;Express JavaScript Detailed Error&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Instead of displaying a &lt;a href=&quot;/vulnerability-list/detailed-application-error&quot;&gt;detailed error message&lt;/a&gt;, you can add an error-handling middleware to catch all errors like below.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-JavaScript&quot;&gt;app.use((err, req, res, next) =&amp;gt; {
+ console.error(err.stack)
+ res.status(500).send('Something broke!')
+})
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You should add the above middleware after any other &lt;code&gt;app.use()&lt;/code&gt; and routes.
+No need to mention that you can capture any exception in NodeJs by subscribing to &lt;code&gt;uncaughtException&lt;/code&gt; event on the &lt;code&gt;process&lt;/code&gt; object.&lt;/p&gt;
+
+&lt;h2 id=&quot;write-clean-code&quot;&gt;Write clean code&lt;/h2&gt;
+&lt;p&gt;Code quality is directly correlated to software security. Less code hides fewer vulnerabilities, right? So does the clean code. Keeping your Express project as clean as possible helps to increase the security of your JavaScript application.&lt;/p&gt;
+
+&lt;p&gt;One example of bad code that is common in JavaScript projects is the &lt;em&gt;Callback Hell&lt;/em&gt;. Callback Hell, also known as &lt;em&gt;Pyramid of Doom&lt;/em&gt;, is an anti-pattern seen in code of asynchronous programming. It happens when callbacks are nested inside each other. It’s easy to get lost in a callback hell because it’s hard to follow the execution flow of the program. Inside those deep nested callbacks security bugs, unhandled exceptions, and information leakage are waiting for the right moment to strike.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/javascript-promise-hell.png&quot; width=&quot;896&quot; height=&quot;388&quot; alt=&quot;JavaScript Promise Hell Refactored&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s important to have a proper Secure SDLC process in place to prevent bad code. Things like enabling security linters, code reviews, and automatic code scan like Github code scan (see this &lt;a href=&quot;https://github.com/github/code-scanning-javascript-demo&quot;&gt;repo&lt;/a&gt;) are good controls for having more secure code.&lt;/p&gt;
+
+&lt;h2 id=&quot;only-return-what-is-necessary&quot;&gt;Only return what is necessary&lt;/h2&gt;
+&lt;p&gt;When passing information to the clients always return the minimum possible fields. Consider a use-case where you want to show a list of available users on your website. You can query the database for all users and return a list of users with all their attributes and only display the username on the front end. Properties like username, password, address, social security numbers, and many others are usually associated with users. You might not display all of them on the page but you are exposing them in your API which makes them available for hackers.&lt;/p&gt;
+
+&lt;h2 id=&quot;do-not-use-eval&quot;&gt;Do not use &lt;code&gt;eval&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;There are some functions you must avoid calling unless you absolutely have to use them. &lt;code&gt;eval()&lt;/code&gt; is one of them. The &lt;code&gt;eval()&lt;/code&gt; function evaluates JavaScript code represented as a string. It is far too easy for a bad actor to run arbitrary code when you use &lt;code&gt;eval()&lt;/code&gt; with user-supplied input. The NodeJs &lt;code&gt;child_process.exec&lt;/code&gt; is similar to &lt;code&gt;eval()&lt;/code&gt; and should be avoided.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;fs&lt;/code&gt; and &lt;code&gt;vm&lt;/code&gt; modules as well as the &lt;code&gt;RegExp&lt;/code&gt; class should be used carefully if you want to pass user input to them. Please read the &lt;a href=&quot;/blog/how-to-secure-your-nodejs-express-javascript-application-part-1#validate-input&quot;&gt;input validation&lt;/a&gt; on part 1 of this series for more.&lt;/p&gt;
+
+&lt;h2 id=&quot;use-strict-mode&quot;&gt;Use &lt;code&gt;strict mode&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;JavaScript’s strict mode, introduced in ECMAScript 5, is a way to opt-in to a restricted variant of JavaScript. Strict mode makes several changes to normal JavaScript semantics. It eliminates some JavaScript silent errors by changing them to throw errors. It also helps JavaScript engines perform optimizations and prohibits some syntax likely to be defined in future versions of ECMAScript.
+For all these improvements it’s encouraged to always use strict mode. For activating strict mode add &lt;code&gt;'strict mode';&lt;/code&gt; at top of your code.&lt;/p&gt;
+
+&lt;h2 id=&quot;log-and-monitor-events&quot;&gt;Log and monitor events&lt;/h2&gt;
+&lt;p&gt;Record any events on your application and review them. Monitoring logs regularly could help identify malicious activities on your system. When something bad happens, logs are your only way to find out what happened and what is the root cause of it.
+In Express you can use &lt;a href=&quot;https://www.npmjs.com/package/express-winston&quot;&gt;express-winston&lt;/a&gt; for logging.&lt;/p&gt;</content><author><name></name></author><category term="Express" /><category term="NodeJs" /><category term="JavaScript" /><category term="npm" /><category term="Information Disclosure" /><category term="Brute Force" /><category term="Development" /><summary type="html">Express is an easy-to-use web framework for NodeJs. In this article, we will review some of the common vulnerabilities in NodeJs Express projects and explain mitigations against them.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/eval.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/eval.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
