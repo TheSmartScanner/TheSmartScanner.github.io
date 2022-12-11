@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Change Log  - SmartScanner</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Change Log">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/docs/changelog">
+    <meta property="og:image" content="/assets/img/logo.png">
+    <meta property="og:description" content="" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/docs/changelog" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Change Log">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/docs/changelog" />
+    <meta name="twitter:description" content="">
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    
+
+
+
+
+
+<main class="w-100 mw7 center ph3 pv4 flex-grow">
+  <article>
+    <div>
+      <div class="flex justify-between f6 gray i">
+        <span><a href="/docs/" class="link gray hover-dark-green">Documents</a><span class="mh2">/</span><a href="/docs/#Features" class="link gray hover-dark-green">Features</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/docs/changelog" || document.URL
+  let title = "Change Log" || document.title
+  let text = ``
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+      </div>
+      <h1 class="mt0">Change Log</h1>
+    </div>
+    <style>
+summary h2 {
+display:inline-block;
+}
+</style>
+
+<h2 id="version-1171--december-11-2022">Version 1.17.1 – <small><em>December 11, 2022</em></small></h2>
+<ul>
+  <li>BugFix: Crash during scan</li>
+</ul>
+
+<details><summary><h2 id="version-117--december-10-2022">Version 1.17 – <small><em>December 10, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Testing of JSON parameters (number and string types)</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Optimzied memory usage</li>
+      <li>Enhanced UI vulnerability list display</li>
+      <li>BugFix: TLS initialization failed</li>
+      <li>Minor improvements in error detection issues</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-116--october-10-2022">Version 1.16 – <small><em>October 10, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Support for all HTTP Verbs (POST,DELETE, PATCH, …) and custom headers in AJAX API (XMLHttpRequest)</li>
+      <li>Smoother progress bar on the scan page</li>
+      <li>Support for detection of errors in Ruby programming language</li>
+      <li>Lazy load tests to optimize memory consumption</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+      <li>Enhanced MySql database detection</li>
+      <li>BugFix: False positive hidden resource detection</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-115--august-1-2022">Version 1.15 – <small><em>August 1, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Support for all HTTP Verbs (POST,DELETE, PATCH, …) and custom headers in JavaScript Fetch API</li>
+      <li>Exporting vulnerability scan results in JSON format</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Version</a> to include CVE-2022-26377, CVE-2022-28330, CVE-2022-28614, CVE-2022-28615, CVE-2022-29404, CVE-2022-30522, CVE-2022-30556, CVE-2022-31813</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-tomcat-version">Vulnerable Tomcat Version</a> to include CVE-2022-34305</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2022-2068, CVE-2022-2097, CVE-2022-2274</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-114--june-6-2022">Version 1.14 – <small><em>June 6, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Apache Tomcat and Apache Struts detection</li>
+      <li>Java runtime error detection</li>
+      <li><a href="/vulnerability-list/apache-mod-jk-access-control-bypass">Apache mod_jk Access Control Bypass - CVE-2018-11759</a></li>
+      <li><a href="/vulnerability-list/apache-struts-2-forced-double-ognl-evaluation-s2-059">Apache Struts 2 Forced double OGNL evaluation S2-059 - CVE-2019-0230</a></li>
+      <li><a href="/vulnerability-list/apache-struts-2-rce-s2-045">Apache Struts 2 RCE S2-045 - CVE-2017-5638</a></li>
+      <li><a href="/vulnerability-list/apache-struts-2-rest-plugin-xstream-rce-s2-052">Apache Struts 2 REST plugin XStream RCE S2-052 - CVE-2017-9805</a></li>
+      <li><a href="/vulnerability-list/apache-struts-ognl-expression-rce-s2-057">Apache Struts OGNL expression RCE S2-057 - CVE-2018-11776</a></li>
+      <li><a href="/vulnerability-list/apache-tomcat-jsp-upload-rce">Apache Tomcat JSP Upload RCE - CVE-2017-12615, CVE-2017-12617</a></li>
+      <li><a href="/vulnerability-list/vulnerable-tomcat-version">Vulnerable Tomcat Version</a></li>
+      <li>Split the <a href="/vulnerability-list/server-version-disclosure">Server Version Disclosure</a> based on Web server:
+        <ul>
+          <li><a href="/vulnerability-list/apache-tomcat-manager-login-found">Apache Tomcat Manager Login Found</a></li>
+          <li><a href="/vulnerability-list/apache-version-disclosure">Apache Version Disclosure</a></li>
+          <li><a href="/vulnerability-list/nginx-version-disclosure">Nginx Version Disclosure</a></li>
+          <li><a href="/vulnerability-list/tomcat-version-disclosure">Tomcat Version Disclosure</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2022-1473, CVE-2022-1434, CVE-2022-1343 and, CVE-2022-1292</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-113--april-10-2022">Version 1.13 – <small><em>April 10, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Scan logs during scan</li>
+      <li>Support for sitemaps in robots.txt</li>
+      <li><a href="/vulnerability-list/missing-or-insecure-cache-control-header">Missing or Insecure Cache-Control Header</a></li>
+      <li><a href="/vulnerability-list/joomla-component-advertisement-board-3-1-0-catname-sqli">Joomla! Component Advertisement Board 3.1.0 ‘catname’ SQLI - CVE-2018-5982</a></li>
+      <li><a href="/vulnerability-list/joomla-component-aist-2-0-id-sqli">Joomla! Component Aist 2.0 ‘id’ SQLI - CVE-2018-5993</a></li>
+      <li><a href="/vulnerability-list/joomla-component-allvideos-reloaded-1-2-x-divid-sqli">Joomla! Component AllVideos Reloaded 1.2.x ‘divid’ SQLI - CVE-2018-5990</a></li>
+      <li><a href="/vulnerability-list/joomla-component-ccnewsletter-2-x-x-id-sqli">Joomla! Component CcNewsletter 2.x.x ‘id’ SQLI - CVE-2018-5989</a></li>
+      <li><a href="/vulnerability-list/joomla-component-com-cbcontact-contact-id-sqli">Joomla! Component Com_cbcontact ‘contact_id’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-com-rsgallery2-2-0-catid-sqli">Joomla! Component Com_rsgallery2 2.0 ‘catid’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-com-shop-editid-sqli">Joomla! Component Com_shop ‘editid’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-com-shop-id-sqli">Joomla! Component Com_shop ‘id’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-dt-register-3-2-7-id-sqli">Joomla! Component DT Register 3.2.7 ‘id’ SQLI - CVE-2018-6584</a></li>
+      <li><a href="/vulnerability-list/joomla-component-fastball-2-5-season-sqli">Joomla! Component Fastball 2.5 ‘season’ SQLI - CVE-2018-6373</a></li>
+      <li><a href="/vulnerability-list/joomla-component-google-map-landkarten-4-2-3-sqli">Joomla! Component Google Map Landkarten 4.2.3 SQLI - CVE-2018-6396</a></li>
+      <li><a href="/vulnerability-list/joomla-component-invitex-3-0-5-invite-type-sqli">Joomla! Component InviteX 3.0.5 ‘invite_type’ SQLI - CVE-2018-6394</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jb-bus-2-3-order-number-sqli">Joomla! Component JB Bus 2.3 ‘order_number’ SQLI - CVE-2018-6372</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jck-editor-6-4-4-parent-sqli">Joomla! Component JCK Editor 6.4.4 ‘parent’ SQLI - CVE-2018-17254</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jextn-video-gallery-3-0-5-id-sqli">Joomla! Component JEXTN Video Gallery 3.0.5 ‘id’ SQLI - CVE-2017-17872</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jgive-2-0-9-sqli">Joomla! Component JGive 2.0.9 SQLI - CVE-2018-5970</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jobs-factory-2-0-4-sqli">Joomla! Component Jobs Factory 2.0.4 SQLI - CVE-2018-17382</a></li>
+      <li><a href="/vulnerability-list/joomla-component-jomestate-pro-3-7-id-sqli">Joomla! Component JomEstate PRO 3.7 ‘id’ SQLI - CVE-2018-6368</a></li>
+      <li><a href="/vulnerability-list/joomla-component-music-collection-3-0-3-sqli">Joomla! Component Music Collection 3.0.3 SQLI - CVE-2018-17375</a></li>
+      <li><a href="/vulnerability-list/joomla-component-nextgen-editor-2-1-0-plname-sqli">Joomla! Component NextGen Editor 2.1.0 ‘plname’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-odudeprofile-2-8-profession-sqli">Joomla! Component Odudeprofile 2.8 ‘profession’ SQLI</a></li>
+      <li><a href="/vulnerability-list/joomla-component-reverse-auction-factory-4-3-8-sqli">Joomla! Component Reverse Auction Factory 4.3.8 SQLI - CVE-2018-17376</a></li>
+      <li><a href="/vulnerability-list/joomla-component-timetable-responsive-schedule-for-joomla-1-5-alias-sqli">Joomla! Component Timetable Responsive Schedule For Joomla! 1.5 ‘alias’ SQLI - CVE-2018-6583</a></li>
+      <li><a href="/vulnerability-list/joomla-pinterest-clone-social-pinboard-2-0-sqli">Joomla! Pinterest Clone Social Pinboard 2.0 SQLI - CVE-2018-5987</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>BugFix: Fix wrong SubResource Integrity checking</li>
+      <li>Improvement of testing for Content Security Policy</li>
+      <li>BugFix: Disabled authentication options in scan config</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Version</a> to include CVE-2022-22719, CVE-2022-22720, CVE-2022-22721, CVE-2022-23943</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2022-0778</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-112--february-7-2022">Version 1.12 – <small><em>February 7, 2022</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>64-bit version for Windows</li>
+      <li><a href="/vulnerability-list/crlf-injection-in-url">CRLF Injection in URL</a></li>
+      <li><a href="/vulnerability-list/open-redirection-in-url">Open Redirection In URL</a></li>
+      <li><a href="/vulnerability-list/nginx-code-execution-due-to-misconfiguration">Nginx Code Execution due to Misconfiguration</a></li>
+      <li><a href="/vulnerability-list/nginx-integer-overflow">Nginx Integer Overflow</a></li>
+      <li><a href="/vulnerability-list/wordpress-4-6-blind-os-command-execution">WordPress 4.6 Blind OS Command Execution</a></li>
+      <li>Support for detection of errors in NodeJs</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>BugFix: A crash error</li>
+      <li>BugFix: False positives in <em>BREACH attack</em>, <em>Email Address Disclosure</em> and, <em>Source Code Disclosure</em></li>
+      <li>Improvement of Header manipulation</li>
+      <li>Optimization for Hidden/Backup resource tests</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-111--december-12-2021">Version 1.11 – <small><em>December 12, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/host-header-injection">Host Header Injection</a></li>
+      <li><a href="/vulnerability-list/wordpress-plugin-wpfilemanager-6-8-rce">WordPress Plugin Wpfilemanager 6.8 RCE</a></li>
+      <li><a href="/vulnerability-list/serialized-object-found">Serialized Object Found</a></li>
+      <li><a href="/vulnerability-list/drupal7-pre-auth-sqli">Drupal7 Pre Auth SQLI</a></li>
+      <li><a href="/vulnerability-list/werkzeug-interactive-debugging-is-active">Werkzeug Interactive Debugging is Active</a></li>
+      <li><a href="/vulnerability-list/apache-mod-proxy-2-4-48-ssrf">Apache mod_proxy 2.4.48 SSRF</a></li>
+      <li>X-XSS-Protection Header is Missing retired and <a href="/vulnerability-list/x-xss-protection-header-is-set">X-XSS-Protection Header is Set</a> added</li>
+      <li>Support for detection of errors in Python libraries like Django, Flask and Werkzeug</li>
+      <li>Support for PHP and Java objects in <a href="/vulnerability-list/insecure-deserialization">Insecure Deserialization</a></li>
+      <li>Support for using system’s proxy in the scan configurations</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Minor bug fixes</li>
+      <li>Drupal detection enhanced</li>
+      <li>Improvement on multiple passive tests like error and source code detection,</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-110--october-10-2021">Version 1.10 – <small><em>October 10, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/nginx-restriction-bypass-via-space-character-in-uri">Nginx Restriction Bypass via Space Character in URI (CVE-2013-4547)</a></li>
+      <li><a href="/vulnerability-list/apache-2-4-49-path-traversal-and-rce">Apache 2.4.49 Path Traversal and RCE (CVE-2021-41773, CVE-2021-42013)</a></li>
+      <li><a href="/vulnerability-list/web-server-path-traversal">Web Server Path Traversal (CVE-2017-14849)</a></li>
+      <li><a href="/vulnerability-list/insecure-deserialization">Insecure Deserialization</a></li>
+      <li><a href="/vulnerability-list/insecure-deserialization-remote-code-execution">Insecure Deserialization Remote Code Execution</a></li>
+      <li><a href="/vulnerability-list/cookie-accessible-for-subdomains">Cookie Accessible for Subdomains</a></li>
+      <li><a href="/vulnerability-list/session-cookie-accessible-for-subdomains">Session Cookie Accessible for Subdomains</a></li>
+      <li>All issues mapped to OWASP Top 10 2021</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2021-3711 and CVE-2021-3712</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Version</a> to include CVE-2021-40438, CVE-2021-39275, CVE-2021-36160, CVE-2021-34798, CVE-2021-33193, CVE-2021-41773, CVE-2021-41524, CVE-2021-41773 and CVE-2021-42013</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-191--september-5-2021">Version 1.9.1 – <small><em>September 5, 2021</em></small></h2></summary>
+<ul>
+  <li>Improvements:
+    <ul>
+      <li>BugFix: Wrong emails in target information</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-190--september-5-2021">Version 1.9.0 – <small><em>September 5, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>CSRF bypass support for weak password issues</li>
+      <li>Tests for 12 known Joomla! vulnerabilities and one test for Drupal</li>
+      <li>Cross-Site Scripting test generalized for easy adding of any known vulnerabilities in CMSs like WordPress, Drupal, Joomla, etc.</li>
+      <li><a href="/vulnerability-list/subresource-integrity-is-missing">Subresource Integrity is Missing</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Enhanced passive tests for 404 pages</li>
+      <li>BugFix: Bypassing weak password test in case of too many inputs in the login form</li>
+      <li>BugFix: Duplicate login form detection</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-180--august-7-2021">Version 1.8.0 – <small><em>August 7, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>SQL injection test generalized for easy adding of any known vulnerabilities in CMSs like WordPress, Drupal, Joomla, etc.</li>
+      <li>Tests for 44 known WordPress SQL Injection vulnerabilities</li>
+      <li><a href="/vulnerability-list/passive-mixed-content">Passive Mixed Content</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>WordPress user identification improved</li>
+      <li>BugFix: WordPress brute force</li>
+      <li>BugFix: Scan doesn’t proceed when starting url contains unicode characters</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-170--july-7-2021">Version 1.7.0 – <small><em>July 7, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/viewstate-is-not-encrypted">ViewState is not Encrypted</a></li>
+      <li><a href="/vulnerability-list/redirection-with-body">Redirection with Body</a></li>
+      <li><a href="/vulnerability-list/http-protocol-stack-remote-code-execution-vulnerability-dos">HTTP Protocol Stack Remote Code Execution Vulnerability (DOS) - CVE-2021-31166</a></li>
+      <li><a href="/vulnerability-list/file-upload-functionality">File Upload Functionality</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Improved Fuzzing tests</li>
+      <li>BugFix: False-positive XSS</li>
+      <li>Updated SQL Injection tests for MySQL and PostgreSQL</li>
+      <li>Updated <a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Version</a>, <a href="/vulnerability-list/vulnerable-nginx-version">Vulnerable Nginx Version</a>, <a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a> and <a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-160--june-8-2021">Version 1.6.0 – <small><em>June 8, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Test for <a href="/vulnerability-list/the-shellshock-bug">the ShellShock Bug</a></li>
+      <li>Enhanced application error detection. <a href="/vulnerability-list/detailed-application-error">Detailed Application Error</a> and <a href="/vulnerability-list/detailed-application-and-database-error">Detailed Application and Database Error</a></li>
+      <li>Fuzzing parameter names like URL query, Cookie or HTTP form Post parameter names</li>
+      <li>Automatic detection of ineffective parameters like those used in the query to bypass browser cache. This will prevent unnecessary tests on such parameters and increase scan speed.</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Add support for .NET error detection in <a href="/vulnerability-list/application-error">Application Error</a></li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-150--may-6-2021">Version 1.5.0 – <small><em>May 6, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>New fuzzer script</li>
+      <li><a href="/vulnerability-list/buffer-overflow">Buffer Overflow</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Enhanced <a href="/vulnerability-list/application-error">Application Error</a> and <a href="/vulnerability-list/database-error">Database Error</a></li>
+      <li>Enhanced custom 404 page detector</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-140--april-4-2021">Version 1.4.0 – <small><em>April 4, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li>Automatic Drupal and Joomla! detection</li>
+      <li><a href="/vulnerability-list/joomla-j2store-3-3-7-sql-injection">Joomla! ‘J2Store &lt; 3.3.7’ SQL Injection</a></li>
+      <li><a href="/vulnerability-list/drupal-drupalgeddon2-remote-code-execution">Drupal ‘Drupalgeddon2’ Remote Code Execution</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2021-23840, CVE-2021-23841, CVE-2021-3449 and, CVE-2021-3450 OpenSSL advisories</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-130--march-9-2021">Version 1.3.0 – <small><em>March 9, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/track-method-allowed">TRACK Method Allowed</a> and <a href="/vulnerability-list/trace-method-allowed">TRACE Method Allowed</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Updated <a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a> to include CVE-2021-23841, CVE-2021-23840 and CVE-2021-23839 OpenSSL advisories</li>
+      <li>Improved Crawler Performance: Faster processing of pages</li>
+      <li>BugFix: False-negative Unreferenced resource detection</li>
+      <li>BugFix: Broken PDF report layout</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-120--february-1-2021">Version 1.2.0 – <small><em>February 1, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/unreferenced-repository-found">Unreferenced Repository Found</a></li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Improved Crawler Performance: Automatic detection &amp; limitation of content pages like ecomerce product pages.</li>
+      <li>New “Requested URL” attribute for unreferenced/old file issue reports</li>
+      <li>Minor improvements on Form Brute Force and unreferenced login page tests</li>
+      <li>BugFix: False-negative &amp; False-positive Unreferenced resource detection</li>
+      <li>BugFix: Broken link issue for sitemap</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-110--january-6-2021">Version 1.1.0 – <small><em>January 6, 2021</em></small></h2></summary>
+<ul>
+  <li>New:
+    <ul>
+      <li><a href="/vulnerability-list/expression-language-injection">Expression Language Injection test</a></li>
+      <li><a href="/vulnerability-list/wordpress-user-enumeration">WordPress User Enumeration test</a></li>
+      <li>Sitemap test</li>
+      <li><a href="/docs/configuring-security-tests">Test profiles</a> in scan configs with predefined and custom profiles</li>
+    </ul>
+  </li>
+  <li>Improvements:
+    <ul>
+      <li>Support for WordPress in Form Brute Force test</li>
+      <li>Support for PHP 8.0 in phpinfo() test</li>
+      <li>CVE-2020-1971 added to “Vulnerable OpenSSL Version” test</li>
+      <li>Better detection of session cookies</li>
+      <li>Minor enhancements in “Breach Attack”, “X-Frame-Options Header is Missing”, “Referrer-Policy Header is Missing”, “Basic Authentication Over HTTP”, “Robots.txt” tests</li>
+      <li>Support for MariaDB in “Database Error” and SQLi tests</li>
+      <li>BugFix: False-positive Source Code disclosure detection</li>
+      <li>BugFix: Wrong results in Form Brute Force test</li>
+      <li>BugFix: Wrong URL detection in crawler</li>
+      <li>BugFix: Random crash</li>
+    </ul>
+  </li>
+</ul>
+</details>
+
+<details><summary><h2 id="version-100--december-1-2020">Version 1.0.0 – <small><em>December 1, 2020</em></small></h2></summary>
+<ul>
+  <li>Initial version</li>
+</ul>
+</details>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/artificial-intelligence-security-scanner">Artificial Intelligence</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/comprehensive-security-tests">Comprehensive Security Tests</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/fully-automated-security-testing">Fully Automated Security Testing</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/javascript-html5-spa-jamstack-serverless-react-security">Built For Security Testing of Modern Web</a></h3>
+  
+
+</div>
+
+    <div class="flex justify-between gray">
+      <span>Still need help? <a class="link gray hover-dark-green" href="/contact">contact us</a></span>
+      <span>Last updated on December 10, 2022</span>
+    </div>
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/docs/priority-support">← Priority Support</a>
+      
+      
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Docs",
+    "item": "https://www.thesmartscanner.com/docs/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Change Log"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "TechArticle",
+
+ "headline": "Change Log"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Need more information? Please ask your questions.</h2>
+    <a href="/contact" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Ask a question</a>
+  </div>
+</section>      
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/how-to-secure-your-wordpress-website" class="link dim dib moon-gray link-reset pv1-ns pv2">How to Secure Your WordPress Website</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/update-cheat-sheet-for-developers" class="link dim dib moon-gray link-reset pv1-ns pv2">Update Cheat Sheet for Developers</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/smartscanner-v1-15-released" class="link dim dib moon-gray link-reset pv1-ns pv2">SmartScanner Version 1.15 Released</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
