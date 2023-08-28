@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>10 Secure Coding Best Practices to Follow in Every Project  - SmartScanner</title>
+    <meta name="description" content="Read about secure coding best practicese. How write clean and secure code exaplined. Tips and tricks for security of npm, JavaScript and secure pro...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="10 Secure Coding Best Practices to Follow in Every Project">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project">
+    <meta property="og:image" content="/assets/img/secure-coding-best-practice.jpg">
+    <meta property="og:description" content="Read about secure coding best practicese. How write clean and secure code exaplined. Tips and tricks for security of npm, JavaScript and secure programming" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="10 Secure Coding Best Practices to Follow in Every Project">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project" />
+    <meta name="twitter:description" content="Read about secure coding best practicese. How write clean and secure code exaplined. Tips and tricks for security of npm, JavaScript and secure programming">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/secure-coding-best-practice.jpg">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/secure-coding-best-practice.jpg); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project" || document.URL
+  let title = "10 Secure Coding Best Practices to Follow in Every Project" || document.title
+  let text = `Read about secure coding best practicese. How write clean and secure code exaplined. Tips and tricks for security of npm, JavaScript and secure programming`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2022-06-11" >11 June 2022</time></span>
+      </div>
+      <h1 class="mt0 ph3">10 Secure Coding Best Practices to Follow in Every Project</h1>
+        
+    </div>
+    <div class="ph3">
+    <p>Let’s see how we can make more secure software.</p>
+
+<h2 id="update-update-update">Update, Update, Update!</h2>
+<p>Using vulnerable and outdated components with known vulnerabilities has always been in the <a href="https://owasp.org/www-project-top-ten/">OWASP Top 10 Application Security Risks</a>. You can take a giant leap in securing your projects only if you use up-to-date tools and libraries.</p>
+
+<h2 id="stick-to-standards">Stick to Standards</h2>
+<p>If you have the <a href="https://en.wikipedia.org/wiki/Not_invented_here"><em>Not invented here (NIH)</em></a> syndrome, you prefer to develop everything from scratch. That’s fine if you have the time and money to do so. But building major things like cryptography and web servers from scratch needs a lot of skills and effort. Such complex components cannot be built by a single person. Even if you have made one, you should not use it in production without in-depth reviews from many other people.</p>
+
+<p>In design and architecture concepts, you should do the same. You should follow best practices to benefit from the community experience.</p>
+
+<p>Next time instead of introducing your own hash algorithm, use one of the <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function#Cryptographic_hash_algorithms">well-known hash functions</a> implemented by an open-source and peer-reviewed library.</p>
+
+<h2 id="use-trustworthy-packages">Use Trustworthy Packages</h2>
+<p>One significant risk of using third-party modules (like packages in npm, PyPI, NuGet, etc. ) is the <em>Supply Chain Attack</em>. Consider one of your project’s dependencies goes rogue and doesn’t do what it was supposed to do. It is called a supply chain attack. This has happened for popular npm packages (UA-Parser-JS, COA, and RC), and it can happen for many others.</p>
+
+<p>We know that using third-party packages is inevitable. So, here are a few tips to consider before choosing a third-party library.</p>
+
+<ol>
+  <li>Prefer packages with more contributions (more contributors, commits, pull requests, and stars)</li>
+  <li>Prefer packages with less open issues</li>
+  <li>Prefer packages with higher release frequency</li>
+  <li>Use dependency scanners like <a href="https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates">GitHub Dependabot</a> to find vulnerable packages.</li>
+</ol>
+
+<h2 id="never-trust-user">Never Trust User</h2>
+<p>Always validate data received from user input before processing them. Check the length, type, allowed characters, and data pattern before using it.</p>
+
+<p>The essential thing in user validation is to do it where the user cannot manipulate the logic. For example, the user has complete control over a webpage, so checking if the user entered a correct email address on the client is not enough, and you should validate it on the back-end again.</p>
+
+<h2 id="always-encode-output">Always Encode Output</h2>
+<p>Always use proper encoding when displaying data to the user. The encoding depends on the context you display the data within.
+For example, data on a web page should be HTML-Encoded, and data in URL should be URL-Encoded. Other contexts like CSV, XML, JSON files, or email need unique encodings.</p>
+
+<h2 id="catch-exceptions">Catch Exceptions</h2>
+<p>Exceptions happen! We should be prepared for them. Unhandled errors create security issues like failing insecurely or <a href="/vulnerability-list/detailed-application-and-database-error">revealing sensitive information</a>.</p>
+
+<p>Always assume things will break eventually and get prepared for it.</p>
+
+<h2 id="do-not-write-secrets-in-comments">Do not Write Secrets in Comments</h2>
+<p>When you put comments in the code, it means your code is not clear and expressive enough and needs explanation. So, a better title for this section would be <em>Do not Write Comments</em>.</p>
+
+<blockquote>
+  <p><em>“Comments are always failures.”</em>
+— Robert C. Martin @ Clean Code</p>
+</blockquote>
+
+<p>There are some valid use-cases for comments in the code, but writing operational information and sensitive data like passwords are not one of them.</p>
+
+<h2 id="use-linter">Use Linter</h2>
+<p>Linters can analyze your code and enforce particular rules. Linters assist you in finding errors, bugs, code smells, and suspicious expressions like using <code>eval</code> and dangerous regular expressions.</p>
+
+<h2 id="possess-an-open-source-spirit">Possess an Open-Source Spirit</h2>
+<p>Open source projects are maintained by the community. It means their structure is not specific to a single user’s environment. Open source projects (usually) don’t have any hard-coded passwords or internal IP addresses. These are good practices we can follow in our projects.</p>
+
+<p>Not every project is supposed to be open-source and publicly available. But we should prepare all projects for open sourcing. Here are a few things to start:</p>
+
+<ul>
+  <li>Remove hard-coded passwords, IP addresses, and database connection strings, …</li>
+  <li>Load all configurations from environment variables</li>
+  <li>Add a <code>readme.md</code> file to your project and document build and test instructions.</li>
+</ul>
+
+<h2 id="write-clean-code">Write Clean Code</h2>
+<p>A clean code is inherently more secure. From a security point of view, a clear code has many benefits:</p>
+
+<ul>
+  <li>A clear code has fewer opportunities for vulnerabilities to occur because they’re less complex</li>
+  <li>Reviewing and finding vulnerabilities in a clear code is easier</li>
+  <li>It takes less time and effort to fix a vulnerability in a clear code</li>
+</ul>
+
+<p>You can read the <a href="https://www.google.com/books/edition/_/hjEFCAAAQBAJ">Clean Code</a> book (if you haven’t read it already) and start refactoring your codes.</p>
+
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/secure-coding-101-how-to-read-and-write-files-securely">Secure Coding 101: How to Read and Write Files Securely</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/secure-coding-101-how-to-use-random-function">Secure Coding 101: How to Use Random Function</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">How to Secure your NodeJs Express Javascript Application - part 2</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14">← Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/csrf-xxe-and-12-other-security-acronyms-explained">CSRF, XXE, and 12 Other Security Acronyms Explained →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "10 Secure Coding Best Practices to Follow in Every Project"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "10 Secure Coding Best Practices to Follow in Every Project",
+ "image": "/assets/img/secure-coding-best-practice.jpg"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/secure-coding-101-how-to-read-and-write-files-securely" class="link dim dib moon-gray link-reset pv1-ns pv2">Secure Coding 101: How to Read and Write Files Securely</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/secure-coding-101-how-to-use-random-function" class="link dim dib moon-gray link-reset pv1-ns pv2">Secure Coding 101: How to Use Random Function</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/how-ai-and-machine-learning-are-revolutionizing-web-security" class="link dim dib moon-gray link-reset pv1-ns pv2">How AI and Machine Learning are Revolutionizing Web Security</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>

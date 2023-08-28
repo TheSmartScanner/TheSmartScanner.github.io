@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Is a Serverless application more secure? No, it's not!  - SmartScanner</title>
+    <meta name="description" content="Read about serverless application security. Best practices to secure Serverless applications and preventing security vulnerabilities like IDOR,XSS,...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Is a Serverless application more secure? No, it's not!">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not">
+    <meta property="og:image" content="/assets/img/serverless-security.png">
+    <meta property="og:description" content="Read about serverless application security. Best practices to secure Serverless applications and preventing security vulnerabilities like IDOR,XSS,SQLI" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Is a Serverless application more secure? No, it's not!">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not" />
+    <meta name="twitter:description" content="Read about serverless application security. Best practices to secure Serverless applications and preventing security vulnerabilities like IDOR,XSS,SQLI">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/serverless-security.png">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/serverless-security.webp); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/is-a-serverless-application-more-secure-no,-it-s-not" || document.URL
+  let title = "Is a Serverless application more secure? No, it's not!" || document.title
+  let text = `Read about serverless application security. Best practices to secure Serverless applications and preventing security vulnerabilities like IDOR,XSS,SQLI`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2022-05-21" >21 May 2022</time></span>
+      </div>
+      <h1 class="mt0 ph3">Is a Serverless application more secure? No, it's not!</h1>
+        
+    </div>
+    <div class="ph3">
+    <p>They’re not as serverless as it sounds and not more secure than other applications.</p>
+
+<h2 id="what-is-a-serverless-application">What is a Serverless Application?</h2>
+<p>For running a traditional web application, you need to set up an OS, configure a web server, install a CMS and prepare a database. You should take care of infrastructure, capacity, and maintenance of servers as long as your application is running.</p>
+
+<p>What if you could only focus on developing your application and don’t think about the infrastructure? This is exactly what you can do in a Serverless architecture. You write your code and publish it on cloud servers like AWS Lambda, Cloudflare workers, or Google Cloud Functions. Your code will run on cloud servers, and your cloud provider manages and handles the infrastructure and maintenance.</p>
+
+<p>Cloud companies that provide Serverless services offer different form of it. Take FaaS as an example. In this development model, cloud providers allow you to write your application in small separate functions. That’s why this service is called Function as a service (FaaS). This approach supports trending architectures like the JAMstack (JavaScript, API &amp; Markup). The JAMStack consists of static pages (the Markup) that integrate with the backend through the use of APIs in Serverless applications.</p>
+
+<blockquote>
+  <p>💡 PaaS is also another Serverless cloud service where you control the entire application. This is in contrast with FaaS that has an event-driven architecture. In FaaS, your application (function) gets executed in certain events like incoming requests.</p>
+</blockquote>
+
+<h2 id="serverless-security">Serverless Security</h2>
+<p>The Serverless development model has many benefits like cost efficiency, elasticity, and productivity. But Serverless applications are not more secure compared to traditional applications. Cloud providers like Amazon AWS take care of OS and platform vulnerabilities, but you don’t have access to the servers, and you can’t use classic security solutions like IDS/IPS that require installation on endpoints.</p>
+
+<p>Further, in a Serverless architecture, the entire application consists of more small components, that means more entry points resulting in an increased attack surface.</p>
+
+<p>Developing and running a Serverless application depends on the cloud provider’s standards. This means the same code can not be used in another cloud provider without change.</p>
+
+<p>Privacy is another concern in Serverless applications because of using shared resources and access by external employees in public Serverless cloud infrastructure.</p>
+
+<h2 id="vulnerabilities-in-serverless-applications">Vulnerabilities in Serverless Applications</h2>
+<p>Security vulnerabilities affect different layers of any application like OS, web server, database, and the application itself. In Serverless architectures, the cloud provider takes care of all infrastructure security. So you won’t worry about security misconfigurations and issues like <a href="/vulnerability-list/vulnerable-apache-version">Outdated server vulnerability</a>. But the application security is still your responsibility in the Serverless development model. And unfortunately, many vulnerabilities relate to the application layer. Vulnerabilities like:</p>
+<ul>
+  <li><a href="/vulnerability-list/sql-injection">SQL Injection</a></li>
+  <li><a href="/vulnerability-list/cross-site-scripting">Cross-Site Scripting (XSS)</a></li>
+  <li><a href="/vulnerability-list/local-file-inclusion">File Inclusion Vulnerabilities</a></li>
+  <li>Cross-site Request Forgery (CSRF)</li>
+  <li>Using <code>eval</code> and Command Execution</li>
+  <li><a href="/vulnerability-list/unvalidated-redirection">Unvalidated Redirects and Forwards</a></li>
+</ul>
+
+<p>These are generic vulnerabilities that are in OWASP’s Top 10 list. We have covered some of them in articles like <a href="/blog/how-do-hackers-hack">common web vulnerabilities</a> and <a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">securing your NodeJs express application</a>. In the followings, we will review vulnerabilities that are less known but more specific to Serverless applications.</p>
+
+<h3 id="missing-function-level-access-control">Missing Function Level Access Control</h3>
+<p>Sensitive functionalities should be protected with an authentication mechanism. It doesn’t matter whether these functionalities are served as web pages or an API. If anyone can access such functionalities, this is a broken access control flaw.</p>
+
+<p>All administration use-cases are prone to this issue. You might have several Serverless APIs for tasks like managing accounts/posts or changing service status. You should make sure that only allowed users can access and use such functionalities.</p>
+
+<h3 id="sensitive-data-exposure">Sensitive Data Exposure</h3>
+<p>Let’s say you have a Serverless application for a voting system. One function of this platform is to show the vote counts for any candidate. Consider a Serverless function for displaying vote counts which accepts candidate ID and returns a list of every user who has voted for that candidate. So you can easily show the count of users as vote counts for the candidate.
+But something’s fishy here! We need a function to display vote counts, not to return name of voters! You might say that the list of users is not displayed anywhere, and only the count of users is represented. That’s right, but as long as the Serverless function is returning all those information and it’s publicly accessible, an attacker can abuse it.</p>
+
+<p>Sensitive Data Exposure is a very common flaw. To avoid it you should return the minimum required data in your Serverless functions.</p>
+
+<h3 id="insecure-direct-object-reference-idor">Insecure Direct Object Reference (IDOR)</h3>
+<p>Imagine an HR application that has a profile API that accepts an employee ID and returns the employee information. Let’s say the employee IDs are an integer number and the Serverless function queries it on the database to find the employee. What could go wrong in this scenario? An attacker can build a collection of employee IDs by starting from 1 and incrementing to any number. Then this collection can be used to query your function to enumerate all employee information. This can happen if the API does not implement the proper access control we discussed earlier.</p>
+
+<p>Here employee ID passed to the Serverless API is a reference to the employee record in the database. And this reference is directly controlled by the user. If such references are easy to guess, you risk your data being enumerated.</p>
+
+<p>Avoid using guessable patterns for IDs (using hash can help). Make sure your functions have access control to mitigate IDOR flaws.</p>
+
+<h3 id="template-language-injection">Template Language Injection</h3>
+<p>A common way of rendering HTML pages using a template is to evaluate an expression like <code>2+2</code> and display the results (<code>4</code>) in output. <a href="/vulnerability-list/expression-language-injection">Template language injection</a> or Expression language injection occurs when a user can change the expression used in the template.</p>
+
+<h3 id="components-with-known-vulnerabilities">Components with Known Vulnerabilities</h3>
+<p>Serverless applications are usually in JavaScript (or TypeScript) or Python languages. Developers in Python or JavaScript usually use numerous third-party packages for completing different tasks. These packages might have vulnerabilities, and using them can make your Serverless application vulnerable.</p>
+
+<p>To mitigate component vulnerabilities, make sure you’re using the updated version of any library and run security tests to find vulnerable packages.</p>
+
+<blockquote>
+  <p>💡 In NodeJs, you can use <code>npm audit</code> to find vulnerabilities in npm packages. Read <a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">Securing Your NodeJs JavaScript Project</a> for details.</p>
+</blockquote>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Serverless applications have many benefits and use cases like file transformation, providing dynamic contents, logging, and others. There’s a misunderstanding that Serverless applications are more secure. This is true to some extent when it comes to OS vulnerabilities, but you need to take application layer security in your hand.</p>
+
+<p>We reviewed some of the common vulnerabilities in Serverless applications, but you should know that these vulnerabilities are not complete and these are not even limited to Serverless applications. So security testing of your web applications is a crucial job for securing them.
+Security of Serverless applications needs a DevSecOps solution where developers, operation team, and Security guys collaborate closely.</p>
+
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">Is your robots.txt file vulnerable? Here's how to check and secure it</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/smartscanner-now-has-a-64-bit-version-for-windows">SmartScanner now has a 64-bit version for Windows</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests">SmartScanner 1.13 now has logs and more Joomla! tests</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/scanning-websites-through-a-proxy">Scanning Websites Through a Proxy</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/smartscanner-1-13-now-has-logs-and-more-joomla-tests">← SmartScanner 1.13 now has logs and more Joomla! tests</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14 →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Is a Serverless application more secure? No, it's not!"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "Is a Serverless application more secure? No, it's not!",
+ "image": "/assets/img/serverless-security.webp"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/secure-coding-101-how-to-read-and-write-files-securely" class="link dim dib moon-gray link-reset pv1-ns pv2">Secure Coding 101: How to Read and Write Files Securely</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/secure-coding-101-how-to-use-random-function" class="link dim dib moon-gray link-reset pv1-ns pv2">Secure Coding 101: How to Use Random Function</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/how-ai-and-machine-learning-are-revolutionizing-web-security" class="link dim dib moon-gray link-reset pv1-ns pv2">How AI and Machine Learning are Revolutionizing Web Security</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
