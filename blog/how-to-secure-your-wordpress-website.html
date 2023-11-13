@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>How to Secure Your WordPress Website  - SmartScanner</title>
+    <meta name="description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="How to Secure Your WordPress Website">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website">
+    <meta property="og:image" content="/assets/img/wordpress-security.jpg">
+    <meta property="og:description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="How to Secure Your WordPress Website">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" />
+    <meta name="twitter:description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/wordpress-security.jpg); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/how-to-secure-your-wordpress-website" || document.URL
+  let title = "How to Secure Your WordPress Website" || document.title
+  let text = `10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2022-10-31" >31 October 2022</time></span>
+      </div>
+      <h1 class="mt0 ph3">How to Secure Your WordPress Website</h1>
+      
+      <div class="gray i f6 ph3 mb4">Guest post by Jessica Bullet</div>
+        
+    </div>
+    <div class="ph3">
+    <p>Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.</p>
+
+<p>Owning a WordPress website can be very demanding, especially if you manage it yourself. First, you have to think of the needs and preferences of your users. Second, you have to design and maintain your website in a way that encourages users to visit again and again, and helps you get other users to do the same. But equally important is the security of your WordPress website. If your website is insecure, we assure you that you will not be able to stop users from running off to more secure websites that offer the same services that you do.</p>
+
+<p>So, in this article, we will outline some of the ways you can secure your WordPress website. But before that, here are 5 reasons you should make the security of your WordPress Website a priority.</p>
+
+<h2 id="why-you-should-secure-your-wordpress-website">Why You Should Secure Your WordPress Website</h2>
+
+<ol>
+  <li>
+    <p><strong>WordPress is a fairground for malicious online activity:</strong> Perhaps the best thing about building your website using WordPress is that it is the most popular content management system. The platform’s plugin integration and theme structures help website managers like you run the show without knowing all there is to know about web development. But the popularity of the platform also means that there are a lot of different individuals and virtual agents that can easily penetrate it. Similarly, because of the relative ease with which you can design websites on WordPress, there are many gaps and cracks in the framework that malware such as the <a href="https://softwaretested.com/anti-malware/what-is-the-vzwpix-email-virus/" target="_blank" rel="noopener noreferrer">vzwpix OR vzwpix.com email</a> virus can slip through. So, securing your WordPress website helps you block these gaps.</p>
+  </li>
+  <li>
+    <p><strong>Securing your WordPress website prevents hackers from breaking it:</strong> With the evolution of technology, especially digital tech, hackers are getting smarter. Therefore, if you do not secure your website, these hackers can easily place a ‘bug’ in the backdoor of your WordPress website and do whatever they want with your users. The easiest way for hackers to operate such bugs is via your and your users’ passwords. Maybe you are better at handling passwords, but your users may not. And because some have trouble remembering difficult passwords, they use simple passwords. And hackers can easily break simple passwords. Therefore, it is your responsibility to secure your WordPress website in a way that hackers cannot access user information. </p>
+  </li>
+  <li>
+    <p><strong>You don’t want Google to blacklist your website:</strong> Google as a search engine has become the ultimate gatekeeper for web content management. The majority of web users rely on Google to link them up with information. To a significant extent, therefore, Google decides whether or not users can ‘mistakenly’ bump into your WordPress. And because Google likes and only promotes secure websites to users, you have to tighten the security of your website. Moreover, securing your WordPress website also means that you won’t be subject to Google’s blacklisting. This is a lot like the fictitious Santa’s Naughty and Nice list: stay on Google’s good side by securing your WordPress website or watch how fewer and fewer web users visit your website.</p>
+  </li>
+  <li>
+    <p><strong>You can retain and boost reputation and user trust:</strong> The more secure your WordPress website is, the easier it would be to retain and boost its reputation. Much like Google’s ranking, protecting your website from virtual/cyber breachers like hackers and malware such as the <a href="https://softwaretested.com/anti-malware/soap2day-virus/" target="_blank" rel="noopener noreferrer">soap2day.to virus OR soap2day virus</a> indicates to users that you are worthy of their trust. In return for your protection, the reputation of your website would increase and it would be much easier for you to get new visitors to the site.</p>
+  </li>
+  <li>
+    <p><strong>Secure WordPress websites reinforce revenue:</strong> Lastly, if the primary goal of your website is to earn you some money, you are significantly more likely to meet this goal when your website is secure. If your WordPress website is not secure, hackers will steal user data, users will report to Google, Google will blacklist you, fewer users will go near your website, and your goal for making money from the website will be dashed.</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/wordpress-plugins.jpg" width="768" height="512" alt="WordPress plugins" loading="lazy" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h2 id="how-to-secure-your-wordpress-website">How to Secure Your WordPress Website</h2>
+
+<p>Having outlined some of the most important reasons for securing your WordPress website, how should you go about it?</p>
+
+<h3 id="use-the-security-measures-available-on-wordpress">Use the Security Measures Available on WordPress</h3>
+
+<p>Nobody (and nothing) knows WordPress like WordPress. The platform has many different measures that you can implement against possible breaching. Some of these measures take the form of security plugins which you can easily install on your website and never have to worry about digital cracks that hackers and their malware can slip through. As a bonus, WordPress has a robust collection of these security plugins. Some of the most popular and widely recommended plugins include iThemes Security, Patchstack, Sucuri Security, Wordfence Security, and All In One WP Security &amp; Firewall. Using any one of these WordPress security plugins can help you protect the web users that visit your website from unauthorized hackers and programs.</p>
+
+<h3 id="partner-with-trusted-hostingweb-management-companies">Partner with Trusted Hosting/Web Management Companies</h3>
+
+<p>Website management is not very easy. Because of this, many website owners and managers delegate the task of managing their WordPress websites to professional agencies. But what if such agencies have malicious intentions or are digitally insecure themselves? This is why it is important to consider only agencies/agents with a trusted history of effectively managing WordPress websites. The same can be said of web hosting companies. Make sure you use only trusted hosting companies that prioritize security and take your website seriously. Usually, you have to pay a bit of money to get committed and serious hosting companies. But it is worth it, so find them online and pay them to look over your website if you cannot do so yourself.</p>
+
+<h3 id="only-implement-plugins-from-trusted-developers">Only Implement Plugins from Trusted Developers</h3>
+
+<p>In the same spirit of partnering with only trusted web management agencies and hosting companies, you have to pay attention to where the security plugins installed on your WordPress website come from. If you rely on plugins from developers that are cybercriminals in disguise, you would be jeopardizing your website and putting your users at risk. So, only use plugins from trusted and highly-rated developers. Such developers regularly update their plugins to reflect reported vulnerabilities from users and website managers. So, avoid installing plugins from developers and sources that don’t update or respond to reports of cyberattacks.</p>
+
+<h3 id="use-ssl-certificates-to-lock-your-website">Use SSL Certificates to Lock Your Website</h3>
+
+<p>Simply put, an SSL (Secure Sockets Layer) certificate is a digital encryption key that helps you secure a website. This key typically takes the form of a data file containing the public key of your website and other important information. Once you have it implemented on your website, web users will be able to tell that your website is secure—and it is. A padlock icon is the symbol to indicate to users that a website has SSL and is more secure than websites without the icon.</p>
+
+<h3 id="protect-core-wordpress-files-like-the-wp-configphp-file">Protect Core WordPress Files like the <code>wp-config.php</code> File</h3>
+
+<p>We noted earlier that WordPress makes web development easy. As the owner/manager of a WordPress website, you have access to the files that serve as the core of the site. The <code>wp-config.php</code> file is one such core component of your WordPress website. This file contains important information about your WordPress security keys and database connection details. So, protecting this file is tantamount to protecting the entire website. A simple way to protect this file is to hide it by moving it outside the default WordPress installation folder.</p>
+
+<h3 id="regularly-update-your-wordpress-by-turning-on-auto-update">Regularly Update Your WordPress by Turning on Auto-Update</h3>
+
+<p>Another very easy way to secure your WordPress website is to regularly update it. Much like the majority of software/web developers, no genuine digital creator wants their creation to be abused. As such, they will always progressively protect their products. This is just as true for WordPress. All you need to do, therefore, is turn on auto-update. Consequently, subsequent updates of WordPress will take care of problems such as data breaches that other web managers or users have reported.</p>
+
+<h3 id="use-strong-passwords-and-require-your-users-to-do-the-same">Use Strong Passwords and Require Your Users to Do the Same</h3>
+
+<p>There is no way we can overstate the importance of strong passwords for virtual security. Breaking your password is probably the easiest way an unauthorized person can break the security of your WordPress website. So, use strong passwords and encourage your users to do the same. You can check out password best practices such as mixing alphanumeric passwords with symbols. If you easily forget passwords, you can implement the Two-Factor Authentication (2FA) on your website. This way, users may still decide to use simple passwords but would have to verify them in a way only they can. Authenticator apps are especially useful on this front. The Google Authenticator app is one of the most popular of these apps and can help protect the integrity of your WordPress website.</p>
+
+<h3 id="implement-website-lockdown-feature">Implement Website Lockdown Feature</h3>
+
+<p>A website lockdown feature allows you to have some restrictive control over a web user’s account. The most basic application of this feature is in temporarily deactivating said account until the user can prove that the account belongs to them. So, once you implement this feature on your WordPress website, you will be able to lock down a user’s account whenever they appear to use the wrong password multiple times. You may also use plugins that send notifications to you and to the user’s email account about the repeated attempts to access the account. This will help both you and the user take immediate steps to unauthorized access to the account. Meanwhile, if it is a case of the user forgetting their password, you can implement the aforementioned 2FA solution so users don’t have to adopt and be forced to remember overly difficult passwords.</p>
+
+<h3 id="use-wps-hide-login-plugin-to-reduce-the-ease-of-access-to-the-login-page">Use WPS Hide Login Plugin to Reduce the Ease of Access to the Login Page</h3>
+
+<p>Your <a href="/vulnerability-list/wordpress-login-page-found">WordPress website’s login</a> page is a door that unauthorized persons can use to break the security of your website. Usually, once such hackers with malicious intentions access your login page, they can also use digital brute force to break in. One such brute force method is the use of software applications that combine millions of possible username and password information and then attempt to access the administrative page. But you can protect your website against such inventions by simply renaming the login URL of your website. You can use the WPS Hide Login plugin for this. As long as you have installed and activated this plugin, hackers will not be able to easily access your login page, meaning that they will not be able to gain unauthorized access to your website.</p>
+
+<h3 id="pay-attention-to-user-activity">Pay Attention to User Activity</h3>
+
+<p>Outside the active steps you can implement to secure your WordPress website, you may also use passive methods such as regularly keeping track of user activity on your website. The easiest way to do this is to log user activity and then go through the data for possible irregularities. If a user, for example, reports their location as Canada, you should expect that their digital footprints contain that geographical tag, unless they regularly use a VPN. So, when you begin to notice a difference in location, you should pay more attention to the account and notify the user via email to verify that they are still in control. You can use WordPress’ User Activity Log plugin for this monitoring process.</p>
+
+<h3 id="backup-wordpress-regularly">Backup WordPress Regularly</h3>
+
+<p>Lastly, you should backup your WordPress regularly. This ensures that in case of a very serious breach, you have the option of returning the website to a period when it was secure. So, make sure to install and use backup plugins. You should also store the backup on reliable cloud servers. We recommend using those that require no coding so that you will not have to give your WordPress admin password to someone else to do it for you.</p>
+
+<p>All in all, making your WordPress website more secure is good. Using the methods outlined in this article will protect you and your users, saving you from the malicious activities of hackers and malware.</p>
+
+
+    
+    
+
+
+<div class="mv4 pa4 bg-light-gray br4">
+  <div class="flex">
+    <img src="https://www.gravatar.com/avatar/2877ce4e7fab2d0f45620490fab7caca?d=retro" class="br-100 pa1 ba b--black-10 h3 w3" alt="Jessica Bullet">
+    <h4 class="mh3">Jessica Bullet</h4>
+  </div>
+  <p class="f5">Jess is a professional content writer and editor for Software Tested, writing about all sorts of technology topics under the sun. As a computer programmer, she is able to tap into her expertise on computers and gadgets to help others resolve their tech problems.</p>
+</div>
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">How to Secure your NodeJs Express Javascript Application - part 2</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/wordpress-login-page-found">WordPress Login Page Found - Vulnerability</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/vulnerability-list/wordpress-user-enumeration">WordPress User Enumeration - Vulnerability</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/secure-coding-101-how-to-read-and-write-files-securely">Secure Coding 101: How to Read and Write Files Securely</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/update-cheat-sheet-for-developers">← Update Cheat Sheet for Developers</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/3-reasons-why-any-website-security-is-important">3 reasons why any website's security is important →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "How to Secure Your WordPress Website"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "How to Secure Your WordPress Website",
+ "image": "/assets/img/wordpress-security.jpg"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt" class="link dim dib moon-gray link-reset pv1-ns pv2">Online Robots.txt Validator For Creating a Secure Robots.txt</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/web-scanner,-a-must-have-tool-for-web-developers" class="link dim dib moon-gray link-reset pv1-ns pv2">Web Scanner, A Must Have Tool For Web Developers</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/secure-coding-101-how-to-read-and-write-files-securely" class="link dim dib moon-gray link-reset pv1-ns pv2">Secure Coding 101: How to Read and Write Files Securely</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>

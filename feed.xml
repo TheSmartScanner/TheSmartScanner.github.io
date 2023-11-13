@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2023-11-13T13:57:20+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for web application security testing.Download for free do website security scan find and fix vulnerabilities</subtitle><entry><title type="html">Online Robots.txt Validator For Creating a Secure Robots.txt</title><link href="https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt" rel="alternate" type="text/html" title="Online Robots.txt Validator For Creating a Secure Robots.txt" /><published>2023-10-31T00:00:00+00:00</published><updated>2023-10-31T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt">&lt;p&gt;A robots.txt file is a small but important part of a website. It is a plain text file that is placed in the root directory of a website and is used to communicate with search engine crawlers, telling them which pages or sections of a site should or should not be indexed.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
+&lt;p&gt;Use the &lt;a href=&quot;/tools/robotstxt&quot;&gt;online robots.txt validator&lt;/a&gt; to make sure your robots.txt is well formatted and has no security risk.&lt;/p&gt;
+
+&lt;section class=&quot;shadow-2 bg-near-white pa4 mv5  f4 flex justify-between items-center&quot;&gt;
+ &lt;span&gt;Use free online robots.txt validator to check your robots.txt&lt;/span&gt;
+ &lt;a href=&quot;/tools/robotstxt/&quot; class=&quot;f5 br3 ph3 pv2 dib white ba bw1 dark-green mh1 mb0&quot;&gt;Try it Now!&lt;/a&gt;
+&lt;/section&gt;
+
+&lt;p&gt;The robots.txt file is a set of instructions that tell web crawlers which parts of a website they are allowed to access. These web crawlers are automated programs that scan websites to gather information about the pages and content on a site. While these crawlers can help index a website and make it more visible in search engine results, they can also consume a lot of server resources and bandwidth if they are not properly managed. Not every robot out there is good. That’s why having a properly written robots.txt file is very important.&lt;/p&gt;
+
+&lt;p&gt;The structure of a robots.txt file is relatively simple but it is also hard to debug and make sure it’s working as expected. But with our new online &lt;a href=&quot;/tools/robotstxt&quot;&gt;tool&lt;/a&gt; for validating robots.txt it’s easy to create one.&lt;/p&gt;
+
+&lt;p&gt;You can simply copy and paste your robots.txt contents into this tool and check possible errors. Then you can easily fix the problems with recommendations provided for each issue.&lt;/p&gt;
+
+&lt;h2 id=&quot;security-issues-in-robotstxt&quot;&gt;Security Issues in Robots.txt&lt;/h2&gt;
+&lt;p&gt;There’s a misunderstanding that a robots.txt file can be used for protecting sensitive files on a website. That’s &lt;a href=&quot;/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it&quot;&gt;why many websites disclose valuable information&lt;/a&gt; to hackers. One benefit of our online &lt;a href=&quot;/tools/robotstxt&quot;&gt;robots.txt checker&lt;/a&gt; is that it can also check for security-related problems in robots.txt.&lt;/p&gt;
+
+&lt;p&gt;The online robots.txt validator can detect up to 19 problems. In the following, we explain some common security vulnerabilities that can be found in a robots.txt file.&lt;/p&gt;
+
+&lt;h2 id=&quot;file-disclosure-in-disallow&quot;&gt;File Disclosure in Disallow&lt;/h2&gt;
+&lt;p&gt;It happens when you add a &lt;code&gt;disallow&lt;/code&gt; record with a full file path.
+The robots.txt is a voluntary mechanism. It’s not sufficient to guarantee some robots will not visit restricted URLs. In fact, malicious users can use robots.txt to find out the resources you are trying to hide; like a &lt;a href=&quot;/vulnerabilities/unreferenced-login-page-found&quot;&gt;login page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-fix&quot;&gt;How to Fix&lt;/h3&gt;
+&lt;p&gt;You should not use the disallow rule for protecting files. Following are some alternatives:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Use strong authentication&lt;/strong&gt;: For sensitive resources on your website you must use strong authentication and access control mechanisms.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;You don’t need to disallow at all&lt;/strong&gt;: If the file in the &lt;code&gt;disallow&lt;/code&gt; rule is not linked to your website, you don’t need a disallow for it.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use &lt;code&gt;noindex&lt;/code&gt; meta tag&lt;/strong&gt;: If you only want to prevent search engines from indexing your URL, you can use the &lt;code&gt;noindex&lt;/code&gt; ruleset. &lt;code&gt;noindex&lt;/code&gt; is a rule set with either a &lt;code&gt;&amp;lt;meta&amp;gt;&lt;/code&gt; tag or HTTP response header and is used to prevent indexing content by search engines that support the &lt;code&gt;noindex&lt;/code&gt; rule, such as Google.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Use pattern&lt;/strong&gt;: Instead of revealing the full path, use patterns in the disallow rule. for example, use &lt;code&gt;disallow: /*.php&lt;/code&gt; to exclude all php file&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;directory-disclosure-in-disallow&quot;&gt;Directory Disclosure in Disallow&lt;/h2&gt;
+&lt;p&gt;Revealing directories like &lt;code&gt;/admin/&lt;/code&gt; in the disallow rule gives hackers a clue to start digging in that directory.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-prevent&quot;&gt;How to Prevent&lt;/h3&gt;
+&lt;p&gt;In addition to the above recommendations, you should make sure &lt;a href=&quot;/vulnerability-list/directory-listing&quot;&gt;directory listing&lt;/a&gt; is disabled on your website.&lt;/p&gt;
+
+&lt;h2 id=&quot;possible-path-disclosure-in-allow&quot;&gt;Possible Path Disclosure in Allow&lt;/h2&gt;
+&lt;p&gt;By revealing URLs in the &lt;code&gt;allow&lt;/code&gt; rule, you &lt;a href=&quot;/vulnerability-list/sensitive-unreferenced-resource-found&quot;&gt;disclose resources to malicious users&lt;/a&gt;. You must make sure these URLs are not sensitive.&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-avoid&quot;&gt;How to Avoid&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;Make sure you’re not revealing any sensitive resources.&lt;/li&gt;
+  &lt;li&gt;Make sure revealed folders do not display a directory listing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A robots.txt file is a vital aspect of website management and by properly configuring it, website owners can protect sensitive information and ensure that their site is effectively managed.&lt;/p&gt;
+
+&lt;p&gt;Go ahead and &lt;a href=&quot;/tools/robotstxt&quot;&gt;test your robots.txt now&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="Passive" /><category term="Tool" /><category term="Information Disclosure" /><category term="SEO" /><summary type="html">Try it out!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/robotstxt-validator.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/robotstxt-validator.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Web Scanner, A Must Have Tool For Web Developers</title><link href="https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers" rel="alternate" type="text/html" title="Web Scanner, A Must Have Tool For Web Developers" /><published>2023-09-10T00:00:00+00:00</published><updated>2023-09-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers">&lt;p&gt;A review about web scanners and how they can be a secret weapon to gain competitive advantage for developers.&lt;/p&gt;
+
+&lt;p&gt;As the internet grows and technology advances, web development has become more complex, and so has web security. Web developers must use tools that can help them ensure that their websites are secure. Let’s see how using a web scanner can help with that.&lt;/p&gt;
+
+&lt;h2 id=&quot;web-scanners-in-developers-toolset&quot;&gt;Web Scanners in Developer’s Toolset&lt;/h2&gt;
+&lt;p&gt;Web development is a challenging job that requires a solid understanding of programming languages, web development frameworks, and emerging technologies. Web developers are responsible for different aspects of a web application, including interface design, information architecture, and website performance optimization. Collaboration with other developers, designers, and stakeholders can add extra complexity to the development process.&lt;/p&gt;
+
+&lt;p&gt;Web developers use various tools to create and maintain websites, including text editors, IDEs, version control systems, and testing frameworks. However, one tool that is often overlooked is a web scanner.&lt;/p&gt;
+
+&lt;p&gt;A web scanner is a tool that can detect security vulnerabilities in web applications. It is an essential tool for web developers to ensure website security.&lt;/p&gt;
+
+&lt;h2 id=&quot;benefits-of-using-a-web-security-scanner-for-developers&quot;&gt;Benefits of Using a Web Security Scanner For Developers&lt;/h2&gt;
+&lt;p&gt;Web developers have numerous responsibilities, including the creation of secure applications. However, web security is a complex domain that requires a different skill set and extensive experience to become an expert. Security testing of web applications requires knowledge beyond web development. Using a web scanner can assist web developers in identifying and resolving security vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;Here are some benefits of using a web scanner for web developers.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;It &lt;strong&gt;saves time and effort&lt;/strong&gt; by quickly and accurately scanning websites, allowing developers to focus on other aspects of website development.&lt;/li&gt;
+  &lt;li&gt;Web scanners can &lt;strong&gt;improve a developer’s skills&lt;/strong&gt; by exposing them to new vulnerabilities and best practices for resolving them.&lt;/li&gt;
+  &lt;li&gt;It can &lt;strong&gt;boost productivity&lt;/strong&gt; by automating much of the testing process, enabling developers to spend more time developing new features or improving existing ones.&lt;/li&gt;
+  &lt;li&gt;Web scanners can also &lt;strong&gt;enhance a developer’s reputation&lt;/strong&gt; by demonstrating a commitment to website security.&lt;/li&gt;
+  &lt;li&gt;It can help developers &lt;strong&gt;avoid legal issues&lt;/strong&gt; by ensuring compliance with industry regulations and standards.&lt;/li&gt;
+  &lt;li&gt;Web scanners can &lt;strong&gt;identify security issues before they become a problem&lt;/strong&gt;, which is crucial because it is much easier and cheaper to &lt;a href=&quot;https://www.thesmartscanner.com/blog/how-do-hackers-hack&quot;&gt;fix security issues before they are exploited by hackers&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;By using a web scanner, developers can &lt;strong&gt;improve user experience&lt;/strong&gt; by identifying and fixing security issues that may affect the UX of a website.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;how-to-test-security-of-your-web-application-with-a-web-scanner&quot;&gt;How to Test Security of Your Web Application With a Web Scanner&lt;/h2&gt;
+&lt;p&gt;Several types of security testing are commonly used to identify and address security vulnerabilities in web applications. Penetration Testing, Source Code Analysis, and Vulnerability Scanning are common types of security testing. Manually conducting these tests requires a lot of knowledge and experience. If you’re not a security expert, you can still &lt;a href=&quot;https://www.thesmartscanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now&quot;&gt;perform security testing of your web application&lt;/a&gt;. All you need is the right tool. For instance, you can use a web scanner or a DAST tool.&lt;/p&gt;
+
+&lt;p&gt;DAST stands for &lt;em&gt;Dynamic Application Security Testing&lt;/em&gt;, which is a type of security testing that involves testing the security of an application while it is running in a live environment.&lt;/p&gt;
+
+&lt;p&gt;There are many Web Scanners that can do a DAST on your website. Following is a list of top free web scanners.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.zaproxy.org/&quot; rel=&quot;noopener noreferrer&quot;&gt;OWASP ZAP&lt;/a&gt;&lt;/strong&gt;: Free and open source. Actively maintained by a dedicated international team of volunteers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://subgraph.com/vega/&quot; rel=&quot;noopener noreferrer&quot;&gt;Vega&lt;/a&gt;&lt;/strong&gt;: Web security testing platform to test the security of web applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://wapiti-scanner.github.io/&quot; rel=&quot;noopener noreferrer&quot;&gt;Wapiti&lt;/a&gt;&lt;/strong&gt;: Wapiti allows you to audit the security of your websites or web applications.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://www.theSmartScanner.com&quot;&gt;SmartScanner - Website Vulnerability Scanner&lt;/a&gt;&lt;/strong&gt;: While other tools may not be as user-friendly, SmartScanner stands out for its simplicity and intuitive interface.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;using-smartscanner-for-automated-web-security-test&quot;&gt;Using SmartScanner for Automated Web Security Test&lt;/h2&gt;
+&lt;p&gt;SmartScanner is a DAST tool that scans websites for vulnerabilities and security issues. It uses Artificial Intelligence, &lt;a href=&quot;https://www.thesmartscanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website&quot;&gt;passive scanning&lt;/a&gt; and active methods to identify security issues. SmartScanner can check for a range of security issues, including SQL injection, cross-site scripting (XSS), and other vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/smartscanner-start-scan.gif&quot; width=&quot;736&quot; height=&quot;455&quot; alt=&quot;SmartScanner performing a website scan in 1 simple step&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;SmartScanner is easy to use, and it automatically browses your application, navigates to different pages, runs JavaScripts, and fetches remote APIs to find web vulnerabilities. SmartScanner provides reports specific details for every vulnerability along with remediation and mitigation steps so you can fix vulnerabilities easily.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.TheSmartScanner.com/download&quot;&gt;Download SmartScanner, scan your website&lt;/a&gt;, and discover your web security problems.&lt;/p&gt;</content><author><name></name></author><category term="Development" /><category term="Programming" /><category term="Scanning" /><category term="DAST" /><summary type="html">A review about web scanners and how they can be a secret weapon to gain competitive advantage for developers.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/web-scanner-benefits-for-developers.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/web-scanner-benefits-for-developers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Secure Coding 101: How to Read and Write Files Securely</title><link href="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely" rel="alternate" type="text/html" title="Secure Coding 101: How to Read and Write Files Securely" /><published>2023-08-06T00:00:00+00:00</published><updated>2023-08-06T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely">&lt;p&gt;Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application.&lt;/p&gt;
+
+&lt;p&gt;Let’s review common vulnerabilities and mitigations when working file files.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;File Inclusions and Path Traversal vulnerabilities are the results of insecure accessing files&lt;/li&gt;
+  &lt;li&gt;Avoid accessing file paths that are built with user-provided input&lt;/li&gt;
+  &lt;li&gt;If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs&lt;/li&gt;
+  &lt;li&gt;Use libraries to detect if the file you’re going to access is in the intended directory (e.g. &lt;code&gt;realpath()&lt;/code&gt; in PHP and NodeJs)&lt;/li&gt;
+  &lt;li&gt;When creating files (e.g. file uploads) set a reasonable file size limit&lt;/li&gt;
+  &lt;li&gt;When writing user-provided content, make sure the content type is what you expect&lt;/li&gt;
+  &lt;li&gt;When creating files, make sure they don’t have execution permission&lt;/li&gt;
+  &lt;li&gt;When creating files, make sure they’re not publicly accessible&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;file-inclusion-vulnerability&quot;&gt;File Inclusion Vulnerability&lt;/h2&gt;
+&lt;p&gt;File inclusion vulnerability is a type of web vulnerability that occurs when an application allows a user to include a file in the output of a web page without properly validating or sanitizing the user input.&lt;/p&gt;
+
+&lt;p&gt;There are two types of file inclusion vulnerabilities: &lt;em&gt;Local File Inclusion (LFI)&lt;/em&gt; and &lt;em&gt;Remote File Inclusion (RFI)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;LFI occurs when an attacker can include a file from the local file system of the server. This can allow the attacker to view sensitive files or execute arbitrary code on the server.&lt;/p&gt;
+
+&lt;p&gt;RFI occurs when an attacker can include a file from a remote server. This can allow the attacker to execute arbitrary code on the server or steal sensitive information.&lt;/p&gt;
+
+&lt;p&gt;For example, consider the following vulnerable PHP code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;$module = $_GET['module'];
+include $module;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This code retrieves a value from the URL query string using the &lt;code&gt;$_GET&lt;/code&gt; superglobal, specifically the “module” parameter. The retrieved value is then used as the file path to include a PHP file using the &lt;code&gt;include&lt;/code&gt; statement. This means that the contents of the specified file will be included in the current script at the point where the &lt;code&gt;include&lt;/code&gt; statement appears.&lt;/p&gt;
+
+&lt;p&gt;However, this code can be potentially dangerous to both LFI and RFI.&lt;/p&gt;
+
+&lt;p&gt;In the above PHP code example, a user can pass any file name or URL as the &lt;code&gt;module&lt;/code&gt; parameter. For instance, an attacker can host a PHP script on their server and pass its URL, like &lt;code&gt;http://attackerhost/phpscript.txt&lt;/code&gt;, in the module parameter and execute arbitrary commands on the target system.&lt;/p&gt;
+
+&lt;p&gt;In PHP, for example, file inclusion vulnerabilities are often caused by the use of the &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;require&lt;/code&gt; functions without proper input validation. Similarly, in JSP, file inclusion vulnerabilities can occur when the &lt;code&gt;include&lt;/code&gt; or &lt;code&gt;jsp:include&lt;/code&gt; tags are used without proper input validation. Using &lt;code&gt;Server.Execute&lt;/code&gt; or &lt;code&gt;Server.Transfer&lt;/code&gt; in ASP also can create file inclusion vulnerabilities.&lt;/p&gt;
+
+&lt;h2 id=&quot;local-file-download&quot;&gt;Local File Download&lt;/h2&gt;
+&lt;p&gt;Suppose an application has a file download functionality that allows users to download a file from the server. The application takes a file name as a parameter and returns the file contents to the user. If the application does not validate the file name parameter and allows users to download any file on the server, an attacker can exploit this vulnerability by passing a sensitive file name as the parameter. This is called &lt;em&gt;Local File Download&lt;/em&gt; or &lt;em&gt;Local File Disclosure&lt;/em&gt; vulnerability.&lt;/p&gt;
+
+&lt;p&gt;In our example, if the user passes &lt;code&gt;/etc/passwd&lt;/code&gt; as a module parameter, the content of &lt;code&gt;passwd&lt;/code&gt; file is displayed to the user.&lt;/p&gt;
+
+&lt;p&gt;Local file download is a very common vulnerability and can be found in any programming language.&lt;/p&gt;
+
+&lt;h3 id=&quot;prevent-file-inclusion-vulnerabilities&quot;&gt;Prevent File Inclusion Vulnerabilities&lt;/h3&gt;
+&lt;p&gt;Follow below best practices to mitigate File Inclusion vulnerabilities:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Do not include or open files that are built using user-provided data&lt;/li&gt;
+  &lt;li&gt;If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;path-traversal-vulnerability&quot;&gt;Path Traversal Vulnerability&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Path traversal&lt;/em&gt; vulnerability, also known as &lt;em&gt;directory traversal&lt;/em&gt; vulnerability, is another web security vulnerability that allows attackers to access files outside of the intended directory. An attacker can exploit this vulnerability to access sensitive files, such as configuration files, password files, and even source code files.  &lt;/p&gt;
+
+&lt;p&gt;This vulnerability occurs when you create file paths using invalidated user input. This allows the attacker to navigate to directories and files using the &lt;code&gt;../&lt;/code&gt; character sequences. The &lt;code&gt;../&lt;/code&gt; character sequences refer to the parent directory on file systems.&lt;/p&gt;
+
+&lt;p&gt;Consider below revised version of our vulnerable PHP code.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-PHP&quot;&gt;$module = $_GET['module'];
+include './' . $module;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;By prefixing the module variable with &lt;code&gt;./&lt;/code&gt; character sequences, we’re limiting file inclusion to the current directory only. So users cannot pass absolute file names like &lt;code&gt;/etc/passwd&lt;/code&gt; or URLs that will eliminate RFI. But the user can enter &lt;code&gt;../../../../../../../etc/passwd&lt;/code&gt; as module parameter value and the final file path would resolve to &lt;code&gt;/etc/passwd&lt;/code&gt;. This will reveal the contents of the passwd file.&lt;/p&gt;
+
+&lt;p&gt;The Path traversal vulnerability can occur in any programming language and also in Windows operating systems.&lt;/p&gt;
+
+&lt;h3 id=&quot;prevent-path-traversal-vulnerability&quot;&gt;Prevent Path Traversal Vulnerability&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;Do not include or open files that are built using user-provided data&lt;/li&gt;
+  &lt;li&gt;If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs&lt;/li&gt;
+  &lt;li&gt;Use libraries to detect if the file you’re going to access is in the intended directory (e.g. &lt;code&gt;realpath()&lt;/code&gt; in PHP and NodeJs)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;file-upload-vulnerability&quot;&gt;File Upload Vulnerability&lt;/h2&gt;
+&lt;p&gt;When it comes to uploading files, security is paramount. Unfortunately, there is a severe vulnerability called &lt;em&gt;arbitrary file upload&lt;/em&gt; that can compromise your data. This vulnerability allows users to upload any type of file, including scripts like PHP, Python, or ASP code, which can execute any command on your server.&lt;/p&gt;
+
+&lt;p&gt;In addition to arbitrary file upload, insecure file upload functionality can also introduce other vulnerabilities like &lt;em&gt;Denial of Service (DoS)&lt;/em&gt; attacks. For example, if you don’t set a limit on the file size that can be uploaded, an attacker could upload an excessively large file and potentially cause a DoS attack or consume excessive server resources.&lt;/p&gt;
+
+&lt;p&gt;Furthermore, insecure file uploads can allow attackers to override sensitive files using path traversal or upload malware to your server.&lt;/p&gt;
+
+&lt;h3 id=&quot;prevent-insecure-file-uploads&quot;&gt;Prevent Insecure File Uploads&lt;/h3&gt;
+&lt;p&gt;To prevent file upload vulnerabilities from happening, implement the following measures:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Set a reasonable file size limit and validate that uploaded files are within that limit.&lt;/li&gt;
+  &lt;li&gt;Validate that uploaded files are of the expected file type and reject any files that are not.&lt;/li&gt;
+  &lt;li&gt;Use randomly generated file names for storing uploaded files. If you have to use user-provided filenames, use a white list filter for accepted file names and reject other file names.&lt;/li&gt;
+  &lt;li&gt;Use reputable anti-virus or malware detection software to scan uploaded files before they are processed or stored on your server.&lt;/li&gt;
+  &lt;li&gt;Make sure uploaded files do not have execution permission.&lt;/li&gt;
+  &lt;li&gt;Make sure only required users have access to the uploaded files.&lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><category term="NodeJs" /><category term="Python" /><category term="JavaScript" /><category term="LFD" /><category term="LFI" /><category term="Development" /><category term="Programming" /><category term="RFI" /><category term="Unix" /><category term="Windows" /><category term="File Inclusion" /><category term="Information Disclosure" /><category term="Path Traversal" /><summary type="html">Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/files-folders.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/files-folders.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Secure Coding 101: How to Use Random Function</title><link href="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function" rel="alternate" type="text/html" title="Secure Coding 101: How to Use Random Function" /><published>2023-05-09T00:00:00+00:00</published><updated>2023-05-09T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function">&lt;p&gt;Random numbers are everywhere on the web, and your security depends on them. Let’s see if you’re using them right.&lt;/p&gt;
+
+&lt;p&gt;Random numbers play a critical role in web application security. They are used in session identifiers, passwords, cryptographic keys, and more. However, if not implemented securely, they can lead to vulnerabilities that attackers can exploit to gain unauthorized access to sensitive information.&lt;/p&gt;
+
+&lt;h2 id=&quot;tldr&quot;&gt;TLDR&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Most random generators are not really random. They use math that looks random&lt;/li&gt;
+  &lt;li&gt;Do not use &lt;code&gt;Math.random()&lt;/code&gt; in JavaScript or &lt;code&gt;random&lt;/code&gt; in Python&lt;/li&gt;
+  &lt;li&gt;Use &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API&quot;&gt;&lt;code&gt;Web Crypto API&lt;/code&gt;&lt;/a&gt; in JavaScript, &lt;a href=&quot;https://nodejs.org/api/crypto.html&quot;&gt;&lt;code&gt;crypto&lt;/code&gt;&lt;/a&gt; module in NodeJs, and &lt;a href=&quot;https://docs.python.org/3/library/secrets.html&quot;&gt;&lt;code&gt;secrets&lt;/code&gt;&lt;/a&gt; in python&lt;/li&gt;
+  &lt;li&gt;Do not try to implement your own random generation algorithm&lt;/li&gt;
+  &lt;li&gt;Incorrect usage of secure random numbers can make your application vulnerable&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;how-random-functions-work&quot;&gt;How Random Functions work&lt;/h2&gt;
+&lt;p&gt;There are two main types of Random Number Generators (RNGs): pseudo-random number generators (PRNGs) and true random number generators (TRNGs).&lt;/p&gt;
+
+&lt;h3 id=&quot;pseudo-random-number-generators-prngs&quot;&gt;Pseudo-random Number Generators (PRNGs)&lt;/h3&gt;
+&lt;p&gt;PRNGs are the most commonly used type of RNGs. They work by using an algorithm to generate a sequence of numbers that appear to be random. The algorithm takes an initial value as input and produces a series of numbers based on it.&lt;/p&gt;
+
+&lt;p&gt;The common algorithms used in PRNGs are the &lt;a href=&quot;https://en.wikipedia.org/wiki/Mersenne_Twister&quot;&gt;Mersenne-Twister&lt;/a&gt; and &lt;a href=&quot;https://en.wikipedia.org/wiki/Linear_congruential_generator&quot;&gt;linear congruential generator (LCG)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;These algorithms get an initial number called &lt;code&gt;seed&lt;/code&gt;. They change it by adding previous random number, shifting, and doing XOR operators to generate the output. The output looks like a random number though it’s just an output of a formula.&lt;/p&gt;
+
+&lt;p&gt;If you keep executing any PRNG, it will eventually generate the same numbers over and over. Any PRNG has a fixed length of numbers that can generate before starting over.&lt;/p&gt;
+
+&lt;h3 id=&quot;true-random-number-generators-trngs&quot;&gt;True Random Number Generators (TRNGs)&lt;/h3&gt;
+&lt;p&gt;TRNGs generate truly random numbers based on physical processes that are inherently random. These processes include atmospheric noise, radioactive decay, and thermal noise. TRNGs measure the physical process and convert it into a random number.&lt;/p&gt;
+
+&lt;h2 id=&quot;random-function-vulnerabilities&quot;&gt;Random Function Vulnerabilities&lt;/h2&gt;
+&lt;p&gt;The seed and random number generation algorithm both can have weaknesses.&lt;/p&gt;
+
+&lt;h3 id=&quot;prediction&quot;&gt;Prediction&lt;/h3&gt;
+&lt;p&gt;You can say predictability is the main vulnerability of weak random number generators. PRNGs are inherently predictable as they are based on a mathematical formula. So if you know the seed and last random number, you can predict the next random number. This can lead to severe vulnerabilities.&lt;/p&gt;
+
+&lt;p&gt;For example, consider a forget password functionality that words based on a random token. If the token can be predicted, an attacker can reset the password of any user.&lt;/p&gt;
+
+&lt;h3 id=&quot;collision&quot;&gt;Collision&lt;/h3&gt;
+&lt;p&gt;Besides the predictability, Some random generators that have low quality produce duplicate values very often. This can increase the risk of collision.&lt;/p&gt;
+
+&lt;p&gt;Consider an application that generates random session tokens for its users. The chances of producing duplicate session tokens are related to two factors:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Size of random space (length of session token)&lt;/li&gt;
+  &lt;li&gt;Quality of the random selection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Short-length tokens will have a higher chance of collisions. And bad random generator does not generate all possible values. This can lead to vulnerabilities where a user can see another user’s data.&lt;/p&gt;
+
+&lt;h3 id=&quot;seed-leakage-or-manipulation&quot;&gt;Seed Leakage or Manipulation&lt;/h3&gt;
+&lt;p&gt;Another vulnerability related to random number generators is choosing a weak seed. PRNG always generates the same sequence of numbers with the same initial seed value. If an attacker can find the used seed or manipulate it, he can easily generate same random numbers.&lt;/p&gt;
+
+&lt;p&gt;In pratice, hackers use different methods to predict the next random number. Some methods may involve statistical analysis, while others may involve reverse-engineering the generator’s algorithm.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-use-secure-random-numbers&quot;&gt;How to Use Secure Random Numbers&lt;/h2&gt;
+&lt;p&gt;Using cryptographically secure random number generation algorithms is the key to securely producing random numbers. These algorithms generate random numbers that are unpredictable and cannot be easily guessed by attackers. The output of these algorithms is resistant to brute-force attacks, and it’s statistically robust.
+You should not try to implement your own one unless you know what you are doing. Instead, always use known to be secure random libraries.&lt;/p&gt;
+
+&lt;p&gt;Let’s see a few examples of using secure random libraries in different programming languages.&lt;/p&gt;
+
+&lt;h3 id=&quot;javascript&quot;&gt;Javascript&lt;/h3&gt;
+&lt;p&gt;The &lt;code&gt;Math.random()&lt;/code&gt; function is not suitable for cryptographic purposes, as it is not truly random and can be predicted or manipulated by an attacker.&lt;/p&gt;
+
+&lt;p&gt;To generate a secure random number in JavaScript, you can use the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API&quot;&gt;&lt;code&gt;Web Crypto API&lt;/code&gt;&lt;/a&gt;. The &lt;code&gt;Crypto.getRandomValues()&lt;/code&gt; method lets you get cryptographically strong random values. Here is an example code that generates a secure random number:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;function generateRandomNumber() {  
+  const array = new Uint32Array(1); // Create a 32-bit unsigned integer array  
+  window.crypto.getRandomValues(array); // Fill the array with random values  
+  return array[0]; // Return the first element of the array as the random number  
+}  
+ 
+console.log(generateRandomNumber()); // Output a random number between 0 and 4294967295
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;nodejs&quot;&gt;NodeJS&lt;/h3&gt;
+&lt;p&gt;In NodeJS, the &lt;a href=&quot;https://nodejs.org/api/crypto.html&quot;&gt;&lt;code&gt;crypto&lt;/code&gt;&lt;/a&gt; module can be used to generate cryptographically secure random numbers. The following code sample illustrates the use of crypto module in generating a random number:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Javascript&quot;&gt;const crypto = require('crypto');  
+ 
+function generateRandomNumber() {  
+  const randomBytes = crypto.randomBytes(4); // Generate 4 random bytes  
+  const hexValue = randomBytes.toString('hex'); // Convert the bytes to a hex string  
+  const intValue = parseInt(hexValue, 16); // Convert the hex string to an integer  
+  return intValue;  
+}  
+ 
+console.log(generateRandomNumber()); // Output a random number between 0 and 4294967295
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python&lt;/h3&gt;
+&lt;p&gt;In Python, the &lt;code&gt;random&lt;/code&gt; module can be used to generate random numbers. However, it is not cryptographically secure. Instead, you can use the &lt;a href=&quot;https://docs.python.org/3/library/secrets.html&quot;&gt;&lt;code&gt;secrets&lt;/code&gt;&lt;/a&gt; module to generate cryptographically secure random numbers. The following code sample illustrates the use of secrets module in generating a random number:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-Python&quot;&gt;import secrets  
+ 
+def generate_random_number():  
+    random_number = secrets.randbits(32) # Generate a 32-bit random number  
+    return random_number  
+ 
+print(generate_random_number()) # Output a random number between 0 and 4294967295
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Random numbers in computers are mathematical formulas and predictable. Not every random number generator is suitable for cryptography and security usage. Random numbers are just one element in security system design and implementation. There are many other things like seed generation, key management, and overall security system design that are extremely important and hard to get right. The &lt;a href=&quot;https://www.crypto101.io/&quot;&gt;Crypto 101&lt;/a&gt; is a great place to start learning more about cryptography.&lt;/p&gt;</content><author><name></name></author><category term="Cryptography" /><category term="NodeJs" /><category term="Python" /><category term="JavaScript" /><category term="Random" /><category term="Development" /><category term="Programming" /><summary type="html">Random numbers are everywhere on the web, and your security depends on them. Let’s see if you’re using them right.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/secure-random-numbers.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/secure-random-numbers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How AI and Machine Learning are Revolutionizing Web Security</title><link href="https://www.thesmartscanner.com/blog/how-ai-and-machine-learning-are-revolutionizing-web-security" rel="alternate" type="text/html" title="How AI and Machine Learning are Revolutionizing Web Security" /><published>2023-03-01T00:00:00+00:00</published><updated>2023-03-01T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-ai-and-machine-learning-are-revolutionizing-web-security</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-ai-and-machine-learning-are-revolutionizing-web-security">&lt;p&gt;Right now, the digital age continues to evolve at such a rapid pace that what was once innovative and fashionable today might just end up a fad by tomorrow. However, what will never become obsolete are &lt;a href=&quot;https://www.youngwonks.com/blog/Basic-Guidelines-for-Internet-Security&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;online safety&lt;/a&gt; and web security.&lt;/p&gt;
+
+&lt;p&gt;We all know that the internet is home to a vast amount of data and information, making it a prime target for cyberattacks. Just look at the stats: in 2022, there was a whopping &lt;a href=&quot;https://blog.checkpoint.com/2023/01/05/38-increase-in-2022-global-cyberattacks/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;38% increase in global attacks&lt;/a&gt; compared to 2021. To make matters worse, the average overall cost of data breaches in 2022 was &lt;a href=&quot;https://www.ibm.com/reports/data-breach&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;$4.35 million&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fortunately for us, advancements in AI and machine learning technologies are revolutionizing &lt;a href=&quot;https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important&quot;&gt;web security&lt;/a&gt;. These solutions are being used to detect and prevent cyber threats by analyzing patterns in user behavior and identifying anomalies that could be potential security breaches.&lt;/p&gt;
+
+&lt;p&gt;By integrating these technologies, you can keep your websites and applications safe from unauthorized access, data breaches, and other security threats.&lt;/p&gt;
+
+&lt;p&gt;Here are some ways in which AI and machine learning are transforming web security:&lt;/p&gt;
+
+&lt;h2 id=&quot;threat-detection-and-prevention&quot;&gt;Threat Detection and Prevention&lt;/h2&gt;
+&lt;p&gt;Through &lt;a href=&quot;https://www.vanta.com/resources/risk-assessment-101-working-backwards-from-the-controls&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;risk assessment&lt;/a&gt; and vulnerability management, AI and machine learning can help detect and prevent cyber attacks in real time. They analyze millions upon millions of lines of code and pieces of data to look for patterns and anomalies in user behavior and use this information to intercept security breaches before they happen.&lt;/p&gt;
+
+&lt;p&gt;For example, AI-powered security solutions can monitor network traffic to identify unusual activity that could indicate a cyberattack. By pinpointing and flagging potential threats in real time, security teams can take immediate action to mitigate the risks and safeguard everything from their &lt;a href=&quot;https://andela.com/insights/key-skills-to-look-out-for-when-hiring-angular-developers/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;light web applications&lt;/a&gt; to content-heavy websites.&lt;/p&gt;
+
+&lt;h2 id=&quot;malware-detection&quot;&gt;Malware Detection&lt;/h2&gt;
+&lt;p&gt;Malware is a common threat that can infect a website or application, leading to data breaches and other security risks. AI and machine learning can help detect malware by analyzing patterns in the code and behavior of applications.&lt;/p&gt;
+
+&lt;p&gt;For instance, machine learning algorithms can analyze the code of an application to identify malicious code that may have been inserted by an attacker. These algorithms can also identify patterns of behavior that are consistent with malware, such as attempts to access sensitive data or make unauthorized changes to the system.&lt;/p&gt;
+
+&lt;h2 id=&quot;user-authentication&quot;&gt;User Authentication&lt;/h2&gt;
+&lt;p&gt;Another solution that AI and machine learning can put forward is improved user authentication, which is a critical aspect of web security. By analyzing patterns in user behavior, these technologies can identify fraudulent login attempts and other suspicious activity.&lt;/p&gt;
+
+&lt;p&gt;Take this, for instance: you can employ machine learning algorithms to analyze user behavior, such as the time of day they typically access the system, the device they use, and the location from which they access the system. These algorithms can then use this data to identify anomalies that could indicate a fraudulent login attempt and prompt additional authentication steps, such as multi-factor authentication.&lt;/p&gt;
+
+&lt;h2 id=&quot;fraud-detection&quot;&gt;Fraud Detection&lt;/h2&gt;
+&lt;p&gt;Fraud is a significant problem for websites and applications that process financial transactions. Fortunately, you can use AI and machine learning to detect fraud by analyzing patterns in user behavior and identifying anomalies that could indicate fraudulent activity.&lt;/p&gt;
+
+&lt;p&gt;For instance, machine learning algorithms can analyze data from financial transactions to find patterns that are consistent with fraud, such as unusually large transactions or purchases from unfamiliar locations. By detecting and flagging potential fraud activity, these algorithms can help prevent huge financial losses and protect sensitive data from ending up in the wrong hands.&lt;/p&gt;
+
+&lt;h2 id=&quot;predictive-analysis&quot;&gt;Predictive Analysis&lt;/h2&gt;
+&lt;p&gt;AI and machine learning can also be used to predict potential security risks and prevent them before they even happen. These technologies can analyze your historical data to identify patterns and trends that may indicate potential security breaches.&lt;/p&gt;
+
+&lt;p&gt;For example, predictive analytics algorithms can analyze data from previous security breaches to identify common patterns and trends. Once they’ve identified these patterns, security professionals can take over and set up proactive measures to prevent similar attacks from happening again in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;optimized-data-centers&quot;&gt;Optimized Data Centers&lt;/h2&gt;
+&lt;p&gt;AI and machine learning can also optimize and monitor numerous essential data center processes, including backup power, cooling filters, power consumption, internal temperatures, and bandwidth usage. AI and machine learning’s calculative powers and continuous monitoring capabilities offer insights into what values might improve the efficiency and security of hardware and infrastructure.&lt;/p&gt;
+
+&lt;p&gt;AI and machine learning can also lower the cost of hardware maintenance by alerting you when equipment needs to be fixed. These alerts provide you with the opportunity to repair your equipment before it suffers more serious damage.&lt;/p&gt;
+
+&lt;h2 id=&quot;artificial-intelligence-and-machine-learning-for-safer-websites-and-applications&quot;&gt;Artificial Intelligence and Machine Learning for Safer Websites and Applications&lt;/h2&gt;
+&lt;p&gt;As the threat of cyberattacks grows, AI and machine learning technologies will continue to transform web security by enabling security professionals and developers to detect and prevent cyber threats in real time, improve user authentication, and predict potential security risks, among other things.&lt;/p&gt;
+
+&lt;p&gt;Sooner rather than later, these technologies will become increasingly important in keeping websites and applications safe and secure against cyberattacks. That’s why it’s so important for you to stay up-to-date with the latest advancements in AI and machine learning for web security.&lt;/p&gt;
+
+&lt;p&gt;For more insights and stories about cybersecurity, check out &lt;a href=&quot;https://www.thesmartscanner.com/blog/&quot;&gt;The SmartScanner’s Blog&lt;/a&gt; today!&lt;/p&gt;</content><author><name>Myrtle Bautista</name></author><category term="AI" /><category term="Risk" /><category term="Malware" /><category term="Authentication" /><category term="Fraud" /><summary type="html">Right now, the digital age continues to evolve at such a rapid pace that what was once innovative and fashionable today might just end up a fad by tomorrow. However, what will never become obsolete are online safety and web security.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/ai-security.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/ai-security.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Security Testing of WebSites Using JavaScript</title><link href="https://www.thesmartscanner.com/blog/security-testing-of-websites-using-javascript" rel="alternate" type="text/html" title="Security Testing of WebSites Using JavaScript" /><published>2023-02-15T00:00:00+00:00</published><updated>2023-02-15T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/security-testing-of-websites-using-javascript-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/security-testing-of-websites-using-javascript">&lt;p&gt;These days websites without JavaScript are rare. According to &lt;a href=&quot;https://w3techs.com/technologies/overview/javascript_library&quot;&gt;w3techs&lt;/a&gt;, more than 80% of websites use at least one JavaScript library. So for penetration testing you should execute and run JavaScripts on web pages to find all functionalities and attack vectors like bakcned APIs.&lt;/p&gt;
+
+&lt;p&gt;SmartScanner already has an javascript evaluation engine for running JavaScripts. In version 1.16 and 1.17 we completed the support for testing REST APIs. We added capability of identifying and testing requests sent with &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;Fetch&lt;/a&gt; and &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest&quot;&gt;XMLHttpRequest&lt;/a&gt; APIs with any HTTP methods. These APIs are backbone of any AJAX libraries like jQuery and axios.&lt;/p&gt;
+
+&lt;p&gt;All these new features and enhancements combined with our JavaScript evaluation engine made SmartScanner capable of automated vulnerability finding in any web application. No matter what technology your website is using; a Jamstack application, a single page application (SPA) or a modern reactive application built with ReactJS, Angular, Vue or Svelte. Just enter the URL, SmartScanner automatically tests and finds security vulnerablilities!&lt;/p&gt;
+
+&lt;p&gt;We also made huge changes in our application architecture that resulted in many improvements like, speed and memory optimizations. But a few bugs could find the chance to escape behind these changes! In version 1.18, we focused on polishing features and fixing broken things.&lt;/p&gt;
+
+&lt;p&gt;Now, we are excited to announce release of SmartScanner version 1.18, smarter and sharper than ever.&lt;/p&gt;
+
+&lt;p&gt;And that’s not all! &lt;a href=&quot;/vulnerability-list/insecure-inline-frame&quot;&gt;Insecure Inline Frame&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/user-controllable-url&quot;&gt;User Controllable URL&lt;/a&gt; and &lt;a href=&quot;/vulnerability-list/unicode-transformation-issue&quot;&gt;Unicode Transformation Issue&lt;/a&gt; are new tests we’ve added with many XSS and SQLI improvements in version 1.18. Download and check it out!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="JavaScript" /><category term="AJAX" /><category term="React" /><category term="Vue" /><category term="Fetch" /><category term="Axios" /><category term="Angular" /><category term="jQuery" /><category term="Svelte" /><summary type="html">React, AJAX, and Testing REST APIs</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-18.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-18.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">3 reasons why any website’s security is important</title><link href="https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important" rel="alternate" type="text/html" title="3 reasons why any website’s security is important" /><published>2023-01-02T00:00:00+00:00</published><updated>2023-01-02T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important">&lt;p&gt;You might think that security is important but only for big companies. This article is going to change your mind.&lt;/p&gt;
+
+&lt;h2 id=&quot;hacked-website-can-affect-your-audience&quot;&gt;Hacked website can affect your audience&lt;/h2&gt;
+
+&lt;p&gt;Security is critical as long as you have any visitor on your website (actually, security is vital even if you don’t have any visitor at all, you’ll see!).&lt;/p&gt;
+
+&lt;p&gt;Either recruiters on your personal project portfolio website or customers on your online shopping platform, it doesn’t matter who you are targeting on your website. Any of your website visitors can be targeted by hackers as well if you don’t make your website secure.&lt;/p&gt;
+
+&lt;p&gt;Your website can have many vulnerabilities, and any of them would be sufficient for hackers to compromise your website to use it against your visitors. Security vulnerabilities like &lt;a href=&quot;/vulnerability-list/cross-site-scripting&quot;&gt;XSS&lt;/a&gt;, &lt;a href=&quot;/vulnerability-list/sql-injection&quot;&gt;SQLI&lt;/a&gt; or &lt;a href=&quot;/vulnerability-list/local-file-inclusion&quot;&gt;File Inclusions&lt;/a&gt; allow hackers to take control over what your visitors see on your website. These vulnerabilities can exist on any page, or they might be in your web server’s configurations or even in an outdated WordPress plugin.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-should-hackers-hack-my-website&quot;&gt;Why should hackers hack my website?&lt;/h3&gt;
+
+&lt;p&gt;Hackers take over your website to do any of below malicious tasks.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://thehackernews.com/2022/04/over-16500-sites-hacked-to-distribute.html&quot;&gt;Distributing malwares&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Stealing your customers data&lt;/li&gt;
+  &lt;li&gt;Making your web server a zombie and using it in DDOS attacks against other targets&lt;/li&gt;
+  &lt;li&gt;Mining cryptocurrencies using your web server or your visitor’s CPU power&lt;/li&gt;
+  &lt;li&gt;Using your servers for running software like proxy or spammers.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;You can see that even if no one visits your website, security is still essential because hackers can abuse your web server against inocent targets. Or, you might receive a costly bill from your hosting service because a hacker is using too much CPU power on your server to mine cryptocurrencies.&lt;/p&gt;
+
+&lt;h2 id=&quot;reputation-loss&quot;&gt;Reputation loss&lt;/h2&gt;
+
+&lt;p&gt;You run a website for a reason. It could be revenue, finding a job or being creative. A hacked website impacts your reputation. Bad reputations results in less visitors, less trust and less revenue or job interviews.&lt;/p&gt;
+
+&lt;p&gt;Besides, not having a secure website has negative SEO impact. Google and other search engines penalize websites without SSL Certificate. If your site has &lt;a href=&quot;/vulnerability-list/no-https&quot;&gt;no HTTPS&lt;/a&gt; and your competition does, Google punishes your websites, and your competitor website come up higher on Google search results than you are. Google Chrome also displays a red “Not secure” note in address bar for sites without SSL.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/no-https-chrome.jpg&quot; width=&quot;768&quot; height=&quot;351&quot; alt=&quot;Google Chrome displaying alert for non-https sites&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hacked website is a thread to visitors, so it’s no surprise to see that &lt;a href=&quot;https://www.blog.google/products/search/search-spam-report-2017/&quot;&gt;Google removes hacked website from search results&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;When your website gets hacked, it can be added to specific black-lists like Google Safe Browsing list. The Safe Browsing lists—also referred to as threat lists or simply lists—are Google’s constantly updated lists of unsafe web resources. Many applications like browsers use these lists to prevent users from accessing a hacked website.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/deceptive-site-ahead.png&quot; width=&quot;768&quot; height=&quot;477&quot; alt=&quot;Google Chrome warning user about deceptive site&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If your visitors get warned about security of your website, the chances are extremely low that they will buy on your website, invite you to interview or visit your site anyhow.&lt;/p&gt;
+
+&lt;h2 id=&quot;prevention-is-better-than-cure&quot;&gt;Prevention is better than cure&lt;/h2&gt;
+
+&lt;p&gt;OK, you got hacked! Now you have to clean up your website, restore your backup, remove your website from black-lists and inform your users. You lost your customers and revenue untill you’ve rebuilt the trust and reputation. That’s a enormous task to recover from a security incident, and it will cost you time and money.&lt;/p&gt;
+
+&lt;p&gt;In most cases recovery and fixing a hacked website is a complex task that requires experts to do it manually, and of course it will not be for free.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-vulnerable-is-your-website&quot;&gt;How vulnerable is your website?&lt;/h2&gt;
+
+&lt;p&gt;Hackers look for low hanging fruits. They look for high risk vulnerabilities in many websites (because any website can be usefull). Read more about hacker methods on &lt;a href=&quot;/blog/how-do-hackers-hack&quot;&gt;how hackers hack&lt;/a&gt; article.&lt;/p&gt;
+
+&lt;p&gt;Good news is you can be like hackers. You can find holes in your website before hackers find them.&lt;/p&gt;
+
+&lt;p&gt;Testing security of your website is easy. There are dozen of web security testing tools out there you can use for free. &lt;a href=&quot;https://www.arachni-scanner.com/&quot;&gt;Arachni&lt;/a&gt; and &lt;a href=&quot;https://w3af.org/&quot;&gt;w3af&lt;/a&gt; are famous open source security scanners you can use.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/&quot;&gt;SmartScanner&lt;/a&gt; is an AI powered web security scanner aimed to be easy to use for everyone. &lt;a href=&quot;/download&quot;&gt;Download&lt;/a&gt; and enter your website address for a free scan to find out about security of your website.&lt;/p&gt;</content><author><name></name></author><category term="Vulnerability" /><category term="Web Server" /><category term="SEO" /><category term="Wordpress" /><summary type="html">Have you ever wondered why hackers are interested in your small personal website?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/website-security.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/website-security.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How to Secure Your WordPress Website</title><link href="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" rel="alternate" type="text/html" title="How to Secure Your WordPress Website" /><published>2022-10-31T00:00:00+00:00</published><updated>2022-10-31T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website">&lt;p&gt;Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.&lt;/p&gt;
+
+&lt;p&gt;Owning a WordPress website can be very demanding, especially if you manage it yourself. First, you have to think of the needs and preferences of your users. Second, you have to design and maintain your website in a way that encourages users to visit again and again, and helps you get other users to do the same. But equally important is the security of your WordPress website. If your website is insecure, we assure you that you will not be able to stop users from running off to more secure websites that offer the same services that you do.&lt;/p&gt;
+
+&lt;p&gt;So, in this article, we will outline some of the ways you can secure your WordPress website. But before that, here are 5 reasons you should make the security of your WordPress Website a priority.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-you-should-secure-your-wordpress-website&quot;&gt;Why You Should Secure Your WordPress Website&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;WordPress is a fairground for malicious online activity:&lt;/strong&gt; Perhaps the best thing about building your website using WordPress is that it is the most popular content management system. The platform’s plugin integration and theme structures help website managers like you run the show without knowing all there is to know about web development. But the popularity of the platform also means that there are a lot of different individuals and virtual agents that can easily penetrate it. Similarly, because of the relative ease with which you can design websites on WordPress, there are many gaps and cracks in the framework that malware such as the &lt;a href=&quot;https://softwaretested.com/anti-malware/what-is-the-vzwpix-email-virus/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;vzwpix OR vzwpix.com email&lt;/a&gt; virus can slip through. So, securing your WordPress website helps you block these gaps.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Securing your WordPress website prevents hackers from breaking it:&lt;/strong&gt; With the evolution of technology, especially digital tech, hackers are getting smarter. Therefore, if you do not secure your website, these hackers can easily place a ‘bug’ in the backdoor of your WordPress website and do whatever they want with your users. The easiest way for hackers to operate such bugs is via your and your users’ passwords. Maybe you are better at handling passwords, but your users may not. And because some have trouble remembering difficult passwords, they use simple passwords. And hackers can easily break simple passwords. Therefore, it is your responsibility to secure your WordPress website in a way that hackers cannot access user information. &lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;You don’t want Google to blacklist your website:&lt;/strong&gt; Google as a search engine has become the ultimate gatekeeper for web content management. The majority of web users rely on Google to link them up with information. To a significant extent, therefore, Google decides whether or not users can ‘mistakenly’ bump into your WordPress. And because Google likes and only promotes secure websites to users, you have to tighten the security of your website. Moreover, securing your WordPress website also means that you won’t be subject to Google’s blacklisting. This is a lot like the fictitious Santa’s Naughty and Nice list: stay on Google’s good side by securing your WordPress website or watch how fewer and fewer web users visit your website.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;You can retain and boost reputation and user trust:&lt;/strong&gt; The more secure your WordPress website is, the easier it would be to retain and boost its reputation. Much like Google’s ranking, protecting your website from virtual/cyber breachers like hackers and malware such as the &lt;a href=&quot;https://softwaretested.com/anti-malware/soap2day-virus/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;soap2day.to virus OR soap2day virus&lt;/a&gt; indicates to users that you are worthy of their trust. In return for your protection, the reputation of your website would increase and it would be much easier for you to get new visitors to the site.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Secure WordPress websites reinforce revenue:&lt;/strong&gt; Lastly, if the primary goal of your website is to earn you some money, you are significantly more likely to meet this goal when your website is secure. If your WordPress website is not secure, hackers will steal user data, users will report to Google, Google will blacklist you, fewer users will go near your website, and your goal for making money from the website will be dashed.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/wordpress-plugins.jpg&quot; width=&quot;768&quot; height=&quot;512&quot; alt=&quot;WordPress plugins&quot; loading=&quot;lazy&quot; style=&quot;aspect-ratio: attr(width) / attr(height); height:auto;&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;how-to-secure-your-wordpress-website&quot;&gt;How to Secure Your WordPress Website&lt;/h2&gt;
+
+&lt;p&gt;Having outlined some of the most important reasons for securing your WordPress website, how should you go about it?&lt;/p&gt;
+
+&lt;h3 id=&quot;use-the-security-measures-available-on-wordpress&quot;&gt;Use the Security Measures Available on WordPress&lt;/h3&gt;
+
+&lt;p&gt;Nobody (and nothing) knows WordPress like WordPress. The platform has many different measures that you can implement against possible breaching. Some of these measures take the form of security plugins which you can easily install on your website and never have to worry about digital cracks that hackers and their malware can slip through. As a bonus, WordPress has a robust collection of these security plugins. Some of the most popular and widely recommended plugins include iThemes Security, Patchstack, Sucuri Security, Wordfence Security, and All In One WP Security &amp;amp; Firewall. Using any one of these WordPress security plugins can help you protect the web users that visit your website from unauthorized hackers and programs.&lt;/p&gt;
+
+&lt;h3 id=&quot;partner-with-trusted-hostingweb-management-companies&quot;&gt;Partner with Trusted Hosting/Web Management Companies&lt;/h3&gt;
+
+&lt;p&gt;Website management is not very easy. Because of this, many website owners and managers delegate the task of managing their WordPress websites to professional agencies. But what if such agencies have malicious intentions or are digitally insecure themselves? This is why it is important to consider only agencies/agents with a trusted history of effectively managing WordPress websites. The same can be said of web hosting companies. Make sure you use only trusted hosting companies that prioritize security and take your website seriously. Usually, you have to pay a bit of money to get committed and serious hosting companies. But it is worth it, so find them online and pay them to look over your website if you cannot do so yourself.&lt;/p&gt;
+
+&lt;h3 id=&quot;only-implement-plugins-from-trusted-developers&quot;&gt;Only Implement Plugins from Trusted Developers&lt;/h3&gt;
+
+&lt;p&gt;In the same spirit of partnering with only trusted web management agencies and hosting companies, you have to pay attention to where the security plugins installed on your WordPress website come from. If you rely on plugins from developers that are cybercriminals in disguise, you would be jeopardizing your website and putting your users at risk. So, only use plugins from trusted and highly-rated developers. Such developers regularly update their plugins to reflect reported vulnerabilities from users and website managers. So, avoid installing plugins from developers and sources that don’t update or respond to reports of cyberattacks.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-ssl-certificates-to-lock-your-website&quot;&gt;Use SSL Certificates to Lock Your Website&lt;/h3&gt;
+
+&lt;p&gt;Simply put, an SSL (Secure Sockets Layer) certificate is a digital encryption key that helps you secure a website. This key typically takes the form of a data file containing the public key of your website and other important information. Once you have it implemented on your website, web users will be able to tell that your website is secure—and it is. A padlock icon is the symbol to indicate to users that a website has SSL and is more secure than websites without the icon.&lt;/p&gt;
+
+&lt;h3 id=&quot;protect-core-wordpress-files-like-the-wp-configphp-file&quot;&gt;Protect Core WordPress Files like the &lt;code&gt;wp-config.php&lt;/code&gt; File&lt;/h3&gt;
+
+&lt;p&gt;We noted earlier that WordPress makes web development easy. As the owner/manager of a WordPress website, you have access to the files that serve as the core of the site. The &lt;code&gt;wp-config.php&lt;/code&gt; file is one such core component of your WordPress website. This file contains important information about your WordPress security keys and database connection details. So, protecting this file is tantamount to protecting the entire website. A simple way to protect this file is to hide it by moving it outside the default WordPress installation folder.&lt;/p&gt;
+
+&lt;h3 id=&quot;regularly-update-your-wordpress-by-turning-on-auto-update&quot;&gt;Regularly Update Your WordPress by Turning on Auto-Update&lt;/h3&gt;
+
+&lt;p&gt;Another very easy way to secure your WordPress website is to regularly update it. Much like the majority of software/web developers, no genuine digital creator wants their creation to be abused. As such, they will always progressively protect their products. This is just as true for WordPress. All you need to do, therefore, is turn on auto-update. Consequently, subsequent updates of WordPress will take care of problems such as data breaches that other web managers or users have reported.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-strong-passwords-and-require-your-users-to-do-the-same&quot;&gt;Use Strong Passwords and Require Your Users to Do the Same&lt;/h3&gt;
+
+&lt;p&gt;There is no way we can overstate the importance of strong passwords for virtual security. Breaking your password is probably the easiest way an unauthorized person can break the security of your WordPress website. So, use strong passwords and encourage your users to do the same. You can check out password best practices such as mixing alphanumeric passwords with symbols. If you easily forget passwords, you can implement the Two-Factor Authentication (2FA) on your website. This way, users may still decide to use simple passwords but would have to verify them in a way only they can. Authenticator apps are especially useful on this front. The Google Authenticator app is one of the most popular of these apps and can help protect the integrity of your WordPress website.&lt;/p&gt;
+
+&lt;h3 id=&quot;implement-website-lockdown-feature&quot;&gt;Implement Website Lockdown Feature&lt;/h3&gt;
+
+&lt;p&gt;A website lockdown feature allows you to have some restrictive control over a web user’s account. The most basic application of this feature is in temporarily deactivating said account until the user can prove that the account belongs to them. So, once you implement this feature on your WordPress website, you will be able to lock down a user’s account whenever they appear to use the wrong password multiple times. You may also use plugins that send notifications to you and to the user’s email account about the repeated attempts to access the account. This will help both you and the user take immediate steps to unauthorized access to the account. Meanwhile, if it is a case of the user forgetting their password, you can implement the aforementioned 2FA solution so users don’t have to adopt and be forced to remember overly difficult passwords.&lt;/p&gt;
+
+&lt;h3 id=&quot;use-wps-hide-login-plugin-to-reduce-the-ease-of-access-to-the-login-page&quot;&gt;Use WPS Hide Login Plugin to Reduce the Ease of Access to the Login Page&lt;/h3&gt;
+
+&lt;p&gt;Your &lt;a href=&quot;/vulnerability-list/wordpress-login-page-found&quot;&gt;WordPress website’s login&lt;/a&gt; page is a door that unauthorized persons can use to break the security of your website. Usually, once such hackers with malicious intentions access your login page, they can also use digital brute force to break in. One such brute force method is the use of software applications that combine millions of possible username and password information and then attempt to access the administrative page. But you can protect your website against such inventions by simply renaming the login URL of your website. You can use the WPS Hide Login plugin for this. As long as you have installed and activated this plugin, hackers will not be able to easily access your login page, meaning that they will not be able to gain unauthorized access to your website.&lt;/p&gt;
+
+&lt;h3 id=&quot;pay-attention-to-user-activity&quot;&gt;Pay Attention to User Activity&lt;/h3&gt;
+
+&lt;p&gt;Outside the active steps you can implement to secure your WordPress website, you may also use passive methods such as regularly keeping track of user activity on your website. The easiest way to do this is to log user activity and then go through the data for possible irregularities. If a user, for example, reports their location as Canada, you should expect that their digital footprints contain that geographical tag, unless they regularly use a VPN. So, when you begin to notice a difference in location, you should pay more attention to the account and notify the user via email to verify that they are still in control. You can use WordPress’ User Activity Log plugin for this monitoring process.&lt;/p&gt;
+
+&lt;h3 id=&quot;backup-wordpress-regularly&quot;&gt;Backup WordPress Regularly&lt;/h3&gt;
+
+&lt;p&gt;Lastly, you should backup your WordPress regularly. This ensures that in case of a very serious breach, you have the option of returning the website to a period when it was secure. So, make sure to install and use backup plugins. You should also store the backup on reliable cloud servers. We recommend using those that require no coding so that you will not have to give your WordPress admin password to someone else to do it for you.&lt;/p&gt;
+
+&lt;p&gt;All in all, making your WordPress website more secure is good. Using the methods outlined in this article will protect you and your users, saving you from the malicious activities of hackers and malware.&lt;/p&gt;</content><author><name>Jessica Bullet</name></author><category term="Wordpress" /><category term="Malware" /><category term="Brute Force" /><summary type="html">Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Update Cheat Sheet for Developers</title><link href="https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers" rel="alternate" type="text/html" title="Update Cheat Sheet for Developers" /><published>2022-09-11T00:00:00+00:00</published><updated>2022-09-11T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/update-cheat-sheet-for-developers">&lt;p&gt;Using an outdated application is a high-risk vulnerability that has an easy fix. This guide provides easy-to-follow instructions for different applications to fix security vulnerabilities.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;⚠️ The goal of this guide is to eliminate vulnerabilities by updating applications. Sometimes updates can break things or lead to unexpected behaviors. It is up to you to perform enough checking and testing before using commands in this cheat sheet in the production environment.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Let’s see how to update different environments.&lt;/p&gt;
+
+&lt;h2 id=&quot;rhelcentosoracle-linux&quot;&gt;RHEL/CentOS/Oracle Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo yum update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;debianubuntu-linux&quot;&gt;Debian/Ubuntu Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo apt update &amp;amp;&amp;amp; sudo apt upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;opensusesuse-linux&quot;&gt;OpenSUSE/SUSE Linux&lt;/h2&gt;
+&lt;p&gt;Run below command in terminal (ssh)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo zypper up
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nodejs-npm&quot;&gt;NodeJs (npm)&lt;/h2&gt;
+&lt;p&gt;Run the below command in your NodeJs project directory.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm audit fix
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that some vulnerabilities cannot be fixed automatically and will require manual intervention or review.
+Some fixes can be forced using the below command but please make sure it doesn’t break anything in your project.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;npm audit fix --force
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;python-pip&quot;&gt;Python (pip)&lt;/h2&gt;
+&lt;p&gt;You have to update packages one by one. Run the below command to get a list of outdated packages.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip list --outdated
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For each package run the below command to update it.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pip install [package_name] --upgrade
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;nuget&quot;&gt;NuGet&lt;/h2&gt;
+&lt;p&gt;From the command line, you can update packages in the solution to the latest version available from nuget.org.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nuget update YourSolution.sln
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note that this will not run any PowerShell scripts in any NuGet packages.&lt;/p&gt;
+
+&lt;p&gt;From within Visual Studio, you can use the &lt;a href=&quot;http://docs.nuget.org/docs/reference/package-manager-console-powershell-reference&quot;&gt;Package Manager Console&lt;/a&gt; to also update the packages. This has the benefit that any PowerShell scripts will be run as part of the update whereas using NuGet.exe will not run them. The following command will update all packages in every project to the latest version available from nuget.org.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Update-Package
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;php-composer&quot;&gt;PHP (Composer)&lt;/h2&gt;
+&lt;p&gt;Navigate to the root of your application, where your &lt;code&gt;composer.json&lt;/code&gt; file is, and run the below command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;php composer.phar update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In Windows:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;composer update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;go-golang&quot;&gt;Go (golang)&lt;/h2&gt;
+&lt;p&gt;To update all packages in your &lt;code&gt;GOPATH&lt;/code&gt;, run the below command.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go get -u all
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;ruby-gem&quot;&gt;Ruby (gem)&lt;/h2&gt;
+&lt;p&gt;To update all gems:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;RubyGems keeps old versions of gems. Run cleanup to remove old gems after an update.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem cleanup
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;maven-mvn&quot;&gt;Maven (mvn)&lt;/h2&gt;
+&lt;p&gt;Run the below command to force an update of dependencies.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mvn clean install -U
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;rust-cargo&quot;&gt;Rust (cargo)&lt;/h2&gt;
+&lt;p&gt;For updating all dependencies of your Rust project, you need to install a third-party crate. Install &lt;code&gt;cargo-update&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install cargo-update
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then run the below command to check for newer versions and update all installed packages.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cargo install-update -a
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&quot;wordpress&quot;&gt;WordPress&lt;/h2&gt;
+&lt;p&gt;WordPress lets you update with the click of a button. You can launch the update by clicking the link in the new version banner (if it’s there) or by going to the Dashboard &amp;gt; Updates screen. Once you are on the &lt;em&gt;“Update WordPress”&lt;/em&gt; page, click the button &lt;em&gt;“Update Now”&lt;/em&gt; to start the process off. You shouldn’t need to do anything else and, once it’s finished, you will be up-to-date.&lt;/p&gt;
+
+&lt;h2 id=&quot;windows&quot;&gt;Windows&lt;/h2&gt;
+&lt;p&gt;Run the below command on &lt;code&gt;cmd&lt;/code&gt; to open the Windows update screen.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;control update
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This document is a &lt;a href=&quot;https://github.com/TheSmartScanner/update-everyhitng&quot;&gt;GitHub project&lt;/a&gt; and contributions are most welcome.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.npmjs.com/cli/v8/commands/npm-audit&quot;&gt;npm-audit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wordpress.org/support/article/updating-wordpress/&quot;&gt;Updating WordPress&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/6882750&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/10383783&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/a/40982333&quot;&gt;stackoverflow.com&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><category term="npm" /><category term="NodeJs" /><category term="Unix" /><category term="Python" /><category term="NuGet" /><category term="PHP" /><category term="Go" /><category term="Ruby" /><category term="Gem" /><category term="Maven" /><category term="mvn" /><category term="Rust" /><category term="Composer" /><category term="Wordpress" /><summary type="html">How to keep your project packages and development environment update to date.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/system-update.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/system-update.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner Version 1.15 Released</title><link href="https://www.thesmartscanner.com/blog/smartscanner-v1-15-released" rel="alternate" type="text/html" title="SmartScanner Version 1.15 Released" /><published>2022-08-01T00:00:00+00:00</published><updated>2022-08-01T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-v1-15-released</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-v1-15-released">&lt;p&gt;JSON report and better dynamic javascript evaluations added.&lt;/p&gt;
+
+&lt;p&gt;Modern web applications heavily depend on front-end JavaScript functionalities. JavaScript is used for creating reactive content, validating forms, and performing different actions. 
+SmartScanner has a built-in module to interpret JavaScript on web pages, so it can submit forms and crawl the website. In this version, new changes have been deployed to add support for the Javascript &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;Fetch&lt;/a&gt; API.
+This feature improves SmartScanner’s capability for covering all the contents and resources in websites using AJAX and new frameworks like ReactJS, Vue.js, and Angular.&lt;/p&gt;
+
+&lt;p&gt;Below are major changes in this version.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved dynamic JavaScript evaluation module for &lt;strong&gt;full capturing of &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API&quot;&gt;Fetch&lt;/a&gt; API&lt;/strong&gt;, supporting all HTTP methods and custom headers.&lt;/li&gt;
+  &lt;li&gt;In addition to PDF reports, now you can export scan results in &lt;strong&gt;JSON format&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;Minor improvements and bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;/download&quot;&gt;Download SmartScanner free&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Read the &lt;a href=&quot;/docs/changelog&quot;&gt;changelog&lt;/a&gt; for details of new changes.&lt;/p&gt;</content><author><name></name></author><category term="Release" /><category term="JSON" /><category term="JavaScript" /><category term="React" /><category term="Vue" /><category term="Angular" /><category term="AJAX" /><summary type="html">JSON report and better dynamic javascript evaluations added.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-15.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-15.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
