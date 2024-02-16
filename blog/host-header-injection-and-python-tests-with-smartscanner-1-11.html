@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Host Header Injection and Python Tests with SmartScanner 1.11  - SmartScanner</title>
+    <meta name="description" content="SmartScanner version 1.11 was released with new tests like Host Header Injection.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Host Header Injection and Python Tests with SmartScanner 1.11">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11">
+    <meta property="og:image" content="/assets/img/smarscanner-v1-11.png">
+    <meta property="og:description" content="SmartScanner version 1.11 was released with new tests like Host Header Injection." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Host Header Injection and Python Tests with SmartScanner 1.11">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11" />
+    <meta name="twitter:description" content="SmartScanner version 1.11 was released with new tests like Host Header Injection.">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/smarscanner-v1-11.png">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+<!-- Hotjar Tracking Code for https://www.thesmartscanner.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/smarscanner-v1-11.png); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/host-header-injection-and-python-tests-with-smartscanner-1-11" || document.URL
+  let title = "Host Header Injection and Python Tests with SmartScanner 1.11" || document.title
+  let text = `SmartScanner version 1.11 was released with new tests like Host Header Injection.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2021-12-12" >12 December 2021</time></span>
+      </div>
+      <h1 class="mt0 ph3">Host Header Injection and Python Tests with SmartScanner 1.11</h1>
+        
+    </div>
+    <div class="ph3">
+    <p>SmartScanner version 1.11 <a href="/download">was released</a> with new tests like Host Header Injection.</p>
+
+<p>Below are the change highlights in this version:</p>
+
+<ul>
+  <li><strong><a href="/vulnerability-list/host-header-injection">Host Header Injection</a></strong></li>
+  <li><strong><a href="/vulnerability-list/insecure-deserialization">Insecure Deserialization</a></strong> test for JSON objects, which <a href="/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner">was added</a> in version 1.10 updated with support for Java and PHP objects.</li>
+  <li><strong><a href="/vulnerability-list/wordpress-plugin-wpfilemanager-6-8-rce">WordPress Plugin Wpfilemanager 6.8 RCE</a></strong>, which is listed with CVE-2020-25213 in <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a></li>
+  <li><strong><a href="/vulnerability-list/drupal7-pre-auth-sqli">Drupal7 Pre Auth SQLI (CVE-2014-3704)</a></strong></li>
+  <li><strong><a href="/vulnerability-list/apache-mod-proxy-2-4-48-ssrf">Apache mod_proxy 2.4.48 SSRF (CVE-2021-40438)</a></strong>, listed <a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog">Known Exploited Vulnerabilities Catalog</a></li>
+  <li>Support for using <strong>the system’s proxy</strong> in the scan configurations</li>
+  <li>Support for detection of <strong>errors in Python</strong> libraries like Django, Flask, and <a href="/vulnerability-list/werkzeug-interactive-debugging-is-active">Werkzeug</a></li>
+  <li><strong>Vulnerability assessment</strong> for outdated <a href="/vulnerability-list/vulnerable-php-version">PHP</a>, and <a href="/vulnerability-list/vulnerable-wordpress-version">WordPress</a></li>
+</ul>
+
+<p><a href="/download">Download SmartScanner free</a></p>
+
+<p>Check out all changes in the <a href="/docs/changelog">changelog</a></p>
+
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/apache-and-express-path-traversal-plus-nginx-restriction-bypass-tests-with-smartscanner">Apache and Express Path Traversal plus Nginx Restriction Bypass Tests with SmartScanner</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/test-apache-tomcat-and-apache-struts-vulnerabilities-with-smartscanner-1-14">Test Apache Tomcat and Apache Struts Vulnerabilities with SmartScanner 1-14</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/44-new-sql-injection-tests-for-wordpress-in-smartscanner-1-8">44 New SQL Injection Tests for WordPress in SmartScanner 1.8</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/test-for-drupal-and-joomla-vulnerabilities-with-smartscanner-version-1-4">Test for Drupal and Joomla! vulnerabilities with SmartScanner version 1.4</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/5-security-vulnerabilities-you-can-fix-right-now">← 5 Security Vulnerabilities You Can Fix Right Now</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1 →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Host Header Injection and Python Tests with SmartScanner 1.11"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "Host Header Injection and Python Tests with SmartScanner 1.11",
+ "image": "/assets/img/smarscanner-v1-11.png"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding" class="link dim dib moon-gray link-reset pv1-ns pv2">The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt" class="link dim dib moon-gray link-reset pv1-ns pv2">Online Robots.txt Validator For Creating a Secure Robots.txt</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/web-scanner,-a-must-have-tool-for-web-developers" class="link dim dib moon-gray link-reset pv1-ns pv2">Web Scanner, A Must Have Tool For Web Developers</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
