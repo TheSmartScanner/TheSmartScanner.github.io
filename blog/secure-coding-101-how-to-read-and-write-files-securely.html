@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Secure Coding 101: How to Read and Write Files Securely  - SmartScanner</title>
+    <meta name="description" content="Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Secure Coding 101: How to Read and Write Files Securely">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely">
+    <meta property="og:image" content="/assets/img/files-folders.jpg">
+    <meta property="og:description" content="Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Secure Coding 101: How to Read and Write Files Securely">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely" />
+    <meta name="twitter:description" content="Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application.">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/files-folders.jpg">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+<!-- Hotjar Tracking Code for https://www.thesmartscanner.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+	<link rel="stylesheet" href="/assets/css/prism.css">
+    
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/files-folders.jpg); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/secure-coding-101-how-to-read-and-write-files-securely" || document.URL
+  let title = "Secure Coding 101: How to Read and Write Files Securely" || document.title
+  let text = `Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2023-08-06" >06 August 2023</time></span>
+      </div>
+      <h1 class="mt0 ph3">Secure Coding 101: How to Read and Write Files Securely</h1>
+        
+    </div>
+    <div class="ph3">
+    <p>Working with files is a common requirement in many applications, but it also introduces several potential security vulnerabilities. In this article, we will explore how to securely work with files in your application.</p>
+
+<p>Let’s review common vulnerabilities and mitigations when working file files.</p>
+
+<h2 id="tldr">TLDR</h2>
+<ul>
+  <li>File Inclusions and Path Traversal vulnerabilities are the results of insecure accessing files</li>
+  <li>Avoid accessing file paths that are built with user-provided input</li>
+  <li>If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs</li>
+  <li>Use libraries to detect if the file you’re going to access is in the intended directory (e.g. <code>realpath()</code> in PHP and NodeJs)</li>
+  <li>When creating files (e.g. file uploads) set a reasonable file size limit</li>
+  <li>When writing user-provided content, make sure the content type is what you expect</li>
+  <li>When creating files, make sure they don’t have execution permission</li>
+  <li>When creating files, make sure they’re not publicly accessible</li>
+</ul>
+
+<h2 id="file-inclusion-vulnerability">File Inclusion Vulnerability</h2>
+<p>File inclusion vulnerability is a type of web vulnerability that occurs when an application allows a user to include a file in the output of a web page without properly validating or sanitizing the user input.</p>
+
+<p>There are two types of file inclusion vulnerabilities: <em>Local File Inclusion (LFI)</em> and <em>Remote File Inclusion (RFI)</em>.</p>
+
+<p>LFI occurs when an attacker can include a file from the local file system of the server. This can allow the attacker to view sensitive files or execute arbitrary code on the server.</p>
+
+<p>RFI occurs when an attacker can include a file from a remote server. This can allow the attacker to execute arbitrary code on the server or steal sensitive information.</p>
+
+<p>For example, consider the following vulnerable PHP code:</p>
+
+<pre><code class="language-PHP">$module = $_GET['module'];
+include $module;
+</code></pre>
+
+<p>This code retrieves a value from the URL query string using the <code>$_GET</code> superglobal, specifically the “module” parameter. The retrieved value is then used as the file path to include a PHP file using the <code>include</code> statement. This means that the contents of the specified file will be included in the current script at the point where the <code>include</code> statement appears.</p>
+
+<p>However, this code can be potentially dangerous to both LFI and RFI.</p>
+
+<p>In the above PHP code example, a user can pass any file name or URL as the <code>module</code> parameter. For instance, an attacker can host a PHP script on their server and pass its URL, like <code>http://attackerhost/phpscript.txt</code>, in the module parameter and execute arbitrary commands on the target system.</p>
+
+<p>In PHP, for example, file inclusion vulnerabilities are often caused by the use of the <code>include</code> or <code>require</code> functions without proper input validation. Similarly, in JSP, file inclusion vulnerabilities can occur when the <code>include</code> or <code>jsp:include</code> tags are used without proper input validation. Using <code>Server.Execute</code> or <code>Server.Transfer</code> in ASP also can create file inclusion vulnerabilities.</p>
+
+<h2 id="local-file-download">Local File Download</h2>
+<p>Suppose an application has a file download functionality that allows users to download a file from the server. The application takes a file name as a parameter and returns the file contents to the user. If the application does not validate the file name parameter and allows users to download any file on the server, an attacker can exploit this vulnerability by passing a sensitive file name as the parameter. This is called <em>Local File Download</em> or <em>Local File Disclosure</em> vulnerability.</p>
+
+<p>In our example, if the user passes <code>/etc/passwd</code> as a module parameter, the content of <code>passwd</code> file is displayed to the user.</p>
+
+<p>Local file download is a very common vulnerability and can be found in any programming language.</p>
+
+<h3 id="prevent-file-inclusion-vulnerabilities">Prevent File Inclusion Vulnerabilities</h3>
+<p>Follow below best practices to mitigate File Inclusion vulnerabilities:</p>
+
+<ol>
+  <li>Do not include or open files that are built using user-provided data</li>
+  <li>If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs</li>
+</ol>
+
+<h2 id="path-traversal-vulnerability">Path Traversal Vulnerability</h2>
+<p><em>Path traversal</em> vulnerability, also known as <em>directory traversal</em> vulnerability, is another web security vulnerability that allows attackers to access files outside of the intended directory. An attacker can exploit this vulnerability to access sensitive files, such as configuration files, password files, and even source code files.  </p>
+
+<p>This vulnerability occurs when you create file paths using invalidated user input. This allows the attacker to navigate to directories and files using the <code>../</code> character sequences. The <code>../</code> character sequences refer to the parent directory on file systems.</p>
+
+<p>Consider below revised version of our vulnerable PHP code.</p>
+
+<pre><code class="language-PHP">$module = $_GET['module'];
+include './' . $module;
+</code></pre>
+
+<p>By prefixing the module variable with <code>./</code> character sequences, we’re limiting file inclusion to the current directory only. So users cannot pass absolute file names like <code>/etc/passwd</code> or URLs that will eliminate RFI. But the user can enter <code>../../../../../../../etc/passwd</code> as module parameter value and the final file path would resolve to <code>/etc/passwd</code>. This will reveal the contents of the passwd file.</p>
+
+<p>The Path traversal vulnerability can occur in any programming language and also in Windows operating systems.</p>
+
+<h3 id="prevent-path-traversal-vulnerability">Prevent Path Traversal Vulnerability</h3>
+<ol>
+  <li>Do not include or open files that are built using user-provided data</li>
+  <li>If you must use inputs from users in file paths, use a strict whitelist for allowed user inputs and reject non-compliant inputs</li>
+  <li>Use libraries to detect if the file you’re going to access is in the intended directory (e.g. <code>realpath()</code> in PHP and NodeJs)</li>
+</ol>
+
+<h2 id="file-upload-vulnerability">File Upload Vulnerability</h2>
+<p>When it comes to uploading files, security is paramount. Unfortunately, there is a severe vulnerability called <em>arbitrary file upload</em> that can compromise your data. This vulnerability allows users to upload any type of file, including scripts like PHP, Python, or ASP code, which can execute any command on your server.</p>
+
+<p>In addition to arbitrary file upload, insecure file upload functionality can also introduce other vulnerabilities like <em>Denial of Service (DoS)</em> attacks. For example, if you don’t set a limit on the file size that can be uploaded, an attacker could upload an excessively large file and potentially cause a DoS attack or consume excessive server resources.</p>
+
+<p>Furthermore, insecure file uploads can allow attackers to override sensitive files using path traversal or upload malware to your server.</p>
+
+<h3 id="prevent-insecure-file-uploads">Prevent Insecure File Uploads</h3>
+<p>To prevent file upload vulnerabilities from happening, implement the following measures:</p>
+
+<ol>
+  <li>Set a reasonable file size limit and validate that uploaded files are within that limit.</li>
+  <li>Validate that uploaded files are of the expected file type and reject any files that are not.</li>
+  <li>Use randomly generated file names for storing uploaded files. If you have to use user-provided filenames, use a white list filter for accepted file names and reject other file names.</li>
+  <li>Use reputable anti-virus or malware detection software to scan uploaded files before they are processed or stored on your server.</li>
+  <li>Make sure uploaded files do not have execution permission.</li>
+  <li>Make sure only required users have access to the uploaded files.</li>
+</ol>
+
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/secure-coding-101-how-to-use-random-function">Secure Coding 101: How to Use Random Function</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">How to Secure your NodeJs Express Javascript Application - part 2</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding">The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1</a></h3>
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/secure-coding-101-how-to-use-random-function">← Secure Coding 101: How to Use Random Function</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/web-scanner,-a-must-have-tool-for-web-developers">Web Scanner, A Must Have Tool For Web Developers →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Secure Coding 101: How to Read and Write Files Securely"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "Secure Coding 101: How to Read and Write Files Securely",
+ "image": "/assets/img/files-folders.jpg"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/announcing-smartscanner-version-1-23" class="link dim dib moon-gray link-reset pv1-ns pv2">Announcing SmartScanner Version 1.23: Enhanced Technology Support and Improved Detection</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" class="link dim dib moon-gray link-reset pv1-ns pv2">Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding" class="link dim dib moon-gray link-reset pv1-ns pv2">The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <script defer type="text/javascript" src="/assets/js/prism.js"></script>
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>

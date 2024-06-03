@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation  - SmartScanner</title>
+    <meta name="description" content="Discover how gray box testing, bridging white-box and black-box methods, is revolutionized by machine learning automation, enhancing software quali...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation">
+    <meta property="og:image" content="/assets/img/gray-box-testing-automation-with-ml.png">
+    <meta property="og:description" content="Discover how gray box testing, bridging white-box and black-box methods, is revolutionized by machine learning automation, enhancing software quality despite challenges. Explore the promise and hurdles in this essential aspect of software development" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" />
+    <meta name="twitter:description" content="Discover how gray box testing, bridging white-box and black-box methods, is revolutionized by machine learning automation, enhancing software quality despite challenges. Explore the promise and hurdles in this essential aspect of software development">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/gray-box-testing-automation-with-ml.png">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  const _arch=()=>{const n=navigator.userAgent;return-1!=n.indexOf("WOW64")||-1!=n.indexOf("Win64")?"64bit":"32bit"};
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+  gtag('event', 'arch_dimension', {'arch': _arch()});
+</script>
+<!-- Hotjar Tracking Code for https://www.thesmartscanner.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="sans-serif lh-easy flex flex-column">
+    <header role="banner" class=" black overflow-hidden flex-shrink-none">
+      <nav class="w-100 mw8 flex justify-between items-center pa3 center">
+        <a class="w-25 flex items-center link" href="/#" title="Home">
+          <img src="/assets/img/logo_opaque.svg" class="dib w2 h2" width="2rem" height="2rem" alt="SmartScanner Logo">
+        </a>
+        <div class="w-75 tr black">
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/pricing">Pricing</a>
+          <a class="f6 f5-ns dib mr3 mr4-ns black link bb-animate" href="/features">Features</a>
+          <a class="f6 f5-ns dib pa1 ba br1 black link hover-bg-light-green" href="/download">Download</a>
+        </div>
+      </nav>      
+     </header>
+
+    <main class="w-100 mw7 center pv4 flex-grow">
+  <article>
+    <div>
+      <div class="h5 w-100 mb2 cover" style="background-image: url(/assets/img/gray-box-testing-automation-with-ml.png); background-position:center center"></div>
+      <div class="flex justify-between f6 gray i mb2 ph3">
+        <span><a href="/blog/" class="link gray hover-dark-green">Blog</a><span class="mh2">/</span></span>
+        <span onClick="share()" class="gray hover-dark-green cursor-pointer dn-l">
+<svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)"><path d="m11.5 4.5-3.978-4-4.022 4"></path><path d="m7.522.521v11.979"></path><path d="m4.5 7.5h-2c-1.1045695 0-2 .8954305-2 2v4c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-4c0-1.1045695-.8954305-2-2-2h-2"></path></g></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" || document.URL
+  let title = "Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation" || document.title
+  let text = `Discover how gray box testing, bridging white-box and black-box methods, is revolutionized by machine learning automation, enhancing software quality despite challenges. Explore the promise and hurdles in this essential aspect of software development`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        <span><time datetime="2024-04-25" >25 April 2024</time></span>
+      </div>
+      <h1 class="mt0 ph3">Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation</h1>
+      
+      <div class="gray i f6 ph3 mb4">Guest post by by Harikrishna Kundariya</div>
+        
+    </div>
+    <div class="ph3">
+    <h2 id="introduction">Introduction</h2>
+<p>When it comes to <a href="https://www.thesmartscanner.com/blog/14-software-security-terms-you-should-know">software security</a> and development, gray box testing has become an important but also laborious part of the process. This strategy, that is testing software functions based on partial knowledge of its internal workings, strikes a balance between the comprehensiveness of white-box testing (full internal knowledge) and the practicality of black-box testing (no internal knowledge). The beginning of machine learning (ML) brings opportunities to automate gray box testing, thus revolutionizing the software development lifecycle.</p>
+
+<h2 id="the-role-of-machine-learning-in-automating-gray-box-testing">The Role of Machine Learning in Automating Gray Box Testing</h2>
+<p>Machine learning algorithms can parse tons of code, test data, and logs from execution. As a result, they can identify patterns automatically, anticipate potential troubles ahead-and ultimately help out with writing new test cases layered on top of old ones. This is particularly useful in grey box testing, where testers have some understanding of the system’s architecture but lack intricate details of every component.</p>
+
+<h2 id="benefits-of-automating-gray-box-testing-with-machine-learning">Benefits of Automating Gray Box Testing with Machine Learning</h2>
+
+<h3 id="improved-efficiency-and-speed">Improved Efficiency and Speed </h3>
+<p>By automating routine test execution tasks, human testers can spend more of their time on important tasks like test design, analysis, or edge-case exploration. According to research from <a href="https://www.capgemini.com/wp-content/uploads/2018/05/theautomationadvantage.pdf">Capgemini</a>, automation can cut up to 70% off of the time taken for testing execution which in turn accelerates development speed greatly.</p>
+
+<h3 id="better-accuracy-and-more-reliability">Better Accuracy and More Reliability</h3>
+<p>Machine learning algorithms are continuously learning and improving, over time, thus producing more accurate generations of test cases. This improvement in accuracy and reliability helps to shore up the testing</p>
+
+<h3 id="reduced-potential-for-human-error">Reduced Potential for Human Error</h3>
+<p>When repetitive tasks are automated, there is less likelihood of human error than when the same task has to be performed manually. Hence, test results also become more consistent and reliable.</p>
+
+<h3 id="early-and-frequent-bug-detection">Early and Frequent Bug Detection</h3>
+<p>You can auto detect bugs at an earlier stage and more frequently than ever before. Machine learning makes it possible to detect errors during program development. Detecting errors at this stage means that remedial programming can be done faster, and so reduces the cost of remedying defects later in the process.</p>
+
+<h2 id="challenges-in-automating-gray-box-testing-with-machine-learning">Challenges in Automating Gray Box Testing with Machine Learning</h2>
+
+<h3 id="high-initial-investment">High Initial Investment </h3>
+<p>To implement a robust testing framework using machine learning, the upfront costs include automation instruments and learning materials -and possibly more personnel who are familiar with testing software as well as machine learning.</p>
+
+<h3 id="lack-of-expertise">Lack of expertise</h3>
+<p>There is an increased need for people who can effectively implement automation testing and machine learning. This shortage of talent will become an obstacle to businesses implementing these techniques in practice.</p>
+
+<h3 id="maintenance-complexity">Maintenance Complexity</h3>
+<p>Maintaining the automation testing tools and machine learning models can be challenging. The work is never done due to the need to maintain models up-to-date with active code changes and continuously measure and improve test generations.</p>
+
+<h3 id="execution-challenges">Execution Challenges</h3>
+<p>Execution of automated tests is complex due to intricate lab management with every feature up-to-date and regular maintenance. Additionally, the lack of experience in automation testing platforms can also hinder test executions.</p>
+
+<h3 id="infrastructure-considerations">Infrastructure Considerations</h3>
+<p>Organizations might not have the required testing infrastructure, such as automated testing tools and cloud-based lab solutions, to efficiently utilize machine learning for gray-box testing.</p>
+
+<h3 id="choosing-the-right-framework">Choosing the Right Framework</h3>
+<p>It can be difficult to pick the most suitable automation testing framework for your needs. Project scope, team expertise, and budget all influence this decision.</p>
+
+<h2 id="case-studies-and-statistics-related-to-gray-box-testing-automation">Case Studies and Statistics related to Gray Box Testing Automation</h2>
+
+<h3 id="1-engine-fault-diagnosis-study-by-daniel-jung">1. Engine Fault Diagnosis Study by Daniel Jung</h3>
+<p>A research by <a href="https://arxiv.org/pdf/2008.04644.pdf">Daniel Jung</a> employed a physically-driven grey-box recurrent neural network for engine fault diagnosis. An internal combustion engine test bench data was used in the study and it was used to explain benefits of employing machine learning and model-based fault diagnosis methods together.</p>
+
+<p>The study established that the physically-based grey-box recurrent neural network model was able to correctly diagnose problem in an internal combustion engine. The model was able to detect and isolate faults, even with the presence of measurement noise and process disturbances.</p>
+
+<p>This research demonstrated the feasibility of integrating the two approaches: machine learning and model-based fault diagnosis. This is similar to gray box testing where both black-box (machine learning) and white-box (model-based) techniques are employed.</p>
+
+<h3 id="2-two-stage-grey-box-modeling-approach-study">2. Two-Stage Grey-Box Modeling Approach Study</h3>
+<p>Another case study delved into a <a href="https://www.sciencegate.app/document/10.1115/detc2017-67794">two-stage grey-box modeling approach</a> that combines knowledge-based (white-box) models with statistical (black-box) metamodels to achieve model reusability and improved predictions. The approach was used to develop a powder bed fusion additive manufacturing process.</p>
+
+<p>The study demonstrated that the two-stage grey-box modeling method was more effective than the conventional approaches in terms of the predictability and the reusability. With the approach, the predicted process outcomes were found to be very accurate. This suggests that integrating manufacturing knowledge-based models alongside statistical metamodels improves the efficacy and precision of predictive modeling in manufacturing processes.</p>
+
+<p>Similarly in gray box testing, predictability means to predict the results of a test based on the input, and reusability means to utilize the same test cases in different scenarios. Machine learning can do both of this parts.</p>
+
+<h3 id="3-reinforcement-learning-based-monkey-agents">3. Reinforcement Learning-Based Monkey Agents</h3>
+<p>In the <a href="https://link.springer.com/chapter/10.1007/978-3-031-44355-8_1">conference paper</a> “Automation of User Interface Testing by Reinforcement Learning-Based Monkey Agents” the researcher had shown how to conduct grey-box GUI testing using reinforcement learning-algorithms can be implemented in practice to improve efficiency.</p>
+
+<p>This research paper discussed how using reinforcement learning (a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative profit) for autonomous grey-box monkey testing can potentially give rise to advantages in terms of efficiency. </p>
+
+<p>To explain in layman terms, they utilized a machine learning technique to automate the test process, making it faster and more productive.</p>
+
+<h3 id="4-ai-based-test-automation-analysis">4. AI-based Test Automation Analysis </h3>
+<p>The <a href="https://tsigalko18.github.io/assets/pdf/2021-Ricca-ICSTW.pdf">AI-based Test Automation analysis</a> grouped the 307 individual occurrences in four different major parts: test generation (41%), test oracle (12%), debugging (20%), and test maintenance (26%). The most popular ones (20% all in all) represent automated test generation.</p>
+
+<p>Therefore, out of 307 examples examined, they have found that AI is used to generate test (41% of the time). These charts were also used for validating the results of tests (12%), debugging which would help in finding errors (20%), maintaining and upgrading tests (26%). The most frequent particular solution was the automated test generation that included 20% of all the solutions.</p>
+
+<h2 id="applications-of-machine-learning-in-gray-box-testing-automation">Applications of Machine Learning in Gray Box Testing Automation</h2>
+<ul>
+  <li>Automating Unit, Integration, and Performance Testing: Unit tests verify the correct operation of individual modules within an application, integration tests validate the cooperation of submodules with one another, and performance tests assess the application’s behavior under high loads. All this can be carried out in an automated mode by ML, including loading tests with various user emulators. This approach frees up human tester time for more complex scenarios.</li>
+  <li>Automating Test Setup: Routine activities like creating a test environment and generating test data are easily automated with machine learning.</li>
+  <li>High-Value and Business-Critical Tests: Automation of critical tests guarantees regular and frequent launch. This will help to eliminate the risk of regression and guarantee the stability of the fundamental functionality.</li>
+  <li>Repetitive and Predictable Tests: Machine learning is ideal for automating tests that are frequently executed, have a clear pattern, and its execution is focused on a well-defined function.</li>
+  <li>Tests Impossible to Perform Manually: Machine learning can automate complex test scenarios that are difficult to implement or impossible manually.</li>
+</ul>
+
+<h2 id="future-directions-of-machine-learning-in-gray-box-testing">Future Directions of Machine Learning in Gray Box Testing</h2>
+<ul>
+  <li>AI-powered In-Production Testing: The future promises powered testing that includes analyzing the live production systems. With in-production testing, developers access real-time data insights into how their code is performing and any arising issues. In other words, developers will have the ability to detect problems before users experience their effects.</li>
+  <li>Autonomous Testing: Some future models of machine learning may produce an AI that rarely requires human intervention in its testing processes. Shortly, we can imagine a fully automated process in which AI generates, executes, and analyzes the results of the given test cases.</li>
+  <li>Machine Learning for User Behavior Monitoring: Machine learning can actively monitor how users interact with applications and alert for gaps in testing. By analyzing user behavior patterns and identifying unexpected interactions, machine learning can pinpoint areas where additional testing might be necessary. This helps ensure to cope up with the <a href="https://www.esparkinfo.com/blog/software-testing-trends.html">software testing trends</a> and caters to real-world user behavior and minimizes the risk of usability issues.</li>
+  <li>Continuous Testing: The future of software testing involves, but is not limited to, continuous testing, cloud-based lab solutions, and integration with existing processes. Continuous testing defines the future of an ideal software development life cycle, where code changes are tested and verified continuously. To achieve such an ideal, the teams need to be exposed to open access to the test lab, and the right tools to run and perform tests more efficiently. For instance, machine learning can also be employed in testing to monitor and provide real-time feedback when code changes are deployed.</li>
+  <li>Cloud-based Lab Solutions: Cloud-based lab solutions, provide a scalable and cost-effective ideal way to apply continuous testing. This is achievable since the labs run on the powerful cloud, making the test environments and resources readily available; as such, many organizations can easily embrace machine learning-powered gray box testing. </li>
+  <li>Integration with Existing Processes: Finally, the future also involves the integration of <a href="https://www.thesmartscanner.com/blog/how-ai-and-machine-learning-are-revolutionizing-web-security">machine learning and AI</a> into the existing software testing process. The process would not only augment the existing process but also the human expertise on these platforms. The overall result will be a more efficient and comprehensive testing process.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, machine learning provides a robust toolset for automating and improving gray box testing. The early investment costs, lack of qualified expertise, and requiring effort to support are only a few of the many hurdles to overcome. However, in terms of productivity, accuracy, and early identification of bugs, the potential advantages are well worth it. </p>
+
+<p>Advances in the process and an increasingly knowledgeable talent will move us closer to the future in how we think about gray box testing. This cutting-edge technology will enable businesses to remain ahead of the curve by providing cutting-edge software that satisfies the demands of the digital age.</p>
+
+
+    
+    
+
+
+<div class="mv4 pa4 bg-light-gray br4">
+  <div class="flex">
+    <img src="/assets/img/HK-Sir.jpg" class="br-100 pa1 ba b--black-10 h3 w3" alt="Harikrishna Kundariya">
+    <h4 class="mh3">Harikrishna Kundariya</h4>
+  </div>
+  <p class="f5">Harikrishna Kundariya, a marketer, developer, IoT, ChatBot &amp; Blockchain savvy, designer, co-founder, Director of eSparkBiz Technologies. His 12+ years of experience enables him to provide digital solutions to new start-ups based on IoT and SaaS applications.</p>
+</div>
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mv4">
+<b>👉 You might also like:</b>
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/blog/how-ai-and-machine-learning-are-revolutionizing-web-security">How AI and Machine Learning are Revolutionizing Web Security</a></h3>
+  
+
+  
+    <h3 class="mv2 normal lh-title"><a class="dark-green hover-green link" href="/docs/artificial-intelligence-security-scanner">Artificial Intelligence</a></h3>
+  
+
+  
+
+  
+
+</div>
+
+    <div class="f4 pt4 mt4">
+      
+      <a class="link dark-green dim fl" href="/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding">← The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</a>
+      
+      
+      <a class="link dark-green dim fr" href="/blog/announcing-smartscanner-version-1-23">Announcing SmartScanner Version 1.23: Enhanced Technology Support and Improved Detection →</a>
+      
+    </div>
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation",
+ "image": "/assets/img/gray-box-testing-automation-with-ml.png"
+}]
+</script>  
+
+<section class="w-100 center ph3 pv4 bg-black-05 tc">
+  <div class="mw8 center">
+    <h2 class="mt0">Scan security of your website with SmartScanner for free</h2>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="f3 link dim ph3 pv2 ma2 ml0 mb0 dib br1 white bg-dark-green">Download</a>      
+  </div>
+</section>
+
+        <footer class="w-100 f6 pv3 pv4-ns bg-dark-gray moon-gray">
+      <div class="mw8 flex flex-wrap justify-between center nt2">
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/blog/" class="light-gray b">Blog</a></h2>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/announcing-smartscanner-version-1-23" class="link dim dib moon-gray link-reset pv1-ns pv2">Announcing SmartScanner Version 1.23: Enhanced Technology Support and Improved Detection</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" class="link dim dib moon-gray link-reset pv1-ns pv2">Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation</a></h3>
+          
+          <h3 class="ma0 normal f6 lh-copy"><a href="/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding" class="link dim dib moon-gray link-reset pv1-ns pv2">The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</a></h3>
+          
+          <a href="/blog/" class="link dim dib moon-gray link-reset mt2">read more...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/features" class="light-gray b">Features</a></h2>
+          <h4 class="ma0 normal"><a href="/docs/artificial-intelligence-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Artificial Intelligence</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/comprehensive-security-tests" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Comprehensive Security Tests</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/wordpress-drupal-joomla-cms-security-scanner" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">WordPress, Drupal, Joomla! CMS Scanner</a></h4>
+          <h4 class="ma0 normal"><a href="/docs/javascript-html5-spa-jamstack-serverless-react-security" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Built for Modern Web</a></h4>
+          <a href="/features" class="link dim dib moon-gray link-reset mt2">all features...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/vulnerability-list/" class="light-gray b">Security Vulnerabilities</a></h2>
+          <a href="/vulnerability-list/sql-injection" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">SQL Injection</a>
+          <a href="/vulnerability-list/cross-site-scripting" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Cross Site Scripting (XSS)</a>
+          <a href="/vulnerability-list/weak-password" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Weak Password</a>
+          <a href="/vulnerability-list/local-file-inclusion" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Path Traversal</a>
+          <a href="/vulnerability-list/" class="link dim dib moon-gray link-reset mt2">all security issues...</a>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">
+  
+          <h2 class="ma0 f6 lh-copy pv3 pt0-ns"><a href="/support" class="light-gray b">Support</a></h2>
+          <h2 class="ma0 f6 lh-copy normal"><a href="/docs/" class="link dim dib moon-gray link-reset pv1-ns pv2">Documentation</a></h2>
+          <a href="/contact" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Contact form</a>
+          <span>
+            <a href="mailto:info@thesmartscanner.com" title="Send us an email" class="link dim dib moon-gray link-reset mt2 mr2 lh-copy pv1-ns pv2">
+              <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><desc>Email</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3.5 4.5)"><path d="m0 2v8c0 1.1045695.8954305 2 2 2h10c1.1045695 0 2-.8954305 2-2v-8c0-1.1045695-.8954305-2-2-2h-10c-1.1045695 0-2 .8954305-2 2z"></path><path d="m2 3 5 3 5-3"></path></g></svg>
+            </a>
+            <a href="https://twitter.com/TheSmartScanner" title="Follow us on Twitter" class="link dim dib moon-gray link-reset mt2 lh-copy pv1-ns pv2" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="21" height="21"><desc>Twitter</desc><g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></g></svg>
+            </a>
+          </span>
+        </div>
+        <div class="flex flex-column mh2 h-100 measure-narrow mv2">  
+          <span class="light-gray b lh-copy pv3 pt0-ns">Legal</span>
+          <a href="/privacy" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Privacy</a>
+          <a href="/terms" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">Terms</a>
+          <a href="/eula" class="link dim dib moon-gray link-reset lh-copy pv1-ns pv2">EULA</a>
+        </div>
+      </div>
+      <div class="pv4 tc">
+        <span>© TheSmartScanner.com</span>
+      </div>      
+    </footer>
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+  <script defer type="text/javascript" id="cookieinfo" data-moreinfo="/privacy#cookies" data-link="inherit" data-bg="#CCC" data-fg="inherit" data-divlinkbg="#137752" data-divlink="#fff" data-opacity="0.5" src="/assets/js/cookieinfo.min.js"></script>    
+  </body>
+</html>
