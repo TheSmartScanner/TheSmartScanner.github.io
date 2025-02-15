@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>How to Secure Your WordPress Website  - SmartScanner</title>
+    <meta name="description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="How to Secure Your WordPress Website">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website">
+    <meta property="og:image" content="/assets/img/wordpress-security.jpg">
+    <meta property="og:description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers." />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="How to Secure Your WordPress Website">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/how-to-secure-your-wordpress-website" />
+    <meta name="twitter:description" content="10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/wordpress-security.jpg">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.hotjar.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://static.hotjar.com">
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+</script>
+<!-- Hotjar Tracking Code for https://www.thesmartscanner.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="font-sans">
+    <nav id="nav" class="sticky top-0 z-40 bg-white transition-shadow w-full text-neutral-725 px-4 xl:px-0" role="navigation" aria-label="Main">
+  <div class="mx-auto max-w-6xl flex items-center justify-between h-[56px] lg:h-[72px] font-semibold ">
+    <div class="flex items-center">
+      <a class="resetLink text-xl flex items-center text-emerald-750 hover:text-emerald-750 shrink-0 mr-24" href="/#" title="Home">
+        <img src="/assets/img/logo_opaque.svg" class="w-10 mr-1" width="40" height="40" alt="SmartScanner Logo" aria-hidden="true">
+        SmartScanner
+      </a>
+      <a class="resetLink mr-16 transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/features">Features</a>
+      <a class="resetLink mr-16 transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/pricing">Pricing</a>
+      <a class="resetLink transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/support">Support</a>
+    </div>
+    
+    <a class="resetLink font-semibold text-lg leading-tight text-white hover:text-white rounded-[7px] h-11 w-52 hidden lg:flex items-center text-center justify-center bg-emerald-750 transition-colors hover:bg-emerald-775" href="/download">Download for Free</a>
+    
+    <span class="block hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor"><path d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"/></svg>
+    </span>
+  </div>
+</nav>
+<script>
+let lastKnownScrollPosition = 0;
+let ticking = false;
+function doSomething(scrollPos) {
+  if (scrollPos>20) {
+    document.getElementById('nav').classList.add("shadow-md");
+  } else {
+    document.getElementById('nav').classList.remove("shadow-md");
+  }
+}
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.pageYOffset
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+</script>
+
+
+    <main class="w-full lg:max-w-[50rem] lg:mx-auto lg:pt-14 px-4 xl:px-0 pb-14 lg:pb-24">
+  <article>
+    <div>
+      <div class="text-sm lg:text-base text-neutral-710 mb-2 mt-2 lg:mb-8 lg:mt-0"><a class="resetLink hover:text-emerald-750" href="/blog/">Blog</a><span class="mx-1">/</span></div>
+      <h1 class="mb-3 lg:mb-5">How to Secure Your WordPress Website</h1>
+      <img width="800" height="320" class="mb-3 lg:mb-5" src="/assets/img/wordpress-security.jpg" alt="" aria-hidden="true">
+      
+      <div class="flex justify-between mb-8">
+        <div class="flex gap-x-10 text-sm">
+          <span><span class="text-neutral-500">Guest post </span> <span class="font-semibold"></span>Jessica Bullet</span>
+          <time class="text-neutral-500" datetime="2022-10-31" >31 October 2022</time>
+        </div>
+
+        <div>
+          <span onClick="share()" class="lg:hidden hover:bg-emerald-750 cursor-pointer">
+  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"/></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/how-to-secure-your-wordpress-website" || document.URL
+  let title = "How to Secure Your WordPress Website" || document.title
+  let text = `10+ things to do to secure your WordPress website. Learn why and how to test and protect your WordPress site against hackers.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        </div>
+      </div>
+    </div>
+
+    <div class="ph3">
+    <p>Knowing how to secure your WordPress website can protect the site from hackers and malware. This article shows you how to implement this protection.</p>
+
+<p>Owning a WordPress website can be very demanding, especially if you manage it yourself. First, you have to think of the needs and preferences of your users. Second, you have to design and maintain your website in a way that encourages users to visit again and again, and helps you get other users to do the same. But equally important is the security of your WordPress website. If your website is insecure, we assure you that you will not be able to stop users from running off to more secure websites that offer the same services that you do.</p>
+
+<p>So, in this article, we will outline some of the ways you can secure your WordPress website. But before that, here are 5 reasons you should make the security of your WordPress Website a priority.</p>
+
+<h2 id="why-you-should-secure-your-wordpress-website">Why You Should Secure Your WordPress Website</h2>
+
+<ol>
+  <li>
+    <p><strong>WordPress is a fairground for malicious online activity:</strong> Perhaps the best thing about building your website using WordPress is that it is the most popular content management system. The platform’s plugin integration and theme structures help website managers like you run the show without knowing all there is to know about web development. But the popularity of the platform also means that there are a lot of different individuals and virtual agents that can easily penetrate it. Similarly, because of the relative ease with which you can design websites on WordPress, there are many gaps and cracks in the framework that malware such as the <a href="https://softwaretested.com/anti-malware/what-is-the-vzwpix-email-virus/" target="_blank" rel="noopener noreferrer">vzwpix OR vzwpix.com email</a> virus can slip through. So, securing your WordPress website helps you block these gaps.</p>
+  </li>
+  <li>
+    <p><strong>Securing your WordPress website prevents hackers from breaking it:</strong> With the evolution of technology, especially digital tech, hackers are getting smarter. Therefore, if you do not secure your website, these hackers can easily place a ‘bug’ in the backdoor of your WordPress website and do whatever they want with your users. The easiest way for hackers to operate such bugs is via your and your users’ passwords. Maybe you are better at handling passwords, but your users may not. And because some have trouble remembering difficult passwords, they use simple passwords. And hackers can easily break simple passwords. Therefore, it is your responsibility to secure your WordPress website in a way that hackers cannot access user information. </p>
+  </li>
+  <li>
+    <p><strong>You don’t want Google to blacklist your website:</strong> Google as a search engine has become the ultimate gatekeeper for web content management. The majority of web users rely on Google to link them up with information. To a significant extent, therefore, Google decides whether or not users can ‘mistakenly’ bump into your WordPress. And because Google likes and only promotes secure websites to users, you have to tighten the security of your website. Moreover, securing your WordPress website also means that you won’t be subject to Google’s blacklisting. This is a lot like the fictitious Santa’s Naughty and Nice list: stay on Google’s good side by securing your WordPress website or watch how fewer and fewer web users visit your website.</p>
+  </li>
+  <li>
+    <p><strong>You can retain and boost reputation and user trust:</strong> The more secure your WordPress website is, the easier it would be to retain and boost its reputation. Much like Google’s ranking, protecting your website from virtual/cyber breachers like hackers and malware such as the <a href="https://softwaretested.com/anti-malware/soap2day-virus/" target="_blank" rel="noopener noreferrer">soap2day.to virus OR soap2day virus</a> indicates to users that you are worthy of their trust. In return for your protection, the reputation of your website would increase and it would be much easier for you to get new visitors to the site.</p>
+  </li>
+  <li>
+    <p><strong>Secure WordPress websites reinforce revenue:</strong> Lastly, if the primary goal of your website is to earn you some money, you are significantly more likely to meet this goal when your website is secure. If your WordPress website is not secure, hackers will steal user data, users will report to Google, Google will blacklist you, fewer users will go near your website, and your goal for making money from the website will be dashed.</p>
+  </li>
+</ol>
+
+<p><img src="/assets/img/wordpress-plugins.jpg" width="768" height="512" alt="WordPress plugins" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h2 id="how-to-secure-your-wordpress-website">How to Secure Your WordPress Website</h2>
+
+<p>Having outlined some of the most important reasons for securing your WordPress website, how should you go about it?</p>
+
+<h3 id="use-the-security-measures-available-on-wordpress">Use the Security Measures Available on WordPress</h3>
+
+<p>Nobody (and nothing) knows WordPress like WordPress. The platform has many different measures that you can implement against possible breaching. Some of these measures take the form of security plugins which you can easily install on your website and never have to worry about digital cracks that hackers and their malware can slip through. As a bonus, WordPress has a robust collection of these security plugins. Some of the most popular and widely recommended plugins include iThemes Security, Patchstack, Sucuri Security, Wordfence Security, and All In One WP Security &amp; Firewall. Using any one of these WordPress security plugins can help you protect the web users that visit your website from unauthorized hackers and programs.</p>
+
+<h3 id="partner-with-trusted-hostingweb-management-companies">Partner with Trusted Hosting/Web Management Companies</h3>
+
+<p>Website management is not very easy. Because of this, many website owners and managers delegate the task of managing their WordPress websites to professional agencies. But what if such agencies have malicious intentions or are digitally insecure themselves? This is why it is important to consider only agencies/agents with a trusted history of effectively managing WordPress websites. The same can be said of web hosting companies. Make sure you use only trusted hosting companies that prioritize security and take your website seriously. Usually, you have to pay a bit of money to get committed and serious hosting companies. But it is worth it, so find them online and pay them to look over your website if you cannot do so yourself.</p>
+
+<h3 id="only-implement-plugins-from-trusted-developers">Only Implement Plugins from Trusted Developers</h3>
+
+<p>In the same spirit of partnering with only trusted web management agencies and hosting companies, you have to pay attention to where the security plugins installed on your WordPress website come from. If you rely on plugins from developers that are cybercriminals in disguise, you would be jeopardizing your website and putting your users at risk. So, only use plugins from trusted and highly-rated developers. Such developers regularly update their plugins to reflect reported vulnerabilities from users and website managers. So, avoid installing plugins from developers and sources that don’t update or respond to reports of cyberattacks.</p>
+
+<h3 id="use-ssl-certificates-to-lock-your-website">Use SSL Certificates to Lock Your Website</h3>
+
+<p>Simply put, an SSL (Secure Sockets Layer) certificate is a digital encryption key that helps you secure a website. This key typically takes the form of a data file containing the public key of your website and other important information. Once you have it implemented on your website, web users will be able to tell that your website is secure—and it is. A padlock icon is the symbol to indicate to users that a website has SSL and is more secure than websites without the icon.</p>
+
+<h3 id="protect-core-wordpress-files-like-the-wp-configphp-file">Protect Core WordPress Files like the <code>wp-config.php</code> File</h3>
+
+<p>We noted earlier that WordPress makes web development easy. As the owner/manager of a WordPress website, you have access to the files that serve as the core of the site. The <code>wp-config.php</code> file is one such core component of your WordPress website. This file contains important information about your WordPress security keys and database connection details. So, protecting this file is tantamount to protecting the entire website. A simple way to protect this file is to hide it by moving it outside the default WordPress installation folder.</p>
+
+<h3 id="regularly-update-your-wordpress-by-turning-on-auto-update">Regularly Update Your WordPress by Turning on Auto-Update</h3>
+
+<p>Another very easy way to secure your WordPress website is to regularly update it. Much like the majority of software/web developers, no genuine digital creator wants their creation to be abused. As such, they will always progressively protect their products. This is just as true for WordPress. All you need to do, therefore, is turn on auto-update. Consequently, subsequent updates of WordPress will take care of problems such as data breaches that other web managers or users have reported.</p>
+
+<h3 id="use-strong-passwords-and-require-your-users-to-do-the-same">Use Strong Passwords and Require Your Users to Do the Same</h3>
+
+<p>There is no way we can overstate the importance of strong passwords for virtual security. Breaking your password is probably the easiest way an unauthorized person can break the security of your WordPress website. So, use strong passwords and encourage your users to do the same. You can check out password best practices such as mixing alphanumeric passwords with symbols. If you easily forget passwords, you can implement the Two-Factor Authentication (2FA) on your website. This way, users may still decide to use simple passwords but would have to verify them in a way only they can. Authenticator apps are especially useful on this front. The Google Authenticator app is one of the most popular of these apps and can help protect the integrity of your WordPress website.</p>
+
+<h3 id="implement-website-lockdown-feature">Implement Website Lockdown Feature</h3>
+
+<p>A website lockdown feature allows you to have some restrictive control over a web user’s account. The most basic application of this feature is in temporarily deactivating said account until the user can prove that the account belongs to them. So, once you implement this feature on your WordPress website, you will be able to lock down a user’s account whenever they appear to use the wrong password multiple times. You may also use plugins that send notifications to you and to the user’s email account about the repeated attempts to access the account. This will help both you and the user take immediate steps to unauthorized access to the account. Meanwhile, if it is a case of the user forgetting their password, you can implement the aforementioned 2FA solution so users don’t have to adopt and be forced to remember overly difficult passwords.</p>
+
+<h3 id="use-wps-hide-login-plugin-to-reduce-the-ease-of-access-to-the-login-page">Use WPS Hide Login Plugin to Reduce the Ease of Access to the Login Page</h3>
+
+<p>Your <a href="/vulnerability-list/wordpress-login-page-found">WordPress website’s login</a> page is a door that unauthorized persons can use to break the security of your website. Usually, once such hackers with malicious intentions access your login page, they can also use digital brute force to break in. One such brute force method is the use of software applications that combine millions of possible username and password information and then attempt to access the administrative page. But you can protect your website against such inventions by simply renaming the login URL of your website. You can use the WPS Hide Login plugin for this. As long as you have installed and activated this plugin, hackers will not be able to easily access your login page, meaning that they will not be able to gain unauthorized access to your website.</p>
+
+<h3 id="pay-attention-to-user-activity">Pay Attention to User Activity</h3>
+
+<p>Outside the active steps you can implement to secure your WordPress website, you may also use passive methods such as regularly keeping track of user activity on your website. The easiest way to do this is to log user activity and then go through the data for possible irregularities. If a user, for example, reports their location as Canada, you should expect that their digital footprints contain that geographical tag, unless they regularly use a VPN. So, when you begin to notice a difference in location, you should pay more attention to the account and notify the user via email to verify that they are still in control. You can use WordPress’ User Activity Log plugin for this monitoring process.</p>
+
+<h3 id="backup-wordpress-regularly">Backup WordPress Regularly</h3>
+
+<p>Lastly, you should backup your WordPress regularly. This ensures that in case of a very serious breach, you have the option of returning the website to a period when it was secure. So, make sure to install and use backup plugins. You should also store the backup on reliable cloud servers. We recommend using those that require no coding so that you will not have to give your WordPress admin password to someone else to do it for you.</p>
+
+<p>All in all, making your WordPress website more secure is good. Using the methods outlined in this article will protect you and your users, saving you from the malicious activities of hackers and malware.</p>
+
+
+    
+    
+
+
+<div class="mt-14 lg:mt-[88px] border-t border-b b-neutral-300 py-5">
+  <div class="flex gap-x-3 mb-3 items-center">
+    <img src="https://www.gravatar.com/avatar/2877ce4e7fab2d0f45620490fab7caca?d=retro" class="rounded-full w-12 h-12" alt="Jessica Bullet" loading="lazy">
+    <h4 class="text-base m-0">Jessica Bullet</h4>
+  </div>
+  <p class="text-base leading-5 m-0">Jess is a professional content writer and editor for Software Tested, writing about all sorts of technology topics under the sun. As a computer programmer, she is able to tap into her expertise on computers and gadgets to help others resolve their tech problems.</p>
+</div>
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-14 lg:mt-[88px]">
+<h3 class="text-base font-semibold mb-9 mx-auto w-fit">You might also like:</h3>
+<div class="flex flex-wrap lg:flex-nowrap justify-between gap-[22px]">
+
+
+
+
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/eval.png);">
+        <a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" class="resetLink flex w-full h-full"  aria-label="Read the full article: How to Secure your NodeJs Express Javascript Application - part 2">
+          
+          <img class="invisible" width="213" height="142" src="/assets/img/eval.png" alt="How to Secure your NodeJs Express Javascript Application - part 2" aria-hidden="true" loading="lazy">
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">How to Secure your NodeJs Express Javascript Application - part 2</a></h3>
+    </div>
+   
+  
+  
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url();">
+        <a href="/vulnerability-list/wordpress-user-enumeration" class="resetLink flex w-full h-full"  aria-label="Read the full article: WordPress User Enumeration - Vulnerability">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" xml:space="preserve" role="img">
+            <title>WordPress User Enumeration - Vulnerability</title>
+            <switch>
+              <foreignObject x="0" y="0" width="100%" height="100%">
+                
+                
+                
+              <div xmlns="http://www.w3.org/1999/xhtml" class="                     from-pink-800 to-red-800                                    bg-gradient-to-r  text-white p-4 flex flex-col justify-center items-center h-full w-full">WordPress User Enumeration - Vulnerability</div>
+              </foreignObject>
+              
+              <text x="20" y="20">WordPress User Enumeration - Vulnerability</text>
+              </switch>
+            </svg>  
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/vulnerability-list/wordpress-user-enumeration">WordPress User Enumeration - Vulnerability</a></h3>
+    </div>
+   
+  
+  
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url();">
+        <a href="/vulnerability-list/wordpress-login-page-found" class="resetLink flex w-full h-full"  aria-label="Read the full article: WordPress Login Page Found - Vulnerability">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" xml:space="preserve" role="img">
+            <title>WordPress Login Page Found - Vulnerability</title>
+            <switch>
+              <foreignObject x="0" y="0" width="100%" height="100%">
+                
+                
+                
+              <div xmlns="http://www.w3.org/1999/xhtml" class=" from-violet-800 to-fuchsia-800                                                        bg-gradient-to-r  text-white p-4 flex flex-col justify-center items-center h-full w-full">WordPress Login Page Found - Vulnerability</div>
+              </foreignObject>
+              
+              <text x="20" y="20">WordPress Login Page Found - Vulnerability</text>
+              </switch>
+            </svg>  
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/vulnerability-list/wordpress-login-page-found">WordPress Login Page Found - Vulnerability</a></h3>
+    </div>
+   
+  
+  
+    
+</div>
+</div>
+
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "How to Secure Your WordPress Website"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ "headline": "How to Secure Your WordPress Website",
+ "image": "/assets/img/wordpress-security.jpg"
+}]
+</script>  
+
+<section class="w-full bg-emerald-750 py-8 lg:py-10 px-4 xl:px-0">
+  <div class="max-w-6xl mx-auto flex flex-wrap gap-6 justify-center xl:justify-around items-center">
+    <h3 class="m-0 font-semibold text-xl lg:text-3xl text-white text-center xl:text-left">Scan security of your website with SmartScanner for free</h3>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="resetLink text-lg lg:text-2xl leading-tight font-semibold h-12 lg:h-16 w-72 lg:w-80 rounded-[7px] lg:rounded-lg text-emerald-750 inline-flex items-center text-center justify-center bg-white transition-colors hover:bg-emerald-25">Download</a>
+  </div>
+</section>
+
+
+    <footer class="bg-[#EBF4F0] pt-[52px] lg:pt-20  [&_a]:leading-5 [&_a]:block">
+  <div class="max-w-6xl mx-auto bg-[#EBF4F0]">
+  <div class="flex flex-wrap justify-between mb-9 text-neutral-710 px-4 xl:px-0 gap-9">
+    <div class="w-[4.5rem] hidden lg:block">
+    <a href="/" class="resetLink" aria-label="Home page">
+    <img src="/assets/img/logo_opaque.svg" class="w-[3.75rem] mt-14" width="60" height="60" alt="SmartScanner Logo" aria-hidden="true">
+    </a>
+    </div>
+    
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Product</h4>
+    <a href="/features" class="resetLink hover:text-emerald-750 hover:underline mb-3 lg:mb-4">Why SmartScanner?</a>
+    <a href="/download" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Download the app</a>
+    <a href="/pricing" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Plans and Pricing</a>
+    <a href="/changelog" class="resetLink hover:text-emerald-750 hover:underline ">What’s New?</a>
+    </div>
+    
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Feature</h4>
+    <a href="/features/artificial-intelligence-security-scanner" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Artificial Intelligence</a>
+    <a href="/features/comprehensive-security-tests" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Comprehensive Security Testing</a>
+    <a href="/features/javascript-html5-spa-jamstack-serverless-react-security" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Security Testing of Modern Web</a>
+    <a href="/features" class="resetLink hover:text-emerald-750 hover:underline  ">Explore All Features...</a>
+    </div>
+
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Resource</h4>
+    <a href="/blog/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Blog</a>
+    <a href="/docs/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Documentation</a>
+    <a href="/vulnerability-list/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Security Vulnerabilities</a>
+    <a href="/tools/robotstxt/" class="resetLink hover:text-emerald-750 hover:underline ">Online Robottxt Validator</a>
+    </div>
+
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Support</h4>
+    <a href="/contact" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Contact Form</a>
+    <a href="/support#faq" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">FAQ</a>        
+    <div class="flex gap-3">
+      <a href="https://twitter.com/TheSmartScanner" class="resetLink hover:text-emerald-750 hover:underline " aria-labelledby="svgXid"><svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor " xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><title id="svgXid">Click to go to SmartScanner's X (Twitter) page</title><path d="M3.59812 3.80762L10.4745 13.0299L3.55469 20.5259H5.11294L11.1695 13.9611L16.0641 20.5259H21.3633L14.1014 10.7863L20.5407 3.80762H18.9852L13.4064 9.85233L8.89998 3.80762H3.59812ZM5.88935 4.95666H8.32446L19.0748 19.3741H16.6397L5.88935 4.95666Z"/></svg></a>
+      <a href="mailto:support@thesmartscanner.com" class="resetLink hover:text-emerald-750 hover:underline " aria-labelledby="svgMailid"><svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor " xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><title id="svgMailid">Click to send an email to SmartScanner in your email software</title><path d="M5.07241 19.1689C4.61216 19.1689 4.22786 19.0148 3.91953 18.7064C3.6112 18.3981 3.45703 18.0138 3.45703 17.5536V6.78432C3.45703 6.32407 3.6112 5.93978 3.91953 5.63145C4.22786 5.32311 4.61216 5.16895 5.07241 5.16895H19.8417C20.3019 5.16895 20.6862 5.32311 20.9945 5.63145C21.3029 5.93978 21.457 6.32407 21.457 6.78432V17.5536C21.457 18.0138 21.3029 18.3981 20.9945 18.7064C20.6862 19.0148 20.3019 19.1689 19.8417 19.1689H5.07241ZM12.457 12.2843L4.45703 7.05357V17.5536C4.45703 17.7331 4.51472 17.8805 4.63011 17.9959C4.74549 18.1113 4.89292 18.1689 5.07241 18.1689H19.8417C20.0211 18.1689 20.1686 18.1113 20.284 17.9959C20.3993 17.8805 20.457 17.7331 20.457 17.5536V7.05357L12.457 12.2843ZM12.457 11.1689L20.1493 6.16895H4.76473L12.457 11.1689ZM4.45703 7.05357V6.16895V17.5536C4.45703 17.7331 4.51472 17.8805 4.63011 17.9959C4.74549 18.1113 4.89292 18.1689 5.07241 18.1689H4.45703V7.05357Z"/></svg></a>
+    </div>        
+    </div>
+  </div>
+  
+  <div class="flex flex-wrap justify-between border-t border-neutral-300 py-5 lg:py-6 px-4 xl:px-0 text-neutral-710 gap-3">
+    <div class="flex gap-2 items-center">
+    <span>©</span> <a href="/" class="resetLink hover:text-emerald-750 hover:underline ">TheSmartScanner.com</a>
+    </div>
+    
+    <div class="flex flex-wrap gap-3">
+      <a href="/privacy" class="resetLink hover:text-emerald-750 hover:underline ">Privacy Policy</a>
+      <a href="/terms" class="resetLink hover:text-emerald-750 hover:underline ">Terms of Service</a>
+      <a href="/eula" class="resetLink hover:text-emerald-750 hover:underline ">EULA</a>         
+    </div>
+  </div>
+  </div>
+</footer>
+
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+
+  <div id="cookieConsent" style="display:none;" class="flex py-4 px-4 lg:px-6 shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full justify-between items-center flex-wrap lg:flex-nowrap gap-4 text-sm bg-white/60 backdrop-blur-md">
+  <p class="text-base mx-auto m-0 pr-4 lg:pr-0">We use cookies to enhance quality of our services and to analyze traffic. Read our <a href="/privacy" class="resetLink underline">privacy policy</a>.</p>
+  <div class="flex gap-2 w-full lg:w-fit">
+    <button onclick="consent.accept()" class="w-full lg:w-fit text-emerald-750 border border-emerald-750 rounded-[7px] h-10 min-w-24 flex items-center text-center justify-center bg-white transition-colors hover:text-emerald-750 hover:bg-emerald-25 active:bg-teal-100">OK, got it</button>
+    <button onclick="consent.reject()" class="py-1 px-2 hover:text-black absolute top-3 right-2 lg:[position:initial]">X</button>
+  </div>
+</div>
+<script defer type="text/javascript" src="/assets/js/cookie.min.js"></script>
+
+  </body>
+</html>

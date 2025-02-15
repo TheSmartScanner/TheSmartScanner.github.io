@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2025-02-15T07:56:11+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for web application security testing.Download for free do website security scan find and fix vulnerabilities</subtitle><entry><title type="html">Introducing SmartScanner 2.0: New Features and Enhanced Scanning Capabilities</title><link href="https://www.thesmartscanner.com/blog/introducing-smartscanner-2-0-new-features-and-enhanced-scanning-capabilities" rel="alternate" type="text/html" title="Introducing SmartScanner 2.0: New Features and Enhanced Scanning Capabilities" /><published>2025-02-15T00:00:00+00:00</published><updated>2025-02-15T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/introducing-smartscanner-2-0-new-features-and-enhanced-scanning-capabilities</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/introducing-smartscanner-2-0-new-features-and-enhanced-scanning-capabilities"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner 2.0</strong>, a significant update that builds upon the solid foundation of SmartScanner 1.x. This new version introduces several key improvements and new features designed to enhance your vulnerability scanning process, along with early-stage CICD integration possibilities.</p>
+
+<h2 id="new-features-at-a-glance">New Features at a Glance</h2>
+
+<h3 id="cli-tool-sms">CLI Tool: <code>sms</code></h3>
+<p>SmartScanner 2.0 introduces a new command-line interface tool called <strong><code>sms</code></strong>. This tool opens up basic opportunities for integrating vulnerability scans into your CI/CD pipelines. While the integration is still in its early stages—not yet fully seamless or highly scalable—it provides a useful starting point for automation and scripting. With <code>sms</code>, you can:</p>
+<ul>
+  <li><strong>Automate Scanning:</strong> Trigger scans as part of your build process.</li>
+  <li><strong>Streamline Workflows:</strong> Use simple scripts to execute scans and generate reports without the overhead of a graphical interface.</li>
+</ul>
+
+<p><a href="/docs/using-smartscanner-cli-sms">Learn more about <code>sms</code> SmartScanner command line interface</a>.</p>
+
+<h3 id="expanded-vulnerability-testing">Expanded Vulnerability Testing</h3>
+<ul>
+  <li><strong>IDOR Testing:</strong> New tests now cover Insecure Direct Object Reference (IDOR) vulnerabilities, helping you identify potential unauthorized access issues.</li>
+  <li><strong>Fuzzing Capabilities:</strong> Fuzzing tests have been incorporated into scan configurations to enhance the detection of unexpected vulnerabilities.</li>
+  <li><strong>Customizable Crawl Depth:</strong> Setting the crawl depth to zero now limits the scan to the input URL only, preventing unnecessary crawling of additional pages.</li>
+  <li><strong>Selective Subdomain Scanning:</strong> By default, subdomains are no longer scanned, reducing extraneous network requests.</li>
+</ul>
+
+<h2 id="improvements-and-updates">Improvements and Updates</h2>
+
+<h3 id="enhanced-accuracy-and-performance">Enhanced Accuracy and Performance</h3>
+<ul>
+  <li><strong>Reduced False Positives:</strong> Adjustments to passive tests have minimized false positives, so you spend more time addressing real security issues.</li>
+  <li><strong>Improved Performance:</strong> Optimizations in scanning and crawling processes lead to faster execution times and more efficient resource usage.</li>
+  <li><strong>Bug Fixes:</strong> We’ve resolved issues with manual login and improved input URL validation to ensure a smoother scanning experience.</li>
+  <li><strong>UI Adjustments:</strong> Minor tweaks have been made to enhance the overall user experience.</li>
+</ul>
+
+<h3 id="updated-vulnerability-rules">Updated Vulnerability Rules</h3>
+<p>Our detection rules have been updated to better identify vulnerabilities in popular software:</p>
+<ul>
+  <li><a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Versions</a></li>
+  <li><a href="/vulnerability-list/vulnerable-nginx-version">Vulnerable Nginx Versions</a></li>
+  <li><a href="/vulnerability-list/vulnerable-tomcat-version">Vulnerable Tomcat Versions</a></li>
+</ul>
+
+<h3 id="system-requirements-update">System Requirements Update</h3>
+<p>To focus on delivering improved performance and security, we’ve updated our system requirements:</p>
+<ul>
+  <li><strong>32-bit Systems Dropped:</strong> We are now optimized for 64-bit systems, leveraging modern processor capabilities and enhanced memory management.</li>
+  <li><strong>Windows 10 Support:</strong> Only Windows 10 version 1809 and above are supported, ensuring compatibility with the latest security features and performance improvements.</li>
+  <li><strong>Chromium Upgrade:</strong> Embedded Chromium has been updated to version 122, providing better compatibility and security.</li>
+</ul>
+
+<h2 id="a-look-towards-the-future">A Look Towards the Future</h2>
+
+<p>While the new CLI tool <code>sms</code> provides promising avenues for integrating security scans into CI/CD workflows, we recognize that there’s still room for improvement. The current implementation offers a foundational level of automation, and we’re committed to refining it further in future releases to better meet the needs of larger and more complex environments.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>SmartScanner 2.0 is a meaningful step forward in our commitment to enhancing web security testing. With new features like the CLI tool, expanded vulnerability testing, and essential performance improvements, this release aims to streamline your scanning process—even as we continue to work on making integrations smoother and more scalable.</p>
+
+<p>We invite you to <a href="/download">try out SmartScanner 2.0</a> and explore its new capabilities. Your feedback is invaluable as we strive to make each release even more effective and user-friendly.</p>
+
+<p>Happy scanning!</p>]]></content><author><name></name></author><category term="Release" /><category term="IDOR" /><summary type="html"><![CDATA[SmartScanner 2.0 boosts web security with a new CLI tool, enhanced IDOR testing, and optimized scanning—providing a solid foundation for early CI/CD integration.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smart-scanner-2-released.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smart-scanner-2-released.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing SmartScanner v1.25 – Smoother, Smarter, and More Flexible</title><link href="https://www.thesmartscanner.com/blog/introducing-smartscanner-v1-25-smoother,-smarter,-and-more-flexible" rel="alternate" type="text/html" title="Introducing SmartScanner v1.25 – Smoother, Smarter, and More Flexible" /><published>2024-11-29T00:00:00+00:00</published><updated>2024-11-29T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/introducing-smartscanner-v1-25-%E2%80%93-smoother,-smarter,-and-more-flexible</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/introducing-smartscanner-v1-25-smoother,-smarter,-and-more-flexible"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner v1.25</strong>, packed with updates to enhance your experience and extend the tool’s capabilities.</p>
+
+<p>Here’s what’s new:</p>
+
+<h2 id="️-a-refreshed-interface-for-a-better-workflow">🖌️ A Refreshed Interface for a Better Workflow</h2>
+
+<p>The SmartScanner interface just got a makeover! The updated design not only looks cleaner but also improves usability, making it easier for you to navigate and manage your scans effortlessly.</p>
+
+<h2 id="-custom-http-requests-for-greater-flexibility">🔧 Custom HTTP Requests for Greater Flexibility</h2>
+
+<p>You asked, and we listened! With this update, you can now define <strong>custom HTTP requests</strong> to initiate scans. This feature empowers users with greater control, enabling tailored security testing for unique setups.</p>
+
+<h2 id="-smarter-error-detection">🚀 Smarter Error Detection</h2>
+
+<p>We’ve enhanced our database error detection mechanism, ensuring your scans are more precise and deliver actionable results every time.</p>
+
+<h2 id="-updated-vulnerability-detection-rules">🔄 Updated Vulnerability Detection Rules</h2>
+
+<p>Stay ahead of emerging threats with our latest updates to vulnerability detection rules. SmartScanner now offers improved coverage for the following:</p>
+
+<p>  - OpenSSL: Detect vulnerabilities in outdated or insecure versions.
+  - Tomcat: Updated scanning rules for identifying risks in legacy configurations.
+  - PHP: Enhanced accuracy for finding weaknesses in outdated PHP versions.</p>
+
+<h2 id="ready-to-explore-the-new-features">Ready to Explore the New Features?</h2>
+
+<p>Upgrade to <strong>v1.25</strong> today and enjoy a smoother, smarter scanning experience. Your security, simplified.</p>
+
+<p><a href="/download">Update Now</a></p>
+
+<p>If you have any questions or feedback, we’d love to hear from you! <a href="/contact">Reach out to our team</a> and help us make SmartScanner even better.</p>]]></content><author><name></name></author><category term="Release" /><category term="Database" /><category term="Error Handling" /><category term="HTTP" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner v1.25, packed with updates to enhance your experience and extend the tool’s capabilities.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smart-scanner-1-25.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smart-scanner-1-25.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Get Proof of Concept for XSS and SQL Injections with SmartScanner v1.24</title><link href="https://www.thesmartscanner.com/blog/get-proof-of-concept-for-xss-and-sql-injections-with-smartscanner-v1-24" rel="alternate" type="text/html" title="Get Proof of Concept for XSS and SQL Injections with SmartScanner v1.24" /><published>2024-10-02T00:00:00+00:00</published><updated>2024-10-02T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/get-proof-of-concept-for-xss-and-sql-injections-with-smartscanner-v1-24-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/get-proof-of-concept-for-xss-and-sql-injections-with-smartscanner-v1-24"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner Version 1.24</strong>! This version comes packed with new features, important improvements, and updates aimed at enhancing the performance and accuracy of your web vulnerability scanning. Here’s a breakdown of what’s new:</p>
+
+<h2 id="new-features">New Features:</h2>
+<ol>
+  <li>
+    <p><strong>Proof of Concept (POC) for XSS and SQL Injection Vulnerabilities</strong><br />
+To make vulnerability testing more practical, we’ve added POC generation for both Cross-Site Scripting (XSS) and SQL Injection vulnerabilities. This allows you to better understand the potential impact of detected vulnerabilities.</p>
+  </li>
+  <li>
+    <p><strong>SQL Injection for MemSQL Database</strong><br />
+We’ve expanded our SQL injection tests to now include MemSQL, enhancing support for a wider range of database systems.</p>
+  </li>
+  <li>
+    <p><strong>Test for PHP CGI Argument Injection RCE</strong>
+SmartScanner now tests for <strong>PHP CGI Argument Injection Remote Code Execution (RCE)</strong> vulnerabilities, including <strong>CVE-2024-4577</strong> and <strong>CVE-2012-1.24</strong>, providing better protection against remote exploitation.</p>
+  </li>
+  <li>
+    <p><strong>Separate Classification Section in Vulnerability Details</strong><br />
+Vulnerability reports now include a separate classification section, helping you quickly identify the type and severity of each issue.</p>
+  </li>
+</ol>
+
+<h2 id="improvements">Improvements:</h2>
+<ul>
+  <li>
+    <p><strong>Better XSS Detection in Script Tags</strong><br />
+Enhanced our XSS detection algorithm, improving identification of malicious scripts within <code>&lt;script&gt;</code> tags.</p>
+  </li>
+  <li>
+    <p><strong>Improved Error Detection</strong><br />
+We’ve fine-tuned error detection for more accurate reporting, reducing false positives and negatives.</p>
+  </li>
+</ul>
+
+<h2 id="bug-fixes">Bug Fixes:</h2>
+<ul>
+  <li><strong>Fixed Incorrect PHP Error Detection</strong><br />
+Addressed an issue with PHP error detection that occasionally misclassified non-errors as detailed PHP errors.</li>
+</ul>
+
+<h2 id="updates">Updates:</h2>
+<p>We’ve also updated the detection for several vulnerable software versions to ensure your scans are up to date:</p>
+<ul>
+  <li><strong>OpenSSL</strong></li>
+  <li><strong>Nginx</strong></li>
+  <li><strong>Apache</strong></li>
+  <li><strong>Tomcat</strong></li>
+  <li><strong>PHP</strong></li>
+  <li><strong>WordPress</strong></li>
+</ul>
+
+<h2 id="how-to-upgrade">How to Upgrade:</h2>
+<p>If you’re already using SmartScanner, upgrading to version 1.24 is simple! Download the latest version and follow the installation instructions to take advantage of these new features and improvements.</p>
+
+<p>Stay secure and thank you for continuing to trust SmartScanner for your web application security needs!</p>
+
+<p><a href="/download" class="resetLink text-lg leading-tight my-4 font-semibold h-12 px-6 rounded-full w-fit mx-auto bg-emerald-750 flex items-center text-center justify-center text-white hover:text-white transition-colors hover:bg-emerald-775  relative  isolate overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-rose-100/20 before:to-transparent">Download SmartScanner Free Version</a></p>]]></content><author><name></name></author><category term="Release" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner Version 1.24! This version comes packed with new features, important improvements, and updates aimed at enhancing the performance and accuracy of your web vulnerability scanning. Here’s a breakdown of what’s new:]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v124-release.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v124-release.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Should I Hide My Admin Login Page? Yes, You Should!</title><link href="https://www.thesmartscanner.com/blog/should-i-hide-my-admin-login-page-yes,-you-should" rel="alternate" type="text/html" title="Should I Hide My Admin Login Page? Yes, You Should!" /><published>2024-09-11T00:00:00+00:00</published><updated>2024-09-11T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/should-i-hide-my-admin-login-page-yes,-you-should-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/should-i-hide-my-admin-login-page-yes,-you-should"><![CDATA[<p>As a web application owner, you might be wondering whether hiding your login page is necessary. The short answer is: <strong>Yes, you should hide your admin login page!</strong> However, this only applies to <strong>admin interface login pages</strong> and <strong>not</strong> user login pages.</p>
+
+<p>In this article, we’ll explore why protecting your admin login page is crucial, the risks of leaving it exposed, and effective measures to safeguard it from potential attacks.</p>
+
+<h2 id="what-is-an-admin-interface">What is an Admin Interface?</h2>
+
+<p>Most web applications provide an interface for administrators to manage critical aspects of the site, such as content updates, user management, and system configurations. These interfaces enable essential tasks, such as:</p>
+
+<ul>
+  <li>Changing website content or adding new pages.</li>
+  <li>Modifying user roles and permissions.</li>
+  <li>Managing product listings or prices (e.g., for e-commerce websites).</li>
+  <li>Monitoring system logs or application performance.</li>
+</ul>
+
+<p>There are various ways these administrative tasks can be carried out. Common methods include:</p>
+
+<ul>
+  <li><strong>Remote management protocols</strong> like SSH, PowerShell, RDP, or VNC.</li>
+  <li><strong>Code and configuration files</strong> for direct control over the system.</li>
+  <li><strong>APIs</strong> that expose management functionality.</li>
+  <li><strong>Browser-based admin panels</strong> accessible via web consoles.</li>
+</ul>
+
+<p>In this article, we’ll focus on <strong>browser-based admin panels</strong>, the most common and vulnerable admin interface.</p>
+
+<h2 id="why-exposed-admin-interfaces-are-a-major-risk">Why Exposed Admin Interfaces are a Major Risk</h2>
+
+<p>An <a href="/vulnerability-list/unreferenced-login-page-found">exposed admin login page</a> is a goldmine for hackers, offering a direct gateway to the heart of your website’s functionality and sensitive data. Many websites use default or easily guessable URLs for admin login pages, such as <code>/admin/</code> or <code>/administrator/</code>. Once hackers locate these pages, they can exploit vulnerabilities through attacks like:</p>
+
+<ul>
+  <li><strong>Brute force attacks</strong>: Repeated attempts to guess passwords.</li>
+  <li><strong>SQL injections</strong>: Injecting malicious code to manipulate the database.</li>
+  <li><strong>Session hijacking or redirection</strong>: Taking over admin sessions.</li>
+</ul>
+
+<p>Leaving your admin interface exposed is equivalent to leaving the front door of your house unlocked. But, by following certain security practices, you can significantly reduce the chances of a breach.</p>
+
+<h2 id="how-to-protect-your-admin-interfaces">How to Protect Your Admin Interfaces</h2>
+
+<p>Here are several actionable steps you can take to enhance the security of your administration panels:</p>
+
+<h3 id="1-separate-admin-and-user-interfaces">1. Separate Admin and User Interfaces</h3>
+<p>Separate the standard user interface from the admin interface. This ensures that you can apply stricter security measures on the admin side without affecting user access. <strong>Hackers targeting user login pages won’t immediately have access to the administrative backend.</strong></p>
+
+<h3 id="2-do-not-expose-the-admin-interface-on-the-public-internet">2. Do Not Expose the Admin Interface on the Public Internet</h3>
+<p>Wherever possible, avoid exposing your admin panel directly on the internet. One option is to <strong>restrict access to the admin interface through a VPN</strong> or <strong>require physical network access</strong>. Alternatively, you can implement a <strong>whitelisting mechanism</strong> to limit access to specific IP addresses, drastically reducing the likelihood of unauthorized access.</p>
+
+<h3 id="3-use-https-for-secure-communication">3. Use HTTPS for Secure Communication</h3>
+<p>Always use HTTPS to encrypt traffic between your admin panel and the client (browser). This prevents eavesdropping and protects admin credentials from being intercepted. Without HTTPS, attackers can easily capture sensitive information through a man-in-the-middle (MITM) attack.</p>
+
+<h3 id="4-enforce-strong-password-policies">4. Enforce Strong Password Policies</h3>
+<p>Brute force attacks are one of the most common methods used to compromise login pages. Enforce a <strong>strong password policy</strong> with complexity requirements (e.g., a mix of uppercase, lowercase, numbers, and special characters). Additionally, implement <strong>CAPTCHA</strong> and <strong>account lockout mechanisms</strong> to prevent automated <a href="/vulnerability-list/weak-password">password-guessing attempts</a>.</p>
+
+<h3 id="5-implement-multi-factor-authentication-mfa">5. Implement Multi-Factor Authentication (MFA)</h3>
+<p>Multi-factor authentication (MFA) provides an extra layer of security by requiring users to verify their identity through multiple factors—something they know (password), something they have (an OTP or security token), or something they are (biometric verification). MFA helps prevent unauthorized access, even if passwords are compromised.</p>
+
+<h3 id="6-log-and-monitor-admin-activities">6. Log and Monitor Admin Activities</h3>
+<p>Enable <strong>detailed logging and monitoring</strong> of admin activities. This allows you to track login attempts, suspicious behavior, or changes made in the admin panel. By actively monitoring these logs, you can detect and respond to potential threats in real-time, reducing the chances of an undetected breach.</p>
+
+<h3 id="7-obscure-the-admin-url">7. Obscure the Admin URL</h3>
+<p>If you must expose your admin interface to the internet, consider <strong>obscuring the URL</strong>. Instead of using predictable paths like <code>/admin/</code>, choose a non-standard, hard-to-guess URL (e.g., <code>/secret-dashboard-6421/</code>). This practice, called <strong>security through obscurity</strong>, is not a foolproof solution but can reduce the chances of automated or low-effort attacks.</p>
+
+<p><em>Note: While obscuring URLs can help, it should not be your only defense. Hackers can still discover these URLs through more sophisticated methods.</em></p>
+
+<h3 id="8-regularly-test-and-secure-your-admin-interface">8. Regularly Test and Secure Your Admin Interface</h3>
+<p>Regular security testing is crucial to keeping your admin interface secure. Use a <a href="/"><strong>web application security scanner</strong></a> to scan for vulnerabilities such as <strong>outdated software, improper permissions, directory listings</strong>, or <strong>weak configurations</strong>. For example, a <a href="/vulnerability-list/referrer-policy-header-is-missing">missing <strong>referrer policy</strong></a> could unintentionally leak your admin URLs in outgoing requests. Fixing these vulnerabilities can prevent hackers from exploiting them.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Hiding your admin login page is a simple but effective step in reducing your website’s risk of being compromised. However, obscuring the URL is just the beginning. By following the comprehensive guidelines outlined in this article, you can significantly strengthen the security of your admin interface.</p>
+
+<p>From using HTTPS and strong passwords to implementing multi-factor authentication and regular security scans, these actions will help protect your website from malicious attacks.</p>
+
+<p><strong>Remember: Security is an ongoing process, not a one-time task. Continuously scan and fix any vulnerabilities in your web application to stay ahead of evolving threats.</strong></p>
+
+<p>To help with this, you can <a href="/download">download and use <strong>SmartScanner</strong></a>, a web application security scanner, to test your website for vulnerabilities — completely free of charge. Don’t wait until it’s too late, <a href="/">secure your website now!</a></p>
+
+<p><a href="/download" class="resetLink text-lg leading-tight my-4 font-semibold h-12 px-6 rounded-full w-fit mx-auto bg-emerald-750 flex items-center text-center justify-center text-white hover:text-white transition-colors hover:bg-emerald-775  relative  isolate overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-rose-100/20 before:to-transparent">Download Free SmartScanner</a></p>]]></content><author><name></name></author><category term="Brute Force" /><category term="Application Misconfiguration" /><category term="Authentication" /><category term="Misconfiguration" /><category term="Password Policy" /><category term="Password" /><summary type="html"><![CDATA[Learn why hiding your admin login page is essential for web application security. Discover effective strategies to protect your admin interface from hackers, including using HTTPS, strong passwords, MFA, and more.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/admin-interface-security.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/admin-interface-security.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Exploring Different Methods for Website Vulnerability Scanning</title><link href="https://www.thesmartscanner.com/blog/exploring-different-methods-for-website-vulnerability-scanning" rel="alternate" type="text/html" title="Exploring Different Methods for Website Vulnerability Scanning" /><published>2024-06-28T00:00:00+00:00</published><updated>2024-06-28T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/exploring-different-methods-for-website-vulnerability-scanning</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/exploring-different-methods-for-website-vulnerability-scanning"><![CDATA[<h2 id="why-we-need-to-scan-a-website-for-vulnerabilities">Why We Need to Scan a Website for Vulnerabilities</h2>
+<p>Ensuring the security of your website is crucial to protecting it from hackers. Vulnerabilities are weaknesses that can be exploited by <a href="/blog/how-do-hackers-hack">malicious actors to compromise your site</a>. The process of identifying these vulnerabilities is known as security scanning. There are three main types of security scanning: white box, black box, and gray box. Each type has its own unique characteristics, methodologies, and use cases. In this article, we will explore these different methods to help you understand how to effectively test the security of your website.</p>
+
+<h2 id="1-white-box-testing">1. White Box Testing</h2>
+<p>White Box Testing, also known as clear box, open box, or glass box testing, involves having full access to the source code, user credentials, servers, databases, and the entire website architecture. Essentially, in white box testing, you have complete knowledge and access to every aspect of the website.</p>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+  <li>Comprehensive coverage</li>
+  <li>Can detect hidden vulnerabilities, logic errors, and security issues in the code.</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+<ul>
+  <li>Time-consuming and resource-intensive.</li>
+  <li>Requires skills in programming and software architecture.</li>
+</ul>
+
+<p>To perform white box testing, you need a strong understanding of the security domain and proficiency in programming languages. While most tests should be conducted manually, open source code analyzers like <a href="https://owasp.org/www-community/Source_Code_Analysis_Tools">Veracode and Coverity</a> can assist in identifying vulnerabilities within the website’s source code.</p>
+
+<h2 id="2-black-box-testing">2. Black Box Testing</h2>
+
+<p>Also known as external testing, black box testing involves examining the website from an external perspective without any knowledge of the internal code or architecture. In black box testing, you essentially have only the URL and any publicly available information about the website.</p>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+  <li>Mimics the perspective of an external attacker, providing a realistic attack scenario.</li>
+  <li>Easier to set up and requires less knowledge of the internal workings.</li>
+  <li>Can be performed by individuals with less technical expertise.</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+<ul>
+  <li>Limited visibility into the internal logic and structure.</li>
+  <li>May miss internal vulnerabilities that are not exposed through the user interface.</li>
+</ul>
+
+<p>Black box testing is relatively easy and cost-effective to perform. You can utilize automated web vulnerability scanners such as OWASP ZAP, Vega, or SmartScanner to conduct black box testing.
+Simply <a href="/download">download SmartScanner</a>, enter your website URL, and initiate the test to uncover potential vulnerabilities from an external perspective.</p>
+
+<h2 id="3-gray-box-testing">3. Gray Box Testing</h2>
+
+<p>Gray box testing is a hybrid approach that combines elements of both white box and black box testing. If you have partial knowledge about the website, but not complete access or understanding, you can perform gray box testing. For example, if you know the technologies a website uses, you can conduct targeted tests specific to those technologies, making the testing process more effective.</p>
+
+<p><strong>Advantages:</strong></p>
+<ul>
+  <li>Provides a balanced approach, enhancing accuracy in identifying vulnerabilities that might be overlooked in black box testing.</li>
+  <li>Efficiently identifies both internal and external vulnerabilities, reducing time and resource requirements compared to exhaustive black box testing.</li>
+  <li>Creates a more realistic attack scenario, offering a better assessment of the web application’s security posture.</li>
+</ul>
+
+<p><strong>Disadvantages:</strong></p>
+<ul>
+  <li>May not achieve the depth of coverage of white box testing.</li>
+  <li>Requires some knowledge about website technologies.</li>
+</ul>
+
+<h2 id="use-cases-and-applications">Use Cases and Applications</h2>
+
+<ul>
+  <li><strong>White Box Testing:</strong> Typically used in the software development lifecycle (SDLC) for unit testing, code review, and early-stage security assessments.</li>
+  <li><strong>Black Box Testing:</strong> Commonly used in penetration testing, user acceptance testing (UAT), and for assessing security from an external perspective.</li>
+  <li><strong>Gray Box Testing:</strong> Often used in for scenarios where partial knowledge of the system can enhance the testing process without the need for full access.</li>
+</ul>
+
+<h2 id="implementing-gray-box-scanning-with-smartscanner">Implementing Gray Box Scanning with SmartScanner</h2>
+
+<p>SmartScanner makes it easy to perform gray box scanning by allowing you to configure the target technologies used by your web application. This configuration enables SmartScanner to tailor its scanning process, enhancing accuracy and efficiency. Here’s how you can leverage this feature:</p>
+
+<p><img src="/assets/img/setting-target-technologies-in-smartscanner-config.gif" width="800" height="534" alt="Configuring target technologies in SmartScanner's scan configurations and performing Gray Box Scanning" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h3 id="adding-website-technologies">Adding Website Technologies</h3>
+
+<p>To configure target technologies in SmartScanner, follow these steps:</p>
+
+<ol>
+  <li>
+    <p><strong>Access Scan Settings:</strong> Navigate to the scan settings section in the SmartScanner dashboard.</p>
+  </li>
+  <li>
+    <p><strong>Select Technologies:</strong> Choose from a wide range of supported technologies including: Apache, Nginx, IIS, Tomcat, WordPress, and more.</p>
+  </li>
+  <li>
+    <p><strong>Start Scan Process:</strong> Start the scan by clicking the scan button. SmartScanner optimizes the scan process, reducing irrelevant tests and focusing on areas most likely to be vulnerable given the known technology stack.</p>
+  </li>
+</ol>
+
+<p>For a detailed guide on configuring target technologies, refer to our <a href="/docs/setting-target-environments-and-technologies">Setting Target Environments and Technologies</a> documentation.</p>
+
+<p>Stay secure and happy scanning!</p>]]></content><author><name></name></author><category term="Gray Box Scanning" /><category term="Black Box Scanning" /><category term="White Box Scanning" /><category term="Technologies" /><summary type="html"><![CDATA[Explore different methods for website vulnerability scanning to protect your site from hackers. Learn about white box, black box, and gray box testing, their advantages, disadvantages, and practical applications. Discover tools and techniques to enhance your website's security.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/blackbox-graybox-whitebox.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/blackbox-graybox-whitebox.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Announcing SmartScanner Version 1.23: Enhanced Technology Support and Improved Detection</title><link href="https://www.thesmartscanner.com/blog/announcing-smartscanner-version-1-23" rel="alternate" type="text/html" title="Announcing SmartScanner Version 1.23: Enhanced Technology Support and Improved Detection" /><published>2024-06-03T00:00:00+00:00</published><updated>2024-06-03T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/announcing-smartscanner-version-1-23</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/announcing-smartscanner-version-1-23"><![CDATA[<p>We are excited to announce the release of SmartScanner Version 1.23! This update brings significant improvements, new features, and bug fixes to enhance your web vulnerability scanning experience.</p>
+
+<h2 id="whats-new-in-version-123">What’s New in Version 1.23</h2>
+
+<h3 id="new-technology-support">New Technology Support</h3>
+<p>SmartScanner now supports configuration for a wider range of technologies. You can add the following technologies in your scan settings:</p>
+<ul>
+  <li>Apache</li>
+  <li>Nginx</li>
+  <li>IIS</li>
+  <li>Tomcat</li>
+  <li>WordPress</li>
+  <li>Joomla</li>
+  <li>Drupal</li>
+</ul>
+
+<p>By specifying these technologies in the scan configurations, SmartScanner can optimize the scan process, improve accuracy, and reduce the number of irrelevant tests. For detailed instructions on configuring technologies, refer to our <a href="/docs/setting-target-environments-and-technologies">Setting Target Environments and Technologies</a> documentation.</p>
+
+<h3 id="enhanced-detection-capabilities">Enhanced Detection Capabilities</h3>
+<p>We’ve made several enhancements to our detection algorithms to improve the accuracy and efficiency of your scans:</p>
+<ul>
+  <li><strong>Path Traversal Tests</strong>: Path Traversal tests are now separated from File Inclusion tests, allowing for more precise detection.</li>
+  <li><strong>SQL Injection</strong>: Improved Microsoft SQL Server error-based SQL injection detection.</li>
+  <li><strong>File Inclusion</strong>: Enhanced detection of File Inclusion and PHP Remote File Inclusion vulnerabilities.</li>
+  <li><strong>Database Errors</strong>: Improved detection of various database errors.</li>
+</ul>
+
+<h3 id="bug-fixes">Bug Fixes</h3>
+<p>This release also addresses several critical bugs to ensure more reliable scanning:</p>
+<ul>
+  <li>Fixed an issue with incorrect PHP version detection.</li>
+  <li>Resolved missed XSS vulnerabilities on 404 pages.</li>
+  <li>Fixed missed XSS vulnerabilities on pages without query parameters.</li>
+</ul>
+
+<h3 id="updated-vulnerability-lists">Updated Vulnerability Lists</h3>
+<p>We have updated our vulnerability lists to include the latest information. Also following tests have been updated to include recent CVEs and vulnerabilities.</p>
+<ul>
+  <li><a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Version</a></li>
+  <li><a href="/vulnerability-list/vulnerable-nginx-version">Vulnerable Nginx Version</a></li>
+  <li><a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Version</a></li>
+  <li><a href="/vulnerability-list/vulnerable-tomcat-version">Vulnerable Tomcat Version</a></li>
+  <li><a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Version</a></li>
+  <li><a href="/vulnerability-list/vulnerable-wordpress-version">Vulnerable WordPress Version</a></li>
+</ul>
+
+<h2 id="optimizing-your-scan-settings">Optimizing Your Scan Settings</h2>
+<p>If you already know tech technologies used by your web application, we recommend configuring the technologies to get the most out of SmartScanner. This step is crucial for optimizing your security scans. By providing precise information about your web application’s infrastructure, you ensure a thorough and efficient vulnerability assessment.</p>
+
+<p>For a step-by-step guide, visit our <a href="/docs/setting-target-environments-and-technologies">Setting Target Environments and Technologies</a> page.</p>
+
+<h2 id="get-started-with-smartscanner-123">Get Started with SmartScanner 1.23</h2>
+<p><a href="/download">Upgrade to SmartScanner Version 1.23</a> today and take advantage of these new features and improvements. As always, we are committed to helping you secure your web applications effectively and efficiently.</p>
+
+<p>Stay tuned for more updates and enhancements. Happy scanning!</p>]]></content><author><name></name></author><category term="Release" /><category term="Configurations" /><category term="Technologies" /><summary type="html"><![CDATA[Discover the latest advancements in web vulnerability scanning with SmartScanner Version 1.23. With expanded technology support, enhanced detection algorithms, and critical bug fixes, optimizing your security scans has never been easier. Upgrade today for a more efficient and reliable scanning experience.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-23-release.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v1-23-release.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation</title><link href="https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation" rel="alternate" type="text/html" title="Unlocking Efficiency: Harnessing Machine Learning for Gray Box Testing Automation" /><published>2024-04-25T00:00:00+00:00</published><updated>2024-04-25T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/unlocking-efficiency-harnessing-machine-learning-for-gray-box-testing-automation"><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>When it comes to <a href="https://www.thesmartscanner.com/blog/14-software-security-terms-you-should-know">software security</a> and development, gray box testing has become an important but also laborious part of the process. This strategy, that is testing software functions based on partial knowledge of its internal workings, strikes a balance between the comprehensiveness of white-box testing (full internal knowledge) and the practicality of black-box testing (no internal knowledge). The beginning of machine learning (ML) brings opportunities to automate gray box testing, thus revolutionizing the software development lifecycle.</p>
+
+<h2 id="the-role-of-machine-learning-in-automating-gray-box-testing">The Role of Machine Learning in Automating Gray Box Testing</h2>
+<p>Machine learning algorithms can parse tons of code, test data, and logs from execution. As a result, they can identify patterns automatically, anticipate potential troubles ahead-and ultimately help out with writing new test cases layered on top of old ones. This is particularly useful in grey box testing, where testers have some understanding of the system’s architecture but lack intricate details of every component.</p>
+
+<h2 id="benefits-of-automating-gray-box-testing-with-machine-learning">Benefits of Automating Gray Box Testing with Machine Learning</h2>
+
+<h3 id="improved-efficiency-and-speed">Improved Efficiency and Speed </h3>
+<p>By automating routine test execution tasks, human testers can spend more of their time on important tasks like test design, analysis, or edge-case exploration. According to research from <a href="https://www.capgemini.com/wp-content/uploads/2018/05/theautomationadvantage.pdf">Capgemini</a>, automation can cut up to 70% off of the time taken for testing execution which in turn accelerates development speed greatly.</p>
+
+<h3 id="better-accuracy-and-more-reliability">Better Accuracy and More Reliability</h3>
+<p>Machine learning algorithms are continuously learning and improving, over time, thus producing more accurate generations of test cases. This improvement in accuracy and reliability helps to shore up the testing</p>
+
+<h3 id="reduced-potential-for-human-error">Reduced Potential for Human Error</h3>
+<p>When repetitive tasks are automated, there is less likelihood of human error than when the same task has to be performed manually. Hence, test results also become more consistent and reliable.</p>
+
+<h3 id="early-and-frequent-bug-detection">Early and Frequent Bug Detection</h3>
+<p>You can auto detect bugs at an earlier stage and more frequently than ever before. Machine learning makes it possible to detect errors during program development. Detecting errors at this stage means that remedial programming can be done faster, and so reduces the cost of remedying defects later in the process.</p>
+
+<h2 id="challenges-in-automating-gray-box-testing-with-machine-learning">Challenges in Automating Gray Box Testing with Machine Learning</h2>
+
+<h3 id="high-initial-investment">High Initial Investment </h3>
+<p>To implement a robust testing framework using machine learning, the upfront costs include automation instruments and learning materials -and possibly more personnel who are familiar with testing software as well as machine learning.</p>
+
+<h3 id="lack-of-expertise">Lack of expertise</h3>
+<p>There is an increased need for people who can effectively implement automation testing and machine learning. This shortage of talent will become an obstacle to businesses implementing these techniques in practice.</p>
+
+<h3 id="maintenance-complexity">Maintenance Complexity</h3>
+<p>Maintaining the automation testing tools and machine learning models can be challenging. The work is never done due to the need to maintain models up-to-date with active code changes and continuously measure and improve test generations.</p>
+
+<h3 id="execution-challenges">Execution Challenges</h3>
+<p>Execution of automated tests is complex due to intricate lab management with every feature up-to-date and regular maintenance. Additionally, the lack of experience in automation testing platforms can also hinder test executions.</p>
+
+<h3 id="infrastructure-considerations">Infrastructure Considerations</h3>
+<p>Organizations might not have the required testing infrastructure, such as automated testing tools and cloud-based lab solutions, to efficiently utilize machine learning for gray-box testing.</p>
+
+<h3 id="choosing-the-right-framework">Choosing the Right Framework</h3>
+<p>It can be difficult to pick the most suitable automation testing framework for your needs. Project scope, team expertise, and budget all influence this decision.</p>
+
+<h2 id="case-studies-and-statistics-related-to-gray-box-testing-automation">Case Studies and Statistics related to Gray Box Testing Automation</h2>
+
+<h3 id="1-engine-fault-diagnosis-study-by-daniel-jung">1. Engine Fault Diagnosis Study by Daniel Jung</h3>
+<p>A research by <a href="https://arxiv.org/pdf/2008.04644.pdf">Daniel Jung</a> employed a physically-driven grey-box recurrent neural network for engine fault diagnosis. An internal combustion engine test bench data was used in the study and it was used to explain benefits of employing machine learning and model-based fault diagnosis methods together.</p>
+
+<p>The study established that the physically-based grey-box recurrent neural network model was able to correctly diagnose problem in an internal combustion engine. The model was able to detect and isolate faults, even with the presence of measurement noise and process disturbances.</p>
+
+<p>This research demonstrated the feasibility of integrating the two approaches: machine learning and model-based fault diagnosis. This is similar to gray box testing where both black-box (machine learning) and white-box (model-based) techniques are employed.</p>
+
+<h3 id="2-two-stage-grey-box-modeling-approach-study">2. Two-Stage Grey-Box Modeling Approach Study</h3>
+<p>Another case study delved into a <a href="https://www.sciencegate.app/document/10.1115/detc2017-67794">two-stage grey-box modeling approach</a> that combines knowledge-based (white-box) models with statistical (black-box) metamodels to achieve model reusability and improved predictions. The approach was used to develop a powder bed fusion additive manufacturing process.</p>
+
+<p>The study demonstrated that the two-stage grey-box modeling method was more effective than the conventional approaches in terms of the predictability and the reusability. With the approach, the predicted process outcomes were found to be very accurate. This suggests that integrating manufacturing knowledge-based models alongside statistical metamodels improves the efficacy and precision of predictive modeling in manufacturing processes.</p>
+
+<p>Similarly in gray box testing, predictability means to predict the results of a test based on the input, and reusability means to utilize the same test cases in different scenarios. Machine learning can do both of this parts.</p>
+
+<h3 id="3-reinforcement-learning-based-monkey-agents">3. Reinforcement Learning-Based Monkey Agents</h3>
+<p>In the <a href="https://link.springer.com/chapter/10.1007/978-3-031-44355-8_1">conference paper</a> “Automation of User Interface Testing by Reinforcement Learning-Based Monkey Agents” the researcher had shown how to conduct grey-box GUI testing using reinforcement learning-algorithms can be implemented in practice to improve efficiency.</p>
+
+<p>This research paper discussed how using reinforcement learning (a type of machine learning where an agent learns to make decisions by taking actions in an environment to maximize some notion of cumulative profit) for autonomous grey-box monkey testing can potentially give rise to advantages in terms of efficiency. </p>
+
+<p>To explain in layman terms, they utilized a machine learning technique to automate the test process, making it faster and more productive.</p>
+
+<h3 id="4-ai-based-test-automation-analysis">4. AI-based Test Automation Analysis </h3>
+<p>The <a href="https://tsigalko18.github.io/assets/pdf/2021-Ricca-ICSTW.pdf">AI-based Test Automation analysis</a> grouped the 307 individual occurrences in four different major parts: test generation (41%), test oracle (12%), debugging (20%), and test maintenance (26%). The most popular ones (20% all in all) represent automated test generation.</p>
+
+<p>Therefore, out of 307 examples examined, they have found that AI is used to generate test (41% of the time). These charts were also used for validating the results of tests (12%), debugging which would help in finding errors (20%), maintaining and upgrading tests (26%). The most frequent particular solution was the automated test generation that included 20% of all the solutions.</p>
+
+<h2 id="applications-of-machine-learning-in-gray-box-testing-automation">Applications of Machine Learning in Gray Box Testing Automation</h2>
+<ul>
+  <li>Automating Unit, Integration, and Performance Testing: Unit tests verify the correct operation of individual modules within an application, integration tests validate the cooperation of submodules with one another, and performance tests assess the application’s behavior under high loads. All this can be carried out in an automated mode by ML, including loading tests with various user emulators. This approach frees up human tester time for more complex scenarios.</li>
+  <li>Automating Test Setup: Routine activities like creating a test environment and generating test data are easily automated with machine learning.</li>
+  <li>High-Value and Business-Critical Tests: Automation of critical tests guarantees regular and frequent launch. This will help to eliminate the risk of regression and guarantee the stability of the fundamental functionality.</li>
+  <li>Repetitive and Predictable Tests: Machine learning is ideal for automating tests that are frequently executed, have a clear pattern, and its execution is focused on a well-defined function.</li>
+  <li>Tests Impossible to Perform Manually: Machine learning can automate complex test scenarios that are difficult to implement or impossible manually.</li>
+</ul>
+
+<h2 id="future-directions-of-machine-learning-in-gray-box-testing">Future Directions of Machine Learning in Gray Box Testing</h2>
+<ul>
+  <li>AI-powered In-Production Testing: The future promises powered testing that includes analyzing the live production systems. With in-production testing, developers access real-time data insights into how their code is performing and any arising issues. In other words, developers will have the ability to detect problems before users experience their effects.</li>
+  <li>Autonomous Testing: Some future models of machine learning may produce an AI that rarely requires human intervention in its testing processes. Shortly, we can imagine a fully automated process in which AI generates, executes, and analyzes the results of the given test cases.</li>
+  <li>Machine Learning for User Behavior Monitoring: Machine learning can actively monitor how users interact with applications and alert for gaps in testing. By analyzing user behavior patterns and identifying unexpected interactions, machine learning can pinpoint areas where additional testing might be necessary. This helps ensure to cope up with the <a href="https://www.esparkinfo.com/blog/software-testing-trends.html">software testing trends</a> and caters to real-world user behavior and minimizes the risk of usability issues.</li>
+  <li>Continuous Testing: The future of software testing involves, but is not limited to, continuous testing, cloud-based lab solutions, and integration with existing processes. Continuous testing defines the future of an ideal software development life cycle, where code changes are tested and verified continuously. To achieve such an ideal, the teams need to be exposed to open access to the test lab, and the right tools to run and perform tests more efficiently. For instance, machine learning can also be employed in testing to monitor and provide real-time feedback when code changes are deployed.</li>
+  <li>Cloud-based Lab Solutions: Cloud-based lab solutions, provide a scalable and cost-effective ideal way to apply continuous testing. This is achievable since the labs run on the powerful cloud, making the test environments and resources readily available; as such, many organizations can easily embrace machine learning-powered gray box testing. </li>
+  <li>Integration with Existing Processes: Finally, the future also involves the integration of <a href="https://www.thesmartscanner.com/blog/how-ai-and-machine-learning-are-revolutionizing-web-security">machine learning and AI</a> into the existing software testing process. The process would not only augment the existing process but also the human expertise on these platforms. The overall result will be a more efficient and comprehensive testing process.</li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>In conclusion, machine learning provides a robust toolset for automating and improving gray box testing. The early investment costs, lack of qualified expertise, and requiring effort to support are only a few of the many hurdles to overcome. However, in terms of productivity, accuracy, and early identification of bugs, the potential advantages are well worth it. </p>
+
+<p>Advances in the process and an increasingly knowledgeable talent will move us closer to the future in how we think about gray box testing. This cutting-edge technology will enable businesses to remain ahead of the curve by providing cutting-edge software that satisfies the demands of the digital age.</p>]]></content><author><name>Harikrishna Kundariya</name></author><category term="AI" /><category term="ML" /><category term="Gray Box" /><summary type="html"><![CDATA[Discover how gray box testing, bridging white-box and black-box methods, is revolutionized by machine learning automation, enhancing software quality despite challenges. Explore the promise and hurdles in this essential aspect of software development]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/gray-box-testing-automation-with-ml.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/gray-box-testing-automation-with-ml.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding</title><link href="https://www.thesmartscanner.com/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding" rel="alternate" type="text/html" title="The Best Ebooks Beginners and Experienced Programmers Alike Can Read to Get Better at Secure Coding" /><published>2024-01-26T00:00:00+00:00</published><updated>2024-01-26T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/the-best-ebooks-beginners-and-experienced-programmers-alike-can-read-to-get-better-at-secure-coding"><![CDATA[<p>Security is a top priority when developing applications and software, and programmers must keep it in mind throughout the whole development process. Our <a href="https://www.thesmartscanner.com/blog/10-secure-coding-best-practices-to-follow-in-every-project">“10 Secure Coding Best Practices to Follow in Every Project”</a> post highlights important steps to help create more secure software. Updating components, using trustworthy packages, proper encoding, and writing clean code are standard practices for every beginner and experienced programmer. But if you’re looking for more guidance or want to brush up on the basics, ebooks can be a great resource to turn to for learning more about secure coding and how to get better at it.</p>
+
+<h2 id="why-ebooks">Why ebooks?</h2>
+<p>With so many resources for learning coding, why ebooks? Ebooks are accessible and affordable resources; platforms can give you access to thousands of ebooks for a low cost or even for free. You can read a wide selection of <a href="https://www.everand.com/books/Computers">computer and programming books on Everand</a>, like Coding for Dummies by Nikhil Abraham or Alex Nordeen’s Python: Learn Python in 24 Hours. Books on topics like applications and software, certification guides, databases, and more are available with a flat monthly fee that costs roughly one physical book. Other <a href="https://www.cnet.com/tech/services-and-software/save-money-on-ebooks-with-this-free-library-app/">apps like Libby</a> allow you to borrow ebooks free of charge using your library card. It’s like borrowing a book from a library but with the convenience and flexibility of the digital age.</p>
+
+<p>Ebooks combine the tried and true learning method of reading with the accessibility and convenience the online world offers. If you want to learn more about secure coding through ebooks, here are some titles you can start with:</p>
+
+<h2 id="best-ebooks-to-learn-secure-coding">Best ebooks to learn secure coding</h2>
+
+<h3 id="alice-and-bob-learn-application-security-by-tanya-janca">Alice and Bob Learn Application Security <strong>by Tanya Janca</strong></h3>
+<p>Alice and Bob Learn Application Security is an excellent resource that provides a comprehensive and easy-to-understand guide on the best security practices in software development. This ebook covers all the fundamental topics, such as common coding mistakes, secure code writing, and ways to test for security vulnerabilities. It also delves into complex and advanced topics about the security of modern software systems and architectures. The book uses analogies, real-life examples, technical explanations, and diagrams to explain many abstract and complicated subjects, making it easy to understand and follow. It’s great for beginners and for more experienced programmers who want to get back to the basics.</p>
+
+<h3 id="hacking-the-art-of-exploitation-by-jon-erickson">Hacking: The Art of Exploitation <strong>by Jon Erickson</strong></h3>
+<p>This ebook takes a unique approach to learning about security vulnerabilities by teaching you how to think like a hacker. <a href="https://www.linkedin.com/pulse/book-review-hacking-art-exploitation-jon-erickson-kabir-cisa">Hacking: The Art of Exploitation covers various topics</a>, including network security, cryptography, web application vulnerabilities, and more. The ebook also comes with a range of hands-on exercises that allow readers to test their understanding and apply the concepts covered in the book. It’s a great way to understand the potential weaknesses in your code and learn how to patch them. It also touches on the ethical aspects of hacking and how it can be used lawfully so programmers can apply important security principles correctly when coding.</p>
+
+<h3 id="secure-by-design-by-daniel-sawano-dan-bergh-johnsson-and-daniel-deogun">Secure by Design <strong>by Daniel Sawano, Dan Bergh Johnsson, and Daniel Deogun</strong></h3>
+<p>With applications and software increasing in complexity, programmers and developers must design with security in mind at every step of the coding and development processes. Secure by Design teaches readers how to apply the best patterns, best practices, and mindsets to software development, as well as find shortcomings in the legacy code and address them. At the code level, you’ll discover constructs like safe error handling, secure validation, and domain primitives, and even how to use techniques centered on security throughout the build-test-deploy pipeline.</p>]]></content><author><name>Faith Wiley</name></author><category term="Programming" /><summary type="html"><![CDATA[Introducing some security eBooks for programmers.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/security-ebooks.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/security-ebooks.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Online Robots.txt Validator For Creating a Secure Robots.txt</title><link href="https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt" rel="alternate" type="text/html" title="Online Robots.txt Validator For Creating a Secure Robots.txt" /><published>2023-10-31T00:00:00+00:00</published><updated>2023-10-31T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt-</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/online-robots-txt-validator-for-creating-a-secure-robots-txt"><![CDATA[<p>A robots.txt file is a small but important part of a website. It is a plain text file that is placed in the root directory of a website and is used to communicate with search engine crawlers, telling them which pages or sections of a site should or should not be indexed.</p>
+
+<h2 id="tldr">TLDR</h2>
+<p>Use the <a href="/tools/robotstxt/">online robots.txt validator</a> to make sure your robots.txt is well formatted and has no security risk.</p>
+
+<section class="w-full bg-[#EBF4F0] my-6 py-6 px-4 rounded shadow">
+  <div class="w-full flex flex-wrap flex-col gap-5 justify-evenly xl:justify-between items-center">
+    <h3 class="m-0 font-semibold text-[1.125rem] lg:text-[1.25rem] text-emerald-750 text-center xl:text-left">Use free online robots.txt validator to check your robots.txt</h3>
+    <a href="/tools/robotstxt/" class="resetLink text-lg leading-tight font-semibold h-12 px-4 rounded-[7px] bg-emerald-750 inline-flex items-center text-center justify-center text-white hover:text-white transition-colors hover:bg-emerald-775          relative 
+    isolate
+    overflow-hidden
+    before:absolute before:inset-0
+    before:-translate-x-full
+    before:animate-[shimmer_2s_infinite]
+    before:bg-gradient-to-r
+    before:from-transparent before:via-rose-100/20 before:to-transparent">Try it Now!</a>
+  </div>
+</section>
+
+<p>The robots.txt file is a set of instructions that tell web crawlers which parts of a website they are allowed to access. These web crawlers are automated programs that scan websites to gather information about the pages and content on a site. While these crawlers can help index a website and make it more visible in search engine results, they can also consume a lot of server resources and bandwidth if they are not properly managed. Not every robot out there is good. That’s why having a properly written robots.txt file is very important.</p>
+
+<p>The structure of a robots.txt file is relatively simple but it is also hard to debug and make sure it’s working as expected. But with our new online <a href="/tools/robotstxt/">tool</a> for validating robots.txt it’s easy to create one.</p>
+
+<p>You can simply copy and paste your robots.txt contents into this tool and check possible errors. Then you can easily fix the problems with recommendations provided for each issue.</p>
+
+<h2 id="security-issues-in-robotstxt">Security Issues in Robots.txt</h2>
+<p>There’s a misunderstanding that a robots.txt file can be used for protecting sensitive files on a website. That’s <a href="/blog/is-your-robots-txt-file-vulnerable-here-s-how-to-check-and-secure-it">why many websites disclose valuable information</a> to hackers. One benefit of our online <a href="/tools/robotstxt/">robots.txt checker</a> is that it can also check for security-related problems in robots.txt.</p>
+
+<p>The online robots.txt validator can detect up to 19 problems. In the following, we explain some common security vulnerabilities that can be found in a robots.txt file.</p>
+
+<h2 id="file-disclosure-in-disallow">File Disclosure in Disallow</h2>
+<p>It happens when you add a <code>disallow</code> record with a full file path.
+The robots.txt is a voluntary mechanism. It’s not sufficient to guarantee some robots will not visit restricted URLs. In fact, malicious users can use robots.txt to find out the resources you are trying to hide; like a <a href="/vulnerability-list/unreferenced-login-page-found">login page</a>.</p>
+
+<h3 id="how-to-fix">How to Fix</h3>
+<p>You should not use the disallow rule for protecting files. Following are some alternatives:</p>
+
+<ol>
+  <li><strong>Use strong authentication</strong>: For sensitive resources on your website you must use strong authentication and access control mechanisms.</li>
+  <li><strong>You don’t need to disallow at all</strong>: If the file in the <code>disallow</code> rule is not linked to your website, you don’t need a disallow for it.</li>
+  <li><strong>Use <code>noindex</code> meta tag</strong>: If you only want to prevent search engines from indexing your URL, you can use the <code>noindex</code> ruleset. <code>noindex</code> is a rule set with either a <code>&lt;meta&gt;</code> tag or HTTP response header and is used to prevent indexing content by search engines that support the <code>noindex</code> rule, such as Google.</li>
+  <li><strong>Use pattern</strong>: Instead of revealing the full path, use patterns in the disallow rule. for example, use <code>disallow: /*.php</code> to exclude all php file</li>
+</ol>
+
+<h2 id="directory-disclosure-in-disallow">Directory Disclosure in Disallow</h2>
+<p>Revealing directories like <code>/admin/</code> in the disallow rule gives hackers a clue to start digging in that directory.</p>
+
+<h3 id="how-to-prevent">How to Prevent</h3>
+<p>In addition to the above recommendations, you should make sure <a href="/vulnerability-list/directory-listing">directory listing</a> is disabled on your website.</p>
+
+<h2 id="possible-path-disclosure-in-allow">Possible Path Disclosure in Allow</h2>
+<p>By revealing URLs in the <code>allow</code> rule, you <a href="/vulnerability-list/sensitive-unreferenced-resource-found">disclose resources to malicious users</a>. You must make sure these URLs are not sensitive.</p>
+
+<h3 id="how-to-avoid">How to Avoid</h3>
+<ul>
+  <li>Make sure you’re not revealing any sensitive resources.</li>
+  <li>Make sure revealed folders do not display a directory listing.</li>
+</ul>
+
+<p>A robots.txt file is a vital aspect of website management and by properly configuring it, website owners can protect sensitive information and ensure that their site is effectively managed.</p>
+
+<p>Go ahead and <a href="/tools/robotstxt/">test your robots.txt now</a>.</p>]]></content><author><name></name></author><category term="Passive" /><category term="Tool" /><category term="Information Disclosure" /><category term="SEO" /><summary type="html"><![CDATA[a robots.txt is not for protecting sensitive files on a website. With online robots.txt validator test your robots.txt]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/robotstxt-validator.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/robotstxt-validator.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Web Scanner, A Must Have Tool For Web Developers</title><link href="https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers" rel="alternate" type="text/html" title="Web Scanner, A Must Have Tool For Web Developers" /><published>2023-09-10T00:00:00+00:00</published><updated>2023-09-10T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/web-scanner,-a-must-have-tool-for-web-developers"><![CDATA[<p>A review about web scanners and how they can be a secret weapon to gain competitive advantage for developers.</p>
+
+<p>As the internet grows and technology advances, web development has become more complex, and so has web security. Web developers must use tools that can help them ensure that their websites are secure. Let’s see how using a web scanner can help with that.</p>
+
+<h2 id="web-scanners-in-developers-toolset">Web Scanners in Developer’s Toolset</h2>
+<p>Web development is a challenging job that requires a solid understanding of programming languages, web development frameworks, and emerging technologies. Web developers are responsible for different aspects of a web application, including interface design, information architecture, and website performance optimization. Collaboration with other developers, designers, and stakeholders can add extra complexity to the development process.</p>
+
+<p>Web developers use various tools to create and maintain websites, including text editors, IDEs, version control systems, and testing frameworks. However, one tool that is often overlooked is a web scanner.</p>
+
+<p>A web scanner is a tool that can detect security vulnerabilities in web applications. It is an essential tool for web developers to ensure website security.</p>
+
+<h2 id="benefits-of-using-a-web-security-scanner-for-developers">Benefits of Using a Web Security Scanner For Developers</h2>
+<p>Web developers have numerous responsibilities, including the creation of secure applications. However, web security is a complex domain that requires a different skill set and extensive experience to become an expert. Security testing of web applications requires knowledge beyond web development. Using a web scanner can assist web developers in identifying and resolving security vulnerabilities.</p>
+
+<p>Here are some benefits of using a web scanner for web developers.</p>
+
+<ol>
+  <li>It <strong>saves time and effort</strong> by quickly and accurately scanning websites, allowing developers to focus on other aspects of website development.</li>
+  <li>Web scanners can <strong>improve a developer’s skills</strong> by exposing them to new vulnerabilities and best practices for resolving them.</li>
+  <li>It can <strong>boost productivity</strong> by automating much of the testing process, enabling developers to spend more time developing new features or improving existing ones.</li>
+  <li>Web scanners can also <strong>enhance a developer’s reputation</strong> by demonstrating a commitment to website security.</li>
+  <li>It can help developers <strong>avoid legal issues</strong> by ensuring compliance with industry regulations and standards.</li>
+  <li>Web scanners can <strong>identify security issues before they become a problem</strong>, which is crucial because it is much easier and cheaper to <a href="https://www.thesmartscanner.com/blog/how-do-hackers-hack">fix security issues before they are exploited by hackers</a>.</li>
+  <li>By using a web scanner, developers can <strong>improve user experience</strong> by identifying and fixing security issues that may affect the UX of a website.</li>
+</ol>
+
+<h2 id="how-to-test-security-of-your-web-application-with-a-web-scanner">How to Test Security of Your Web Application With a Web Scanner</h2>
+<p>Several types of security testing are commonly used to identify and address security vulnerabilities in web applications. Penetration Testing, Source Code Analysis, and Vulnerability Scanning are common types of security testing. Manually conducting these tests requires a lot of knowledge and experience. If you’re not a security expert, you can still <a href="https://www.thesmartscanner.com/blog/5-security-vulnerabilities-you-can-fix-right-now">perform security testing of your web application</a>. All you need is the right tool. For instance, you can use a web scanner or a DAST tool.</p>
+
+<p>DAST stands for <em>Dynamic Application Security Testing</em>, which is a type of security testing that involves testing the security of an application while it is running in a live environment.</p>
+
+<p>There are many Web Scanners that can do a DAST on your website. Following is a list of top free web scanners.</p>
+
+<ol>
+  <li><strong><a href="https://www.zaproxy.org/" rel="noopener noreferrer">OWASP ZAP</a></strong>: Free and open source. Actively maintained by a dedicated international team of volunteers.</li>
+  <li><strong><a href="https://subgraph.com/vega/" rel="noopener noreferrer">Vega</a></strong>: Web security testing platform to test the security of web applications.</li>
+  <li><strong><a href="https://wapiti-scanner.github.io/" rel="noopener noreferrer">Wapiti</a></strong>: Wapiti allows you to audit the security of your websites or web applications.</li>
+  <li><strong><a href="https://www.theSmartScanner.com">SmartScanner - Website Vulnerability Scanner</a></strong>: While other tools may not be as user-friendly, SmartScanner stands out for its simplicity and intuitive interface.</li>
+</ol>
+
+<h2 id="using-smartscanner-for-automated-web-security-test">Using SmartScanner for Automated Web Security Test</h2>
+<p>SmartScanner is a DAST tool that scans websites for vulnerabilities and security issues. It uses Artificial Intelligence, <a href="https://www.thesmartscanner.com/blog/why-you-should-use-passive-vulnerability-scan-on-your-website">passive scanning</a> and active methods to identify security issues. SmartScanner can check for a range of security issues, including SQL injection, cross-site scripting (XSS), and other vulnerabilities.</p>
+
+<p><img src="/assets/img/smartscanner-start-scan.gif" width="800" height="533" alt="SmartScanner performing a website scan in 1 simple step" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<p>SmartScanner is easy to use, and it automatically browses your application, navigates to different pages, runs JavaScripts, and fetches remote APIs to find web vulnerabilities. SmartScanner provides reports specific details for every vulnerability along with remediation and mitigation steps so you can fix vulnerabilities easily.</p>
+
+<p><a href="https://www.TheSmartScanner.com/download">Download SmartScanner, scan your website</a>, and discover your web security problems.</p>]]></content><author><name></name></author><category term="Development" /><category term="Programming" /><category term="Scanning" /><category term="DAST" /><summary type="html"><![CDATA[A review about web scanners and how they can be a secret weapon to gain competitive advantage for developers.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/web-scanner-benefits-for-developers.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/web-scanner-benefits-for-developers.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
