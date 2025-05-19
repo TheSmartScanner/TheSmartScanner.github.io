@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en-US" class="h-100">
+  <head>
+    <meta charset="UTF-8">
+    <title>3 reasons why any website&apos;s security is important  - SmartScanner</title>
+    <meta name="description" content="Security is critical when you have visitors. Having vulnerabilities like XSS or lacking SSL certificate affects your visitors, your reputation and ...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#137752">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="/assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg">
+    <link rel="alternate icon" type="image/png" href="/assets/img/logo.png">
+    <meta property="og:title" content="3 reasons why any website&apos;s security is important">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important">
+    <meta property="og:image" content="/assets/img/website-security.jpg">
+    <meta property="og:description" content="Security is critical when you have visitors. Having vulnerabilities like XSS or lacking SSL certificate affects your visitors, your reputation and revenue" />
+    <link rel="canonical" href="https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@TheSmartScanner">
+    <meta name="twitter:title" content="3 reasons why any website&apos;s security is important">
+    <meta name="twitter:url" content="https://www.thesmartscanner.com/blog/3-reasons-why-any-website-security-is-important" />
+    <meta name="twitter:description" content="Security is critical when you have visitors. Having vulnerabilities like XSS or lacking SSL certificate affects your visitors, your reputation and revenue">
+    
+    <meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/website-security.jpg">    
+    
+    
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://static.hotjar.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://static.hotjar.com">
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });
+
+</script>
+<!-- Hotjar Tracking Code for https://www.thesmartscanner.com/ -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+
+    <link rel="stylesheet" href="/assets/css/main.css">
+    
+    <link rel="prefetch" href="/assets/css/prism.css">
+	
+  </head>
+  <body class="font-sans">
+    <nav id="nav" class="sticky top-0 z-40 bg-white transition-shadow w-full text-neutral-725 px-4 xl:px-0" role="navigation" aria-label="Main">
+  <div class="mx-auto max-w-6xl flex items-center justify-between h-[56px] lg:h-[72px] font-semibold ">
+    <div class="flex items-center">
+      <a class="resetLink text-xl flex items-center text-emerald-750 hover:text-emerald-750 shrink-0 mr-24" href="/#" title="Home">
+        <img src="/assets/img/logo_opaque.svg" class="w-10 mr-1" width="40" height="40" alt="SmartScanner Logo" aria-hidden="true">
+        SmartScanner
+      </a>
+      <a class="resetLink mr-16 transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/features">Features</a>
+      <a class="resetLink mr-16 transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/pricing">Pricing</a>
+      <a class="resetLink transition-colors hover:text-emerald-750 hidden lg:inline-block" href="/support">Support</a>
+    </div>
+    
+    <a class="resetLink font-semibold text-lg leading-tight text-white hover:text-white rounded-[7px] h-11 w-52 hidden lg:flex items-center text-center justify-center bg-emerald-750 transition-colors hover:bg-emerald-775" href="/download">Download for Free</a>
+    
+    <span class="block hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="currentColor"><path d="M160-240q-17 0-28.5-11.5T120-280q0-17 11.5-28.5T160-320h640q17 0 28.5 11.5T840-280q0 17-11.5 28.5T800-240H160Zm0-200q-17 0-28.5-11.5T120-480q0-17 11.5-28.5T160-520h640q17 0 28.5 11.5T840-480q0 17-11.5 28.5T800-440H160Zm0-200q-17 0-28.5-11.5T120-680q0-17 11.5-28.5T160-720h640q17 0 28.5 11.5T840-680q0 17-11.5 28.5T800-640H160Z"/></svg>
+    </span>
+  </div>
+</nav>
+<script>
+let lastKnownScrollPosition = 0;
+let ticking = false;
+function doSomething(scrollPos) {
+  if (scrollPos>20) {
+    document.getElementById('nav').classList.add("shadow-md");
+  } else {
+    document.getElementById('nav').classList.remove("shadow-md");
+  }
+}
+document.addEventListener("scroll", (event) => {
+  lastKnownScrollPosition = window.pageYOffset
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      doSomething(lastKnownScrollPosition);
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+</script>
+
+
+    <main class="w-full lg:max-w-[50rem] lg:mx-auto lg:pt-14 px-4 xl:px-0 pb-14 lg:pb-24">
+  <article>
+    <div>
+      <div class="text-sm lg:text-base text-neutral-710 mb-2 mt-2 lg:mb-8 lg:mt-0"><a class="resetLink hover:text-emerald-750" href="/blog/">Blog</a><span class="mx-1">/</span></div>
+      <h1 class="mb-3 lg:mb-5">3 reasons why any website&apos;s security is important</h1>
+      
+      <img width="800" height="320" class="mb-3 lg:mb-5" src="/assets/img/website-security.jpg" alt="" aria-hidden="true">
+      
+      
+      <div class="flex justify-between mb-8">
+        <div class="flex gap-x-10 text-sm">
+          <span><span class="text-neutral-500">By</span> <span class="font-semibold"></span>SmartScanner</span>
+          <time class="text-neutral-500" datetime="2023-01-02" >02 January 2023</time>
+        </div>
+
+        <div>
+          <span onClick="share()" class="lg:hidden hover:bg-emerald-750 cursor-pointer">
+  <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"/></svg>
+</span>
+
+<script>
+async function share() {
+  let url = "https://www.TheSmartScanner.com/blog/3-reasons-why-any-website-security-is-important" || document.URL
+  let title = "3 reasons why any website's security is important" || document.title
+  let text = `Security is critical when you have visitors. Having vulnerabilities like XSS or lacking SSL certificate affects your visitors, your reputation and revenue`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}
+</script>
+        </div>
+      </div>
+    </div>
+
+    <div class="ph3">
+    <p>You might think that security is important but only for big companies. This article is going to change your mind.</p>
+
+<h2 id="hacked-website-can-affect-your-audience">Hacked website can affect your audience</h2>
+
+<p>Security is critical as long as you have any visitor on your website (actually, security is vital even if you don’t have any visitor at all, you’ll see!).</p>
+
+<p>Either recruiters on your personal project portfolio website or customers on your online shopping platform, it doesn’t matter who you are targeting on your website. Any of your website visitors can be targeted by hackers as well if you don’t make your website secure.</p>
+
+<p>Your website can have many vulnerabilities, and any of them would be sufficient for hackers to compromise your website to use it against your visitors. Security vulnerabilities like <a href="/vulnerability-list/cross-site-scripting">XSS</a>, <a href="/vulnerability-list/sql-injection">SQLI</a> or <a href="/vulnerability-list/local-file-inclusion">File Inclusions</a> allow hackers to take control over what your visitors see on your website. These vulnerabilities can exist on any page, or they might be in your web server’s configurations or even in an outdated WordPress plugin.</p>
+
+<h3 id="why-should-hackers-hack-my-website">Why should hackers hack my website?</h3>
+
+<p>Hackers take over your website to do any of below malicious tasks.</p>
+
+<ul>
+  <li><a href="https://thehackernews.com/2022/04/over-16500-sites-hacked-to-distribute.html">Distributing malwares</a></li>
+  <li>Stealing your customers data</li>
+  <li>Making your web server a zombie and using it in DDOS attacks against other targets</li>
+  <li>Mining cryptocurrencies using your web server or your visitor’s CPU power</li>
+  <li>Using your servers for running software like proxy or spammers.</li>
+</ul>
+
+<p>You can see that even if no one visits your website, security is still essential because hackers can abuse your web server against inocent targets. Or, you might receive a costly bill from your hosting service because a hacker is using too much CPU power on your server to mine cryptocurrencies.</p>
+
+<h2 id="reputation-loss">Reputation loss</h2>
+
+<p>You run a website for a reason. It could be revenue, finding a job or being creative. A hacked website impacts your reputation. Bad reputations results in less visitors, less trust and less revenue or job interviews.</p>
+
+<p>Besides, not having a secure website has negative SEO impact. Google and other search engines penalize websites without SSL Certificate. If your site has <a href="/vulnerability-list/no-https">no HTTPS</a> and your competition does, Google punishes your websites, and your competitor website come up higher on Google search results than you are. Google Chrome also displays a red “Not secure” note in address bar for sites without SSL.</p>
+
+<p><img src="/assets/img/no-https-chrome.jpg" width="768" height="351" alt="Google Chrome displaying alert for non-https sites" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<p>Hacked website is a thread to visitors, so it’s no surprise to see that <a href="https://www.blog.google/products/search/search-spam-report-2017/">Google removes hacked website from search results</a>.</p>
+
+<p>When your website gets hacked, it can be added to specific black-lists like Google Safe Browsing list. The Safe Browsing lists—also referred to as threat lists or simply lists—are Google’s constantly updated lists of unsafe web resources. Many applications like browsers use these lists to prevent users from accessing a hacked website.</p>
+
+<p><img src="/assets/img/deceptive-site-ahead.png" width="768" height="477" alt="Google Chrome warning user about deceptive site" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<p>If your visitors get warned about security of your website, the chances are extremely low that they will buy on your website, invite you to interview or visit your site anyhow.</p>
+
+<h2 id="prevention-is-better-than-cure">Prevention is better than cure</h2>
+
+<p>OK, you got hacked! Now you have to clean up your website, restore your backup, remove your website from black-lists and inform your users. You lost your customers and revenue untill you’ve rebuilt the trust and reputation. That’s a enormous task to recover from a security incident, and it will cost you time and money.</p>
+
+<p>In most cases recovery and fixing a hacked website is a complex task that requires experts to do it manually, and of course it will not be for free.</p>
+
+<h2 id="how-vulnerable-is-your-website">How vulnerable is your website?</h2>
+
+<p>Hackers look for low hanging fruits. They look for high risk vulnerabilities in many websites (because any website can be usefull). Read more about hacker methods on <a href="/blog/how-do-hackers-hack">how hackers hack</a> article.</p>
+
+<p>Good news is you can be like hackers. You can find holes in your website before hackers find them.</p>
+
+<p>Testing security of your website is easy. There are dozen of web security testing tools out there you can use for free. <a href="https://www.arachni-scanner.com/">Arachni</a> and <a href="https://w3af.org/">w3af</a> are famous open source security scanners you can use.</p>
+
+<p><a href="/">SmartScanner</a> is an AI powered web security scanner aimed to be easy to use for everyone. <a href="/download">Download</a> and enter your website address for a free scan to find out about security of your website.</p>
+
+
+      
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="mt-14 lg:mt-[88px]">
+<h3 class="text-base font-semibold mb-9 mx-auto w-fit">You might also like:</h3>
+<div class="flex flex-wrap lg:flex-nowrap justify-between gap-[22px]">
+
+
+
+
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url();">
+        <a href="/vulnerability-list/apache-version-disclosure" class="resetLink flex w-full h-full"  aria-label="Read the full article: Apache Version Disclosure - Vulnerability">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" xml:space="preserve" role="img">
+            <title>Apache Version Disclosure - Vulnerability</title>
+            <switch>
+              <foreignobject x="0" y="0" width="100%" height="100%">
+                
+                
+                
+              <div xmlns="http://www.w3.org/1999/xhtml" class=" from-violet-800 to-fuchsia-800                                                        bg-gradient-to-r  text-white p-4 flex flex-col justify-center items-center h-full w-full">Apache Version Disclosure - Vulnerability</div>
+              </foreignobject>
+              
+              <text x="20" y="20">Apache Version Disclosure - Vulnerability</text>
+              </switch>
+            </svg>  
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/vulnerability-list/apache-version-disclosure">Apache Version Disclosure - Vulnerability</a></h3>
+    </div>
+   
+  
+  
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url();">
+        <a href="/vulnerability-list/asp-net-version-disclosure" class="resetLink flex w-full h-full"  aria-label="Read the full article: ASP.NET Version Disclosure - Vulnerability">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" xml:space="preserve" role="img">
+            <title>ASP.NET Version Disclosure - Vulnerability</title>
+            <switch>
+              <foreignobject x="0" y="0" width="100%" height="100%">
+                
+                
+                
+              <div xmlns="http://www.w3.org/1999/xhtml" class="        from-sky-800 to-teal-800                                                 bg-gradient-to-r  text-white p-4 flex flex-col justify-center items-center h-full w-full">ASP.NET Version Disclosure - Vulnerability</div>
+              </foreignobject>
+              
+              <text x="20" y="20">ASP.NET Version Disclosure - Vulnerability</text>
+              </switch>
+            </svg>  
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/vulnerability-list/asp-net-version-disclosure">ASP.NET Version Disclosure - Vulnerability</a></h3>
+    </div>
+   
+  
+  
+
+
+  
+   
+    
+    <div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow">
+      <div class="relative overflow-hidden mb-2">
+      <div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px]  min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url();">
+        <a href="/vulnerability-list/broken-link" class="resetLink flex w-full h-full"  aria-label="Read the full article: Broken Link - Vulnerability">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" xml:space="preserve" role="img">
+            <title>Broken Link - Vulnerability</title>
+            <switch>
+              <foreignobject x="0" y="0" width="100%" height="100%">
+                
+                
+                
+              <div xmlns="http://www.w3.org/1999/xhtml" class=" from-violet-800 to-fuchsia-800                                                        bg-gradient-to-r  text-white p-4 flex flex-col justify-center items-center h-full w-full">Broken Link - Vulnerability</div>
+              </foreignobject>
+              
+              <text x="20" y="20">Broken Link - Vulnerability</text>
+              </switch>
+            </svg>  
+          
+        </a>
+      </div>
+      </div>
+  
+      <h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/vulnerability-list/broken-link">Broken Link - Vulnerability</a></h3>
+    </div>
+   
+  
+  
+    
+</div>
+</div>
+
+    </div>
+  </article>
+</main>
+
+<script type="application/ld+json">
+[{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+    "@type": "ListItem",
+    "position": 1,
+    "name": "Blog",
+    "item": "https://www.thesmartscanner.com/blog/"
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "name": "3 reasons why any website's security is important"
+  }]
+},
+{ 
+ "@context": "https://schema.org", 
+ "@type": "BlogPosting",
+ 
+ "image": "/assets/img/website-security.jpg",
+ 
+ "headline": "3 reasons why any website's security is important"
+}]
+</script>  
+
+<section class="w-full bg-emerald-750 py-8 lg:py-10 px-4 xl:px-0">
+  <div class="max-w-6xl mx-auto flex flex-wrap gap-6 justify-center xl:justify-around items-center">
+    <h3 class="m-0 font-semibold text-xl lg:text-3xl text-white text-center xl:text-left">Scan security of your website with SmartScanner for free</h3>
+    <a href="/download?utm_source=blog&utm_medium=banner" class="resetLink text-lg lg:text-2xl leading-tight font-semibold h-12 lg:h-16 w-72 lg:w-80 rounded-[7px] lg:rounded-lg text-emerald-750 inline-flex items-center text-center justify-center bg-white transition-colors hover:bg-emerald-25">Download</a>
+  </div>
+</section>
+
+
+    <footer class="bg-[#EBF4F0] pt-[52px] lg:pt-20  [&_a]:leading-5 [&_a]:block">
+  <div class="max-w-6xl mx-auto bg-[#EBF4F0]">
+  <div class="flex flex-wrap justify-between mb-9 text-neutral-710 px-4 xl:px-0 gap-9">
+    <div class="w-[4.5rem] hidden lg:block">
+    <a href="/" class="resetLink" aria-label="Home page">
+    <img src="/assets/img/logo_opaque.svg" class="w-[3.75rem] mt-14" width="60" height="60" alt="SmartScanner Logo" aria-hidden="true">
+    </a>
+    </div>
+    
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Product</h4>
+    <a href="/features" class="resetLink hover:text-emerald-750 hover:underline mb-3 lg:mb-4">Why SmartScanner?</a>
+    <a href="/download" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Download the app</a>
+    <a href="/pricing" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Plans and Pricing</a>
+    <a href="/changelog" class="resetLink hover:text-emerald-750 hover:underline ">What’s New?</a>
+    </div>
+    
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Feature</h4>
+    <a href="/features/artificial-intelligence-security-scanner" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Artificial Intelligence</a>
+    <a href="/features/comprehensive-security-tests" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Comprehensive Security Testing</a>
+    <a href="/features/javascript-html5-spa-jamstack-serverless-react-security" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Security Testing of Modern Web</a>
+    <a href="/features" class="resetLink hover:text-emerald-750 hover:underline  ">Explore All Features...</a>
+    </div>
+
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Resource</h4>
+    <a href="/blog/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Blog</a>
+    <a href="/docs/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Documentation</a>
+    <a href="/vulnerability-list/" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Security Vulnerabilities</a>
+    <a href="/tools/robotstxt/" class="resetLink hover:text-emerald-750 hover:underline ">Online Robottxt Validator</a>
+    </div>
+
+    <div class="w-52">
+    <h4 class="font-semibold text-lg lg:text-xl leading-snug lg:leading-tight mb-4 lg:mb-7 text-neutral-725">Support</h4>
+    <a href="/contact" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">Contact Form</a>
+    <a href="/support#faq" class="resetLink hover:text-emerald-750 hover:underline  mb-3 lg:mb-4">FAQ</a>        
+    <div class="flex gap-3">
+      <a href="https://twitter.com/TheSmartScanner" class="resetLink hover:text-emerald-750 hover:underline " aria-labelledby="svgXid"><svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor " xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><title id="svgXid">Click to go to SmartScanner's X (Twitter) page</title><path d="M3.59812 3.80762L10.4745 13.0299L3.55469 20.5259H5.11294L11.1695 13.9611L16.0641 20.5259H21.3633L14.1014 10.7863L20.5407 3.80762H18.9852L13.4064 9.85233L8.89998 3.80762H3.59812ZM5.88935 4.95666H8.32446L19.0748 19.3741H16.6397L5.88935 4.95666Z"/></svg></a>
+      <a href="mailto:support@thesmartscanner.com" class="resetLink hover:text-emerald-750 hover:underline " aria-labelledby="svgMailid"><svg width="25" height="25" viewBox="0 0 25 25" fill="currentColor " xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><title id="svgMailid">Click to send an email to SmartScanner in your email software</title><path d="M5.07241 19.1689C4.61216 19.1689 4.22786 19.0148 3.91953 18.7064C3.6112 18.3981 3.45703 18.0138 3.45703 17.5536V6.78432C3.45703 6.32407 3.6112 5.93978 3.91953 5.63145C4.22786 5.32311 4.61216 5.16895 5.07241 5.16895H19.8417C20.3019 5.16895 20.6862 5.32311 20.9945 5.63145C21.3029 5.93978 21.457 6.32407 21.457 6.78432V17.5536C21.457 18.0138 21.3029 18.3981 20.9945 18.7064C20.6862 19.0148 20.3019 19.1689 19.8417 19.1689H5.07241ZM12.457 12.2843L4.45703 7.05357V17.5536C4.45703 17.7331 4.51472 17.8805 4.63011 17.9959C4.74549 18.1113 4.89292 18.1689 5.07241 18.1689H19.8417C20.0211 18.1689 20.1686 18.1113 20.284 17.9959C20.3993 17.8805 20.457 17.7331 20.457 17.5536V7.05357L12.457 12.2843ZM12.457 11.1689L20.1493 6.16895H4.76473L12.457 11.1689ZM4.45703 7.05357V6.16895V17.5536C4.45703 17.7331 4.51472 17.8805 4.63011 17.9959C4.74549 18.1113 4.89292 18.1689 5.07241 18.1689H4.45703V7.05357Z"/></svg></a>
+    </div>        
+    </div>
+  </div>
+  
+  <div class="flex flex-wrap justify-between border-t border-neutral-300 py-5 lg:py-6 px-4 xl:px-0 text-neutral-710 gap-3">
+    <div class="flex gap-2 items-center">
+    <span>©</span> <a href="/" class="resetLink hover:text-emerald-750 hover:underline ">TheSmartScanner.com</a>
+    </div>
+    
+    <div class="flex flex-wrap gap-3">
+      <a href="/privacy" class="resetLink hover:text-emerald-750 hover:underline ">Privacy Policy</a>
+      <a href="/terms" class="resetLink hover:text-emerald-750 hover:underline ">Terms of Service</a>
+      <a href="/eula" class="resetLink hover:text-emerald-750 hover:underline ">EULA</a>         
+    </div>
+  </div>
+  </div>
+</footer>
+
+
+  
+  <link rel="prefetch" href="/assets/js/prism.js">
+  
+
+  <div id="cookieConsent" style="display:none;" class="flex py-4 px-4 lg:px-6 shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full justify-between items-center flex-wrap lg:flex-nowrap gap-4 text-sm bg-white/60 backdrop-blur-md">
+  <p class="text-base mx-auto m-0 pr-4 lg:pr-0">We use cookies to enhance quality of our services and to analyze traffic. Read our <a href="/privacy" class="resetLink underline">privacy policy</a>.</p>
+  <div class="flex gap-2 w-full lg:w-fit">
+    <button onclick="consent.accept()" class="w-full lg:w-fit text-emerald-750 border border-emerald-750 rounded-[7px] h-10 min-w-24 flex items-center text-center justify-center bg-white transition-colors hover:text-emerald-750 hover:bg-emerald-25 active:bg-teal-100">OK, got it</button>
+    <button onclick="consent.reject()" class="py-1 px-2 hover:text-black absolute top-3 right-2 lg:[position:initial]">X</button>
+  </div>
+</div>
+<script defer type="text/javascript" src="/assets/js/cookie.min.js"></script>
+
+  </body>
+</html>
