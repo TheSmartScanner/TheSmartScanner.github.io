@@ -1,0 +1,967 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://www.thesmartscanner.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.thesmartscanner.com/" rel="alternate" type="text/html" /><updated>2026-02-23T12:21:33+00:00</updated><id>https://www.thesmartscanner.com/feed.xml</id><subtitle>SmartScanner is an AI-powered web vulnerability scanner for web application security testing.Download for free do website security scan find and fix vulnerabilities</subtitle><entry><title type="html">How to Test for React2Shell with SmartScanner</title><link href="https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner" rel="alternate" type="text/html" title="How to Test for React2Shell with SmartScanner" /><published>2026-02-23T00:00:00+00:00</published><updated>2026-02-23T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner"><![CDATA[<p><strong>React2Shell</strong> is a critical remote code execution (RCE) vulnerability affecting server-side components of React (CVE-2025-55182) and the <a href="https://nextjs.org/">Next.js framework</a> (CVE-2025-66478). When exploited, it allows attackers to execute arbitrary commands on vulnerable servers, potentially leading to full system compromise.</p>
+
+<p>With more than 440000 websites using Next.js, the impact of React2Shell is significant. If your applications are built with Next.js, you should test them immediately and apply patches where necessary.</p>
+
+<p>This guide explains how to detect React2Shell quickly and safely using <strong>SmartScanner</strong>.</p>
+
+<h2 id="why-use-smartscanner-to-test-for-react2shell">Why Use SmartScanner to Test for React2Shell?</h2>
+<p>Several scanners and proof-of-concept tools exist for React2Shell detection. However, SmartScanner provides key advantages:</p>
+
+<h3 id="1-smart-detection">1. Smart Detection</h3>
+<p>SmartScanner automatically checks whether a target is running Next.js before testing for React2Shell.
+This:</p>
+
+<ul>
+  <li>Reduces unnecessary requests</li>
+  <li>Minimizes noise</li>
+  <li>Lowers the risk of triggering WAF protections</li>
+</ul>
+
+<h3 id="2-direct--fast-detection">2. Direct &amp; Fast Detection</h3>
+<p>Many scanners rely on out-of-band (OOB) verification techniques. They send a request and wait for an external callback to confirm exploitation.
+This approach:</p>
+
+<ul>
+  <li>Slows down scanning</li>
+  <li>Can fail due to network issues</li>
+  <li>Produces false negatives</li>
+</ul>
+
+<p>SmartScanner detects React2Shell directly using a single request, making it significantly faster and more reliable.</p>
+
+<h3 id="3-safe-testing">3. Safe Testing</h3>
+<p>Some testing tools may unintentionally disrupt services or cause denial-of-service conditions during exploitation attempts. SmartScanner performs non-disruptive detection without interrupting normal server operations.</p>
+
+<p>These makes SmartScanner a faster, reliable and safer scanner for testing React2Shell.</p>
+
+<h2 id="how-to-detect-react2shell-with-smartscanner-gui">How to Detect React2Shell with SmartScanner (GUI)</h2>
+<p>Testing for React2Shell with SmartScanner is straightforward.</p>
+
+<h3 id="scan-a-single-target">Scan a Single Target</h3>
+
+<ol>
+  <li><a href="https://www.thesmartscanner.com/download">Download and install SmartScanner</a>.</li>
+  <li>Open SmartScanner.</li>
+  <li>Enter the target URL you want to test.</li>
+  <li>Click the <strong>gear icon</strong> to open configuration settings.</li>
+  <li>Deselect all tests except <strong>Next.js Tests</strong>.</li>
+  <li>Return to the main screen and click <strong>Start</strong>.</li>
+</ol>
+
+<p>If the target is vulnerable, the issue will appear in the <strong>Found Issues</strong> panel. You can click the finding to view technical details, request/response data and other useful contents.</p>
+
+<h3 id="scan-multiple-urls-for-react2shell">Scan Multiple URLs for React2Shell</h3>
+<p>You can quickly test a list of targets in bulk.</p>
+
+<ol>
+  <li>Prepare a text file containing a newline-separated list of URLs.</li>
+  <li>Open SmartScanner.</li>
+  <li>Drag and drop the file into the main input field<br />
+<em>(Alternatively, click the three-dot menu to browse and select the file.)</em></li>
+  <li>Open configuration settings (gear icon).</li>
+  <li>Disable all tests except <strong>Next.js Tests</strong>.</li>
+  <li>(Optional) Enable <strong>no-crawl</strong> to prevent scanning additional linked pages.</li>
+  <li>Start the scan.</li>
+</ol>
+
+<p>Any vulnerable targets will appear in the Findings section.</p>
+
+<style>
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1rem;
+}
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+
+<div class="youtube-wrapper">
+<iframe src="https://www.youtube.com/embed/XCPwVVX2FkQ?controls=0">
+</iframe>
+</div>
+
+<h2 id="using-smartscanner-cli-smsexe">Using SmartScanner CLI (sms.exe)</h2>
+<p>SmartScanner also includes a command-line version (<code>sms.exe</code>) for automation and CI/CD pipelines.</p>
+
+<blockquote>
+  <p><strong>Default installation path (Windows):</strong>
+<code>%LocalAppData%\Programs\SmartScanner\</code></p>
+</blockquote>
+
+<h3 id="scan-a-single-target-cli">Scan a Single Target (CLI)</h3>
+<p>Run the following command in Windows Command Prompt:</p>
+
+<pre><code class="language-powershell">sms.exe -t react2shell@r=1 localhost:3000
+</code></pre>
+
+<p>This executes the React2Shell test against <code>localhost:3000</code>.</p>
+
+<blockquote>
+  <p><strong>Note:</strong> The <code>r=1</code> parameter configures the trigger so the test runs on every user-input URL.</p>
+</blockquote>
+
+<p><img src="/assets/img/test-for-react2shell-with-smartscanner-cli.gif" width="1050" height="532" alt="SmartScanner CLI scanning localhost for react2shell vulnerability" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h4 id="smart-detection-with-framework-fingerprinting">Smart Detection with Framework Fingerprinting</h4>
+<p>To test for React2Shell <strong>only if</strong> the target is running Next.js, use:</p>
+
+<pre><code class="language-powershell">sms.exe -t React2Shell -t fingerprint -u localhost:3000
+</code></pre>
+
+<p>This command:</p>
+
+<ul>
+  <li>Runs the <code>fingerprint</code> test</li>
+  <li>Detects whether the target uses Next.js</li>
+  <li>Triggers the React2Shell test only if applicable</li>
+</ul>
+
+<p>This reduces unnecessary requests and improves stealth.</p>
+
+<p><img src="/assets/img/bulk-target-test-for-react2shell-with-smartscanner-cli.gif" width="1050" height="532" alt="SmartScanner CLI bulk scanning a list of URLs for react2shell vulnerability" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h3 id="scan-multiple-urls-with-cli">Scan Multiple URLs with CLI</h3>
+<p>To scan a list of URLs from a file:</p>
+
+<pre><code class="language-powershell">sms.exe -t react2shell -t fingerprint -f c:\url-list.txt
+</code></pre>
+
+<p>This command:</p>
+
+<ul>
+  <li>Reads URLs from <code>c:\url-list.txt</code></li>
+  <li>Performs fingerprinting</li>
+  <li>Tests for React2Shell only if Next.js is detected</li>
+</ul>
+
+<h2 id="final-recommendations">Final Recommendations</h2>
+
+<ul>
+  <li>Test all public-facing Next.js applications immediately</li>
+  <li>Re-scan after patching to verify remediation</li>
+  <li>Integrate SmartScanner CLI into CI/CD pipelines for continuous monitoring</li>
+  <li>Monitor vendor advisories and apply framework updates promptly</li>
+</ul>
+
+<p>React2Shell is a high-impact vulnerability. Proactive detection and remediation are critical to protecting your infrastructure.</p>
+
+<p>If you maintain Next.js applications, don’t delay, scan today!</p>]]></content><author><name></name></author><category term="Next.js" /><category term="HowTo" /><category term="CLI" /><category term="RCE" /><summary type="html"><![CDATA[Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list of URLs for Next.Js react2shell vulerability.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/testing-react2shell-with-smartscanner.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/testing-react2shell-with-smartscanner.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">🚀 SmartScanner 2.5 Is Here: Advanced Vulnerability Detection and Powerful New CLI Capabilities</title><link href="https://www.thesmartscanner.com/blog/smartscanner-2-5-is-here-advanced-vulnerability-detection-and-powerful-new-cli-capabilities" rel="alternate" type="text/html" title="🚀 SmartScanner 2.5 Is Here: Advanced Vulnerability Detection and Powerful New CLI Capabilities" /><published>2026-02-02T00:00:00+00:00</published><updated>2026-02-02T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-2-5-is-here-advanced-vulnerability-detection-and-powerful-new-cli-capabilities</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-2-5-is-here-advanced-vulnerability-detection-and-powerful-new-cli-capabilities"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner 2.5</strong>, bringing critical new vulnerability tests, expanded CLI control, and important stability improvements. This release focuses on giving security teams and researchers more precision, flexibility, and confidence when running targeted assessments.</p>
+
+<p>Let’s take a look at what’s new.</p>
+
+<h2 id="-new-vulnerability-tests">🧨 New Vulnerability Tests</h2>
+
+<h3 id="xml-external-entity-xxe-injection-detection">XML External Entity (XXE) Injection Detection</h3>
+
+<p>SmartScanner 2.5 introduces a new test for <a href="/vulnerability-list/xml-external-entity-injection-xxe"><strong>XML External Entity (XXE) Injection</strong></a>, helping you identify insecure XML parsers that could lead to sensitive file disclosure, SSRF, or even remote code execution in some environments.</p>
+
+<p>This addition strengthens coverage for applications that process XML-based data and APIs.</p>
+
+<h3 id="react2shell-cve-2025-55182-detection">React2Shell (CVE-2025-55182) Detection</h3>
+
+<p>We’ve added a dedicated test for <a href="/vulnerability-list/react2shell-cve-2025-66478"><strong>React2Shell (CVE-2025-55182)</strong></a>—a critical vulnerability that can lead to remote code execution in vulnerable React environments.</p>
+
+<p>With this new test, SmartScanner can help quickly identify exposed systems and reduce the risk of exploitation from this high-impact issue.</p>
+
+<h2 id="️-more-control-with-the-cli-smsexe">🖥️ More Control with the CLI (<code>sms.exe</code>)</h2>
+
+<p>SmartScanner 2.5 significantly enhances CLI flexibility:</p>
+
+<h3 id="selective-test-execution">Selective Test Execution</h3>
+
+<p>A new CLI argument allows you to <strong>explicitly select which tests to run</strong>, making scans faster and more focused. This is ideal for:</p>
+
+<ul>
+  <li>Regression testing</li>
+  <li>Targeted vulnerability validation</li>
+  <li>Custom security workflows</li>
+</ul>
+
+<h3 id="single-script-execution-mode">Single Script Execution Mode</h3>
+
+<p>You can now run a <strong>single scanning script</strong> against a list of input URLs. This is especially useful for:</p>
+
+<ul>
+  <li>Security research</li>
+  <li>Proof-of-concept validation</li>
+  <li>Narrow-scope assessments</li>
+</ul>
+
+<p>These additions make SmartScanner more adaptable to advanced and specialized use cases.</p>
+
+<h2 id="-updated-detection-rules--definitions">🔄 Updated Detection Rules &amp; Definitions</h2>
+
+<p>To ensure accurate and up-to-date coverage, we’ve refreshed detection logic and vulnerability definitions across multiple technologies:</p>
+
+<ul>
+  <li><strong>OpenSSL</strong></li>
+  <li><strong>WordPress</strong></li>
+  <li><strong>Apache</strong></li>
+  <li><strong>PHP</strong></li>
+</ul>
+
+<p>We’ve also expanded vulnerability definitions to support a broader range of tests, improving overall detection quality and consistency.</p>
+
+<h2 id="-stability--accuracy-improvements">🛠 Stability &amp; Accuracy Improvements</h2>
+
+<p>This release also includes important fixes to improve reliability:</p>
+
+<ul>
+  <li><strong>License Validation Fix:</strong> Resolved an issue that could incorrectly invalidate licenses if system date/time settings were changed.</li>
+  <li><strong>Reduced False Positives:</strong> Fixed a false detection of <em>Subresource Integrity Missing</em> when the scanned URL was not a network resource.</li>
+</ul>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+
+<p>SmartScanner 2.5 strengthens your ability to detect both modern and classic vulnerabilities—while giving you more control over how scans are executed. Whether you’re validating a specific CVE, running focused research, or building custom security workflows, this release is designed to help you work faster and more precisely.</p>
+
+<h2 id="get-started-with-smartscanner-25">Get Started with SmartScanner 2.5</h2>
+
+<p>SmartScanner 2.5 is available now.
+📥 <strong><a href="/download">Download</a> the latest version and upgrade your security testing today.</strong></p>
+
+<p>As always, thank you for using SmartScanner—and for helping us make it better with your feedback.</p>
+
+<p>Stay secure,
+<strong>The SmartScanner Team</strong></p>]]></content><author><name></name></author><category term="Release" /><category term="XXE" /><category term="Next.js" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner 2.5, bringing critical new vulnerability tests, expanded CLI control, and important stability improvements. This release focuses on giving security teams and researchers more precision, flexibility, and confidence when running targeted assessments.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.5-released.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.5-released.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">🚀 SmartScanner 2.4 Is Here! Faster, Smarter, and More Flexible Than Ever</title><link href="https://www.thesmartscanner.com/blog/smartscanner-2-4-is-here-faster,-smarter,-and-more-flexible-than-ever" rel="alternate" type="text/html" title="🚀 SmartScanner 2.4 Is Here! Faster, Smarter, and More Flexible Than Ever" /><published>2025-11-28T00:00:00+00:00</published><updated>2025-11-28T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/%F0%9F%9A%80-smartscanner-2-4-is-here-faster,-smarter,-and-more-flexible-than-ever</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-2-4-is-here-faster,-smarter,-and-more-flexible-than-ever"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner 2.4</strong>, delivering powerful new capabilities, smoother workflows, and enhanced vulnerability detection to help you secure your applications more effectively. This update focuses on flexibility, performance, and accuracy, based directly on feedback from our amazing community.</p>
+
+<h2 id="-license-transfers-made-effortless">🔐 License Transfers Made Effortless</h2>
+
+<p>Until now, moving your SmartScanner license from one machine to another could be inconvenient. With version 2.4, we’ve made this process <strong>simple, transparent, and fully self-service</strong>.</p>
+
+<p>You can now easily <a href="/docs/transfering-your-license-to-a-new-device"><strong>remove your license from one device and activate it on another</strong></a>, giving you complete control, especially valuable for users upgrading hardware or shifting between work environments.</p>
+
+<h2 id="️-request-rate-limiting-for-smarter-safer-scans">⚙️ Request Rate Limiting for Smarter, Safer Scans</h2>
+
+<p>High-speed scanning can sometimes overwhelm sensitive endpoints. SmartScanner 2.4 introduces <a href="/docs/scan-config-http"><strong>Request Rate Limiting</strong></a>, allowing you to customize the <strong>maximum number of requests per second</strong> during a scan.</p>
+
+<p>This gives you better control over:</p>
+
+<ul>
+  <li>Server impact</li>
+  <li>API rate quotas</li>
+  <li>Performance tuning</li>
+  <li>Stability when scanning fragile applications</li>
+</ul>
+
+<p>Whether you’re testing production, staging, or a personal sandbox, SmartScanner lets you scan at the pace that’s right for you.</p>
+
+<h2 id="️-more-powerful-cli-options">🖥️ More Powerful CLI Options</h2>
+
+<p>For automation enthusiasts and power users, the CLI (<code>sms.exe</code>) now supports <a href="/docs/smartscanner-config-file"><strong>passing a Scan Configuration File</strong></a>. This gives you fully reproducible scans with predefined targets, settings, and preferences, all triggered with a single command.</p>
+
+<p>Perfect for scripting, batch processing, and repeatable workflows.</p>
+
+<h2 id="-faster--more-accurate-detection">⚡ Faster &amp; More Accurate Detection</h2>
+
+<p>We’ve continued refining SmartScanner’s engine to make it faster and more precise than ever:</p>
+
+<h3 id="performance-optimizations"><strong>Performance Optimizations</strong></h3>
+
+<ul>
+  <li>Improved Chromium-based page evaluation ensures faster loading and fewer heavy operations.</li>
+  <li>Better JavaScript library detection means more accurate fingerprinting of client-side technologies.</li>
+</ul>
+
+<h3 id="updated-detection-rules"><strong>Updated Detection Rules</strong></h3>
+
+<p>We’ve enhanced vulnerability checks for:</p>
+
+<ul>
+  <li><strong>Vulnerable Tomcat Versions</strong></li>
+  <li><strong>Vulnerable OpenSSL Versions</strong></li>
+  <li><strong>Vulnerable WordPress Versions</strong></li>
+</ul>
+
+<p>Plus many updated vulnerability definitions to ensure you’re scanning with the most current intelligence.</p>
+
+<h2 id="-a-stronger-smarter-smartscanner">🎯 A Stronger, Smarter SmartScanner</h2>
+
+<p>Version 2.4 brings meaningful improvements across flexibility, performance, and security coverage. Whether you’re a penetration tester, a developer, or a security engineer, this release helps you work more efficiently and detect risks more accurately.</p>
+
+<p>📥 <strong><a href="/download">Download SmartScanner 2.4</a> today and experience the upgrade.</strong></p>]]></content><author><name></name></author><category term="Release" /><category term="CLI" /><category term="Configurations" /><category term="Premium" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner 2.4, delivering powerful new capabilities, smoother workflows, and enhanced vulnerability detection to help you secure your applications more effectively. This update focuses on flexibility, performance, and accuracy, based directly on feedback from our amazing community.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.4.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.4.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5 Key IT Security Measures Every Business Needs to Protect Online Transactions</title><link href="https://www.thesmartscanner.com/blog/5-key-it-security-measures-every-business-needs-to-protect-online-transactions" rel="alternate" type="text/html" title="5 Key IT Security Measures Every Business Needs to Protect Online Transactions" /><published>2025-11-14T00:00:00+00:00</published><updated>2025-11-14T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/5-key-it-security-measures-every-business-needs-to-protect-online-transactions</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/5-key-it-security-measures-every-business-needs-to-protect-online-transactions"><![CDATA[<p>Online transactions are no longer just a convenience—they’re the backbone of modern business. From processing customer payments to managing supplier invoices, organizations exchange sensitive data every second. With that, the stakes have never been higher.</p>
+
+<p>Cybercriminals today target businesses of all sizes—seeking valuable customer databases, payment gateways, and weak internal systems. Robust IT security is no longer optional; it’s the foundation of trust in any digital operation.</p>
+
+<p>Below are five essential measures companies can consider to strengthen online transaction security and maintain client, partner, and regulatory confidence.</p>
+
+<h2 id="1-encryption-protect-data-at-every-step">1. Encryption: Protect Data at Every Step</h2>
+
+<p>Encryption is one of the most powerful methods to safeguard sensitive data. It ensures that even if information—such as payment details, internal communications, or financial records—is intercepted, it remains unreadable without the proper decryption key.</p>
+
+<p>Business-grade encryption, such as <a href="https://www.ibm.com/docs/en/ns1-connect?topic=redirects-ssltls-certificates" target="_blank" rel="noopener noreferrer">SSL/TLS certificates</a>, transforms ordinary web portals into secure gateways. When processing online payments, customers should always see “https://” and the padlock symbol in the browser—both signals of an encrypted connection.</p>
+
+<p>Beyond websites, organizations are encouraged to encrypt stored data, employee communications, and backups. Proper encryption not only reduces the risk of data exposure but also supports compliance with data protection regulations.</p>
+
+<h2 id="2-multi-factor-authentication-mfa-reinforce-access-control">2. Multi-Factor Authentication (MFA): Reinforce Access Control</h2>
+
+<p>Passwords alone no longer provide sufficient protection against unauthorized access. <a href="https://www.cisa.gov/topics/cybersecurity-best-practices/multifactor-authentication" target="_blank" rel="noopener noreferrer">Multi-Factor Authentication (MFA)</a> introduces an additional layer of verification—such as a one-time code, biometric scan, or hardware token—before access is granted.</p>
+
+<p>In business environments, MFA is especially important for securing administrative dashboards, payment systems, and employee logins. Even if a password is compromised, MFA can prevent attackers from gaining entry.</p>
+
+<p>Many financial institutions, SaaS providers, and e-commerce platforms now consider MFA a standard safeguard, as it significantly reduces account takeover and fraud risks.</p>
+
+<h2 id="3-data-integrity-guarantee-accuracy-and-authenticity">3. Data Integrity: Guarantee Accuracy and Authenticity</h2>
+
+<p>Data integrity ensures that every transaction, invoice, and record remains accurate and unaltered from creation to storage.</p>
+
+<p>Hashing algorithms, for example, generate unique digital “fingerprints” for data—any change immediately alters that fingerprint, signaling potential tampering. This helps detect unauthorized modifications in financial transactions or stored customer information.</p>
+
+<p>Maintaining data integrity supports transparency, auditability, and compliance while reinforcing customer trust in digital transactions.</p>
+
+<h2 id="4-secure-payment-solutions-choose-trusted-providers">4. Secure Payment Solutions: Choose Trusted Providers</h2>
+
+<p>Businesses that handle online transactions should carefully evaluate payment platforms offering strong encryption, fraud prevention, and adherence to PCI DSS standards.</p>
+
+<p>Many reputable payment providers, such as <a href="https://www.paysafe.com/us-en/" target="_blank" rel="noopener noreferrer">Paysafe payment solutions</a>, employ tokenization, risk monitoring, and advanced authentication mechanisms to protect financial data. Using a secure, compliant platform not only enhances transaction security but can also reduce an organization’s overall liability exposure.</p>
+
+<p>Integrating such solutions demonstrates a commitment to security—helping businesses protect both data and reputation.</p>
+
+<h2 id="5-the-human-element-build-a-culture-of-security-awareness">5. The Human Element: Build a Culture of Security Awareness</h2>
+
+<p>Technology alone cannot prevent all threats. Employees play a critical role in maintaining security through awareness and vigilance.</p>
+
+<p>Ongoing <a href="https://www.cisa.gov/cybersecurity-training-exercises" target="_blank" rel="noopener noreferrer">cybersecurity training</a> should be part of every organization’s culture. Training programs help teams recognize phishing attempts, suspicious links, and social-engineering tactics—transforming staff from potential vulnerabilities into active defenders.</p>
+
+<p>Promoting awareness builds a security-first mindset across all levels of the company.</p>
+
+<h2 id="the-bottom-line">The Bottom Line</h2>
+
+<p>Protecting online transactions is a business-critical responsibility that extends beyond the IT department. In a digital economy built on trust, proactive security practices are a competitive advantage.</p>
+
+<p>Organizations that invest in encryption, authentication, integrity controls, secure payment systems, and employee awareness don’t just prevent breaches—they build long-term customer confidence and regulatory resilience.</p>
+
+<blockquote>
+  <p>Don’t wait for a security incident to act. Strengthen your defenses today—because in business, trust is earned through protection.</p>
+</blockquote>
+
+<h3 id="about-smartscanner"><em>About SmartScanner</em></h3>
+
+<p><em>At SmartScanner, we believe that secure digital ecosystems start with visibility. Our <a href="/web-vulnerability-scanner/">web vulnerability scanner</a> helps organizations detect and address potential web application risks before they can be exploited.</em></p>
+
+<p><a href="/">Learn more about SmartScanner →</a></p>
+
+<h3 id="disclaimer"><strong>Disclaimer</strong></h3>
+
+<blockquote>
+  <p>The information in this article is provided for general educational and informational purposes only and does not constitute legal, compliance, or cybersecurity advice. Organizations should consult qualified professionals before implementing specific security measures.</p>
+</blockquote>]]></content><author><name>Jordan Reyes</name></author><category term="SSL/TLS" /><category term="Encryption" /><summary type="html"><![CDATA[Online transactions are no longer just a convenience—they’re the backbone of modern business. From processing customer payments to managing supplier invoices, organizations exchange sensitive data every second. With that, the stakes have never been higher.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/luca-bravo-XJXWbfSo2f0-unsplash.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/luca-bravo-XJXWbfSo2f0-unsplash.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">SmartScanner 2.3: Smarter JavaScript Detection, Faster Scans, and Powerful CLI Enhancements</title><link href="https://www.thesmartscanner.com/blog/smartscanner-2-3-smarter-javascript-detection,-faster-scans,-and-powerful-cli-enhancements" rel="alternate" type="text/html" title="SmartScanner 2.3: Smarter JavaScript Detection, Faster Scans, and Powerful CLI Enhancements" /><published>2025-10-06T00:00:00+00:00</published><updated>2025-10-06T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-2-3-smarter-javascript-detection,-faster-scans,-and-powerful-cli-enhancements</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-2-3-smarter-javascript-detection,-faster-scans,-and-powerful-cli-enhancements"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner 2.3</strong>, a feature-rich update focused on improving client-side vulnerability detection, boosting scan performance, and giving you more control through the CLI and reporting.</p>
+
+<p>This release builds on our mission to deliver precise, efficient, and developer-friendly web vulnerability scanning. Let’s take a closer look at what’s new.</p>
+
+<h2 id="-new-features">🚀 New Features</h2>
+
+<h3 id="vulnerable-javascript-library-detection">Vulnerable JavaScript Library Detection</h3>
+
+<p>SmartScanner can now <strong>identify JavaScript libraries in use</strong> and test them against <strong>1,000+ publicly available client-side vulnerabilities</strong> from the GitHub Advisory Database. This means you’ll be alerted when your application is using outdated or insecure libraries, helping you quickly address risks in the front-end stack.</p>
+
+<h3 id="more-control-in-the-cli-smsexe">More Control in the CLI (<code>sms.exe</code>)</h3>
+
+<ul>
+  <li><strong>No-Crawl Mode:</strong> Run scans against a predefined list of URLs without crawling additional pages, ideal for targeted, script-driven workflows.</li>
+  <li><strong>Manual Scope:</strong> Define custom URL scopes using regex directly in the CLI, giving you fine-grained control over what gets scanned.</li>
+</ul>
+
+<h3 id="richer-reporting">Richer Reporting</h3>
+
+<ul>
+  <li><strong>JSON Reports:</strong> Now include vulnerability references and classifications for easier automation and tracking.</li>
+  <li><strong>PDF Reports:</strong> Include vulnerability classifications, making reports clearer for compliance and team handovers.</li>
+</ul>
+
+<h2 id="-improvements">⚡ Improvements</h2>
+
+<h3 id="smarter-faster-scans">Smarter, Faster Scans</h3>
+
+<ul>
+  <li><strong>Efficient JavaScript Evaluation:</strong>
+    <ul>
+      <li>Pages with the same script set are evaluated only once.</li>
+      <li>Pages with only analytics scripts (e.g., Google Analytics) are skipped, saving time.</li>
+    </ul>
+  </li>
+  <li><strong>Resilient JavaScript Handling:</strong> Better recovery from failures when evaluating complex, script-heavy pages.</li>
+  <li><strong>Optimized CPU Usage:</strong> SmartScanner now dynamically adapts to available CPU cores for faster, more efficient scans.</li>
+</ul>
+
+<h3 id="more-accurate-testing">More Accurate Testing</h3>
+
+<ul>
+  <li>Improved <strong>Sensitive Unreferenced Resource</strong> detection.</li>
+  <li>Reduced <strong>false positives</strong> across multiple tests, including data disclosure, CMS/server detection, hidden resources, and OS command execution.</li>
+</ul>
+
+<h2 id="-updates--fixes">🔄 Updates &amp; Fixes</h2>
+
+<ul>
+  <li><strong>Rule Updates:</strong> Enhanced detection for vulnerabilities in <a href="/vulnerability-list/vulnerable-nginx-version">Nginx</a> and <a href="/vulnerability-list/vulnerable-tomcat-version">Tomcat</a>.</li>
+  <li><strong>Bug Fixes:</strong>
+    <ul>
+      <li>Fixed duplicate reporting of the same secret across multiple URLs.</li>
+      <li>Fixed several false positives.</li>
+      <li>Fixed a rare crash during scans.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="why-this-matters">Why This Matters</h2>
+<p>Version 2.3 makes SmartScanner more effective at catching modern threats, especially those related to JavaScript libraries and client-side security. At the same time, we’ve made it faster, more resource-efficient, and easier to integrate into your workflow, whether you’re running scans manually or automating them through the CLI.</p>
+
+<h2 id="get-started-with-smartscanner-23">Get Started with SmartScanner 2.3</h2>
+<p>SmartScanner 2.3 is available now. <a href="/download">Download the latest version</a> and start securing your applications with faster, smarter scans.</p>
+
+<p>Stay secure,
+<strong>The SmartScanner Team</strong></p>]]></content><author><name></name></author><category term="Release" /><category term="npm" /><category term="JavaScript" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner 2.3, a feature-rich update focused on improving client-side vulnerability detection, boosting scan performance, and giving you more control through the CLI and reporting.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-version-2.3.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-version-2.3.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">🚀 SmartScanner 2.2 is Here: No More Secrets!</title><link href="https://www.thesmartscanner.com/blog/smartscanner-2-2-is-here-no-more-secrets" rel="alternate" type="text/html" title="🚀 SmartScanner 2.2 is Here: No More Secrets!" /><published>2025-08-01T00:00:00+00:00</published><updated>2025-08-01T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-2-2-is-here-no-more-secrets</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-2-2-is-here-no-more-secrets"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner 2.2</strong>, packed with meaningful improvements and new features designed to give you more control, better coverage, and a smoother scanning experience. From expanded test capabilities to important bug fixes, this update reflects our continued focus on precision, usability, and performance.</p>
+
+<p>Let’s walk through what’s new in this release.</p>
+
+<h2 id="-new-features">🔍 New Features</h2>
+
+<h3 id="sensitive-data-disclosure-detection">Sensitive Data Disclosure Detection</h3>
+
+<p>SmartScanner 2.2 introduces a powerful new test for detecting <a href="/vulnerability-list/sensitive-data-disclosure">Sensitive Data Disclosure</a>. This helps uncover exposed information such as:</p>
+
+<ul>
+  <li>API keys and access tokens</li>
+  <li>Credentials in code or comments</li>
+</ul>
+
+<p>This addition strengthens your ability to prevent accidental data leaks that could otherwise become an entry point for attackers.</p>
+
+<h3 id="powered-by-trusted-patterns">Powered by Trusted Patterns</h3>
+
+<p>Our new <strong>Sensitive Data Disclosure test</strong> is built using detection patterns inspired by the excellent <a href="https://github.com/gitleaks/gitleaks">gitleaks</a> project. While the scanning logic is fully developed in-house, we’ve incorporated some of the same proven rulesets to enhance detection coverage for secrets, credentials, and other exposed data.</p>
+
+<p>This allows us to deliver precise, high-confidence results while ensuring full integration into SmartScanner’s existing engine and reporting system.</p>
+
+<h3 id="no-crawl-option-for-targeted-scans">No-Crawl Option for Targeted Scans</h3>
+
+<p>Need to scan a predefined list of URLs without crawling? Now you can. SmartScanner 2.2 includes a <strong>no-crawl mode</strong> perfect for tight scope assessments or automation workflows where crawl behavior isn’t needed. Just provide a list of URLs, and we’ll take it from there without crawling beyond them.</p>
+
+<p><img src="/assets/img/using-no-crawl-option.gif" width="525" height="367" alt="Scanning target list with no-crawl option" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<h3 id="javascript-file-scanning">JavaScript File Scanning</h3>
+
+<p>You can now directly scan standalone JavaScript (<code>.js</code>) files. This allows you to inspect public scripts for issues such as insecure APIs, exposed secrets, or obfuscated malicious code, giving you broader coverage for both client-side and back-end assets.</p>
+
+<h2 id="-smarter-and-smoother-experience">🧠 Smarter and Smoother Experience</h2>
+
+<h3 id="improved-manual-login-workflow">Improved Manual Login Workflow</h3>
+
+<p>We’ve refined the manual login process: the browser window now <strong>auto-fills the target URL</strong> when launched, saving time and making the process more intuitive, especially helpful when working with authentication-heavy web apps.</p>
+
+<h2 id="-detection-rule-updates">🔄 Detection Rule Updates</h2>
+
+<p>We’ve updated several core vulnerability checks to reflect the latest threat intelligence and software versions. These enhancements improve detection accuracy for:</p>
+
+<ul>
+  <li><a href="/vulnerability-list/vulnerable-apache-version">Vulnerable Apache Versions</a></li>
+  <li><a href="/vulnerability-list/vulnerable-tomcat-version">Vulnerable Tomcat Versions</a></li>
+  <li><a href="/vulnerability-list/vulnerable-php-version">Vulnerable PHP Versions</a></li>
+  <li><a href="/vulnerability-list/vulnerable-openssl-version">Vulnerable OpenSSL Versions</a></li>
+</ul>
+
+<p>Keeping these rules current ensures that SmartScanner stays ahead of emerging threats.</p>
+
+<h2 id="-bug-fixes">🛠 Bug Fixes</h2>
+
+<p>We also resolved a couple of important issues:</p>
+
+<ul>
+  <li><strong>Crash during scan:</strong> Fixed a rare but disruptive crash that could occur mid-scan.</li>
+  <li><strong>Report truncation issue:</strong> Fixed a bug where HTTP responses in reports were improperly truncated, causing proof-of-concept payloads to be partially hidden.</li>
+</ul>
+
+<h2 id="final-thoughts">Final Thoughts</h2>
+
+<p>SmartScanner 2.2 is another step forward in making web vulnerability scanning more accurate, efficient, and Smarter. Whether you’re performing ad hoc security reviews, scanning during deployments, or using SmartScanner manually, this release gives you more precision and control over how scans are executed and reported.</p>
+
+<p>As always, we’re grateful for your feedback and support. Try out the new version and let us know what you think!</p>
+
+<blockquote>
+  <p>Ready to upgrade? <a href="/download">Download SmartScanner 2.2 Free now</a></p>
+</blockquote>
+
+<p>Stay secure,
+<strong>The SmartScanner Team</strong></p>]]></content><author><name></name></author><category term="Release" /><category term="Sensitive Data Exposure" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner 2.2, packed with meaningful improvements and new features designed to give you more control, better coverage, and a smoother scanning experience. From expanded test capabilities to important bug fixes, this update reflects our continued focus on precision, usability, and performance.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.2-released.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2.2-released.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">🚀 SmartScanner 2.1 Is Here – Smarter, Deeper, and More Flexible Than Ever</title><link href="https://www.thesmartscanner.com/blog/smartscanner-2-1-is-here-smarter,-deeper,-and-more-flexible-than-ever" rel="alternate" type="text/html" title="🚀 SmartScanner 2.1 Is Here – Smarter, Deeper, and More Flexible Than Ever" /><published>2025-05-19T00:00:00+00:00</published><updated>2025-05-19T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/smartscanner-2-1-is-here-%E2%80%93-smarter,-deeper,-and-more-flexible-than-ever</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/smartscanner-2-1-is-here-smarter,-deeper,-and-more-flexible-than-ever"><![CDATA[<p>We’re excited to announce the release of <strong>SmartScanner version 2.1</strong>, packed with powerful new features, deeper scanning capabilities, and key performance improvements to help you secure your web applications more efficiently.</p>
+
+<p>Whether you’re a developer, security professional, or IT administrator, this update brings several enhancements that make scanning faster, more accurate, and easier to customize.</p>
+
+<h2 id="-smarter-scanning-for-multiple-urls">🔍 Smarter Scanning for Multiple URLs</h2>
+
+<p>SmartScanner 2.1 introduces <strong>multi-URL scanning</strong> – you can now enter multiple URLs directly or upload a file containing them. You can even <strong>drag and drop your file</strong> into the application for a seamless experience.</p>
+
+<p>When scanning multiple URLs:</p>
+
+<ul>
+  <li>The <strong>domains of all URLs are automatically added to the crawl scope</strong>.</li>
+  <li>Your <strong>entered URLs are used as starting points</strong>, ensuring a broad and efficient scan.</li>
+  <li>These initial URLs are subjected to <strong>deeper testing with an expanded payload set</strong> for more accurate vulnerability detection.</li>
+</ul>
+
+<h3 id="️-see-it-in-action">📽️ See It in Action</h3>
+
+<p><em>Here’s a quick look at how easy it is to input multiple URLs and upload a list for scanning:</em></p>
+
+<p><img src="/assets/img/smartscanner-scan-url-list.gif" width="800" height="531" alt="Scanning multiple URLs and URL list file with SmartScanner" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;" /></p>
+
+<blockquote>
+  <p>💡 Tip: You can use both typed URLs and file uploads together in the same scan.</p>
+</blockquote>
+
+<h2 id="️-more-control-with-manual-scope-and-javascript-settings">🛠️ More Control with Manual Scope and JavaScript Settings</h2>
+
+<p>New configuration options give you greater control over how scans are performed:</p>
+
+<ul>
+  <li><strong>Manual Crawl Scope</strong>: Fine-tune which domains or paths are included in the scan.</li>
+  <li><strong>JavaScript Evaluation Toggle</strong>: Disable Chromium-based JavaScript rendering if you prefer lighter scans or are scanning simple/static sites.</li>
+</ul>
+
+<h2 id="-other-highlights">💡 Other Highlights</h2>
+
+<ul>
+  <li><strong>Server-Side Request Forgery (SSRF)</strong> is now a standalone test, renamed and separated from the older Remote URL Disclosure category.</li>
+  <li>Improved detection of <strong>SEO-friendly and dynamic URLs</strong>.</li>
+  <li>Faster and more accurate crawling, especially for <strong>AJAX-driven content</strong>.</li>
+  <li>Enhanced identification of custom <code>200 OK</code> and <code>404 Not Found</code> pages.</li>
+</ul>
+
+<h2 id="-updated-vulnerability-checks">🧠 Updated Vulnerability Checks</h2>
+
+<p>We’ve refined our detection logic for several technologies, including:</p>
+
+<ul>
+  <li>Vulnerable <strong>Tomcat</strong>, <strong>PHP</strong>, and <strong>WordPress</strong> versions.</li>
+</ul>
+
+<p>This ensures you’re protected against the latest known risks.</p>
+
+<h2 id="-bug-fixes-and-stability">🐞 Bug Fixes and Stability</h2>
+
+<p>In addition to usability enhancements, this release includes important <strong>bug fixes</strong>, such as:</p>
+
+<ul>
+  <li>Fixed an issue with <strong>Pro version license registration</strong></li>
+  <li>Backend updates for improved <strong>stability and compatibility</strong> across systems</li>
+</ul>
+
+<h2 id="️-download-smartscanner-21-now">⬇️ Download SmartScanner 2.1 Now</h2>
+
+<p>Ready to try out the new version?
+Download SmartScanner 2.1 today and experience a smarter, more flexible approach to web vulnerability scanning.</p>
+
+<p>👉 <a href="/download">Download SmartScanner</a></p>]]></content><author><name></name></author><category term="Release" /><summary type="html"><![CDATA[We’re excited to announce the release of SmartScanner version 2.1, packed with powerful new features, deeper scanning capabilities, and key performance improvements to help you secure your web applications more efficiently.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2-1.png" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/smartscanner-v2-1.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Exploiting Server Version Disclosure</title><link href="https://www.thesmartscanner.com/blog/exploiting-server-version-disclosure" rel="alternate" type="text/html" title="Exploiting Server Version Disclosure" /><published>2025-04-17T00:00:00+00:00</published><updated>2025-04-17T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/exploiting-server-version-disclosure</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/exploiting-server-version-disclosure"><![CDATA[<h2 id="what-is-server-version-disclosure">What Is Server Version Disclosure?</h2>
+
+<p><strong>Server Version Disclosure</strong> occurs when a web server exposes its software name and version number in the <code>Server</code> HTTP response header. This header may also reveal the operating system or other internal components used by the server.</p>
+
+<p>Exposing this information helps attackers identify known vulnerabilities specific to the disclosed versions, making it easier to launch targeted attacks.</p>
+
+<h2 id="how-to-detect-server-version-disclosure">How to Detect Server Version Disclosure</h2>
+
+<p>Detecting server version disclosure is simple and passive. The <code>Server</code> header is present in most HTTP responses. You can view it using browser developer tools or any HTTP client, such as <code>curl</code>:</p>
+
+<pre><code class="language-bash">$ curl -I example.com
+
+HTTP/1.1 200 OK  
+Date: Mon, 17 Mar 2025 10:25:28 GMT  
+Server: Apache/2.4.50 (Debian)  
+Content-Type: text/html  
+</code></pre>
+
+<p>In the example above, the server reveals:</p>
+<ul>
+  <li>Web server software: <strong>Apache</strong></li>
+  <li>Version: <strong>2.4.50</strong></li>
+  <li>Operating system: <strong>Debian</strong></li>
+</ul>
+
+<blockquote>
+  <p>⚠️ Note: The <code>Server</code> header might be absent or obfuscated based on server settings. For reliable detection, use an automated scanner like <a href="/download"><strong>SmartScanner</strong></a>.</p>
+</blockquote>
+
+<p>ℹ️ also read: <a href="/blog/why-you-should-use-passive-vulnerability-scan-on-your-website">Why you should use passive vulnerability scan on your website</a></p>
+
+<h2 id="how-attackers-exploit-server-version-disclosure">How Attackers Exploit Server Version Disclosure</h2>
+
+<p>While the <code>Server</code> header itself isn’t a direct vulnerability, it enables attackers to:</p>
+<ul>
+  <li>Identify the exact server version</li>
+  <li>Search for related public exploits on platforms like <a href="https://www.cvedetails.com/" target="_blank" rel="noopener noreferrer">CVE Details</a> or Exploit-DB</li>
+</ul>
+
+<p><strong>Example:</strong> If <code>Server: Apache/2.4.50</code> is exposed, searching reveals <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-41773" target="_blank" rel="noopener noreferrer">CVE-2021-41773</a>, a high-severity RCE vulnerability. Public exploits for it exist, making exploitation trivial.</p>
+
+<blockquote>
+  <p>⚠️ Headers can be faked, but most often they reveal accurate information unless explicitly configured otherwise.</p>
+</blockquote>
+
+<h2 id="how-to-prevent-server-version-disclosure">How to Prevent Server Version Disclosure</h2>
+
+<p>Most web servers allow you to disable or customize the <code>Server</code> header. Here are guides for popular platforms:</p>
+
+<ul>
+  <li><a href="/vulnerability-list/apache-version-disclosure">Hide Apache Server Version</a></li>
+  <li><a href="/vulnerability-list/nginx-version-disclosure">Hide Nginx Server Version</a></li>
+  <li><a href="/vulnerability-list/server-version-disclosure/#fix-server-version-disclosure-in-tomcat">Hide Tomcat Server Version</a></li>
+</ul>
+
+<blockquote>
+  <p>⚠️ Obscuring version info does <strong>not fix</strong> the underlying vulnerabilities. Always keep your software updated to the latest secure versions.</p>
+</blockquote>
+
+<p>💡 More about Http headers: <a href="/blog/complete-guide-to-http-headers-for-securing-websites-cheat-sheet">Complete HTTP Headers Cheat Sheet</a></p>
+
+<h2 id="bonus-aspnet-version-disclosure">Bonus: ASP.NET Version Disclosure</h2>
+
+<p>In ASP.NET environments, the following headers may expose sensitive version info:</p>
+<ul>
+  <li><code>X-AspNet-Version</code></li>
+  <li><code>X-AspNetMvc-Version</code></li>
+</ul>
+
+<p>Learn how to disable them here:
+👉 <a href="/vulnerability-list/asp-net-version-disclosure">Fix ASP.NET Version Disclosure</a></p>
+
+<p>Was that interesting? Continue reading this: <a href="/blog/5-security-vulnerabilities-you-can-fix-right-now">5 Security Vulnerabilities You Can Fix Right Now</a></p>]]></content><author><name></name></author><category term="Information Disclosure" /><category term="Vulnerability" /><category term="Exploit" /><category term="Passive" /><category term="CVE" /><category term="HTTP Headers" /><summary type="html"><![CDATA[Discover what Server Version Disclosure is, how it exposes your web server to attacks, and how to prevent it on Apache, Nginx, Tomcat, and ASP.NET. Includes detection tips, examples, and security best practices.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/hacker-looking-into-server-header.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/hacker-looking-into-server-header.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">5 Quick Wins: Exploit These Vulnerabilities for Huge Bug Bounty Paydays</title><link href="https://www.thesmartscanner.com/blog/5-quick-wins-exploit-these-vulnerabilities-for-huge-bug-bounty-paydays" rel="alternate" type="text/html" title="5 Quick Wins: Exploit These Vulnerabilities for Huge Bug Bounty Paydays" /><published>2025-04-01T00:00:00+00:00</published><updated>2025-04-01T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/5-quick-wins-exploit-these-vulnerabilities-for-huge-bug-bounty-paydays</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/5-quick-wins-exploit-these-vulnerabilities-for-huge-bug-bounty-paydays"><![CDATA[<p>Bug bounty hunters can earn enormous rewards, with top programs paying over $10,000 for critical vulnerabilities. But finding these flaws isn’t easy— many high-value vulnerabilities require deep technical expertise. This guide focuses on <strong>five vulnerabilities that are easier to exploit yet still offer big rewards.</strong></p>
+
+<h3 id="understanding-the-bug-bounty-landscape">Understanding the Bug Bounty Landscape</h3>
+<p>According to different reports, web vulnerabilities are widespread, affecting <strong>50% to 65% of websites</strong>. While some issues, like missing security headers, are too minor to earn bounties, others can expose sensitive data and create severe security risks.</p>
+
+<p>Instead of targeting highly complex privilege escalation flaws, we focus on vulnerabilities that are relatively easy to find and provide high payouts for ethical hackers. This list is based on real-world reports from leading bug bounty platforms like <a href="https://www.hackerone.com/report/hacker-powered-security" target="_blank" rel="noopener noreferrer">HackerOne</a> and <a href="https://www.bugcrowd.com/resource/top-10-vulnerabilities/" target="_blank" rel="noopener noreferrer">Bugcrowd</a>.</p>
+
+<h2 id="1-insecure-direct-object-reference-idor">1. Insecure Direct Object Reference (IDOR)</h2>
+<table class="text-base my-4 mb-8">
+  <tbody>
+    <tr>
+      <td>💰 Average Payout</td>
+      <td align="right" class="px-1"><strong>$1,285</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Hard</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-idor-is-dangerous">Why IDOR is Dangerous</h3>
+<p>IDOR flaws allow attackers to manipulate object references, gaining unauthorized access to private data. This is a common issue that can be found when <a href="/api-security-scanner/">testing security of APIs</a>; specially in handling user accounts or sensitive records.</p>
+
+<h3 id="how-to-identify-idor">How to Identify IDOR</h3>
+<ul>
+  <li>Look for endpoints using <code>id=</code>, <code>user_id=</code>, <code>account_number=</code>, etc.</li>
+  <li>Modify IDs in requests and observe if you can access other users’ data.</li>
+  <li>Check API responses for unexpected access to restricted information.</li>
+</ul>
+
+<h3 id="best-tools-for-idor-detection">Best Tools for IDOR Detection</h3>
+<p>Automation IDOR detection is hard due to authentication requirements and a lack of predictable patterns. Useful tools:</p>
+<ul>
+  <li><strong><a href="https://github.com/Quitten/Autorize" target="_blank" rel="noopener noreferrer">Autorize</a></strong> can assist in detecting IDOR.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> – Uses AI to analyze response patterns, making it superior to traditional scanners.</li>
+</ul>
+
+<h2 id="2-sql-injection-sqli">2. SQL Injection (SQLi)</h2>
+<table class="text-base my-4 mb-8">
+  <tbody>
+    <tr>
+      <td>💰 Average Payout</td>
+      <td align="right" class="px-1"><strong>$1,084</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Easy</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-sqli-is-dangerous">Why SQLi is Dangerous</h3>
+<p>SQL Injection enables attackers to execute malicious queries, extract sensitive database records, or even gain administrative access.</p>
+
+<h3 id="how-to-identify-sqli">How to Identify SQLi</h3>
+<ul>
+  <li>Submit special characters (<code>'</code>, <code>--</code>, <code>;</code>) in input fields and observe errors.</li>
+  <li>Use payloads like <code>OR 1=1</code> or <code>UNION SELECT</code> to manipulate responses.</li>
+  <li>Look for error messages exposing database structure.</li>
+</ul>
+
+<h3 id="best-tools-for-sqli-detection">Best Tools for SQLi Detection</h3>
+<ul>
+  <li><strong><a href="https://github.com/sqlmapproject/sqlmap" target="_blank" rel="noopener noreferrer">SQLmap</a></strong> – Automated SQLi detection tool.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> – Crawls the entire site to detect injection points with minimal requests, increasing efficiency and reducing false positives.</li>
+</ul>
+
+<h2 id="3-cross-site-scripting-xss">3. Cross-Site Scripting (XSS)</h2>
+<table class="text-base mb-8">
+  <tbody>
+    <tr>
+      <td>💰 Average Payout</td>
+      <td align="right" class="px-1"><strong>$577</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-xss-is-dangerous">Why XSS is Dangerous</h3>
+<p>XSS allows attackers to inject malicious scripts, hijack user sessions, or steal sensitive data.</p>
+
+<h3 id="how-to-identify-xss">How to Identify XSS</h3>
+<ul>
+  <li>Insert <code>&lt;script&gt;alert(1)&lt;/script&gt;</code> into input fields and check execution.</li>
+  <li>Look for unescaped user input reflected in the page response.</li>
+  <li>Test for stored XSS in user-generated content.</li>
+</ul>
+
+<h3 id="best-tools-for-xss-detection">Best Tools for XSS Detection</h3>
+<ul>
+  <li><strong><a href="https://github.com/s0md3v/XSStrike" target="_blank" rel="noopener noreferrer">XSStrike</a></strong> – Detects and exploits XSS vulnerabilities.</li>
+  <li><strong><a href="https://www.zaproxy.org/" target="_blank" rel="noopener noreferrer">OWASP ZAP</a></strong> – Open-source security scanner.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> – Simulates real browser behavior, detecting <strong>multi-step XSS attacks</strong>.</li>
+</ul>
+
+<h2 id="4-information-disclosure">4. Information Disclosure</h2>
+<table class="text-base mb-8">
+  <tbody>
+    <tr>
+      <td>💰 Average Payout</td>
+      <td align="right" class="px-1"><strong>$511</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Easy</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-information-disclosure-is-dangerous">Why Information Disclosure is Dangerous</h3>
+<p>Sensitive information leaks, such as API keys, credentials, or internal logs, can expose an entire system to attack.</p>
+
+<h3 id="how-to-identify-information-disclosure">How to Identify Information Disclosure</h3>
+<ul>
+  <li>Look for error messages revealing system paths, database structures, or debug info.</li>
+  <li>Scan for exposed <code>.git</code> or <code>.env</code> files.</li>
+  <li>Search for leaked credentials in web responses.</li>
+</ul>
+
+<h3 id="best-tools-for-detection">Best Tools for Detection</h3>
+<ul>
+  <li><strong><a href="https://www.kali.org/tools/dirbuster/" target="_blank" rel="noopener noreferrer">DirBuster</a></strong> – Brute force directories and files names on web/application servers.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> Detects different information disclosures like exposed secrets, error messages, and backup files with AI-driven heuristics in the whole website leading to more findings.</li>
+</ul>
+
+<h2 id="5-open-redirect--exploit-url-manipulation">5. Open Redirect – Exploit URL Manipulation</h2>
+<table class="text-base mb-8">
+  <tbody>
+    <tr>
+        <td>💰 Average Payout</td>
+        <td align="right" class="px-1"><strong>$241</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Easy</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-open-redirect-is-dangerous">Why Open Redirect is Dangerous</h3>
+<p>Open redirects occur when an application allows users to control redirection URLs, enabling phishing or malicious site redirections.</p>
+
+<h3 id="how-to-identify-open-redirects">How to Identify Open Redirects</h3>
+<ul>
+  <li>Look for URLs containing <code>redirect=</code>, <code>url=</code>, <code>next=</code>, or <code>return=</code> parameters.</li>
+  <li>Modify these parameters to point to an external malicious site.</li>
+  <li>Test if input validation prevents redirection abuse.</li>
+</ul>
+
+<h3 id="best-tools-for-detection-1">Best Tools for Detection</h3>
+<ul>
+  <li><strong><a href="https://github.com/devanshbatham/OpenRedireX" target="_blank" rel="noopener noreferrer">OpenRedirex</a></strong> – Detects open redirects.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> – Checks for bypass techniques and phishing exploit risks with zero configuration, unlike many manual configuration-heavy tools.</li>
+</ul>
+
+<h2 id="bonus-content-spoofing">Bonus: Content Spoofing</h2>
+<table class="text-base mb-8">
+  <tbody>
+    <tr>
+      <td>💰 Average Payout</td>
+      <td align="right" class="px-1"><strong>Varies</strong></td>
+    </tr>
+    <tr>
+      <td>🧑‍💻 Manual Testing Difficulty</td>
+      <td align="right" class="px-1"><strong>Easy</strong></td>
+    </tr>
+    <tr>
+      <td>🤖 Automated Scan Difficulty</td>
+      <td align="right" class="px-1"><strong>Medium</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="why-content-spoofing-is-dangerous">Why Content Spoofing is Dangerous</h3>
+<p>Content spoofing allows attackers to manipulate visible website content, leading to phishing attacks or misinformation.</p>
+
+<h3 id="how-to-identify-content-spoofing">How to Identify Content Spoofing</h3>
+<ul>
+  <li>Look for unsanitized parameters affecting page content.</li>
+  <li>Modify text values and observe UI changes.</li>
+  <li>Test for missing input validation.</li>
+</ul>
+
+<h3 id="best-tools-for-detection-2">Best Tools for Detection</h3>
+<ul>
+  <li><strong><a href="https://github.com/s0md3v/XSStrike" target="_blank" rel="noopener noreferrer">XSStrike</a></strong> – Can be used to test for XSS-based spoofing.</li>
+  <li><strong><a href="/download">SmartScanner</a></strong> – Automates detection of spoofing vulnerabilities.</li>
+</ul>
+
+<h2 id="conclusion-make-your-bug-hunting-more-efficient">Conclusion: Make Your Bug Hunting More Efficient</h2>
+<p>Bug bounty hunting is competitive, but by focusing on these high-reward vulnerabilities, you can maximize your success.</p>
+
+<h3 id="why-smartscanner-is-the-best-choice">Why SmartScanner is the Best Choice</h3>
+<ul>
+  <li><strong>Advanced Crawler</strong> – Scans entire websites, not just single URLs.</li>
+  <li><strong>Smart &amp; Efficient</strong> – Finds vulnerabilities with <strong>minimal requests</strong> to avoid detection.</li>
+  <li><strong>AI-Powered Analysis</strong> – Uses AI to reduce false negatives and detects complex issues.</li>
+  <li><strong>Zero Configuration</strong> – Works out-of-the-box, saving setup time.</li>
+</ul>
+
+<p>🚀 <strong>Start using SmartScanner today to enhance your bug-hunting efforts!</strong></p>
+
+<p><a href="/download" class="resetLink text-lg leading-tight my-4 font-semibold h-12 px-6 rounded-full w-fit mx-auto bg-emerald-750 flex items-center text-center justify-center text-white hover:text-white transition-colors hover:bg-emerald-775  relative  isolate overflow-hidden before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-rose-100/20 before:to-transparent">Download Free SmartScanner</a></p>]]></content><author><name></name></author><category term="XSS" /><category term="IDOR" /><category term="SQLI" /><category term="Information Disclosure" /><category term="Passive" /><category term="URL Redirection" /><category term="Bug Bounty" /><summary type="html"><![CDATA[Discover 5 high-paying vulnerabilities that ethical hackers exploit for big bug bounty rewards. Learn how to find and scan for IDOR, SQLi, XSS, and more with manual techniques and top security tools, including SmartScanner. Maximize your earnings with these expert insights!]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/high-reward-bounty.webp" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/high-reward-bounty.webp" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">How Businesses Can Effectively Handle Security Incidents and Achieve Compliance</title><link href="https://www.thesmartscanner.com/blog/how-businesses-can-effectively-handle-security-incidents-and-achieve-compliance" rel="alternate" type="text/html" title="How Businesses Can Effectively Handle Security Incidents and Achieve Compliance" /><published>2025-03-07T00:00:00+00:00</published><updated>2025-03-07T00:00:00+00:00</updated><id>https://www.thesmartscanner.com/blog/how-businesses-can-effectively-handle-security-incidents-and-achieve-compliance</id><content type="html" xml:base="https://www.thesmartscanner.com/blog/how-businesses-can-effectively-handle-security-incidents-and-achieve-compliance"><![CDATA[<p>In an era where cyber threats are not a matter of if, but when, businesses are challenged to navigate the complex waters of incident response while ensuring they meet stringent compliance standards. This guide delves into practical strategies for managing security incidents in line with ISO 27001, showcasing how organizations can fortify their defenses and maintain compliance.</p>
+
+<h2 id="understanding-security-incidents">Understanding Security Incidents</h2>
+
+<p>A security incident can disrupt operations, expose sensitive data, or even compromise the integrity of business processes. From malware attacks to insider threats, each incident demands a specific approach, tailored to both mitigate immediate risks and prevent future occurrences.</p>
+
+<h2 id="incident-management-the-iso-27001-approach">Incident Management: The ISO 27001 Approach</h2>
+
+<h3 id="preparation">Preparation</h3>
+
+<ul>
+  <li><strong>Policy and Procedures</strong>: Develop an incident management policy aligned with ISO 27001 incident management solutions. This policy should detail incident classification, response team roles, and escalation procedures.  </li>
+  <li><strong>Training</strong>: Equip your team with the knowledge to detect, respond to, and report incidents. Training should cover ISO 27001 <a href="https://feelagile.com/en/pourquoi-la-certification-iso-27001-va-devenir-obligatoire/">certification</a> requirements to ensure staff actions support compliance.</li>
+</ul>
+
+<h3 id="detection-and-reporting">Detection and Reporting</h3>
+
+<ul>
+  <li><strong>Monitoring Tools</strong>: Leverage technology to detect incidents early. Security Information and Event Management (SIEM) systems can be instrumental here.  </li>
+  <li><strong>Incident Logging</strong>: Maintain a log of all incidents, including minor ones, to track patterns and improve response strategies.</li>
+</ul>
+
+<h3 id="response">Response</h3>
+
+<ul>
+  <li><strong>Containment</strong>: Act swiftly to isolate affected systems or networks. This might involve disconnecting devices or rerouting traffic.  </li>
+  <li><strong>Eradication</strong>: Identify and eliminate the root cause of the incident. This could mean patching vulnerabilities, deleting malicious software, or changing compromised credentials.  </li>
+  <li><strong>Recovery</strong>: Use secure, tested backups to restore services, ensuring no residual threats remain.</li>
+</ul>
+
+<h3 id="post-incident-activities">Post-Incident Activities</h3>
+
+<ul>
+  <li><strong>Analysis</strong>: Dissect the incident to understand its nature, cause, and impact. This step is crucial for compliance documentation.  </li>
+  <li><strong>Documentation</strong>: Keep detailed records of each phase of the incident for audit purposes and to inform future policy.</li>
+</ul>
+
+<h2 id="the-importance-of-a-cybersecurity-culture-in-incident-management">The Importance of a Cybersecurity Culture in Incident Management</h2>
+
+<p>Beyond technical measures and compliance checklists, fostering a strong cybersecurity culture within an organization is essential for effective incident management. Employees, regardless of their role, are often the first line of defense against cyber threats. However, without a culture that prioritizes security awareness and proactive engagement, even the most advanced security frameworks can fall short.</p>
+
+<p>A security-conscious culture starts with executive leadership. When company leaders actively support and participate in cybersecurity initiatives, it sets a precedent for the entire organization. Regular training sessions tailored to different roles—ranging from IT specialists to customer service representatives—help ensure that every employee understands their responsibilities in identifying and reporting threats. Simulated phishing tests, real-world attack case studies, and cross-departmental security drills can reinforce best practices.</p>
+
+<p>Additionally, a clear and open communication channel for reporting incidents without fear of blame is crucial. Employees must feel comfortable reporting suspicious activities, even if they turn out to be false alarms. Encouraging a mindset of “see something, say something” can prevent minor security lapses from escalating into full-blown breaches.</p>
+
+<p>Organizations that embed cybersecurity into their daily operations—rather than treating it as an IT-exclusive function—can respond to incidents faster, mitigate risks more effectively, and maintain compliance with standards like ISO 27001. A complete guide to it should help you understand better. By prioritizing security culture, businesses not only strengthen their defenses but also enhance their ability to recover from incidents with minimal disruption.</p>
+
+<h2 id="achieving-and-maintaining-compliance">Achieving and Maintaining Compliance</h2>
+
+<h3 id="iso-27001-certification">ISO 27001 Certification</h3>
+
+<ul>
+  <li><strong>Risk Assessment</strong>: Conduct periodic risk assessments to identify new threats and compliance gaps, adhering to ISO 27001 standards.  </li>
+  <li><strong>Control Implementation</strong>: Apply controls that not only protect but also align with ISO 27001 requirements for information security management.  </li>
+  <li><strong>Audit</strong>: Regular audits are key to maintaining certification. Both internal reviews and external audits ensure ongoing compliance.</li>
+</ul>
+
+<h3 id="tools-and-services">Tools and Services</h3>
+
+<ul>
+  <li>Utilize various platforms that provide specialized <a href="https://cyberupgrade.net/blog/grc/iso-27001-incident-policy-incident-action-plan/">ISO 27001 incident management solutions - cyberupgrade.net</a> is one of them, assisting with compliance in ICT audits and security incident management.</li>
+</ul>
+
+<h2 id="case-study-example">Case Study Example</h2>
+
+<p>A financial services company faced a sophisticated phishing attack. Their ISO 27001-aligned incident response included:</p>
+
+<ul>
+  <li>Immediate containment by blocking the phishing domain.  </li>
+  <li>Eradication through a thorough review and strengthening of email security policies.  </li>
+  <li>Recovery with the help of secure backups and system checks.  </li>
+  <li>Post-incident analysis led to staff retraining and an update to their ISO 27001 compliance documentation.</li>
+</ul>
+
+<h2 id="best-practices-for-businesses">Best Practices for Businesses</h2>
+
+<ul>
+  <li><strong>Proactive Communication</strong>: Maintain open lines with all stakeholders, including regulatory bodies, to uphold transparency and trust.  </li>
+  <li><strong>Continuous Improvement</strong>: Treat each incident as an educational experience, leading to policy and procedure updates.  </li>
+  <li><strong>Legal Considerations</strong>: Stay abreast of data protection laws like GDPR or CCPA, which can influence how incidents are managed and reported.</li>
+</ul>
+
+<h2 id="integrating-incident-management-with-business-continuity">Integrating Incident Management with Business Continuity</h2>
+
+<ul>
+  <li><strong>Business Impact Analysis</strong>: Understand how security incidents affect business operations to better tailor your response and recovery strategies.  </li>
+  <li><strong>Crisis Communication Plan</strong>: Have a prepped communication strategy that integrates with incident response to manage public perception and internal communications.</li>
+</ul>
+
+<h2 id="leveraging-technology-for-compliance">Leveraging Technology for Compliance</h2>
+
+<ul>
+  <li><strong>Automation</strong>: Use automated tools for compliance checks and incident logging to reduce human error and increase efficiency.  </li>
+  <li><strong>AI and Machine Learning</strong>: These technologies can predict potential vulnerabilities or detect unusual activities that might go unnoticed, aiding in both incident management and compliance.</li>
+</ul>
+
+<h2 id="the-role-of-smartscanner-in-incident-management">The Role of SmartScanner in Incident Management</h2>
+
+<p>A crucial step in preventing security incidents is identifying vulnerabilities before they are exploited. SmartScanner, a comprehensive
+<a href="/web-vulnerability-scanner/">web vulnerability scanner</a>,
+helps businesses detect security flaws such as SQL injection, cross-site scripting, and
+<a href="/owasp-top-10-scanner/">OWASP Top 10 risks</a>.</p>
+
+<p>By integrating regular scans with SmartScanner, organizations can proactively strengthen their defenses, reduce security gaps, and maintain compliance with industry standards such as ISO 27001. As an automated
+<a href="/vulnerability-scanner/">vulnerability scanner</a>,
+SmartScanner enables early threat detection and continuous visibility into application security, ensuring faster incident response and improved security resilience.</p>
+
+<p>By weaving automated security testing into daily operations, incident management evolves from a reactive process into a strategic pillar of overall business resilience and compliance.</p>]]></content><author><name>Vytautas Nemunaitis</name></author><category term="ISO 27001" /><category term="Incident" /><summary type="html"><![CDATA[Discover how businesses can effectively manage security incidents while ensuring ISO 27001 compliance. This comprehensive guide covers incident response strategies, cybersecurity culture, risk assessments, and the role of tools like SmartScanner in strengthening security defenses. Stay ahead of threats with best practices for incident management, compliance, and business continuity.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.thesmartscanner.com/assets/img/security-incident.jpg" /><media:content medium="image" url="https://www.thesmartscanner.com/assets/img/security-incident.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
