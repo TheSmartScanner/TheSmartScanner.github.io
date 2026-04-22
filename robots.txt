@@ -1,0 +1,4 @@
+
+User-agent: *
+allow: /
+Sitemap: https://www.TheSmartScanner.com/sitemap.xml
