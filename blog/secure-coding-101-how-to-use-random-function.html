@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en-US" class="h-100"><head><meta charset="UTF-8"><title>Secure Coding 101: How to Use Random Function | SmartScanner | Web Security</title><meta name="description" content="Random number generation is one of the key secure coding practices. Learn about vulnerabilities and how to implement random functions in JavaScript..."><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#137752"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/assets/img/logo.png"><link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg"><link rel="alternate icon" type="image/png" href="/assets/img/logo.png"><meta property="og:title" content="Secure Coding 101: How to Use Random Function"><meta property="og:type" content="article"><meta property="og:url" content="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function"><meta property="og:image" content="https://www.thesmartscanner.com/assets/img/secure-random-numbers.jpg"><meta property="og:description" content="Random number generation is one of the key secure coding practices. Learn about vulnerabilities and how to implement random functions in JavaScript,NodeJs and Python"><link rel="canonical" href="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TheSmartScanner"><meta name="twitter:title" content="Secure Coding 101: How to Use Random Function"><meta name="twitter:url" content="https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function"><meta name="twitter:description" content="Random number generation is one of the key secure coding practices. Learn about vulnerabilities and how to implement random functions in JavaScript,NodeJs and Python"><meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/secure-random-numbers.jpg"><meta name="robots" content="index, follow"><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://static.hotjar.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://static.hotjar.com"><script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });</script><script>(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><link rel="stylesheet" href="/assets/css/main-cd97c532690b.css"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.thesmartscanner.com/#organization",
+      "name": "SmartScanner",
+      "url": "https://www.thesmartscanner.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thesmartscanner.com/assets/img/logo.png"
+      },
+      "sameAs": [
+        "https://x.com/TheSmartScanner",
+        "https://github.com/TheSmartScanner"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@thesmartscanner.com",
+        "url": "https://www.thesmartscanner.com/contact"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.thesmartscanner.com/#website",
+      "url": "https://www.thesmartscanner.com/",
+      "name": "SmartScanner",
+      "description": "SmartScanner is an AI-powered web application security scanner that makes serious vulnerability testing fast, accessible, and affordable. Designed for developers, security teams, pentesters, agencies, and businesses, SmartScanner automatically tests websites and web applications for security vulnerabilities and provides clear, actionable results.",
+      "publisher": {
+        "@id": "https://www.thesmartscanner.com/#organization"
+      }
+    }
+  ]
+}</script><link rel="stylesheet" href="/assets/css/prism.css"></head><body class="font-sans"><nav id="nav" class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-all duration-300" role="navigation" aria-label="Main navigation"><div class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-4 xl:px-0"><div class="flex min-w-0 items-center"><a class="resetLink inline-flex shrink-0 items-center gap-2 text-lg font-bold tracking-tight text-slate-900 hover:text-emerald-700" href="/#" title="Home"><img src="/assets/img/logo_opaque.svg" class="h-10 w-10" width="40" height="40" alt="SmartScanner Logo" aria-hidden="true"> <span>SmartScanner</span></a><div class="hidden items-center gap-7 pl-10 text-sm font-medium text-slate-700 lg:flex"><a class="resetLink transition-colors hover:text-emerald-700" href="/features">Features</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/support">Support</a></div></div><div class="flex items-center gap-3"><a id="nav-download" class="resetLink hidden items-center justify-center rounded-xl bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800 hover:text-white lg:inline-flex" href="/download">Download for Free</a> <button id="mobile-menu-button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700 lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line class="menu-line menu-line-top" x1="3" y1="6" x2="21" y2="6"/><line class="menu-line menu-line-middle" x1="3" y1="12" x2="21" y2="12"/><line class="menu-line menu-line-bottom" x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div><div id="mobile-menu" class="lg:hidden absolute left-0 right-0 top-full max-h-0 overflow-hidden border-t border-slate-200 bg-white opacity-0 shadow-xl transition-[max-height,opacity] duration-300 ease-out pointer-events-none"><div class="mx-auto max-w-6xl space-y-1 px-4 py-4"><a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/features">Features</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/support">Support</a> <a class="resetLink mt-2 block rounded-xl bg-emerald-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800" href="/download">Download for Free</a></div></div></nav><style>#mobile-menu-button .menu-line {
+    transform-origin: 12px 12px;
+    transition: transform 220ms ease, opacity 180ms ease;
+  }
+
+  #mobile-menu-button.is-open .menu-line-top {
+    transform: translate(-4px, 4px) rotate(45deg);
+  }
+
+  #mobile-menu-button.is-open .menu-line-middle {
+    opacity: 0;
+  }
+
+  #mobile-menu-button.is-open .menu-line-bottom {
+    transform: translate(-4px, -4px) rotate(-45deg);
+  }</style><script>const nav = document.getElementById('nav');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileMenuButton.setAttribute('aria-label', 'Open menu');
+    mobileMenuButton.classList.remove('is-open');
+    mobileMenu.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.remove('max-h-96', 'opacity-100');
+  }
+
+  function openMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+    mobileMenuButton.setAttribute('aria-label', 'Close menu');
+    mobileMenuButton.classList.add('is-open');
+    mobileMenu.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.add('max-h-96', 'opacity-100');
+  }
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (window.innerWidth >= 1024) return;
+      if (!nav.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    });
+  }
+
+  function updateNavShadow() {
+    if (!nav) return;
+    if (window.scrollY > 12) {
+      nav.classList.add('shadow-md');
+      nav.classList.add('shadow-slate-200/60');
+    } else {
+      nav.classList.remove('shadow-md');
+      nav.classList.remove('shadow-slate-200/60');
+    }
+  }
+
+  let ticking = false;
+  document.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateNavShadow();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('load', updateNavShadow);
+  window.addEventListener('resize', updateNavShadow);
+  updateNavShadow();</script><main class="w-full lg:max-w-[50rem] lg:mx-auto lg:pt-14 px-4 xl:px-0 pb-14 lg:pb-24"><article><div><div class="text-sm lg:text-base text-neutral-710 mb-2 mt-2 lg:mb-8 lg:mt-0"><a class="resetLink hover:text-emerald-750" href="/blog/">Blog</a><span class="mx-1">/</span></div><h1 class="mb-3 lg:mb-5">Secure Coding 101: How to Use Random Function</h1><img width="800" height="320" class="mb-3 lg:mb-5" src="/assets/img/secure-random-numbers.jpg" alt="" aria-hidden="true"><div class="flex justify-between mb-8"><div class="flex gap-x-10 text-sm"><span><span class="text-neutral-500">By</span> <span class="font-semibold"></span>SmartScanner</span> <time class="text-neutral-500" datetime="2023-05-09">09 May 2023</time></div><div><span onclick="share()" class="lg:hidden hover:bg-emerald-750 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"/></svg></span><script>async function share() {
+  let url = "https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function" || document.URL
+  let title = "Secure Coding 101: How to Use Random Function" || document.title
+  let text = `Random number generation is one of the key secure coding practices. Learn about vulnerabilities and how to implement random functions in JavaScript,NodeJs and Python`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}</script></div></div></div><div class="ph3"><p>Random numbers are everywhere on the web, and your security depends on them. Let’s see if you’re using them right.</p><p>Random numbers play a critical role in web application security. They are used in session identifiers, passwords, cryptographic keys, and more. However, if not implemented securely, they can lead to vulnerabilities that attackers can exploit to gain unauthorized access to sensitive information.</p><h2 id="tldr">TLDR</h2><ul><li>Most random generators are not really random. They use math that looks random</li><li>Do not use <code>Math.random()</code> in JavaScript or <code>random</code> in Python</li><li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API"><code>Web Crypto API</code></a> in JavaScript, <a href="https://nodejs.org/api/crypto.html"><code>crypto</code></a> module in NodeJs, and <a href="https://docs.python.org/3/library/secrets.html"><code>secrets</code></a> in python</li><li>Do not try to implement your own random generation algorithm</li><li>Incorrect usage of secure random numbers can make your application vulnerable</li></ul><h2 id="how-random-functions-work">How Random Functions work</h2><p>There are two main types of Random Number Generators (RNGs): pseudo-random number generators (PRNGs) and true random number generators (TRNGs).</p><h3 id="pseudo-random-number-generators-prngs">Pseudo-random Number Generators (PRNGs)</h3><p>PRNGs are the most commonly used type of RNGs. They work by using an algorithm to generate a sequence of numbers that appear to be random. The algorithm takes an initial value as input and produces a series of numbers based on it.</p><p>The common algorithms used in PRNGs are the <a href="https://en.wikipedia.org/wiki/Mersenne_Twister">Mersenne-Twister</a> and <a href="https://en.wikipedia.org/wiki/Linear_congruential_generator">linear congruential generator (LCG)</a>.</p><p>These algorithms get an initial number called <code>seed</code>. They change it by adding previous random number, shifting, and doing XOR operators to generate the output. The output looks like a random number though it’s just an output of a formula.</p><p>If you keep executing any PRNG, it will eventually generate the same numbers over and over. Any PRNG has a fixed length of numbers that can generate before starting over.</p><h3 id="true-random-number-generators-trngs">True Random Number Generators (TRNGs)</h3><p>TRNGs generate truly random numbers based on physical processes that are inherently random. These processes include atmospheric noise, radioactive decay, and thermal noise. TRNGs measure the physical process and convert it into a random number.</p><h2 id="random-function-vulnerabilities">Random Function Vulnerabilities</h2><p>The seed and random number generation algorithm both can have weaknesses.</p><h3 id="prediction">Prediction</h3><p>You can say predictability is the main vulnerability of weak random number generators. PRNGs are inherently predictable as they are based on a mathematical formula. So if you know the seed and last random number, you can predict the next random number. This can lead to severe vulnerabilities.</p><p>For example, consider a forget password functionality that words based on a random token. If the token can be predicted, an attacker can reset the password of any user.</p><h3 id="collision">Collision</h3><p>Besides the predictability, Some random generators that have low quality produce duplicate values very often. This can increase the risk of collision.</p><p>Consider an application that generates random session tokens for its users. The chances of producing duplicate session tokens are related to two factors:</p><ul><li>Size of random space (length of session token)</li><li>Quality of the random selection</li></ul><p>Short-length tokens will have a higher chance of collisions. And bad random generator does not generate all possible values. This can lead to vulnerabilities where a user can see another user’s data.</p><h3 id="seed-leakage-or-manipulation">Seed Leakage or Manipulation</h3><p>Another vulnerability related to random number generators is choosing a weak seed. PRNG always generates the same sequence of numbers with the same initial seed value. If an attacker can find the used seed or manipulate it, he can easily generate same random numbers.</p><p>In pratice, hackers use different methods to predict the next random number. Some methods may involve statistical analysis, while others may involve reverse-engineering the generator’s algorithm.</p><h2 id="how-to-use-secure-random-numbers">How to Use Secure Random Numbers</h2><p>Using cryptographically secure random number generation algorithms is the key to securely producing random numbers. These algorithms generate random numbers that are unpredictable and cannot be easily guessed by attackers. The output of these algorithms is resistant to brute-force attacks, and it’s statistically robust. You should not try to implement your own one unless you know what you are doing. Instead, always use known to be secure random libraries.</p><p>Let’s see a few examples of using secure random libraries in different programming languages.</p><h3 id="javascript">Javascript</h3><p>The <code>Math.random()</code> function is not suitable for cryptographic purposes, as it is not truly random and can be predicted or manipulated by an attacker.</p><p>To generate a secure random number in JavaScript, you can use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Crypto_API"><code>Web Crypto API</code></a>. The <code>Crypto.getRandomValues()</code> method lets you get cryptographically strong random values. Here is an example code that generates a secure random number:</p><pre><code class="language-Javascript">function generateRandomNumber() {  
+  const array = new Uint32Array(1); // Create a 32-bit unsigned integer array  
+  window.crypto.getRandomValues(array); // Fill the array with random values  
+  return array[0]; // Return the first element of the array as the random number  
+}  
+ 
+console.log(generateRandomNumber()); // Output a random number between 0 and 4294967295
+</code></pre><h3 id="nodejs">NodeJS</h3><p>In NodeJS, the <a href="https://nodejs.org/api/crypto.html"><code>crypto</code></a> module can be used to generate cryptographically secure random numbers. The following code sample illustrates the use of crypto module in generating a random number:</p><pre><code class="language-Javascript">const crypto = require('crypto');  
+ 
+function generateRandomNumber() {  
+  const randomBytes = crypto.randomBytes(4); // Generate 4 random bytes  
+  const hexValue = randomBytes.toString('hex'); // Convert the bytes to a hex string  
+  const intValue = parseInt(hexValue, 16); // Convert the hex string to an integer  
+  return intValue;  
+}  
+ 
+console.log(generateRandomNumber()); // Output a random number between 0 and 4294967295
+</code></pre><h3 id="python">Python</h3><p>In Python, the <code>random</code> module can be used to generate random numbers. However, it is not cryptographically secure. Instead, you can use the <a href="https://docs.python.org/3/library/secrets.html"><code>secrets</code></a> module to generate cryptographically secure random numbers. The following code sample illustrates the use of secrets module in generating a random number:</p><pre><code class="language-Python">import secrets  
+ 
+def generate_random_number():  
+    random_number = secrets.randbits(32) # Generate a 32-bit random number  
+    return random_number  
+ 
+print(generate_random_number()) # Output a random number between 0 and 4294967295
+</code></pre><h2 id="conclusion">Conclusion</h2><p>Random numbers in computers are mathematical formulas and predictable. Not every random number generator is suitable for cryptography and security usage. Random numbers are just one element in security system design and implementation. There are many other things like seed generation, key management, and overall security system design that are extremely important and hard to get right. The <a href="https://www.crypto101.io/">Crypto 101</a> is a great place to start learning more about cryptography.</p><div class="mt-14 lg:mt-[88px]"><h3 class="text-base font-semibold mb-9 mx-auto w-fit">You might also like:</h3><div class="flex flex-wrap lg:flex-nowrap justify-between gap-[22px]"><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/files-folders.jpg);"><a href="/blog/secure-coding-101-how-to-read-and-write-files-securely" class="resetLink flex w-full h-full" aria-label="Read the full article: Secure Coding 101: How to Read and Write Files Securely"><img class="invisible" width="213" height="142" src="/assets/img/files-folders.jpg" alt="Secure Coding 101: How to Read and Write Files Securely" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/secure-coding-101-how-to-read-and-write-files-securely">Secure Coding 101: How to Read and Write Files Securely</a></h3></div><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/eval.png);"><a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2" class="resetLink flex w-full h-full" aria-label="Read the full article: How to Secure your NodeJs Express Javascript Application - part 2"><img class="invisible" width="213" height="142" src="/assets/img/eval.png" alt="How to Secure your NodeJs Express Javascript Application - part 2" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-2">How to Secure your NodeJs Express Javascript Application - part 2</a></h3></div><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/express-security.png);"><a href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1" class="resetLink flex w-full h-full" aria-label="Read the full article: How to Secure your NodeJs Express Javascript Application - part 1"><img class="invisible" width="213" height="142" src="/assets/img/express-security.png" alt="How to Secure your NodeJs Express Javascript Application - part 1" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/how-to-secure-your-nodejs-express-javascript-application-part-1">How to Secure your NodeJs Express Javascript Application - part 1</a></h3></div></div></div></div></article></main><script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Blog",
+        "item": "https://www.thesmartscanner.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Secure Coding 101: How to Use Random Function"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Secure Coding 101: How to Use Random Function",
+    "description": "Random number generation is one of the key secure coding practices. Learn about vulnerabilities and how to implement random functions in JavaScript,NodeJs an...",
+    
+    "image": ["https://www.thesmartscanner.com/assets/img/secure-random-numbers.jpg"],
+    
+    "datePublished": "2023-05-09T00:00:00+00:00",
+    "dateModified": "2023-05-09T00:00:00+00:00",
+    "author": {
+      "@type": "Organization",
+      "name": "SmartScanner"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SmartScanner",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thesmartscanner.com/assets/img/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.thesmartscanner.com/blog/secure-coding-101-how-to-use-random-function"
+    }
+  }
+]</script><footer class="bg-slate-950 text-slate-300"><div class="mx-auto max-w-6xl px-4 py-12 xl:px-0 lg:py-16"><div class="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_repeat(4,minmax(0,1fr))] lg:gap-8"><div class="max-w-xs"><a href="/" class="resetLink inline-flex items-center gap-3 text-lg font-bold text-white no-underline"><img src="/assets/img/logo.svg" width="36" height="36" alt="SmartScanner logo" class="h-9 w-9"> SmartScanner</a><p class="mt-5 text-sm leading-6 text-slate-400">AI-powered web application security testing for developers, security teams, pentesters, and businesses.</p><nav class="mt-5" aria-label="Support navigation"><ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm list-none"><li><a href="/contact" class="resetLink hover:text-emerald-300">Contact Us</a></li><li><a href="/support#faq" class="resetLink hover:text-emerald-300">FAQ</a></li><li><a href="/support" class="resetLink hover:text-emerald-300">Support</a></li></ul></nav><div class="mt-6 flex items-center gap-3"><a href="https://twitter.com/TheSmartScanner" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="SmartScanner on X"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.2 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L7.53 4.03H5.67L17.8 19.9Z"/></svg></a><a href="mailto:support@thesmartscanner.com" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="Email SmartScanner support"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a></div></div><nav aria-label="Product navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Product</h2><ul class="space-y-3 text-sm list-none"><li><a href="/features" class="resetLink hover:text-emerald-300">Why SmartScanner?</a></li><li><a href="/download" class="resetLink hover:text-emerald-300">Download</a></li><li><a href="/pricing" class="resetLink hover:text-emerald-300">Plans and pricing</a></li><li><a href="/changelog" class="resetLink hover:text-emerald-300">Product updates</a></li></ul></nav><nav aria-label="Security solutions navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Solutions</h2><ul class="space-y-3 text-sm list-none"><li><a href="/free-website-vulnerability-scanner/" class="resetLink hover:text-emerald-300">Free website scanner</a></li><li><a href="/vulnerability-scanner/" class="resetLink hover:text-emerald-300">Web vulnerability scanner</a></li><li><a href="/owasp-top-10-scanner/" class="resetLink hover:text-emerald-300">OWASP Top 10 scanner</a></li><li><a href="/api-security-scanner/" class="resetLink hover:text-emerald-300">API security scanner</a></li><li><a href="/pentest-automation-tool/" class="resetLink hover:text-emerald-300">Pentest automation</a></li></ul></nav><nav aria-label="Resources navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Resources</h2><ul class="space-y-3 text-sm list-none"><li><a href="/vulnerability-list/" class="resetLink hover:text-emerald-300">Vulnerability library</a></li><li><a href="/docs/" class="resetLink hover:text-emerald-300">Documentation</a></li><li><a href="/blog/" class="resetLink hover:text-emerald-300">Security blog</a></li><li><a href="/tools/robotstxt/" class="resetLink hover:text-emerald-300">Robots.txt validator</a></li><li><a href="/air-gapped-security/" class="resetLink hover:text-emerald-300">Air-gapped security</a></li></ul></nav><nav aria-label="Alternatives navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Alternatives</h2><ul class="space-y-3 text-sm list-none"><li><a href="/alternatives/" class="resetLink hover:text-emerald-300">All alternatives</a></li><li><a href="/acunetix-alternative" class="resetLink hover:text-emerald-300">Acunetix</a></li><li><a href="/burp-suite-alternative" class="resetLink hover:text-emerald-300">Burp Suite</a></li><li><a href="/netsparker-alternative" class="resetLink hover:text-emerald-300">Netsparker</a></li><li><a href="/nikto-alternative" class="resetLink hover:text-emerald-300">Nikto</a></li><li><a href="/nuclei-alternative" class="resetLink hover:text-emerald-300">Nuclei</a></li><li><a href="/owasp-zap-alternative" class="resetLink hover:text-emerald-300">OWASP ZAP</a></li></ul></nav></div><div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p class="mb-0">&copy; 2026 TheSmartScanner.com</p><div class="flex flex-wrap gap-x-5 gap-y-2"><a href="/terms" class="resetLink hover:text-slate-300">Terms of service</a><a href="/privacy" class="resetLink hover:text-slate-300">Privacy policy</a><a href="/eula" class="resetLink hover:text-slate-300">EULA</a><a href="/contact" class="resetLink hover:text-slate-300">Contact</a><span>Web security testing for modern applications</span></div></div></div></footer><script defer="defer" type="text/javascript" src="/assets/js/prism.js"></script><div id="cookieConsent" style="display:none;" class="flex py-4 px-4 lg:px-6 shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full justify-between items-center flex-wrap lg:flex-nowrap gap-4 text-sm bg-white/60 backdrop-blur-md"><p class="text-base mx-auto m-0 pr-4 lg:pr-0">We use cookies to enhance quality of our services and to analyze traffic. Read our <a href="/privacy" class="resetLink underline">privacy policy</a>.</p><div class="flex gap-2 w-full lg:w-fit"><button onclick="consent.accept()" class="w-full lg:w-fit text-emerald-750 border border-emerald-750 rounded-[7px] h-10 min-w-24 flex items-center text-center justify-center bg-white transition-colors hover:text-emerald-750 hover:bg-emerald-25 active:bg-teal-100">OK, got it</button> <button onclick="consent.reject()" class="py-1 px-2 hover:text-black absolute top-3 right-2 lg:[position:initial]">X</button></div></div><script defer="defer" type="text/javascript" src="/assets/js/cookie.min.js"></script></body></html>

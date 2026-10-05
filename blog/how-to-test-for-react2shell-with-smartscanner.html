@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="en-US" class="h-100"><head><meta charset="UTF-8"><title>How to Test for React2Shell with SmartScanner | SmartScanner | Web Security</title><meta name="description" content="Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list..."><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#137752"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/assets/img/logo.png"><link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg"><link rel="alternate icon" type="image/png" href="/assets/img/logo.png"><meta property="og:title" content="How to Test for React2Shell with SmartScanner"><meta property="og:type" content="article"><meta property="og:url" content="https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner"><meta property="og:image" content="https://www.thesmartscanner.com/assets/img/testing-react2shell-with-smartscanner.png"><meta property="og:description" content="Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list of URLs for Next.Js react2shell vulerability."><link rel="canonical" href="https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TheSmartScanner"><meta name="twitter:title" content="How to Test for React2Shell with SmartScanner"><meta name="twitter:url" content="https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner"><meta name="twitter:description" content="Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list of URLs for Next.Js react2shell vulerability."><meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/testing-react2shell-with-smartscanner.png"><meta name="robots" content="index, follow"><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://static.hotjar.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://static.hotjar.com"><script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });</script><script>(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><link rel="stylesheet" href="/assets/css/main-cd97c532690b.css"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.thesmartscanner.com/#organization",
+      "name": "SmartScanner",
+      "url": "https://www.thesmartscanner.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thesmartscanner.com/assets/img/logo.png"
+      },
+      "sameAs": [
+        "https://x.com/TheSmartScanner",
+        "https://github.com/TheSmartScanner"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@thesmartscanner.com",
+        "url": "https://www.thesmartscanner.com/contact"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.thesmartscanner.com/#website",
+      "url": "https://www.thesmartscanner.com/",
+      "name": "SmartScanner",
+      "description": "SmartScanner is an AI-powered web application security scanner that makes serious vulnerability testing fast, accessible, and affordable. Designed for developers, security teams, pentesters, agencies, and businesses, SmartScanner automatically tests websites and web applications for security vulnerabilities and provides clear, actionable results.",
+      "publisher": {
+        "@id": "https://www.thesmartscanner.com/#organization"
+      }
+    }
+  ]
+}</script><link rel="prefetch" href="/assets/css/prism.css"></head><body class="font-sans"><nav id="nav" class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-all duration-300" role="navigation" aria-label="Main navigation"><div class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-4 xl:px-0"><div class="flex min-w-0 items-center"><a class="resetLink inline-flex shrink-0 items-center gap-2 text-lg font-bold tracking-tight text-slate-900 hover:text-emerald-700" href="/#" title="Home"><img src="/assets/img/logo_opaque.svg" class="h-10 w-10" width="40" height="40" alt="SmartScanner Logo" aria-hidden="true"> <span>SmartScanner</span></a><div class="hidden items-center gap-7 pl-10 text-sm font-medium text-slate-700 lg:flex"><a class="resetLink transition-colors hover:text-emerald-700" href="/features">Features</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/support">Support</a></div></div><div class="flex items-center gap-3"><a id="nav-download" class="resetLink hidden items-center justify-center rounded-xl bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800 hover:text-white lg:inline-flex" href="/download">Download for Free</a> <button id="mobile-menu-button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700 lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line class="menu-line menu-line-top" x1="3" y1="6" x2="21" y2="6"/><line class="menu-line menu-line-middle" x1="3" y1="12" x2="21" y2="12"/><line class="menu-line menu-line-bottom" x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div><div id="mobile-menu" class="lg:hidden absolute left-0 right-0 top-full max-h-0 overflow-hidden border-t border-slate-200 bg-white opacity-0 shadow-xl transition-[max-height,opacity] duration-300 ease-out pointer-events-none"><div class="mx-auto max-w-6xl space-y-1 px-4 py-4"><a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/features">Features</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/support">Support</a> <a class="resetLink mt-2 block rounded-xl bg-emerald-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800" href="/download">Download for Free</a></div></div></nav><style>#mobile-menu-button .menu-line {
+    transform-origin: 12px 12px;
+    transition: transform 220ms ease, opacity 180ms ease;
+  }
+
+  #mobile-menu-button.is-open .menu-line-top {
+    transform: translate(-4px, 4px) rotate(45deg);
+  }
+
+  #mobile-menu-button.is-open .menu-line-middle {
+    opacity: 0;
+  }
+
+  #mobile-menu-button.is-open .menu-line-bottom {
+    transform: translate(-4px, -4px) rotate(-45deg);
+  }</style><script>const nav = document.getElementById('nav');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileMenuButton.setAttribute('aria-label', 'Open menu');
+    mobileMenuButton.classList.remove('is-open');
+    mobileMenu.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.remove('max-h-96', 'opacity-100');
+  }
+
+  function openMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+    mobileMenuButton.setAttribute('aria-label', 'Close menu');
+    mobileMenuButton.classList.add('is-open');
+    mobileMenu.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.add('max-h-96', 'opacity-100');
+  }
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (window.innerWidth >= 1024) return;
+      if (!nav.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    });
+  }
+
+  function updateNavShadow() {
+    if (!nav) return;
+    if (window.scrollY > 12) {
+      nav.classList.add('shadow-md');
+      nav.classList.add('shadow-slate-200/60');
+    } else {
+      nav.classList.remove('shadow-md');
+      nav.classList.remove('shadow-slate-200/60');
+    }
+  }
+
+  let ticking = false;
+  document.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateNavShadow();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('load', updateNavShadow);
+  window.addEventListener('resize', updateNavShadow);
+  updateNavShadow();</script><main class="w-full lg:max-w-[50rem] lg:mx-auto lg:pt-14 px-4 xl:px-0 pb-14 lg:pb-24"><article><div><div class="text-sm lg:text-base text-neutral-710 mb-2 mt-2 lg:mb-8 lg:mt-0"><a class="resetLink hover:text-emerald-750" href="/blog/">Blog</a><span class="mx-1">/</span></div><h1 class="mb-3 lg:mb-5">How to Test for React2Shell with SmartScanner</h1><img width="800" height="320" class="mb-3 lg:mb-5" src="/assets/img/testing-react2shell-with-smartscanner.webp" alt="" aria-hidden="true"><div class="flex justify-between mb-8"><div class="flex gap-x-10 text-sm"><span><span class="text-neutral-500">By</span> <span class="font-semibold"></span>SmartScanner</span> <time class="text-neutral-500" datetime="2026-03-30">30 March 2026</time></div><div><span onclick="share()" class="lg:hidden hover:bg-emerald-750 cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="currentColor"><path d="M648-96q-50 0-85-35t-35-85q0-9 4-29L295-390q-16 14-36.05 22-20.04 8-42.95 8-50 0-85-35t-35-85q0-50 35-85t85-35q23 0 43 8t36 22l237-145q-2-7-3-13.81-1-6.81-1-15.19 0-50 35-85t85-35q50 0 85 35t35 85q0 50-35 85t-85 35q-23 0-43-8t-36-22L332-509q2 7 3 13.81 1 6.81 1 15.19 0 8.38-1 15.19-1 6.81-3 13.81l237 145q16-14 36.05-22 20.04-8 42.95-8 50 0 85 35t35 85q0 50-35 85t-85 35Zm0-72q20.4 0 34.2-13.8Q696-195.6 696-216q0-20.4-13.8-34.2Q668.4-264 648-264q-20.4 0-34.2 13.8Q600-236.4 600-216q0 20.4 13.8 34.2Q627.6-168 648-168ZM216-432q20.4 0 34.2-13.8Q264-459.6 264-480q0-20.4-13.8-34.2Q236.4-528 216-528q-20.4 0-34.2 13.8Q168-500.4 168-480q0 20.4 13.8 34.2Q195.6-432 216-432Zm432-264q20.4 0 34.2-13.8Q696-723.6 696-744q0-20.4-13.8-34.2Q668.4-792 648-792q-20.4 0-34.2 13.8Q600-764.4 600-744q0 20.4 13.8 34.2Q627.6-696 648-696Zm0 480ZM216-480Zm432-264Z"/></svg></span><script>async function share() {
+  let url = "https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner" || document.URL
+  let title = "How to Test for React2Shell with SmartScanner" || document.title
+  let text = `Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list of URLs for Next.Js react2shell vulerability.`
+  
+  try {
+    await navigator.share({
+      url: url,
+      title: title,
+      text: text
+    })
+  } catch(err) {
+    console.log('sharing not supported', err)
+  }
+}</script></div></div></div><div class="ph3"><p><strong>React2Shell</strong> is a critical remote code execution (RCE) vulnerability affecting server-side components of React (CVE-2025-55182) and the <a href="https://nextjs.org/">Next.js framework</a> (CVE-2025-66478). When exploited, it allows attackers to execute arbitrary commands on vulnerable servers, potentially leading to full system compromise.</p><p>With more than 440000 websites using Next.js, the impact of React2Shell is significant. If your applications are built with Next.js, you should test them immediately and apply patches where necessary.</p><p>This guide explains how to detect React2Shell quickly and safely using <strong>SmartScanner</strong>.</p><h2 id="why-use-smartscanner-to-test-for-react2shell">Why Use SmartScanner to Test for React2Shell?</h2><p>Several scanners and proof-of-concept tools exist for React2Shell detection. However, SmartScanner provides key advantages:</p><h3 id="1-smart-detection">1. Smart Detection</h3><p>SmartScanner automatically checks whether a target is running Next.js before testing for React2Shell. This:</p><ul><li>Reduces unnecessary requests</li><li>Minimizes noise</li><li>Lowers the risk of triggering WAF protections</li></ul><h3 id="2-direct--fast-detection">2. Direct &amp; Fast Detection</h3><p>Many scanners rely on out-of-band (OOB) verification techniques. They send a request and wait for an external callback to confirm exploitation. This approach:</p><ul><li>Slows down scanning</li><li>Can fail due to network issues</li><li>Produces false negatives</li></ul><p>SmartScanner detects React2Shell directly using a single request, making it significantly faster and more reliable.</p><h3 id="3-safe-testing">3. Safe Testing</h3><p>Some testing tools may unintentionally disrupt services or cause denial-of-service conditions during exploitation attempts. SmartScanner performs non-disruptive detection without interrupting normal server operations.</p><p>These makes SmartScanner a faster, reliable and safer scanner for testing React2Shell.</p><h2 id="how-to-detect-react2shell-with-smartscanner-gui">How to Detect React2Shell with SmartScanner (GUI)</h2><p>Testing for React2Shell with SmartScanner is straightforward.</p><h3 id="scan-a-single-target">Scan a Single Target</h3><ol><li><a href="https://www.thesmartscanner.com/download">Download and install SmartScanner</a>.</li><li>Open SmartScanner.</li><li>Enter the target URL you want to test.</li><li>Click the <strong>gear icon</strong> to open configuration settings.</li><li>Deselect all tests except <strong>Next.js Tests</strong>.</li><li>Return to the main screen and click <strong>Start</strong>.</li></ol><p>If the target is vulnerable, the issue will appear in the <strong>Found Issues</strong> panel. You can click the finding to view technical details, request/response data and other useful contents.</p><h3 id="scan-multiple-urls-for-react2shell">Scan Multiple URLs for React2Shell</h3><p>You can quickly test a list of targets in bulk.</p><ol><li>Prepare a text file containing a newline-separated list of URLs.</li><li>Open SmartScanner.</li><li>Drag and drop the file into the main input field<br><em>(Alternatively, click the three-dot menu to browse and select the file.)</em></li><li>Open configuration settings (gear icon).</li><li>Disable all tests except <strong>Next.js Tests</strong>.</li><li>(Optional) Enable <strong>–no-follow</strong> to prevent scanning additional linked pages</li><li>Start the scan.</li></ol><p>Any vulnerable targets will appear in the Findings section.</p><style>.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    margin-bottom: 1rem;
+}
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}</style><div class="youtube-wrapper"><iframe src="https://www.youtube.com/embed/XCPwVVX2FkQ?controls=0"></iframe></div><h2 id="using-smartscanner-cli-smsexe">Using SmartScanner CLI (sms.exe)</h2><p>SmartScanner also includes a command-line version (<code>sms.exe</code>) for automation and CI/CD pipelines.</p><blockquote><p><strong>Default installation path (Windows):</strong> <code>%LocalAppData%\Programs\SmartScanner\</code></p></blockquote><h3 id="scan-a-single-target-cli">Scan a Single Target (CLI)</h3><p>Run the following command in Windows Command Prompt:</p><pre><code class="language-powershell">sms.exe -t react2shell@r=1 localhost:3000
+</code></pre><p>This executes the React2Shell test against <code>localhost:3000</code>.</p><blockquote><p><strong>Note:</strong> The <code>r=1</code> parameter configures the trigger so the test runs on every user-input URL.</p></blockquote><p><img src="/assets/img/test-for-react2shell-with-smartscanner-cli.gif" width="1050" height="532" alt="SmartScanner CLI scanning localhost for react2shell vulnerability" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;"></p><blockquote><p>💡 You can add the <code>--no-discovery</code> option to prevent crawling of the input url. With this option SmartScanner only tests for the react2shell vulnerability and avoids fetching the url.</p></blockquote><h4 id="smart-detection-with-framework-fingerprinting">Smart Detection with Framework Fingerprinting</h4><p>To test for React2Shell <strong>only if</strong> the target is running Next.js, use:</p><pre><code class="language-powershell">sms.exe -t React2Shell -t fingerprint -u localhost:3000
+</code></pre><p>This command:</p><ul><li>Runs the <code>fingerprint</code> test</li><li>Detects whether the target uses Next.js</li><li>Triggers the React2Shell test only if applicable</li></ul><p>This reduces unnecessary requests and improves stealth.</p><p><img src="/assets/img/bulk-target-test-for-react2shell-with-smartscanner-cli.gif" width="1050" height="532" alt="SmartScanner CLI bulk scanning a list of URLs for react2shell vulnerability" loading="lazy" class="mx-auto" style="aspect-ratio: attr(width) / attr(height); height:auto;"></p><h3 id="scan-multiple-urls-with-cli">Scan Multiple URLs with CLI</h3><p>To scan a list of URLs from a file:</p><pre><code class="language-powershell">sms.exe -t react2shell -t fingerprint --no-follow -f c:\url-list.txt
+</code></pre><p>This command:</p><ul><li>Reads URLs from <code>c:\url-list.txt</code></li><li>Performs fingerprinting</li><li>The <strong>–no-follow</strong> option prevents crawling of linked pages</li><li>Tests for React2Shell only if Next.js is detected</li></ul><h2 id="final-recommendations">Final Recommendations</h2><ul><li>Test all public-facing Next.js applications immediately</li><li>Re-scan after patching to verify remediation</li><li>Integrate SmartScanner CLI into CI/CD pipelines for continuous monitoring</li><li>Monitor vendor advisories and apply framework updates promptly</li></ul><p>React2Shell is a high-impact vulnerability. Proactive detection and remediation are critical to protecting your infrastructure.</p><p>If you maintain Next.js applications, don’t delay, scan today!</p><div class="mt-14 lg:mt-[88px]"><h3 class="text-base font-semibold mb-9 mx-auto w-fit">You might also like:</h3><div class="flex flex-wrap lg:flex-nowrap justify-between gap-[22px]"><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/how-to-secure-nodejs-with-smartscanner.png);"><a href="/blog/how-to-use-smartscanner-for-securing-your-node-js-applications" class="resetLink flex w-full h-full" aria-label="Read the full article: How to Use SmartScanner for Securing Your Node.js Applications"><img class="invisible" width="213" height="142" src="/assets/img/how-to-secure-nodejs-with-smartscanner.png" alt="How to Use SmartScanner for Securing Your Node.js Applications" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/how-to-use-smartscanner-for-securing-your-node-js-applications">How to Use SmartScanner for Securing Your Node.js Applications</a></h3></div><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/smartscanner-v2.5-released.png);"><a href="/blog/smartscanner-2-5-is-here-advanced-vulnerability-detection-and-powerful-new-cli-capabilities" class="resetLink flex w-full h-full" aria-label="Read the full article: 🚀 SmartScanner 2.5 Is Here: Advanced Vulnerability Detection and Powerful New CLI Capabilities"><img class="invisible" width="213" height="142" src="/assets/img/smartscanner-v2.5-released.png" alt="🚀 SmartScanner 2.5 Is Here: Advanced Vulnerability Detection and Powerful New CLI Capabilities" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/smartscanner-2-5-is-here-advanced-vulnerability-detection-and-powerful-new-cli-capabilities">🚀 SmartScanner 2.5 Is Here: Advanced Vulnerability Detection and Powerful New CLI Capabilities</a></h3></div><div class="rounded-lg p-4 border lg:max-w-[252px] b-neutral-300 flex-grow"><div class="relative overflow-hidden mb-2"><div class="flex items-center justify-center w-full lg:w-[213px] min-w-[213px] min-h-[142px] h-[142px] bg-cover bg-center relative hover:scale-125 transition-all duration-200" style="background-image: url(/assets/img/smartscanner-version-2.3.png);"><a href="/blog/smartscanner-2-3-smarter-javascript-detection,-faster-scans,-and-powerful-cli-enhancements" class="resetLink flex w-full h-full" aria-label="Read the full article: SmartScanner 2.3: Smarter JavaScript Detection, Faster Scans, and Powerful CLI Enhancements"><img class="invisible" width="213" height="142" src="/assets/img/smartscanner-version-2.3.png" alt="SmartScanner 2.3: Smarter JavaScript Detection, Faster Scans, and Powerful CLI Enhancements" aria-hidden="true" loading="lazy"></a></div></div><h3 class="text-base font-normal m-0 hover:text-emerald-750"><a class="resetLink" href="/blog/smartscanner-2-3-smarter-javascript-detection,-faster-scans,-and-powerful-cli-enhancements">SmartScanner 2.3: Smarter JavaScript Detection, Faster Scans, and Powerful CLI Enhancements</a></h3></div></div></div></div></article></main><script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Blog",
+        "item": "https://www.thesmartscanner.com/blog/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "How to Test for React2Shell with SmartScanner"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "How to Test for React2Shell with SmartScanner",
+    "description": "Step by step guide for testing the React2Shell critical RCE vulnerabilitiy using SmartScanner GUI and command line interface. Test single or a list of URLs f...",
+    
+    "image": ["https://www.thesmartscanner.com/assets/img/testing-react2shell-with-smartscanner.webp"],
+    
+    "datePublished": "2026-03-30T00:00:00+00:00",
+    "dateModified": "2026-03-30T00:00:00+00:00",
+    "author": {
+      "@type": "Organization",
+      "name": "SmartScanner"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SmartScanner",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thesmartscanner.com/assets/img/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://www.thesmartscanner.com/blog/how-to-test-for-react2shell-with-smartscanner"
+    }
+  }
+]</script><footer class="bg-slate-950 text-slate-300"><div class="mx-auto max-w-6xl px-4 py-12 xl:px-0 lg:py-16"><div class="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_repeat(4,minmax(0,1fr))] lg:gap-8"><div class="max-w-xs"><a href="/" class="resetLink inline-flex items-center gap-3 text-lg font-bold text-white no-underline"><img src="/assets/img/logo.svg" width="36" height="36" alt="SmartScanner logo" class="h-9 w-9"> SmartScanner</a><p class="mt-5 text-sm leading-6 text-slate-400">AI-powered web application security testing for developers, security teams, pentesters, and businesses.</p><nav class="mt-5" aria-label="Support navigation"><ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm list-none"><li><a href="/contact" class="resetLink hover:text-emerald-300">Contact Us</a></li><li><a href="/support#faq" class="resetLink hover:text-emerald-300">FAQ</a></li><li><a href="/support" class="resetLink hover:text-emerald-300">Support</a></li></ul></nav><div class="mt-6 flex items-center gap-3"><a href="https://twitter.com/TheSmartScanner" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="SmartScanner on X"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.2 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L7.53 4.03H5.67L17.8 19.9Z"/></svg></a><a href="mailto:support@thesmartscanner.com" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="Email SmartScanner support"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a></div></div><nav aria-label="Product navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Product</h2><ul class="space-y-3 text-sm list-none"><li><a href="/features" class="resetLink hover:text-emerald-300">Why SmartScanner?</a></li><li><a href="/download" class="resetLink hover:text-emerald-300">Download</a></li><li><a href="/pricing" class="resetLink hover:text-emerald-300">Plans and pricing</a></li><li><a href="/changelog" class="resetLink hover:text-emerald-300">Product updates</a></li></ul></nav><nav aria-label="Security solutions navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Solutions</h2><ul class="space-y-3 text-sm list-none"><li><a href="/free-website-vulnerability-scanner/" class="resetLink hover:text-emerald-300">Free website scanner</a></li><li><a href="/vulnerability-scanner/" class="resetLink hover:text-emerald-300">Web vulnerability scanner</a></li><li><a href="/owasp-top-10-scanner/" class="resetLink hover:text-emerald-300">OWASP Top 10 scanner</a></li><li><a href="/api-security-scanner/" class="resetLink hover:text-emerald-300">API security scanner</a></li><li><a href="/pentest-automation-tool/" class="resetLink hover:text-emerald-300">Pentest automation</a></li></ul></nav><nav aria-label="Resources navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Resources</h2><ul class="space-y-3 text-sm list-none"><li><a href="/vulnerability-list/" class="resetLink hover:text-emerald-300">Vulnerability library</a></li><li><a href="/docs/" class="resetLink hover:text-emerald-300">Documentation</a></li><li><a href="/blog/" class="resetLink hover:text-emerald-300">Security blog</a></li><li><a href="/tools/robotstxt/" class="resetLink hover:text-emerald-300">Robots.txt validator</a></li><li><a href="/air-gapped-security/" class="resetLink hover:text-emerald-300">Air-gapped security</a></li></ul></nav><nav aria-label="Alternatives navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Alternatives</h2><ul class="space-y-3 text-sm list-none"><li><a href="/alternatives/" class="resetLink hover:text-emerald-300">All alternatives</a></li><li><a href="/acunetix-alternative" class="resetLink hover:text-emerald-300">Acunetix</a></li><li><a href="/burp-suite-alternative" class="resetLink hover:text-emerald-300">Burp Suite</a></li><li><a href="/netsparker-alternative" class="resetLink hover:text-emerald-300">Netsparker</a></li><li><a href="/nikto-alternative" class="resetLink hover:text-emerald-300">Nikto</a></li><li><a href="/nuclei-alternative" class="resetLink hover:text-emerald-300">Nuclei</a></li><li><a href="/owasp-zap-alternative" class="resetLink hover:text-emerald-300">OWASP ZAP</a></li></ul></nav></div><div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p class="mb-0">&copy; 2026 TheSmartScanner.com</p><div class="flex flex-wrap gap-x-5 gap-y-2"><a href="/terms" class="resetLink hover:text-slate-300">Terms of service</a><a href="/privacy" class="resetLink hover:text-slate-300">Privacy policy</a><a href="/eula" class="resetLink hover:text-slate-300">EULA</a><a href="/contact" class="resetLink hover:text-slate-300">Contact</a><span>Web security testing for modern applications</span></div></div></div></footer><link rel="prefetch" href="/assets/js/prism.js"><div id="cookieConsent" style="display:none;" class="flex py-4 px-4 lg:px-6 shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full justify-between items-center flex-wrap lg:flex-nowrap gap-4 text-sm bg-white/60 backdrop-blur-md"><p class="text-base mx-auto m-0 pr-4 lg:pr-0">We use cookies to enhance quality of our services and to analyze traffic. Read our <a href="/privacy" class="resetLink underline">privacy policy</a>.</p><div class="flex gap-2 w-full lg:w-fit"><button onclick="consent.accept()" class="w-full lg:w-fit text-emerald-750 border border-emerald-750 rounded-[7px] h-10 min-w-24 flex items-center text-center justify-center bg-white transition-colors hover:text-emerald-750 hover:bg-emerald-25 active:bg-teal-100">OK, got it</button> <button onclick="consent.reject()" class="py-1 px-2 hover:text-black absolute top-3 right-2 lg:[position:initial]">X</button></div></div><script defer="defer" type="text/javascript" src="/assets/js/cookie.min.js"></script></body></html>

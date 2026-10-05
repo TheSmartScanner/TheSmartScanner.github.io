@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="en-US" class="h-100"><head><meta charset="UTF-8"><title>API Security Scanner | Secure REST &amp; Web APIs – SmartScanner | SmartScanner | Web Security</title><meta name="description" content="SmartScanner is an automated API security scanner for REST APIs and backend services. Detect authentication flaws, injection, access control issues..."><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#137752"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><link rel="apple-touch-icon" href="/assets/img/logo.png"><link rel="icon" type="image/svg+xml" href="/assets/img/logo.svg"><link rel="alternate icon" type="image/png" href="/assets/img/logo.png"><meta property="og:title" content="API Security Scanner | Secure REST &amp; Web APIs – SmartScanner"><meta property="og:type" content="article"><meta property="og:url" content="https://www.thesmartscanner.com/api-security-scanner/"><meta property="og:image" content="https://www.thesmartscanner.com/assets/img/hero.png"><meta property="og:description" content="SmartScanner is an automated API security scanner for REST APIs and backend services. Detect authentication flaws, injection, access control issues, and OWASP API Top 10 risks."><link rel="canonical" href="https://www.thesmartscanner.com/api-security-scanner/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@TheSmartScanner"><meta name="twitter:title" content="API Security Scanner | Secure REST &amp; Web APIs – SmartScanner"><meta name="twitter:url" content="https://www.thesmartscanner.com/api-security-scanner/"><meta name="twitter:description" content="SmartScanner is an automated API security scanner for REST APIs and backend services. Detect authentication flaws, injection, access control issues, and OWASP API Top 10 risks."><meta name="twitter:image" content="https://www.thesmartscanner.com/assets/img/hero.png"><meta name="robots" content="index, follow"><link rel="preconnect" href="https://www.googletagmanager.com"><link rel="preconnect" href="https://static.hotjar.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://static.hotjar.com"><script async src="https://www.googletagmanager.com/gtag/js?id=G-LBRWV5BDLZ"></script><script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LBRWV5BDLZ', {
+    'custom_map': {'dimension1': 'arch'}
+  });</script><script>(function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:3816086,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');</script><link rel="stylesheet" href="/assets/css/main-cd97c532690b.css"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.thesmartscanner.com/#organization",
+      "name": "SmartScanner",
+      "url": "https://www.thesmartscanner.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.thesmartscanner.com/assets/img/logo.png"
+      },
+      "sameAs": [
+        "https://x.com/TheSmartScanner",
+        "https://github.com/TheSmartScanner"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "email": "support@thesmartscanner.com",
+        "url": "https://www.thesmartscanner.com/contact"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.thesmartscanner.com/#website",
+      "url": "https://www.thesmartscanner.com/",
+      "name": "SmartScanner",
+      "description": "SmartScanner is an AI-powered web application security scanner that makes serious vulnerability testing fast, accessible, and affordable. Designed for developers, security teams, pentesters, agencies, and businesses, SmartScanner automatically tests websites and web applications for security vulnerabilities and provides clear, actionable results.",
+      "publisher": {
+        "@id": "https://www.thesmartscanner.com/#organization"
+      }
+    }
+  ]
+}</script><link rel="prefetch" href="/assets/css/prism.css"></head><body class="font-sans"><nav id="nav" class="sticky top-0 z-40 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md transition-all duration-300" role="navigation" aria-label="Main navigation"><div class="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-4 xl:px-0"><div class="flex min-w-0 items-center"><a class="resetLink inline-flex shrink-0 items-center gap-2 text-lg font-bold tracking-tight text-slate-900 hover:text-emerald-700" href="/#" title="Home"><img src="/assets/img/logo_opaque.svg" class="h-10 w-10" width="40" height="40" alt="SmartScanner Logo" aria-hidden="true"> <span>SmartScanner</span></a><div class="hidden items-center gap-7 pl-10 text-sm font-medium text-slate-700 lg:flex"><a class="resetLink transition-colors hover:text-emerald-700" href="/features">Features</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink transition-colors hover:text-emerald-700" href="/support">Support</a></div></div><div class="flex items-center gap-3"><a id="nav-download" data-initially-hidden="true" class="resetLink hidden items-center justify-center rounded-xl bg-emerald-700 px-5 py-2.5 text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800 hover:text-white lg:inline-flex lg:opacity-0 lg:pointer-events-none" href="/download">Download for Free</a> <button id="mobile-menu-button" class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:border-emerald-200 hover:text-emerald-700 lg:hidden" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line class="menu-line menu-line-top" x1="3" y1="6" x2="21" y2="6"/><line class="menu-line menu-line-middle" x1="3" y1="12" x2="21" y2="12"/><line class="menu-line menu-line-bottom" x1="3" y1="18" x2="21" y2="18"/></svg></button></div></div><div id="mobile-menu" class="lg:hidden absolute left-0 right-0 top-full max-h-0 overflow-hidden border-t border-slate-200 bg-white opacity-0 shadow-xl transition-[max-height,opacity] duration-300 ease-out pointer-events-none"><div class="mx-auto max-w-6xl space-y-1 px-4 py-4"><a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/features">Features</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/pricing">Pricing</a> <a class="resetLink block rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-50 hover:text-emerald-700" href="/support">Support</a> <a class="resetLink mt-2 block rounded-xl bg-emerald-700 px-4 py-3 text-center text-sm font-semibold text-white shadow-sm shadow-emerald-700/20 transition hover:bg-emerald-800" href="/download">Download for Free</a></div></div></nav><style>#mobile-menu-button .menu-line {
+    transform-origin: 12px 12px;
+    transition: transform 220ms ease, opacity 180ms ease;
+  }
+
+  #mobile-menu-button.is-open .menu-line-top {
+    transform: translate(-4px, 4px) rotate(45deg);
+  }
+
+  #mobile-menu-button.is-open .menu-line-middle {
+    opacity: 0;
+  }
+
+  #mobile-menu-button.is-open .menu-line-bottom {
+    transform: translate(-4px, -4px) rotate(-45deg);
+  }</style><script>const nav = document.getElementById('nav');
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  function closeMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'false');
+    mobileMenuButton.setAttribute('aria-label', 'Open menu');
+    mobileMenuButton.classList.remove('is-open');
+    mobileMenu.classList.add('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.remove('max-h-96', 'opacity-100');
+  }
+
+  function openMenu() {
+    if (!mobileMenuButton || !mobileMenu) return;
+    mobileMenuButton.setAttribute('aria-expanded', 'true');
+    mobileMenuButton.setAttribute('aria-label', 'Close menu');
+    mobileMenuButton.classList.add('is-open');
+    mobileMenu.classList.remove('max-h-0', 'opacity-0', 'pointer-events-none');
+    mobileMenu.classList.add('max-h-96', 'opacity-100');
+  }
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isOpen = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    document.addEventListener('click', (event) => {
+      if (window.innerWidth >= 1024) return;
+      if (!nav.contains(event.target)) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        closeMenu();
+      }
+    });
+  }
+
+  function updateNavShadow() {
+    if (!nav) return;
+    if (window.scrollY > 12) {
+      nav.classList.add('shadow-md');
+      nav.classList.add('shadow-slate-200/60');
+    } else {
+      nav.classList.remove('shadow-md');
+      nav.classList.remove('shadow-slate-200/60');
+    }
+  }
+
+  let ticking = false;
+  document.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateNavShadow();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  window.addEventListener('load', updateNavShadow);
+  window.addEventListener('resize', updateNavShadow);
+  updateNavShadow();</script><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SmartScanner",
+  "applicationCategory": "SecurityApplication",
+  "operatingSystem": ["Windows"],
+  "url": "https://www.thesmartscanner.com/",
+  "downloadUrl": "https://www.thesmartscanner.com/download",
+  "image": "https://www.thesmartscanner.com/assets/img/logo.png",
+  "screenshot": "https://www.thesmartscanner.com/assets/img/hero.png",
+  "description": "AI-powered vulnerability scanner for web applications, APIs, and modern JavaScript platforms.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock",
+    "url": "https://www.thesmartscanner.com/download"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SmartScanner",
+    "url": "https://www.thesmartscanner.com/"
+  }
+}</script><main class="overflow-hidden bg-slate-50"><section id="scan" class="bg-slate-950 px-4 pb-14 pt-8 text-white lg:pb-20 lg:pt-12 xl:px-0"><div class="mx-auto max-w-6xl"><div class="mb-14 flex items-center justify-between text-sm text-slate-300"><a href="/" class="resetLink inline-flex items-center gap-2 hover:text-white"><span aria-hidden="true">&larr;</span> SmartScanner</a><a href="/owasp-top-10-scanner/" class="resetLink hover:text-white">See OWASP coverage <span aria-hidden="true">&rarr;</span></a></div><div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_460px] lg:gap-20"><div><div class="mb-6 flex flex-wrap items-center gap-3 text-sm font-semibold uppercase tracking-[0.12em] text-emerald-300"><span class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1">API security scanner</span><span class="text-slate-400">Free scan</span></div><h1 class="mb-6 max-w-3xl text-4xl font-bold leading-tight text-white lg:text-6xl">Find the API flaws attackers use to reach your data.</h1><p class="mb-0 max-w-2xl text-lg leading-8 text-slate-300 lg:text-xl">SmartScanner tests REST APIs and backend services for authentication, authorization, injection, data exposure, and OWASP API Top 10 risks.</p><div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-slate-300"><span class="inline-flex items-center gap-2"><span class="text-emerald-300" aria-hidden="true">&#10003;</span> No signup or credit card</span><span class="inline-flex items-center gap-2"><span class="text-emerald-300" aria-hidden="true">&#10003;</span> Runs on Windows</span><span class="inline-flex items-center gap-2"><span class="text-emerald-300" aria-hidden="true">&#10003;</span> Scan data stays local</span></div></div><div class="rounded-2xl border border-emerald-400/20 bg-emerald-950 p-6 shadow-[0_24px_70px_rgba(0,0,0,.28)] lg:p-7"><div class="mb-5"><p class="mb-1 text-lg font-bold text-white">Scan your API now</p><p class="mb-0 text-sm leading-6 text-emerald-100">Enter a target and launch SmartScanner with the URL ready to test.</p></div><form class="mx-auto flex w-full max-w-[650px] gap-2 rounded-[15px] border border-slate-200 bg-white p-2 shadow-soft max-md:flex-col max-md:border-0 max-md:bg-transparent max-md:p-0 max-md:shadow-none" id="apiScanForm"><div class="min-w-0 flex-1"><input class="w-full min-w-[140px] flex-1 rounded-[10px] border-0 bg-transparent px-[10px] py-[8px] text-base text-slate-900 outline-none ring-0 placeholder:text-slate-400 max-md:border max-md:border-slate-200 max-md:bg-white max-md:shadow-sm max-md:min-h-[55px]" id="apiScanInput" type="url" placeholder="https://yourwebsite.com" autocomplete="url" aria-label="Website URL" aria-describedby="websiteUrlError" required><p id="apiScanStatus" class="hidden px-[10px] text-xs font-medium text-red-600 text-left" role="alert">Please enter a valid website URL.</p></div><button class="hidden whitespace-nowrap rounded-[10px] border-0 bg-brand px-[18px] py-0 text-[15px] font-bold text-white transition hover:-translate-y-px hover:bg-brand-800 disabled:cursor-wait disabled:opacity-60 sm:block max-md:min-h-[55px]" id="apiScanButton" type="submit">Launch Free Scan</button> <button class="inline-flex pointer-events-none bg-neutral-200 border-zinc-300 text-zinc-500 items-center justify-center rounded-[10px] px-[18px] py-0 max-md:min-h-[55px] sm:hidden" type="button" disabled="disabled" aria-disabled="true">Visit on desktop to scan</button></form><script src="/assets/js/online-scan-form.js"></script><script>makeOnlineScanForm({
+    form: "apiScanForm",
+    input: "apiScanInput",
+    button: "apiScanButton",
+    status: "apiScanStatus"
+  });</script><p class="mb-0 mt-3 text-center text-xs text-emerald-200/80">Dynamic testing from your computer. No data upload required.</p></div></div></div></section><section class="border-b border-slate-200 bg-white px-4 py-8 xl:px-0"><div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4"><p class="mb-0 text-sm font-semibold text-slate-500">Test the layer that connects your product to its data</p><div class="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-wider text-slate-500"><span class="rounded-full bg-slate-100 px-3 py-1">REST APIs</span><span class="rounded-full bg-slate-100 px-3 py-1">JWT / sessions</span><span class="rounded-full bg-slate-100 px-3 py-1">Access control</span><span class="rounded-full bg-slate-100 px-3 py-1">OWASP API Top 10</span></div></div></section><section class="px-4 py-16 lg:py-24 xl:px-0"><div class="mx-auto max-w-6xl"><div class="mb-12 max-w-2xl"><p class="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-emerald-750">Why API security is different</p><h2 class="mb-4 text-3xl lg:text-4xl">Your API is not just another URL.</h2><p class="mb-0 text-lg leading-8 text-slate-600">APIs expose business data and actions directly. A useful API security scanner needs to understand request structure, identity, authorization, and what the response reveals.</p></div><div class="grid gap-4 md:grid-cols-3"><div class="rounded-2xl border border-emerald-200 bg-emerald-50 p-6"><span class="mb-10 grid h-11 w-11 place-items-center rounded-xl bg-emerald-700 text-white">01</span><h3 class="mb-3 text-xl">Map the contract</h3><p class="mb-0 leading-7 text-slate-600">Discover endpoints, parameters, request methods, and response structures that make up the API surface.</p></div><div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><span class="mb-10 grid h-11 w-11 place-items-center rounded-xl bg-slate-900 text-white">02</span><h3 class="mb-3 text-xl">Test identity and access</h3><p class="mb-0 leading-7 text-slate-600">Look for authentication gaps, broken object-level authorization, and actions users should not be able to perform.</p></div><div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm"><span class="mb-10 grid h-11 w-11 place-items-center rounded-xl bg-slate-900 text-white">03</span><h3 class="mb-3 text-xl">Validate what comes back</h3><p class="mb-0 leading-7 text-slate-600">Inspect responses for injection behavior, excessive data exposure, and evidence worth investigating.</p></div></div></div></section><section class="bg-white px-4 py-16 lg:py-24 xl:px-0"><div class="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:gap-20"><div><p class="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-emerald-750">API risk coverage</p><h2 class="mb-5 text-3xl lg:text-4xl">Find the failures between a request and a data leak.</h2><p class="mb-8 text-lg leading-8 text-slate-600">SmartScanner helps expose the weaknesses that can let an attacker authenticate as the wrong user, access the wrong object, or send input your backend trusts too much.</p><div class="grid gap-3 sm:grid-cols-2"><div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="mb-2 text-base">Broken authorization</h3><p class="mb-0 text-sm leading-6 text-slate-600">BOLA, object access, and privilege boundary issues.</p></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="mb-2 text-base">Authentication flaws</h3><p class="mb-0 text-sm leading-6 text-slate-600">Weak login, token, session, and identity controls.</p></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="mb-2 text-base">Excessive data exposure</h3><p class="mb-0 text-sm leading-6 text-slate-600">Responses that reveal more than the client needs.</p></div><div class="rounded-xl border border-slate-200 bg-slate-50 p-5"><h3 class="mb-2 text-base">Injection and abuse</h3><p class="mb-0 text-sm leading-6 text-slate-600">Unsafe input, misconfiguration, and abuse paths.</p></div></div></div><div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm sm:p-8"><div class="mb-6 flex items-center justify-between"><h3 class="mb-0 text-lg">API assessment</h3><span class="rounded-full bg-emerald-100 px-3 py-1 text-xs font-bold text-emerald-800">In progress</span></div><div class="relative space-y-3 pl-5 before:absolute before:bottom-6 before:left-[9px] before:top-6 before:w-px before:bg-slate-300"><div class="relative rounded-xl bg-white p-4"><span class="absolute -left-[21px] top-5 h-2.5 w-2.5 rounded-full border-2 border-slate-50 bg-emerald-600"></span><div class="flex items-center justify-between gap-4"><span class="text-sm font-semibold text-slate-800">GET /api/accounts</span><span class="text-xs font-bold text-emerald-700">Mapped</span></div><p class="mb-0 mt-2 text-xs leading-5 text-slate-500">Response schema and identity context captured</p></div><div class="relative rounded-xl bg-white p-4"><span class="absolute -left-[21px] top-5 h-2.5 w-2.5 rounded-full border-2 border-slate-50 bg-amber-500"></span><div class="flex items-center justify-between gap-4"><span class="text-sm font-semibold text-slate-800">Authorization checks</span><span class="text-xs font-bold text-amber-700">Testing</span></div><p class="mb-0 mt-2 text-xs leading-5 text-slate-500">Object and role boundaries under review</p></div><div class="relative rounded-xl bg-white p-4"><span class="absolute -left-[21px] top-5 h-2.5 w-2.5 rounded-full border-2 border-slate-50 bg-sky-500"></span><div class="flex items-center justify-between gap-4"><span class="text-sm font-semibold text-slate-800">POST /api/orders</span><span class="text-xs font-bold text-sky-700">Queued</span></div><p class="mb-0 mt-2 text-xs leading-5 text-slate-500">Injection and data exposure tests next</p></div></div></div></div></section><section class="px-4 py-16 lg:py-24 xl:px-0"><div class="mx-auto max-w-6xl"><div class="mb-10 flex flex-wrap items-end justify-between gap-6"><div><p class="mb-3 text-sm font-bold uppercase tracking-[0.12em] text-emerald-750">Designed for API teams</p><h2 class="mb-0 text-3xl lg:text-4xl">Useful from endpoint discovery to remediation.</h2></div><a href="/vulnerability-list/" class="resetLink font-bold text-emerald-750 hover:text-emerald-900">Browse all security checks <span aria-hidden="true">&rarr;</span></a></div><div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4"><div class="rounded-xl border border-slate-200 bg-white p-5"><h3 class="mb-2 text-base">Authenticated scanning</h3><p class="mb-0 text-sm leading-6 text-slate-600">Reach protected API areas with sessions and configured authentication.</p></div><div class="rounded-xl border border-slate-200 bg-white p-5"><h3 class="mb-2 text-base">Modern services</h3><p class="mb-0 text-sm leading-6 text-slate-600">Test backend services, microservices, and API-driven applications.</p></div><div class="rounded-xl border border-slate-200 bg-white p-5"><h3 class="mb-2 text-base">Verified findings</h3><p class="mb-0 text-sm leading-6 text-slate-600">Review evidence and context to separate signal from noise.</p></div><div class="rounded-xl border border-slate-200 bg-white p-5"><h3 class="mb-2 text-base">Actionable reports</h3><p class="mb-0 text-sm leading-6 text-slate-600">Give developers clear impact and remediation guidance.</p></div></div></div></section><section class="bg-slate-950 px-4 py-20 text-center text-white lg:py-28 xl:px-0"><div class="mx-auto max-w-3xl"><p class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-emerald-300">Protect the data behind your product</p><h2 class="mb-5 text-3xl text-white lg:text-5xl">Start your free API security scan.</h2><p class="mx-auto mb-8 max-w-2xl text-lg leading-8 text-slate-300">No account required. Launch SmartScanner locally and find the API risks that deserve your team’s attention.</p><div class="flex flex-wrap justify-center gap-3"><a href="#scan" class="inline-flex items-center rounded-lg bg-emerald-400 px-6 py-3 font-bold text-emerald-950 no-underline hover:bg-emerald-300">Launch Free Scan <span class="ml-2" aria-hidden="true">&uarr;</span></a><a href="/features/javascript-html5-spa-jamstack-serverless-react-security" class="resetLink inline-flex items-center rounded-lg border border-slate-700 px-6 py-3 font-bold text-white hover:border-slate-500 hover:bg-slate-900">See modern web coverage</a></div></div></section></main><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "What is an API security scanner?", "acceptedAnswer": {"@type": "Answer", "text": "An API security scanner tests application programming interfaces for vulnerabilities that can allow unauthorized access, data exposure, injection, or abuse of business logic."}},
+    {"@type": "Question", "name": "What API vulnerabilities can SmartScanner detect?", "acceptedAnswer": {"@type": "Answer", "text": "SmartScanner checks API behavior for issues including broken object-level authorization, broken authentication, excessive data exposure, injection flaws, and security misconfigurations."}},
+    {"@type": "Question", "name": "Does SmartScanner support authenticated API scanning?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. SmartScanner supports testing protected application areas with configured authentication, sessions, and tokens where applicable."}},
+    {"@type": "Question", "name": "Does API scanning run locally?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. SmartScanner runs on Windows, and scan requests and results remain on your computer rather than being uploaded to a hosted scanning service."}}
+  ]
+}</script><footer class="bg-slate-950 text-slate-300"><div class="mx-auto max-w-6xl px-4 py-12 xl:px-0 lg:py-16"><div class="grid gap-10 lg:grid-cols-[minmax(0,1.35fr)_repeat(4,minmax(0,1fr))] lg:gap-8"><div class="max-w-xs"><a href="/" class="resetLink inline-flex items-center gap-3 text-lg font-bold text-white no-underline"><img src="/assets/img/logo.svg" width="36" height="36" alt="SmartScanner logo" class="h-9 w-9"> SmartScanner</a><p class="mt-5 text-sm leading-6 text-slate-400">AI-powered web application security testing for developers, security teams, pentesters, and businesses.</p><nav class="mt-5" aria-label="Support navigation"><ul class="flex flex-wrap gap-x-5 gap-y-2 text-sm list-none"><li><a href="/contact" class="resetLink hover:text-emerald-300">Contact Us</a></li><li><a href="/support#faq" class="resetLink hover:text-emerald-300">FAQ</a></li><li><a href="/support" class="resetLink hover:text-emerald-300">Support</a></li></ul></nav><div class="mt-6 flex items-center gap-3"><a href="https://twitter.com/TheSmartScanner" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="SmartScanner on X"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.2 2h6.4l4.42 5.84L18.9 2Zm-1.1 17.9h1.73L7.53 4.03H5.67L17.8 19.9Z"/></svg></a><a href="mailto:support@thesmartscanner.com" class="grid h-9 w-9 place-items-center rounded-lg border border-white/10 text-slate-300 transition hover:border-emerald-400/50 hover:bg-emerald-400/10 hover:text-emerald-300" aria-label="Email SmartScanner support"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></a></div></div><nav aria-label="Product navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Product</h2><ul class="space-y-3 text-sm list-none"><li><a href="/features" class="resetLink hover:text-emerald-300">Why SmartScanner?</a></li><li><a href="/download" class="resetLink hover:text-emerald-300">Download</a></li><li><a href="/pricing" class="resetLink hover:text-emerald-300">Plans and pricing</a></li><li><a href="/changelog" class="resetLink hover:text-emerald-300">Product updates</a></li></ul></nav><nav aria-label="Security solutions navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Solutions</h2><ul class="space-y-3 text-sm list-none"><li><a href="/free-website-vulnerability-scanner/" class="resetLink hover:text-emerald-300">Free website scanner</a></li><li><a href="/vulnerability-scanner/" class="resetLink hover:text-emerald-300">Web vulnerability scanner</a></li><li><a href="/owasp-top-10-scanner/" class="resetLink hover:text-emerald-300">OWASP Top 10 scanner</a></li><li><a href="/api-security-scanner/" class="resetLink hover:text-emerald-300">API security scanner</a></li><li><a href="/pentest-automation-tool/" class="resetLink hover:text-emerald-300">Pentest automation</a></li></ul></nav><nav aria-label="Resources navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Resources</h2><ul class="space-y-3 text-sm list-none"><li><a href="/vulnerability-list/" class="resetLink hover:text-emerald-300">Vulnerability library</a></li><li><a href="/docs/" class="resetLink hover:text-emerald-300">Documentation</a></li><li><a href="/blog/" class="resetLink hover:text-emerald-300">Security blog</a></li><li><a href="/tools/robotstxt/" class="resetLink hover:text-emerald-300">Robots.txt validator</a></li><li><a href="/air-gapped-security/" class="resetLink hover:text-emerald-300">Air-gapped security</a></li></ul></nav><nav aria-label="Alternatives navigation"><h2 class="mb-4 text-sm font-bold uppercase tracking-[0.12em] text-white">Alternatives</h2><ul class="space-y-3 text-sm list-none"><li><a href="/alternatives/" class="resetLink hover:text-emerald-300">All alternatives</a></li><li><a href="/acunetix-alternative" class="resetLink hover:text-emerald-300">Acunetix</a></li><li><a href="/burp-suite-alternative" class="resetLink hover:text-emerald-300">Burp Suite</a></li><li><a href="/netsparker-alternative" class="resetLink hover:text-emerald-300">Netsparker</a></li><li><a href="/nikto-alternative" class="resetLink hover:text-emerald-300">Nikto</a></li><li><a href="/nuclei-alternative" class="resetLink hover:text-emerald-300">Nuclei</a></li><li><a href="/owasp-zap-alternative" class="resetLink hover:text-emerald-300">OWASP ZAP</a></li></ul></nav></div><div class="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between"><p class="mb-0">&copy; 2026 TheSmartScanner.com</p><div class="flex flex-wrap gap-x-5 gap-y-2"><a href="/terms" class="resetLink hover:text-slate-300">Terms of service</a><a href="/privacy" class="resetLink hover:text-slate-300">Privacy policy</a><a href="/eula" class="resetLink hover:text-slate-300">EULA</a><a href="/contact" class="resetLink hover:text-slate-300">Contact</a><span>Web security testing for modern applications</span></div></div></div></footer><link rel="prefetch" href="/assets/js/prism.js"><div id="cookieConsent" style="display:none;" class="flex py-4 px-4 lg:px-6 shadow-[0_-4px_8px_0px_rgba(0,0,0,0.1)] fixed bottom-0 left-0 w-full justify-between items-center flex-wrap lg:flex-nowrap gap-4 text-sm bg-white/60 backdrop-blur-md"><p class="text-base mx-auto m-0 pr-4 lg:pr-0">We use cookies to enhance quality of our services and to analyze traffic. Read our <a href="/privacy" class="resetLink underline">privacy policy</a>.</p><div class="flex gap-2 w-full lg:w-fit"><button onclick="consent.accept()" class="w-full lg:w-fit text-emerald-750 border border-emerald-750 rounded-[7px] h-10 min-w-24 flex items-center text-center justify-center bg-white transition-colors hover:text-emerald-750 hover:bg-emerald-25 active:bg-teal-100">OK, got it</button> <button onclick="consent.reject()" class="py-1 px-2 hover:text-black absolute top-3 right-2 lg:[position:initial]">X</button></div></div><script defer="defer" type="text/javascript" src="/assets/js/cookie.min.js"></script><script>(function(){
+    // Page-local control: toggle #nav-download visibility when #download is out of view.
+    // This only runs when the nav item was rendered with data-initially-hidden="true".
+    try {
+    const navDownload = document.getElementById('nav-download');
+    if (!navDownload || navDownload.getAttribute('data-initially-hidden') !== 'true') return;
+
+    const target = document.getElementById('download');
+    if (!target) return;
+
+    const setHidden = (visible) => {
+        // visible === true => keep hidden state (opacity 0). visible === false => show (opacity 100)
+        if (visible) {
+        navDownload.classList.add('lg:opacity-0', 'lg:pointer-events-none');
+        navDownload.classList.remove('lg:opacity-100');
+        } else {
+        navDownload.classList.remove('lg:opacity-0', 'lg:pointer-events-none');
+        navDownload.classList.add('lg:opacity-100');
+        }
+    };
+
+    const io = new IntersectionObserver((entries) => {
+        const e = entries[0];
+        // when #download is not intersecting, show the nav-download; otherwise keep it invisible
+        setHidden(e.isIntersecting);
+    }, { threshold: [0], root: null });
+
+    io.observe(target);
+
+// initial sync: if not visible, make nav visible
+const rect = target.getBoundingClientRect();
+const initiallyVisible = rect.top < window.innerHeight && rect.bottom > 0;
+setHidden(initiallyVisible);
+    } catch (e) {
+    // don't block page on errors
+    console.error(e);
+    }
+})();</script></body></html>
