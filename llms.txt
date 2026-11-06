@@ -1,0 +1,43 @@
+# SmartScanner
+
+> SmartScanner is an AI-powered web application vulnerability scanner for testing websites, APIs, and modern JavaScript applications on Windows.
+
+## Product
+
+SmartScanner automates dynamic application security testing (DAST) through a point-and-click interface. It adapts scanning methods to each target and reports vulnerabilities such as SQL injection, cross-site scripting, open redirects, path traversal, sensitive data leakage, cryptographic weaknesses, insecure dependencies, and configuration flaws.
+
+The product supports authenticated pages, JavaScript-heavy applications, REST APIs, single-page applications built with React or Vue, server-side technologies including PHP, .NET, and Node.js, common web servers, CMS platforms, and relational databases.
+
+## Plans and pricing
+
+- Free: $0/month; unlimited targets and scans; limited vulnerability details.
+- Pro: $25/month billed monthly, or $20/month billed annually at $240 upfront; full vulnerability details and ongoing updates; requires an internet connection.
+- Perpetual: $599 per seat one time; full vulnerability details; works offline and includes one year of upgrades. Upgrade renewal is $219/year, or $149 when renewed before expiry.
+
+See the machine-readable pricing details at [/pricing.md](/pricing.md) and the human pricing page at [/pricing](/pricing).
+
+## Key pages
+
+- [Homepage](/)
+- [Features](/features)
+- [Download the free version](/download)
+- [Documentation](/docs/)
+- [Security vulnerability database](/vulnerability-list/)
+- [Support and FAQ](/support)
+- [Blog](/blog/)
+- [Contact](/contact)
+
+## Comparisons
+
+- [OWASP ZAP alternative](/owasp-zap-alternative)
+- [Netsparker alternative](/netsparker-alternative)
+- [Acunetix alternative](/acunetix-alternative)
+- [Burp alternative](/burp-suite-alternative)
+- [Nuclei alternative](/nuclei-alternative)
+- [Nikto alternative](/nikto-alternative)
+
+
+
+## Company
+
+SmartScanner is published by Smart Web Security. Support is available at [support@thesmartscanner.com](mailto:support@thesmartscanner.com). See the [privacy policy](/privacy), [terms of service](/terms), and [EULA](/eula).
