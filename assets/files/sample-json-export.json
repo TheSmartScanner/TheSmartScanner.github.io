@@ -1,0 +1,2334 @@
+{
+    "date": "Thu May 16 2024",
+    "duration": "2′ 44″",
+    "issues": [
+        {
+            "customFields": {
+                "Authentication Required": [
+                    "http://localhost/auth/"
+                ],
+                "Cookies": [
+                    "p3",
+                    "phpMyAdmin",
+                    "profile",
+                    "PHPSESSID",
+                    "pma_lang",
+                    "id",
+                    "this_should_not_be"
+                ],
+                "Emails": [
+                    "mike@hyperreal.org",
+                    "admin@gmail.com",
+                    "admin@example.com",
+                    "kevinh@kevcom.com",
+                    "aaa@sss.com"
+                ],
+                "Forms With Password": [
+                    "http://localhost/formauth/",
+                    "http://localhost/formauth/bypassBlock.php",
+                    "http://localhost/formauth/enumerate.php"
+                ],
+                "OS": [
+                    "Windows"
+                ],
+                "PHP Versions": [
+                    "8.0.30"
+                ],
+                "Paths": [
+                    "C:\\xampp\\htdocs\\user\\name\\index.php",
+                    "C:/xampp/htdocs",
+                    "C:/xampp/webalizer",
+                    "C:\\xampp\\htdocs",
+                    "C:\\xampp\\htdocs\\xss\\base64.php",
+                    "C:\\xampp\\htdocs\\formauth\\bypassBlock.php",
+                    "/var/log/www",
+                    "C:\\xampp\\htdocs\\feed\\index.php",
+                    "C:/xampp/apache/logs/ssl_scache",
+                    "C:/xampp/apache/cgi-bin",
+                    "C:\\xampp\\htdocs\\xss\\script-inline.php",
+                    "C:/xampp/apache/logs/error.log",
+                    "C:/xampp/apache/conf/extra/httpd-autoindex.conf",
+                    "C:\\xampp\\htdocs\\ping\\index.php",
+                    "C:/xampp/htdocs/xampp",
+                    "C:\\xampp\\htdocs\\redir\\index.php",
+                    "C:/xampp/apache/conf/extra/httpd-xampp.conf",
+                    "C:/xampp/apache/bin/openssl.cnf",
+                    "C:\\xampp\\htdocs\\display\\index.php",
+                    "C:/xampp/php",
+                    "C:\\xampp\\htdocs\\formauth\\enumerate.php",
+                    "C:/xampp/apache/icons",
+                    "C:/xampp/cgi-bin",
+                    "C:/xampp/phpMyAdmin",
+                    "C:/xampp/apache/conf/extra/httpd-ajp.conf",
+                    "C:/xampp/apache/conf/extra/httpd-info.conf",
+                    "C:/xampp/apache/logs/ssl_request.log",
+                    "C:/xampp/apache/conf/extra/httpd-mpm.conf",
+                    "C:/xampp/licenses",
+                    "C:\\xampp\\php\\PEAR",
+                    "C:/xampp/apache/conf/extra/httpd-ssl.conf",
+                    "C:/xampp/php/extras/mibs",
+                    "C:/xampp/apache/conf/httpd.conf",
+                    "C:\\xampp\\htdocs\\formauth\\index.php",
+                    "C:/xampp/apache/conf/extra/httpd-default.conf",
+                    "C:/xampp/apache/conf/extra/httpd-languages.conf",
+                    "C:/xampp/apache/logs/access.log",
+                    "C:/xampp/apache",
+                    "C:\\xampp\\htdocs\\xss\\index.php"
+                ],
+                "Server Banner": [
+                    "apache/2.4.58 (win64) openssl/3.1.3 php/8.0.30"
+                ],
+                "Technologies": [
+                    "PHP"
+                ],
+                "Users": [
+                    "admin"
+                ],
+                "Web Server": [
+                    "apache/2.4.58 (win64)"
+                ],
+                "X-Powered-By": [
+                    "PHP/8.0.30"
+                ]
+            },
+            "id": 4214117723,
+            "impact": 4,
+            "name": "Target Information",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/contact/",
+                    "localhost/xss/",
+                    "localhost/dashboard/json.php",
+                    "localhost/ping/",
+                    "localhost/show/",
+                    "localhost/xss/base64.php",
+                    "localhost/xss/script-inline.php",
+                    "localhost/iframe/secure.html",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/formauth/",
+                    "localhost/ssi/",
+                    "localhost/formauth/enumerate.php",
+                    "localhost",
+                    "localhost/user/",
+                    "localhost/formauth/bypassBlock.php",
+                    "localhost/display/",
+                    "localhost/iframe/",
+                    "localhost/user/name/",
+                    "localhost/icons/small/",
+                    "localhost/feed/",
+                    "localhost/article/show/list/1/details"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 3305688781,
+            "impact": 3,
+            "name": "X-Frame-Options Header is Missing",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/contact/",
+                    "localhost/xss/",
+                    "localhost/dashboard/json.php",
+                    "localhost/ping/",
+                    "localhost/show/",
+                    "localhost/xss/base64.php",
+                    "localhost/xss/script-inline.php",
+                    "localhost/iframe/secure.html",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/formauth/",
+                    "localhost/ssi/",
+                    "localhost/formauth/enumerate.php",
+                    "localhost",
+                    "localhost/user/",
+                    "localhost/formauth/bypassBlock.php",
+                    "localhost/display/",
+                    "localhost/iframe/",
+                    "localhost/user/name/",
+                    "localhost/icons/small/",
+                    "localhost/feed/",
+                    "localhost/article/show/list/1/details"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 2990751467,
+            "impact": 3,
+            "name": "Content-Security-Policy Header is Missing",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/contact/",
+                    "localhost/xss/",
+                    "localhost/dashboard/json.php",
+                    "localhost/ping/",
+                    "localhost/show/",
+                    "localhost/xss/base64.php",
+                    "localhost/xss/script-inline.php",
+                    "localhost/iframe/secure.html",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/formauth/",
+                    "localhost/ssi/",
+                    "localhost/formauth/enumerate.php",
+                    "localhost",
+                    "localhost/user/",
+                    "localhost/formauth/bypassBlock.php",
+                    "localhost/display/",
+                    "localhost/iframe/",
+                    "localhost/user/name/",
+                    "localhost/icons/small/",
+                    "localhost/feed/",
+                    "localhost/article/show/list/1/details"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 2426878632,
+            "impact": 4,
+            "name": "X-Content-Type-Options Header is Missing",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/contact/",
+                    "localhost/xss/",
+                    "localhost/dashboard/json.php",
+                    "localhost/ping/",
+                    "localhost/show/",
+                    "localhost/xss/base64.php",
+                    "localhost/xss/script-inline.php",
+                    "localhost/iframe/secure.html",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/formauth/",
+                    "localhost/ssi/",
+                    "localhost/formauth/enumerate.php",
+                    "localhost",
+                    "localhost/user/",
+                    "localhost/formauth/bypassBlock.php",
+                    "localhost/display/",
+                    "localhost/iframe/",
+                    "localhost/user/name/",
+                    "localhost/icons/small/",
+                    "localhost/feed/",
+                    "localhost/article/show/list/1/details"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 1954580827,
+            "impact": 4,
+            "name": "Referrer-Policy Header is Missing",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "X-Powered-By": [
+                    "PHP/8.0.30"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 79510906,
+            "impact": 4,
+            "name": "X-Powered-By Header Found",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "IP Addresses": [
+                    "10.10.98.19"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\n10.10.98.19</span>\r\n\t<span>FD00::4:120</span>\r\n\t</\r\n...[truncated]..."
+                }
+            ],
+            "id": 3321417796,
+            "impact": 4,
+            "name": "Private IPv4 Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "IP Addresses": [
+                    "FD00::4:120"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nFD00::4:120</span>\r\n\t</div>\r\n  </div>\r\n  <div clas\r\n...[truncated]..."
+                }
+            ],
+            "id": 4166187064,
+            "impact": 4,
+            "name": "Private IPv6 Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Found Emails": [
+                    "admin@gmail.com"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nadmin@gmail.com\">admin@gmail.com</a>\r\n\t</div>\r\n  <\r\n...[truncated]..."
+                }
+            ],
+            "id": 3940842125,
+            "impact": 4,
+            "name": "Email Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\</span>\r\n\t<span>/var/log/www/</spa\r\n...[truncated]..."
+                }
+            ],
+            "id": 3073172465,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "/var/log/www"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\n\r\n...[truncated]..."
+                }
+            ],
+            "id": 3068606696,
+            "impact": 4,
+            "name": "Unix Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "SQL": [
+                    "Select * from users"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nSelect * from users where id=1</span>\r\n\t</div>\r\n  \r\n...[truncated]..."
+                }
+            ],
+            "id": 3668130265,
+            "impact": 4,
+            "name": "SQL Command Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Code": [
+                    "<?php "
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\n\"module-title\">Source Code Disclosure</div>\r\n\t<div class=\"module-body\">\r\n\t<span><?php echo something; ?></span>\r\n\t</div>\r\n  </div>\r\n  <div class=\"module\">\r\n\t<di\r\n...[truncated]..."
+                }
+            ],
+            "id": 2585100020,
+            "impact": 2,
+            "name": "Source Code Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\niv class=\"module-body\">\r\n  <input type=file name=test>\r\n...[truncated]..."
+                }
+            ],
+            "id": 1345192528,
+            "impact": 4,
+            "name": "File Upload Functionality",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/dashboard/json.php",
+                    "localhost/show/",
+                    "localhost/xss/base64.php?name=YmFzZTY0LWVuY29kZWQtdmFsdWU",
+                    "localhost/iframe/secure.html",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/ping/?i=127.0.0.1",
+                    "localhost/formauth/",
+                    "localhost/ssi/",
+                    "localhost/xss/script-inline.php?u=testa",
+                    "localhost/formauth/enumerate.php",
+                    "localhost/display/?f=a.html",
+                    "localhost/xss/?name=test",
+                    "localhost",
+                    "localhost/user/",
+                    "localhost/formauth/bypassBlock.php",
+                    "localhost/auth/",
+                    "localhost/iframe/",
+                    "localhost/user/name/",
+                    "localhost/contact/?q=1",
+                    "localhost/icons/small/",
+                    "localhost/feed/",
+                    "localhost/article/show/list/1/details"
+                ]
+            },
+            "id": 1134962474,
+            "impact": 2,
+            "name": "No HTTPS",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Version": [
+                    "2.4.58 (win64)"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 3696606367,
+            "impact": 3,
+            "name": "Apache Version Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Version in use": [
+                    "3.1.3"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 1798989448,
+            "impact": 2,
+            "name": "Vulnerable OpenSSL Version",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "\"'/<jxqz9464>=()"
+                ]
+            },
+            "details": "The `\"'/<jxqz9464>=()` was set as parameter `User-Agent` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nContent-Length: 0\r\nUser-Agent: \"'/<jxqz9464>=()\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7813\r\nKeep-Alive: timeout=5, max=94\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nmodule-title\">XSS in header</div>\r\n\t<div class=\"module-body\">\r\n\t\"'/<jxqz9464>=()\t</div>\r\n  </div>\r\n\r\n\r\n  <div class=\"module\">\r\n\t<div class=\"module-title\">XSS in\r\n...[truncated]..."
+                }
+            ],
+            "id": 1774520128,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "User-Agent",
+                "type": "Header",
+                "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+            },
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "PHP Version": [
+                    "8.0.30"
+                ]
+            },
+            "details": "PHP version is disclosed in the `Server header`.",
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 940915425,
+            "impact": 4,
+            "name": "PHP Version Disclosure",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "customFields": {
+                "Version in use": [
+                    "8.0.30"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7908\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width:\r\n...[truncated]..."
+                }
+            ],
+            "id": 1269462394,
+            "impact": 2,
+            "name": "Vulnerable PHP Version",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /server-status HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=87\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=ISO-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html><head>\n<title>Apache Status</title>\n</head><body>\n<h1>Apache Server Status for localhost (via ::1)\r\n...[truncated]..."
+                }
+            ],
+            "id": 1388675739,
+            "impact": 2,
+            "name": "Apache server-status enabled",
+            "restriction": 0,
+            "url": "http://localhost/server-status"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /server-info HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=ISO-8859-1\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n<html xmlns=\"http://www.w3.org/1999/xh\r\n...[truncated]..."
+                }
+            ],
+            "id": 233230939,
+            "impact": 2,
+            "name": "Apache server-info enabled",
+            "restriction": 0,
+            "url": "http://localhost/server-info"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "{\"userId\":12,\"userName\":\"customevalue\"}"
+                ]
+            },
+            "details": "SmartScanner tampered with a value in the `userName` property of the serialized JSON object in the parameter `id (Cookie)` and, the server accepted it without integrity checking. Then the server replied with the tampered data in the body.",
+            "http": [
+                {
+                    "request": "GET /dashboard/json.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=eyJ1c2VySWQiOjEyLCJ1c2VyTmFtZSI6ImN1c3RvbWV2YWx1ZSJ9; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 18\r\nKeep-Alive: timeout=5, max=90\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello customevalue"
+                }
+            ],
+            "id": 222551589,
+            "impact": 1,
+            "name": "Insecure Deserialization",
+            "parameter": {
+                "name": "id",
+                "type": "Cookie",
+                "value": "{\"userName\":\"testuser\",\"userId\":12}"
+            },
+            "restriction": 0,
+            "url": "http://localhost/dashboard/json.php"
+        },
+        {
+            "details": "The value injected in the `Host` header is reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /ssi HTTP/1.1\r\nOrigin: dkGjcdj2y3djasdcO\r\nX-Forwarded-Host: dkGjcdj2y3djasdcX\r\nForwarded: for=dkGjcdj2y3djasdcF\r\nConnection: Close\r\nAccept: */*\r\nHost: dkGjcdj2y3djasdc\r\n\r\n",
+                    "response": "HTTP/1.1 301 Moved Permanently\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLocation: http://dkgjcdj2y3djasdc/ssi/\r\nContent-Length: 342\r\nConnection: close\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>301 Moved Permanently</title>\n</head><body>\n<h1>Moved Permanently</h1>\n<p>The document has moved <a href=\"http://dkgjcdj2y3djasdc/ssi/\">here</a>.</p>\n<hr>\n<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at dkgjcdj2y3djasdc Port 80</address>\n</body></html>\n"
+                }
+            ],
+            "id": 976917108,
+            "impact": 2,
+            "name": "Host Header Injection",
+            "restriction": 0,
+            "url": "http://localhost/ssi"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\formauth\\bypassBlock.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nReferer: smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 463\r\nKeep-Alive: timeout=5, max=95\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 2685648554,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line"
+                ],
+                "Injection": [
+                    "smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the `smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769` was set as the parameter `Referer` value, the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nReferer: smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 463\r\nKeep-Alive: timeout=5, max=95\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 1342317816,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "Referer",
+                "type": "Header",
+                "value": "http://localhost/formauth/bypassBlock.php"
+            },
+            "referer": "smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Iframe Url": [
+                    "https://example.com"
+                ]
+            },
+            "details": "An `iframe` tag is loading an external URL without `sandbox` attribute.",
+            "http": [
+                {
+                    "request": "GET /iframe/index.html HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nReferer: {{369293-1}}\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLast-Modified: Tue, 14 Feb 2023 11:56:25 GMT\r\nETag: \"5f-5f4a7a72e3f11\"\r\nAccept-Ranges: bytes\r\nContent-Length: 95\r\nKeep-Alive: timeout=5, max=86\r\nConnection: Keep-Alive\r\nContent-Type: text/html\r\n\r\n<html>\r\n    <body>\r\n        <iframe src=\"https://example.com\"></iframe>\r\n    </body>\r\n\r\n</html>"
+                }
+            ],
+            "id": 1561040349,
+            "impact": 3,
+            "name": "Insecure Inline Frame",
+            "restriction": 0,
+            "url": "http://localhost/iframe/index.html"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/json.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=rawplain; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=83\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 2886107021,
+            "impact": 3,
+            "name": "Cookie without HttpOnly Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/json.php"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/json.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=rawplain; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=83\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 2430942448,
+            "impact": 3,
+            "name": "Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/json.php"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    ""
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/json.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=rawplain; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=83\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 3467836609,
+            "impact": 3,
+            "name": "Cookie without SameSite Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/json.php"
+        },
+        {
+            "customFields": {
+                "External Resources": [
+                    "https://code.jquery.com/ui/1.13.0-alpha.1/themes/smoothness/jquery-ui.css",
+                    "https://unpkg.com/vue@3.0.2"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /ssi/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nContent-Length: 0\r\nUser-Agent: {{800944-1}}\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLast-Modified: Wed, 13 Apr 2022 08:24:26 GMT\r\nETag: \"147-5dc84e7d62df8\"\r\nAccept-Ranges: bytes\r\nContent-Length: 327\r\nKeep-Alive: timeout=5, max=81\r\nConnection: Keep-Alive\r\nContent-Type: text/html\r\n\r\n<html>\r\n\r\n<head>\r\n<script type=\"text/javascript\" src=\"https://unpkg.com/vue@3.0.2\"></script>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://code.jquery.com/ui/1.13.0-alpha.1/themes/smoothne\r\n...[truncated]..."
+                }
+            ],
+            "id": 176636815,
+            "impact": 3,
+            "name": "Subresource Integrity is Missing",
+            "restriction": 0,
+            "url": "http://localhost/ssi/"
+        },
+        {
+            "details": "The value injected in the `Host` header is reflected in the response.",
+            "http": [
+                {
+                    "request": "GET / HTTP/1.1\r\nOrigin: dkGjcdj2y3djasdcO\r\nX-Forwarded-Host: dkGjcdj2y3djasdcX\r\nForwarded: for=dkGjcdj2y3djasdcF\r\nConnection: Close\r\nAccept: */*\r\nHost: dkGjcdj2y3djasdc\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:08 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 7927\r\nConnection: close\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\" >\r\n\r\n<head>\r\n  <meta charset=\"UTF-8\">\r\n  <title>Complete test cases</title>\r\n  <style>\r\nbody {\r\n  margin: 0 auto;\r\n  max-width: 56em;\r\n  padding: 1em 0;\r\n}\r\n\r\n.grid {\r\n  /* Grid Fallback */\r\n  display: flex;\r\n  flex-wrap: wrap;\r\n  \r\n  /* Supports Grid */\r\n  display: grid;\r\n  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));\r\n  grid-auto-rows: minmax(150px, auto);\r\n  grid-gap: 1em;\r\n}\r\n\r\n.module {\r\n  /* Demo-Specific Styles */\r\n  background: #eaeaea;\r\n}\r\n\r\n.module div {\r\n\tpadding: 5px;\r\n\tdisplay: flex;\r\n\talign-items: center;\r\n\tjustify-content: center;\r\n\tflex-direction: column;\r\n}\r\n\r\n.module-title {\r\n\tmin-height: 40px;\r\n\tbackground-color: tomato;\r\n\tcolor:white;\r\n\tfont-weight: bold;\r\n}\r\n\r\n.module-body {\r\n\tdisplay: flex;\r\n\talign-i"
+                }
+            ],
+            "id": 752798318,
+            "impact": 2,
+            "name": "Host Header Injection",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "id": 2015241976,
+            "impact": 2,
+            "name": "No Redirection from HTTP to HTTPS",
+            "restriction": 0,
+            "url": "http://localhost"
+        },
+        {
+            "http": [
+                {
+                    "request": "TRACE / HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:08 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=85\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: message/http\r\n\r\nTRACE / HTTP/1.1\r\nHost: localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla\r\n...[truncated]..."
+                }
+            ],
+            "id": 4157540289,
+            "impact": 3,
+            "name": "TRACE Method Allowed",
+            "restriction": 0,
+            "url": "http://localhost/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; path=/\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 593\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 3078959805,
+            "impact": 2,
+            "name": "Session Cookie without HttpOnly Flag",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; path=/\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 593\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 299301920,
+            "impact": 2,
+            "name": "Session Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; path=/\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 593\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 881888054,
+            "impact": 2,
+            "name": "Session Cookie without SameSite Flag",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/user/name/",
+                    "localhost/article/show/list/1/details",
+                    "localhost/xss/",
+                    "localhost/xss/base64.php",
+                    "localhost/formauth/enumerate.php",
+                    "localhost/msg/ZGRkZGRkZGRkZA==",
+                    "localhost/xss/script-inline.php",
+                    "localhost/dashboard/json.php"
+                ]
+            },
+            "details": "The `Cache-Control` header is not set",
+            "http": [
+                {
+                    "request": "GET /dashboard/json.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 1209693443,
+            "impact": 4,
+            "name": "Missing or Insecure Cache-Control Header",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/json.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /iframe/index.html HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLast-Modified: Tue, 14 Feb 2023 11:56:25 GMT\r\nETag: \"5f-5f4a7a72e3f11\"\r\nAccept-Ranges: bytes\r\nContent-Length: 95\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html\r\n\r\n<html>\r\n    <body>\r\n        <iframe src=\"https://example.com\"></iframe>\r\n    </body>\r\n\r\n</html>"
+                }
+            ],
+            "id": 3404552842,
+            "impact": 4,
+            "name": "Content Character Encoding is not Defined",
+            "restriction": 0,
+            "url": "http://localhost/iframe/index.html"
+        },
+        {
+            "details": "The value injected in the `Host` header is reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /sitemap.xml HTTP/1.1\r\nOrigin: dkGjcdj2y3djasdcO\r\nX-Forwarded-Host: dkGjcdj2y3djasdcX\r\nForwarded: for=dkGjcdj2y3djasdcF\r\nConnection: Close\r\nAccept: */*\r\nHost: dkGjcdj2y3djasdc\r\n\r\n",
+                    "response": "HTTP/1.1 404 Not Found\r\nDate: Thu, 16 May 2024 10:07:09 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 302\r\nConnection: close\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\n<p>The requested URL was not found on this server.</p>\n<hr>\n<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at dkgjcdj2y3djasdc Port 80</address>\n</body></html>\n"
+                }
+            ],
+            "id": 1315333870,
+            "impact": 2,
+            "name": "Host Header Injection",
+            "restriction": 0,
+            "url": "http://localhost/sitemap.xml"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /ssi/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLast-Modified: Wed, 13 Apr 2022 08:24:26 GMT\r\nETag: \"147-5dc84e7d62df8\"\r\nAccept-Ranges: bytes\r\nContent-Length: 327\r\nKeep-Alive: timeout=5, max=96\r\nConnection: Keep-Alive\r\nContent-Type: text/html\r\n\r\n<html>\r\n\r\n<head>\r\n<script type=\"text/javascript\" src=\"https://unpkg.com/vue@3.0.2\"></script>\r\n<link type=\"text/css\" rel=\"stylesheet\" href=\"https://code.jquery.c\r\n...[truncated]..."
+                }
+            ],
+            "id": 3890660471,
+            "impact": 4,
+            "name": "Content Character Encoding is not Defined",
+            "restriction": 0,
+            "url": "http://localhost/ssi/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /iframe/secure.html HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:10 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nLast-Modified: Tue, 14 Feb 2023 11:56:25 GMT\r\nETag: \"71-5f4a7a72e3f11\"\r\nAccept-Ranges: bytes\r\nContent-Length: 113\r\nKeep-Alive: timeout=5, max=83\r\nConnection: Keep-Alive\r\nContent-Type: text/html\r\n\r\n<html>\r\n    <body>\r\n        <iframe src=\"https://example.com\" \r\n        sandbox></iframe>\r\n    </body>\r\n\r\n</html>"
+                }
+            ],
+            "id": 252648646,
+            "impact": 4,
+            "name": "Content Character Encoding is not Defined",
+            "restriction": 0,
+            "url": "http://localhost/iframe/secure.html"
+        },
+        {
+            "customFields": {
+                "Found Emails": [
+                    "admin@example.com"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /server-info HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=ISO-8859-1\r\n\r\n...[truncated]...\r\nadmin@example.com</i></tt></dd>\n<dd><tt>&nbsp;127:\r\n...[truncated]..."
+                }
+            ],
+            "id": 4126614617,
+            "impact": 4,
+            "name": "Email Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/server-info"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:/xampp/apache/conf/extra/httpd-mpm.conf",
+                    "C:/xampp/webalizer",
+                    "C:/xampp/apache",
+                    "C:/xampp/apache/conf/extra/httpd-ssl.conf",
+                    "C:/xampp/cgi-bin",
+                    "C:/xampp/php",
+                    "C:/xampp/apache/bin/openssl.cnf",
+                    "C:/xampp/apache/logs/ssl_scache",
+                    "C:/xampp/licenses",
+                    "C:/xampp/apache/conf/extra/httpd-info.conf",
+                    "C:/xampp/apache/cgi-bin",
+                    "C:/xampp/apache/conf/extra/httpd-xampp.conf",
+                    "C:/xampp/apache/conf/extra/httpd-default.conf",
+                    "C:/xampp/apache/conf/httpd.conf",
+                    "C:/xampp/php/extras/mibs",
+                    "C:/xampp/htdocs",
+                    "C:/xampp/apache/logs/access.log",
+                    "C:/xampp/apache/logs/error.log",
+                    "C:/xampp/apache/conf/extra/httpd-languages.conf",
+                    "C:/xampp/apache/logs/ssl_request.log",
+                    "C:/xampp/htdocs/xampp",
+                    "C:/xampp/apache/conf/extra/httpd-ajp.conf",
+                    "C:/xampp/apache/icons",
+                    "C:/xampp/phpMyAdmin",
+                    "C:/xampp/apache/conf/extra/httpd-autoindex.conf"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /server-info HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=ISO-8859-1\r\n\r\n...[truncated]...\r\nC:/xampp/apache</tt></dt>\n<dt><strong>Config File:</strong> <tt>C:/xampp/apache/conf/httpd.conf</tt></dt>\n<dt><strong>Server Built With:</strong>\n<tt style=\"white-space: pre;\">\n -D APR_HAS_SENDFILE\n -D APR_HAS_MMAP\n -D APR_HAVE_IPV6 (IPv4-mapped addr\r\n...[truncated]..."
+                }
+            ],
+            "id": 2044340371,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/server-info"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nReferer: smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 463\r\nKeep-Alive: timeout=5, max=95\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 1188962775,
+            "impact": 2,
+            "name": "Password Sent Over HTTP",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /formauth/bypassBlock.php HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nReferer: smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:07 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 463\r\nKeep-Alive: timeout=5, max=95\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 2342323662,
+            "impact": 3,
+            "name": "Auto Complete Enabled Password Input",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "details": "The server uses the session to limit login attempts. This can be easily bypassed by not sending the session token to the server.",
+            "http": [
+                {
+                    "request": "POST /formauth/bypassBlock.php HTTP/1.1\r\nReferer: http://localhost/formauth/bypassBlock.php\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 15\r\nCookie: PHPSESSID=sh7320pe1qgpvn3bdsjdhbkb73; \r\nContent-Length: 15\r\n\r\nname=root&pass=",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:10 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 216\r\nKeep-Alive: timeout=5, max=90\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\tyou have been locked<br>\tusername: <input name=\"name\"><br>\r\n\tpassword: <input name=\"pass\" type=\"password\"><br>\r\n\t<input \r\n...[truncated]..."
+                },
+                {
+                    "request": "POST /formauth/bypassBlock.php HTTP/1.1\r\nReferer: http://localhost/formauth/bypassBlock.php\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 15\r\nCookie: PHPSESSID=tp88ivhtn018878srnmkca490v; \r\nContent-Length: 15\r\n\r\nname=root&pass=",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:10 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 213\r\nKeep-Alive: timeout=5, max=99\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\tInvalid user/pass<br>\tusername: <input name=\"name\"><br>\r\n\tpassword: <input name=\"pass\" type=\"password\"><br>\r\n\t<input typ\r\n...[truncated]..."
+                }
+            ],
+            "id": 2462134544,
+            "impact": 2,
+            "name": "Brute Force Prevention Bypassed",
+            "referer": "http://localhost/formauth/bypassBlock.php",
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\formauth\\enumerate.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 458\r\nKeep-Alive: timeout=5, max=82\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line <b>3</b><br />\n<br />\n<b>Warning</b>:  Undefined array key \"user\" in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 1397440457,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 458\r\nKeep-Alive: timeout=5, max=82\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line <b>3</b><br />\n<br />\n<b>Warning</b>:  Undefined arr\r\n...[truncated]..."
+                }
+            ],
+            "id": 443084503,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /auth/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 401 Unauthorized\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nWWW-Authenticate: Basic realm=\"My Realm\"\r\nContent-Length: 39\r\nConnection: close\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nText to send if user hits Cancel button"
+                }
+            ],
+            "id": 2521493507,
+            "impact": 2,
+            "name": "Basic Authentication Over HTTP",
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/auth/"
+        },
+        {
+            "customFields": {
+                "Pass": [
+                    "password"
+                ],
+                "User": [
+                    "admin"
+                ]
+            },
+            "details": "An easily guessable user/password was found.",
+            "http": [
+                {
+                    "request": "GET /auth/ HTTP/1.1\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 64\r\nKeep-Alive: timeout=5, max=100\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<p>Hello admin.</p><p>You entered password as your password.</p>"
+                }
+            ],
+            "id": 2008303560,
+            "impact": 1,
+            "name": "Weak Password",
+            "restriction": 0,
+            "url": "http://localhost/auth/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 458\r\nKeep-Alive: timeout=5, max=82\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line <b>3</b><br />\n<br />\n<b>Warning</b>:  Undefined arr\r\n...[truncated]..."
+                }
+            ],
+            "id": 3910161624,
+            "impact": 2,
+            "name": "Password Sent Over HTTP",
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 458\r\nKeep-Alive: timeout=5, max=82\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line <b>3</b><br />\n<br />\n<b>Warning</b>:  Undefined arr\r\n...[truncated]..."
+                }
+            ],
+            "id": 693488271,
+            "impact": 3,
+            "name": "Auto Complete Enabled Password Input",
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "customFields": {
+                "Found User": [
+                    "admin"
+                ]
+            },
+            "details": "The server generates different responses for user `admin` and `nonexistinguser`. it means that the user `admin` exists in the application.",
+            "http": [
+                {
+                    "request": "POST /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost/formauth/enumerate.php\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 38\r\nContent-Length: 38\r\n\r\nuser=admin&pass=InvalidPa$s12f%23Kdkf4",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 212\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\tInvalid password<br>\tusername: <input name=\"user\"><br>\r\n\tpassword: <input name=\"pass\" type=\"password\"><br>\r\n\t<input type\r\n...[truncated]..."
+                },
+                {
+                    "request": "POST /formauth/enumerate.php HTTP/1.1\r\nReferer: http://localhost/formauth/enumerate.php\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 48\r\nContent-Length: 48\r\n\r\nuser=nonexistinguser&pass=InvalidPa$s12f%23Kdkf4",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 212\r\nKeep-Alive: timeout=5, max=96\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\tInvalid username<br>\tusername: <input name=\"user\"><br>\r\n\tpassword: <input name=\"pass\" type=\"password\"><br>\r\n\t<input type\r\n...[truncated]..."
+                }
+            ],
+            "id": 2880482647,
+            "impact": 2,
+            "name": "User Enumeration",
+            "referer": "http://localhost/formauth/enumerate.php",
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\formauth\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 447\r\nKeep-Alive: timeout=5, max=84\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\formauth\\index.php</b> on line <b>3</b><br />\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\t<br />\n<b>Warning</b>:  Undefined variable $error in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 1722626231,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/formauth/"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"usr\" in <b>C:\\xampp\\htdocs\\formauth\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /formauth/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 447\r\nKeep-Alive: timeout=5, max=84\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"usr\" in <b>C:\\xampp\\htdocs\\formauth\\index.php</b> on line <b>3</b><br />\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\t<b\r\n...[truncated]..."
+                }
+            ],
+            "id": 4137194837,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/formauth/"
+        },
+        {
+            "details": "Directory listing discloses sensitive or dynamic application files.",
+            "http": [
+                {
+                    "request": "GET /show/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 975\r\nKeep-Alive: timeout=5, max=93\r\nConnection: Keep-Alive\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /show</title>\n </head>\n <body>\n<h1>Index of /show</h1>\n  <table>\n   <tr\r\n...[truncated]..."
+                }
+            ],
+            "id": 1340553046,
+            "impact": 3,
+            "name": "Directory Listing of Sensitive Files",
+            "restriction": 0,
+            "url": "http://localhost/show/"
+        },
+        {
+            "customFields": {
+                "Found In": [
+                    "localhost/xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU",
+                    "localhost/xss/base64.php"
+                ],
+                "Path": [
+                    "C:\\xampp\\htdocs\\xss\\base64.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:14 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 320\r\nKeep-Alive: timeout=5, max=68\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\xss\\base64.php:3\nStack trace:\n#0 C:\\xampp\\htdocs\\xss\\base64.php(3): base64_decode(Array)\n#1 {main}\n  thrown in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 506313000,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU"
+        },
+        {
+            "customFields": {
+                "Affected URLs": [
+                    "localhost/xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU",
+                    "localhost/xss/base64.php"
+                ],
+                "Application Error": [
+                    "Fatal error</b>:  Uncaught TypeError: base64_decode(): Argument #1 ($string) must be of type string, array given in C:\\xampp\\htdocs\\xss\\base64.php:3\nStack trace:\n#0 C:\\xampp\\htdocs\\xss\\base64.php(3): base64_decode(Array)\n#1 {main}\n  thrown in <b>C:\\xampp\\htdocs\\xss\\base64.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:14 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 320\r\nKeep-Alive: timeout=5, max=68\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello <br />\n<b>Fatal error</b>:  Uncaught TypeError: base64_decode(): Argument #1 ($string) must be of type string, array given in C:\\xampp\\htdocs\\xss\\base64.p\r\n...[truncated]..."
+                }
+            ],
+            "id": 1914804796,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "name",
+                "type": "Query",
+                "value": "base64-encoded-value"
+            },
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/xss/base64.php?name[]=YmFzZTY0LWVuY29kZWQtdmFsdWU"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "\"'/<jxqz32026>=()"
+                ]
+            },
+            "details": "The `\"'/<jxqz32026>=()` was set as parameter `name` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /xss/base64.php?name=IicvPGp4cXozMjAyNj49KCk%3D HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:14 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 23\r\nKeep-Alive: timeout=5, max=64\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello \"'/<jxqz32026>=()"
+                }
+            ],
+            "id": 3616531900,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "name",
+                "type": "Query",
+                "value": "base64-encoded-value"
+            },
+            "restriction": 0,
+            "url": "http://localhost/xss/base64.php?name=YmFzZTY0LWVuY29kZWQtdmFsdWU"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /formauth/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 447\r\nKeep-Alive: timeout=5, max=84\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"usr\" in <b>C:\\xampp\\htdocs\\formauth\\index.php</b> on line <b>3</b><br />\n<html>\r\n<body>\r\n\t<form method=\"POST\">\r\n\t<b\r\n...[truncated]..."
+                }
+            ],
+            "id": 317392538,
+            "impact": 2,
+            "name": "Password Sent Over HTTP",
+            "restriction": 0,
+            "url": "http://localhost/formauth/"
+        },
+        {
+            "customFields": {
+                "Pass": [
+                    "123456"
+                ],
+                "User": [
+                    "admin"
+                ]
+            },
+            "details": "An easily guessable user/password was found.",
+            "http": [
+                {
+                    "request": "POST /formauth/ HTTP/1.1\r\nReferer: http://localhost/formauth/\r\nContent-Type: application/x-www-form-urlencoded\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 21\r\nContent-Length: 21\r\n\r\nusr=admin&pass=123456",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:15 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 45\r\nKeep-Alive: timeout=5, max=99\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nWelcome <a href=\"protected.php\">protected</a>"
+                }
+            ],
+            "id": 1327593996,
+            "impact": 1,
+            "name": "Weak Password",
+            "referer": "http://localhost/formauth/",
+            "restriction": 0,
+            "url": "http://localhost/formauth/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /xss/index.php?name=test HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nX-XSS-Protection: 1\r\nContent-Length: 10\r\nKeep-Alive: timeout=5, max=86\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello test"
+                }
+            ],
+            "id": 2833807001,
+            "impact": 4,
+            "name": "X-XSS-Protection Header is Set",
+            "restriction": 0,
+            "url": "http://localhost/xss/index.php?name=test"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\xss\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was converted to array (`name[]`), the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /xss/index.php?name[]=test HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nX-XSS-Protection: 1\r\nContent-Length: 125\r\nKeep-Alive: timeout=5, max=34\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello <br />\n<b>Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\xss\\index.php</b> on line <b>4</b><br />\nArray"
+                }
+            ],
+            "id": 2847425622,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "name",
+                "type": "Query",
+                "value": "test"
+            },
+            "restriction": 0,
+            "url": "http://localhost/xss/index.php?name=test"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "\"'/<jxqz4630>=()"
+                ]
+            },
+            "details": "The `\"'/<jxqz4630>=()` was set as parameter `name` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /xss/index.php?name=%22'/%3Cjxqz4630%3E%3D() HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nX-XSS-Protection: 1\r\nContent-Length: 22\r\nKeep-Alive: timeout=5, max=31\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello \"'/<jxqz4630>=()"
+                }
+            ],
+            "id": 3506519349,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "name",
+                "type": "Query",
+                "value": "test"
+            },
+            "restriction": 0,
+            "url": "http://localhost/xss/index.php?name=test"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  include('&quot;!?-%s): Failed to open stream: No such file or directory in <b>C:\\xampp\\htdocs\\display\\index.php</b> on line"
+                ],
+                "Injection": [
+                    "'\"!?-%s"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the `'\"!?-%s` was set as the parameter `f` value, the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /display/?f='%22!?-%25s HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 355\r\nKeep-Alive: timeout=5, max=13\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello vas\r\n<br />\n<b>Warning</b>:  include('&quot;!?-%s): Failed to open stream: No such file or directory in <b>C:\\xampp\\htdocs\\display\\index.php</b> on line <\r\n...[truncated]..."
+                }
+            ],
+            "id": 976721307,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "f",
+                "type": "Query",
+                "value": "a.html"
+            },
+            "restriction": 0,
+            "url": "http://localhost/display/?f=a.html"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\xss\\script-inline"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was converted to array (`name[]`), the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /xss/script-inline.php?u[]=testa HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 193\r\nKeep-Alive: timeout=5, max=55\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhi\r\n<script>\r\n    let name = '<br />\n<b>Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\xss\\script-inline.php</b> on line <b>3</b><br />\nArray';\r\r\n...[truncated]..."
+                }
+            ],
+            "id": 3726010673,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "u",
+                "type": "Query",
+                "value": "testa"
+            },
+            "restriction": 0,
+            "url": "http://localhost/xss/script-inline.php?u=testa"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "a';alert(1);//"
+                ]
+            },
+            "details": "The `a';alert(1);//` was set as parameter `u` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /xss/script-inline.php?u=a';alert(1);// HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 80\r\nKeep-Alive: timeout=5, max=95\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhi\r\n<script>\r\n    let name = 'a';alert(1);//';\r\n    console.log(name)\r\n</script>"
+                }
+            ],
+            "id": 1060526064,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "u",
+                "type": "Query",
+                "value": "testa"
+            },
+            "restriction": 0,
+            "url": "http://localhost/xss/script-inline.php?u=testa"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "../../../../../../../../windows/win.ini"
+                ],
+                "Proof": [
+                    "[mci extensions]"
+                ]
+            },
+            "details": "The `../../../../../../../../windows/win.ini` was injected into the parameter `f` and `[mci extensions]` was found in the response which indicates the target is vulnerable against Local File Inclusion.",
+            "http": [
+                {
+                    "request": "GET /display/?f=../../../../../../../../windows/win.ini HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 103\r\nKeep-Alive: timeout=5, max=90\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello vas\r\n; for 16-bit app support\r\n[fonts]\r\n[extensions]\r\n[mci extensions]\r\n[files]\r\n[Mail]\r\nMAPI=1\r\n"
+                }
+            ],
+            "id": 4036946273,
+            "impact": 1,
+            "name": "Local File Inclusion",
+            "parameter": {
+                "name": "f",
+                "type": "Query",
+                "value": "a.html"
+            },
+            "restriction": 0,
+            "url": "http://localhost/display/?f=a.html"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\xss\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /xss/index.php?name[]=test HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nX-XSS-Protection: 1\r\nContent-Length: 125\r\nKeep-Alive: timeout=5, max=34\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\xss\\index.php</b> on line <b>4</b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 3419239341,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/xss/index.php?name[]=test"
+        },
+        {
+            "customFields": {
+                "Found In": [
+                    "localhost/display/?f=%7B%7B561181-1%7D%7D",
+                    "localhost/display/?f=99999 or 1%3E0-- a",
+                    "localhost/display/?f=a.html'; if (1%3D1) waitfor delay '00:00:03'--",
+                    "localhost/display/?f=a.html' and 1%3E1-- a",
+                    "localhost/display/?f=smta＜bʺcʹd﻿etms769",
+                    "localhost/display/?f=a%26ping 2130706433%26%23'%26ping 2130706434%26a%26%23%22%26ping 2130706435%26a%5C",
+                    "localhost/display/?f=a.html or 1%3DExtractValue(1,CoNCaT(0x3a,(md5(122459))))",
+                    "localhost/display/?f=99999 or 1%3E0",
+                    "localhost/display/?f=99999' or '1'%3E'0",
+                    "localhost/display/?f=99999' or 1%3E0-- a",
+                    "localhost/display/?f='%22!?-%25s",
+                    "localhost/display/?f=a.html' and '1'%3E'1",
+                    "localhost/display/?f=a.html; if (1%3D1) waitfor delay '00:00:03'--",
+                    "localhost/display/?f=a.html and 1%3E1",
+                    "localhost/display/?f='XOR((SELECT(1)FROM(SELECT(if(now()%3Dsysdate(),sleep(3),0)))A))OR'",
+                    "localhost/display/?f=%25%7B561181-1%7D",
+                    "localhost/display/?f=a.html and 1%3E1-- a",
+                    "localhost/display/?f=a%7Cver",
+                    "localhost/display/?f=99999%22 or %221%22%3E%220",
+                    "localhost/display/?f=a.html%22 and %221%22%3E%221",
+                    "localhost/display/?f=%22'/%3Cjxqz5296%3E%3D()",
+                    "localhost/display/?f=a.html' and '1'%3E'0",
+                    "localhost/display/?f=example.com/?a.html",
+                    "localhost/display/?f=$%7B561181-1%7D",
+                    "localhost/display/?f=hTtp://example.com/?a.html",
+                    "localhost/display/?f=a.html and 1%3E0",
+                    "localhost/display/?f=a.html' or 1%3DExtractValue(1,CoNCaT(0x3a,(md5(122459)))) or 1%3D'2",
+                    "localhost/display/?f=(SELECT(1)FROM(SELECT(if(now()%3Dsysdate(),sleep(3),0)))A)",
+                    "localhost/display/?f=a.html%22 and %221%22%3E%220"
+                ],
+                "Path": [
+                    "C:\\xampp\\php\\PEAR",
+                    "C:\\xampp\\htdocs\\display\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /display/?f='%22!?-%25s HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 355\r\nKeep-Alive: timeout=5, max=13\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\display\\index.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  include(): Failed opening ''&quot;!?-%s' for inclusion (include_path='C:\\xampp\\php\\PEAR') in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 3384280628,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/display/?f='%22!?-%25s"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\xss\\script-inline.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /xss/script-inline.php?u[]=testa HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:16 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 193\r\nKeep-Alive: timeout=5, max=55\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\xss\\script-inline.php</b> on line \r\n...[truncated]..."
+                }
+            ],
+            "id": 1189580598,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/xss/script-inline.php?u[]=testa"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\redir\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was converted to array (`name[]`), the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /redir/?u[]=http://localhost/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 301 Moved Permanently\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nLocation: Array\r\nContent-Length: 116\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\redir\\index.php</b> on line <b>7</b><br />\n"
+                }
+            ],
+            "id": 2234575282,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "u",
+                "type": "Query",
+                "value": "http://localhost/"
+            },
+            "restriction": 0,
+            "url": "http://localhost/redir/?u=http://localhost/"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\user\\name\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was converted to array (`name[]`), the application faced with an error.",
+            "http": [
+                {
+                    "request": "POST /user/name/index.php HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://localhost/user/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 13\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 13\r\n\r\nname[]=myname",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 125\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\user\\name\\index.php</b> on line <b>4</b><br />\nArray"
+                }
+            ],
+            "id": 3502942862,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "name",
+                "type": "Post",
+                "value": "myname"
+            },
+            "restriction": 0,
+            "url": "http://localhost/user/name/index.php"
+        },
+        {
+            "customFields": {
+                "Found In": [
+                    "localhost/redir/?u=QvXuSbA%0D%0AQvXuSbA",
+                    "localhost/redir/?u[]=http://localhost/"
+                ],
+                "Path": [
+                    "C:\\xampp\\htdocs\\redir\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /redir/?u[]=http://localhost/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 301 Moved Permanently\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nLocation: Array\r\nContent-Length: 116\r\nKeep-Alive: timeout=5, max=97\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\redir\\index.php</b> on line <b>7</\r\n...[truncated]..."
+                }
+            ],
+            "id": 3668386959,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/redir/?u[]=http://localhost/"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "\"'/<jxqz24353>=()"
+                ]
+            },
+            "details": "The `\"'/<jxqz24353>=()` was set as parameter `name` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "POST /user/name/index.php HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://localhost/user/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 30\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 30\r\n\r\nname=%22'/%3Cjxqz24353%3E%3D()",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 17\r\nKeep-Alive: timeout=5, max=94\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n\"'/<jxqz24353>=()"
+                }
+            ],
+            "id": 726010093,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "name",
+                "type": "Post",
+                "value": "myname"
+            },
+            "restriction": 0,
+            "url": "http://localhost/user/name/index.php"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "www.example.com"
+                ]
+            },
+            "details": "The URL will be redirected when the value of parameter `u` is set to `www.example.com`",
+            "http": [
+                {
+                    "request": "GET /redir/?u=www.example.com HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 301 Moved Permanently\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nLocation: www.example.com\r\nContent-Length: 0\r\nKeep-Alive: timeout=5, max=89\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
+                }
+            ],
+            "id": 2504775214,
+            "impact": 1,
+            "name": "Unvalidated Redirection",
+            "parameter": {
+                "name": "u",
+                "type": "Query",
+                "value": "http://localhost/"
+            },
+            "restriction": 0,
+            "url": "http://localhost/redir/?u=http://localhost/"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was removed, the application faced with an error.",
+            "http": [
+                {
+                    "request": "POST /formauth/bypassBlock.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://localhost/formauth/bypassBlock.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 18\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 18\r\n\r\npass=DJrLcmno321@!",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 19 Nov 1981 08:52:00 GMT\r\nCache-Control: no-store, no-cache, must-revalidate\r\nPragma: no-cache\r\nContent-Length: 466\r\nKeep-Alive: timeout=5, max=82\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"name\" in <b>C:\\xampp\\htdocs\\formauth\\bypassBlock.php</b> on line <b>4</b><br />\n<br />\n<b>Warning</b>:  Undefined a\r\n...[truncated]..."
+                }
+            ],
+            "id": 645049762,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "name",
+                "type": "Post",
+                "value": "James Bond"
+            },
+            "restriction": 0,
+            "url": "http://localhost/formauth/bypassBlock.php"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\user\\name\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "POST /user/name/index.php HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://localhost/user/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 13\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 13\r\n\r\nname[]=myname",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:02 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 125\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\user\\name\\index.php</b> on line <b\r\n...[truncated]..."
+                }
+            ],
+            "id": 239213073,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/user/name/index.php"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was removed, the application faced with an error.",
+            "http": [
+                {
+                    "request": "POST /formauth/enumerate.php HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nReferer: http://localhost/formauth/enumerate.php\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 18\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 18\r\n\r\npass=DJrLcmno321@!",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:04 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 458\r\nKeep-Alive: timeout=5, max=40\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<br />\n<b>Warning</b>:  Undefined array key \"user\" in <b>C:\\xampp\\htdocs\\formauth\\enumerate.php</b> on line <b>3</b><br />\n<br />\n<b>Warning</b>:  Undefined arr\r\n...[truncated]..."
+                }
+            ],
+            "id": 726528227,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "user",
+                "type": "Post",
+                "value": "Test"
+            },
+            "restriction": 0,
+            "url": "http://localhost/formauth/enumerate.php"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\feed\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "POST /feed/ HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: applicatioN/json\r\nReferer: http://localhost/feed/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 4\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 4\r\n\r\n{\n}\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:04 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 508\r\nKeep-Alive: timeout=5, max=41\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\feed\\index.php</b> on line <b>13</\r\n...[truncated]..."
+                }
+            ],
+            "id": 1827304681,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/feed/"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined property: stdClass::$name in <b>C:\\xampp\\htdocs\\feed\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "POST /feed/ HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: applicatioN/json\r\nReferer: http://localhost/feed/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 4\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 4\r\n\r\n{\n}\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:04 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 508\r\nKeep-Alive: timeout=5, max=41\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n\r\n<br />\n<b>Warning</b>:  Undefined property: stdClass::$name in <b>C:\\xampp\\htdocs\\feed\\index.php</b> on line <b>13</b><br />\nhi \r\n\t<script>\r\n  async f\r\n...[truncated]..."
+                }
+            ],
+            "id": 2606756323,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "name",
+                "type": "Post",
+                "value": "myname is 1"
+            },
+            "referer": "http://localhost/feed/",
+            "restriction": 0,
+            "url": "http://localhost/feed/"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "\"'/<jxqz30603>=()"
+                ]
+            },
+            "details": "The `\"'/<jxqz30603>=()` was set as parameter `name` value and, it was reflected in the response.",
+            "http": [
+                {
+                    "request": "POST /feed/ HTTP/1.1\r\nAuthorization: valid-token\r\nContent-Type: applicatioN/json\r\nReferer: http://localhost/feed/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 43\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\nContent-Length: 43\r\n\r\n{\n    \"name\": \"IicvPGp4cXozMDYwMz49KCk=\"\n}\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:04 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 400\r\nKeep-Alive: timeout=5, max=38\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html>\r\n\r\nhi \"'/<jxqz30603>=()\r\n\t<script>\r\n  async function req(name) {\r\n    const body = {\r\n      name: btoa(name)\r\n    }\r\n    let myInit = {\r\n      method: 'P\r\n...[truncated]..."
+                }
+            ],
+            "id": 3771254256,
+            "impact": 1,
+            "name": "Cross Site Scripting",
+            "parameter": {
+                "name": "name",
+                "type": "Post",
+                "value": "myname is 1"
+            },
+            "restriction": 0,
+            "url": "http://localhost/feed/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D\r\nSet-Cookie: p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=16\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 1524952569,
+            "impact": 3,
+            "name": "Cookie without HttpOnly Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D\r\nSet-Cookie: p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=16\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 3542373980,
+            "impact": 3,
+            "name": "Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D\r\nSet-Cookie: p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=16\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 3097167333,
+            "impact": 3,
+            "name": "Cookie without HttpOnly Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /dashboard/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: id=eyJ1c2VyTmFtZSI6InRlc3R1c2VyIiwidXNlcklkIjoxMn0%3D; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: profile=Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJ1c2VyTmFtZSI7czo4OiJ0ZXN0dXNlciI7czo2OiJ1c2VySWQiO2k6MTI7fQ%3D%3D\r\nSet-Cookie: p3=rO0ABXNyAAlTb21lQ2xhc3MAAAAAAAAAAQIABkkAAWJJAAFpTAABZHQAEkxqYXZhL2xhbmcvRG91YmxlO0wABGhoaGh0ABJMamF2YS9sYW5nL1N0cmluZztMAAFzcQB%2BAAJMAANzdHJxAH4AAnhwAAAAe3%2F%2F%2F%2F9zcgAQamF2YS5sYW5nLkRvdWJsZYCzwkopa%2FsEAgABRAAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHC%2F8AAAAAAAAHQABmhoaGhoaHQABUFCQ0RFdAAGc3RyaW5n\r\nContent-Length: 14\r\nKeep-Alive: timeout=5, max=16\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nHello testuser"
+                }
+            ],
+            "id": 3776411976,
+            "impact": 3,
+            "name": "Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/dashboard/"
+        },
+        {
+            "details": "The value injected in the `Host` header is reflected in the response.",
+            "http": [
+                {
+                    "request": "GET /.htaccess HTTP/1.1\r\nOrigin: dkGjcdj2y3djasdcO\r\nX-Forwarded-Host: dkGjcdj2y3djasdcX\r\nForwarded: for=dkGjcdj2y3djasdcF\r\nConnection: Close\r\nAccept: */*\r\nHost: dkGjcdj2y3djasdc\r\n\r\n",
+                    "response": "HTTP/1.1 403 Forbidden\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 305\r\nConnection: close\r\nContent-Type: text/html; charset=iso-8859-1\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//IETF//DTD HTML 2.0//EN\">\n<html><head>\n<title>403 Forbidden</title>\n</head><body>\n<h1>Forbidden</h1>\n<p>You don't have permission to access this resource.</p>\n<hr>\n<address>Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30 Server at dkgjcdj2y3djasdc Port 80</address>\n</body></html>\n"
+                }
+            ],
+            "id": 3196015668,
+            "impact": 2,
+            "name": "Host Header Injection",
+            "restriction": 0,
+            "url": "http://localhost/.htaccess"
+        },
+        {
+            "customFields": {
+                "Found Emails": [
+                    "mike@hyperreal.org",
+                    "kevinh@kevcom.com"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /icons/ HTTP/1.1\r\nReferer: http://localhost/show/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=75\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n...[truncated]...\r\nkevinh@kevcom.com).\r\nAndy Polyakov tuned the icon colors and added few new images.</p>\r\n\r\n<p>If you'd like to contribute additions to this set, contact the httpd\r\ndocumentation project <a href=\"http://httpd.apache.org/docs-project/\"\r\n>http://httpd.ap\r\n...[truncated]..."
+                }
+            ],
+            "id": 861385378,
+            "impact": 4,
+            "name": "Email Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/icons/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /icons/ HTTP/1.1\r\nReferer: http://localhost/show/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=75\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /icons</title>\n </head>\n <body>\n<h1>Index of /icons</h1>\n  <table>\n   <\r\n...[truncated]..."
+                }
+            ],
+            "id": 2611523153,
+            "impact": 3,
+            "name": "Directory Listing",
+            "restriction": 0,
+            "url": "http://localhost/icons/"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\ping\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "details": "When the parameter `name` was converted to array (`name[]`), the application faced with an error.",
+            "http": [
+                {
+                    "request": "GET /ping/?i[]=127.0.0.1 HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:06 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 354\r\nKeep-Alive: timeout=5, max=90\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><pre>\r\n<br />\n<b>Warning</b>:  Array to string conversion in <b>C:\\xampp\\htdocs\\ping\\index.php</b> on line <b>5</b><br />\nPing request could not fin\r\n...[truncated]..."
+                }
+            ],
+            "id": 1878295924,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "parameter": {
+                "name": "i",
+                "type": "Query",
+                "value": "127.0.0.1"
+            },
+            "restriction": 0,
+            "url": "http://localhost/ping/?i=127.0.0.1"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "smta%EF%BC%9Cb%CA%BAc%CA%B9d%ef%bb%bfetms769"
+                ],
+                "Proof": [
+                    "a<b\"c'd?e"
+                ]
+            },
+            "details": "The parameter `i` incorectly transforms unicode values.\n- The Fullwidth Less-Than Sign (U+FF1C) was transformed to Less-Than Sign `<` (U+003C) when entered as UTF-8 encoded (`%EF %BC %9C`).\n- The Modifier Letter Double Prime (U+02BA) was transformed to Quotation Mark `\"` (U+0022) when entered as UTF-8 encoded (`%CA %BA`).\n- The Modifier Letter Prime (U+02B9) was transformed to Apostrophe `'` (U+0027) when entered as UTF-8 encoded (`%CA %B9`).\n",
+            "http": [
+                {
+                    "request": "GET /ping/?i=smta%EF%BC%9Cb%CA%BAc%CA%B9d%EF%BB%BFetms769 HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:09 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 265\r\nKeep-Alive: timeout=5, max=89\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><pre>\r\nPing request could not find host smta<b\"c'd?etms769. Please check the name and try again.\r\nPing request could not find host smta<b\"c'd?\r\n...[truncated]..."
+                }
+            ],
+            "id": 2005023812,
+            "impact": 1,
+            "name": "Unicode Transformation Issue",
+            "parameter": {
+                "name": "i",
+                "type": "Query",
+                "value": "127.0.0.1"
+            },
+            "restriction": 0,
+            "url": "http://localhost/ping/?i=127.0.0.1"
+        },
+        {
+            "customFields": {
+                "Injection": [
+                    "a|ver"
+                ],
+                "Proof": [
+                    "Microsoft Windows [Version "
+                ]
+            },
+            "details": "The server replied with the result of executing the injected command `a|ver` into the parameter `i`.",
+            "http": [
+                {
+                    "request": "GET /ping/?i=a%7Cver HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:10 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 175\r\nKeep-Alive: timeout=5, max=87\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><pre>\r\n\r\nMicrosoft Windows [Version 10.0.22621.3527]\r\nMicrosoft Windows [Version 10.0.22621.3527]</pre>\r\n<p>normal,blind: &ver&ping 127.0.0.1</p>\r\n<\r\n...[truncated]..."
+                }
+            ],
+            "id": 213104130,
+            "impact": 1,
+            "name": "OS Command Execution",
+            "parameter": {
+                "name": "i",
+                "type": "Query",
+                "value": "127.0.0.1"
+            },
+            "restriction": 0,
+            "url": "http://localhost/ping/?i=127.0.0.1"
+        },
+        {
+            "customFields": {
+                "Found In": [
+                    "localhost/ping/",
+                    "localhost/ping/?i[]=127.0.0.1"
+                ],
+                "Path": [
+                    "C:\\xampp\\htdocs\\ping\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /ping/?i[]=127.0.0.1 HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:06 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 354\r\nKeep-Alive: timeout=5, max=90\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\ping\\index.php</b> on line <b>5</b\r\n...[truncated]..."
+                }
+            ],
+            "id": 4253898685,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/ping/?i[]=127.0.0.1"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /icons/small/ HTTP/1.1\r\nReferer: http://localhost/icons/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:05 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nKeep-Alive: timeout=5, max=99\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /icons/small</title>\n </head>\n <body>\n<h1>Index of /icons/small</h1>\n  \r\n...[truncated]..."
+                }
+            ],
+            "id": 1093794201,
+            "impact": 3,
+            "name": "Directory Listing",
+            "restriction": 0,
+            "url": "http://localhost/icons/small/"
+        },
+        {
+            "details": "Directory listing discloses sensitive or dynamic application files.",
+            "http": [
+                {
+                    "request": "GET /admin/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:22 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 1403\r\nKeep-Alive: timeout=5, max=54\r\nConnection: Keep-Alive\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /admin</title>\n </head>\n <body>\n<h1>Index of /admin</h1>\n  <table>\n   <\r\n...[truncated]..."
+                }
+            ],
+            "id": 2383348924,
+            "impact": 3,
+            "name": "Directory Listing of Sensitive Files",
+            "restriction": 0,
+            "url": "http://localhost/admin/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "phpMyAdmin=4o8r1dsf0pa7psm2obll989v6i"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /phpmyadmin/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:27 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 16 May 2024 10:08:28 +0000\r\nCache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0\r\nLast-Modified: Thu, 16 May 2024 10:08:28 +0000\r\nSet-Cookie: phpMyAdmin=4o8r1dsf0pa7psm2obll989v6i; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: phpMyAdmin=4o8r1dsf0pa7psm2obll989v6i; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: pma_lang=en; expires=Sat, 15-Jun-2024 10:08:27 GMT; Max-Age=2592000; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nX-ob_mode: 1\r\nX-Frame-Options: DENY\r\nReferrer-Policy: no-referrer\r\nContent-Security-Policy: default-src 'self' ;script-src 'self' 'unsafe-inline' 'unsafe-eval' ;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-Content-Security-Policy: default-src 'self' ;options inline-script eval-script;referrer no-referrer;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-WebKit-CSP: default-src 'self' ;script-src 'self'  'unsafe-inline' 'unsafe-eval';referrer no-referrer;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Robots-Tag: noindex, nofollow\r\nPragma: no-cache\r\nContent-Encoding: gzip\r\nVary: Accept-Encoding\r\nKeep-Alive: timeout=5, max=27\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<!doctype html>\n<html lang=\"en\" dir=\"ltr\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"\r\n...[truncated]..."
+                }
+            ],
+            "id": 2410152096,
+            "impact": 2,
+            "name": "Session Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/phpmyadmin/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "pma_lang=en"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /phpmyadmin/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:27 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 16 May 2024 10:08:28 +0000\r\nCache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0\r\nLast-Modified: Thu, 16 May 2024 10:08:28 +0000\r\nSet-Cookie: phpMyAdmin=4o8r1dsf0pa7psm2obll989v6i; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: phpMyAdmin=4o8r1dsf0pa7psm2obll989v6i; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: pma_lang=en; expires=Sat, 15-Jun-2024 10:08:27 GMT; Max-Age=2592000; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nX-ob_mode: 1\r\nX-Frame-Options: DENY\r\nReferrer-Policy: no-referrer\r\nContent-Security-Policy: default-src 'self' ;script-src 'self' 'unsafe-inline' 'unsafe-eval' ;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-Content-Security-Policy: default-src 'self' ;options inline-script eval-script;referrer no-referrer;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-WebKit-CSP: default-src 'self' ;script-src 'self'  'unsafe-inline' 'unsafe-eval';referrer no-referrer;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Robots-Tag: noindex, nofollow\r\nPragma: no-cache\r\nContent-Encoding: gzip\r\nVary: Accept-Encoding\r\nKeep-Alive: timeout=5, max=27\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<!doctype html>\n<html lang=\"en\" dir=\"ltr\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"\r\n...[truncated]..."
+                }
+            ],
+            "id": 2600237122,
+            "impact": 3,
+            "name": "Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/phpmyadmin/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "this_should_not_be=1"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /tmp/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: this_should_not_be=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:24 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: this_should_not_be=1\r\nContent-Length: 11\r\nKeep-Alive: timeout=5, max=57\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\naaa@sss.com"
+                }
+            ],
+            "id": 1869704174,
+            "impact": 3,
+            "name": "Cookie without HttpOnly Flag",
+            "restriction": 0,
+            "url": "http://localhost/tmp/"
+        },
+        {
+            "customFields": {
+                "Cookie": [
+                    "this_should_not_be=1"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /tmp/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: this_should_not_be=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:24 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: this_should_not_be=1\r\nContent-Length: 11\r\nKeep-Alive: timeout=5, max=57\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\naaa@sss.com"
+                }
+            ],
+            "id": 892456337,
+            "impact": 3,
+            "name": "Cookie without Secure Flag",
+            "restriction": 0,
+            "url": "http://localhost/tmp/"
+        },
+        {
+            "customFields": {
+                "Found Emails": [
+                    "aaa@sss.com"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /tmp/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: this_should_not_be=aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa; PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:24 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: this_should_not_be=1\r\nContent-Length: 11\r\nKeep-Alive: timeout=5, max=57\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\naaa@sss.com"
+                }
+            ],
+            "id": 1676293300,
+            "impact": 4,
+            "name": "Email Address Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/tmp/"
+        },
+        {
+            "customFields": {
+                "Path": [
+                    "C:\\xampp\\htdocs\\display\\index.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /display/index.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:36 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 334\r\nKeep-Alive: timeout=5, max=36\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n...[truncated]...\r\nC:\\xampp\\htdocs\\display\\index.php</b> on line <b>4</b><br />\n<br />\n<b>Fatal error</b>:  Uncaught ValueError: Path cannot be empty in C:\\xampp\\htdocs\\display\\index.php:4\nStack trace:\n#0 {main}\n  thrown in <b>\r\n...[truncated]..."
+                }
+            ],
+            "id": 3562384535,
+            "impact": 4,
+            "name": "Windows Path Disclosure",
+            "restriction": 0,
+            "url": "http://localhost/display/index.php"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"f\" in <b>C:\\xampp\\htdocs\\display\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /display/index.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:36 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 334\r\nKeep-Alive: timeout=5, max=36\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello vas\r\n<br />\n<b>Warning</b>:  Undefined array key \"f\" in <b>C:\\xampp\\htdocs\\display\\index.php</b> on line <b>4</b><br />\n<br />\n<b>Fatal error</b>:  Uncaug\r\n...[truncated]..."
+                }
+            ],
+            "id": 144554169,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/display/index.php"
+        },
+        {
+            "customFields": {
+                "Application Error": [
+                    "Warning</b>:  Undefined array key \"i\" in <b>C:\\xampp\\htdocs\\ping\\index.php</b> on line"
+                ],
+                "Programming Language": [
+                    "PHP"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /ping/index.php HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:39 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 1894\r\nKeep-Alive: timeout=5, max=53\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<html><body><pre>\r\n<br />\n<b>Warning</b>:  Undefined array key \"i\" in <b>C:\\xampp\\htdocs\\ping\\index.php</b> on line <b>4</b><br />\n\r\nUsage: ping [-t] [-a] [-n c\r\n...[truncated]..."
+                }
+            ],
+            "id": 606823567,
+            "impact": 2,
+            "name": "Detailed Application Error",
+            "referer": "http://localhost",
+            "restriction": 0,
+            "url": "http://localhost/ping/index.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /show/ HTTP/1.1\r\nReferer: http://localhost\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:07:13 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 975\r\nKeep-Alive: timeout=5, max=93\r\nConnection: Keep-Alive\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /show</title>\n </head>\n <body>\n<h1>Index of /show</h1>\n  <table>\n   <tr\r\n...[truncated]..."
+                }
+            ],
+            "id": 401514160,
+            "impact": 3,
+            "name": "Sensitive Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/show/db.sql"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /admin/ HTTP/1.1\r\nReferer: http://localhost/admin\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:22 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nContent-Length: 1403\r\nKeep-Alive: timeout=5, max=98\r\nConnection: Keep-Alive\r\nContent-Type: text/html;charset=UTF-8\r\n\r\n<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<html>\n <head>\n  <title>Index of /admin</title>\n </head>\n <body>\n<h1>Index of /admin</h1>\n  <table>\n   <\r\n...[truncated]..."
+                }
+            ],
+            "id": 3701868352,
+            "impact": 3,
+            "name": "Sensitive Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/admin/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /admin/login.php HTTP/1.1\r\nReferer: http://localhost/admin/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:22 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 0\r\nKeep-Alive: timeout=5, max=50\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
+                }
+            ],
+            "id": 3655986189,
+            "impact": 3,
+            "name": "Sensitive Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/admin/login.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /admin/change.php HTTP/1.1\r\nReferer: http://localhost/admin/\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:22 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 0\r\nKeep-Alive: timeout=5, max=51\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n"
+                }
+            ],
+            "id": 2581673820,
+            "impact": 4,
+            "name": "Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/admin/change.php"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /phpmyadmin/ HTTP/1.1\r\nReferer: http://localhost/phpmyadmin\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:08:28 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nExpires: Thu, 16 May 2024 10:08:29 +0000\r\nCache-Control: no-store, no-cache, must-revalidate, pre-check=0, post-check=0, max-age=0\r\nLast-Modified: Thu, 16 May 2024 10:08:29 +0000\r\nSet-Cookie: phpMyAdmin=prqtdhngpp3jds6cmbpulra02h; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: phpMyAdmin=prqtdhngpp3jds6cmbpulra02h; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nSet-Cookie: pma_lang=en; expires=Sat, 15-Jun-2024 10:08:28 GMT; Max-Age=2592000; path=/phpmyadmin/; HttpOnly; SameSite=Strict\r\nX-ob_mode: 1\r\nX-Frame-Options: DENY\r\nReferrer-Policy: no-referrer\r\nContent-Security-Policy: default-src 'self' ;script-src 'self' 'unsafe-inline' 'unsafe-eval' ;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-Content-Security-Policy: default-src 'self' ;options inline-script eval-script;referrer no-referrer;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-WebKit-CSP: default-src 'self' ;script-src 'self'  'unsafe-inline' 'unsafe-eval';referrer no-referrer;style-src 'self' 'unsafe-inline' ;img-src 'self' data:  *.tile.openstreetmap.org;object-src 'none';\r\nX-XSS-Protection: 1; mode=block\r\nX-Content-Type-Options: nosniff\r\nX-Permitted-Cross-Domain-Policies: none\r\nX-Robots-Tag: noindex, nofollow\r\nPragma: no-cache\r\nContent-Encoding: gzip\r\nVary: Accept-Encoding\r\nKeep-Alive: timeout=5, max=56\r\nConnection: Keep-Alive\r\nTransfer-Encoding: chunked\r\nContent-Type: text/html; charset=utf-8\r\n\r\n<!doctype html>\n<html lang=\"en\" dir=\"ltr\">\n<head>\n  <meta charset=\"utf-8\">\n  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n  <meta name=\"\r\n...[truncated]..."
+                }
+            ],
+            "id": 2578967548,
+            "impact": 3,
+            "name": "Sensitive Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/phpmyadmin/"
+        },
+        {
+            "http": [
+                {
+                    "request": "GET /tmp/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:24 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nSet-Cookie: this_should_not_be=1\r\nContent-Length: 11\r\nKeep-Alive: timeout=5, max=61\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\naaa@sss.com"
+                }
+            ],
+            "id": 4158024478,
+            "impact": 4,
+            "name": "Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/tmp/"
+        },
+        {
+            "customFields": {
+                "Requested URL": [
+                    "http://localhost/test.php"
+                ]
+            },
+            "http": [
+                {
+                    "request": "GET /Redirected/ HTTP/1.1\r\nReferer: \r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Language: en-US,en;q=0.5\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36\r\nContent-Length: 0\r\nCookie: PHPSESSID=e2n36q648gvr9u8rk3hsdmboeo; \r\n\r\n",
+                    "response": "HTTP/1.1 200 OK\r\nDate: Thu, 16 May 2024 10:09:24 GMT\r\nServer: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.0.30\r\nX-Powered-By: PHP/8.0.30\r\nContent-Length: 81\r\nKeep-Alive: timeout=5, max=73\r\nConnection: Keep-Alive\r\nContent-Type: text/html; charset=UTF-8\r\n\r\nhello\r\n<a href=\"?q=1\">query on same page</a>\r\n<a href=\"subdir/\">sub directory</a>"
+                }
+            ],
+            "id": 3276113942,
+            "impact": 4,
+            "name": "Unreferenced Resource Found",
+            "restriction": 0,
+            "url": "http://localhost/Redirected/"
+        }
+    ],
+    "requests": 2903,
+    "risk": 5,
+    "status": "finished",
+    "target": "http://localhost",
+    "version": "1.22.0"
+}
